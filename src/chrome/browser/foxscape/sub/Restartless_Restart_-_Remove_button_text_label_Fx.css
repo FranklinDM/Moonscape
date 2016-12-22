@@ -1,0 +1,7 @@
+/**************************************************************************
+ * Restartless Restart - Remove button text
+ * By: Michael Walden
+ **/
+#restartlessrestart-toolbarbutton > .toolbarbutton-text {
+ display: none !important;
+}

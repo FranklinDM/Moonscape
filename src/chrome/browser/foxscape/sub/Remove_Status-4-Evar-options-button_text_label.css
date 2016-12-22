@@ -1,0 +1,6 @@
+/**************************************************************************
+ * Remove Status-4-Evar-options-button text label
+ * By: Michael Walden
+ **/
+#status4evar-options-button { min-width: 16px !important; }
+#status4evar-options-button > .toolbarbutton-text { display: none !important; } 

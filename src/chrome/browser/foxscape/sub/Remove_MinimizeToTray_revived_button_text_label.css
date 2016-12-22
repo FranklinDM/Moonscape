@@ -1,0 +1,6 @@
+/**************************************************************************
+ * Remove MinimizeToTray revived button text label
+ * By: Michael Walden
+ **/
+#MinTrayR_toolbaritem { min-width: 16px !important; } 
+#MinTrayR_toolbaritem > .toolbarbutton-text { display: none !important; } 

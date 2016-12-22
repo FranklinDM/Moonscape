@@ -1,0 +1,85 @@
+/* ::::: tabbrowser ::::: */
+
+.tabbrowser-tabbox {
+  margin: 0;
+}
+
+/* Remove border box around tabbar close button */
+
+#TabsToolbar #tabs-closebutton {
+  -moz-appearance: none !important;
+}
+
+/* Remove gap between unified Back & Forward buttons */
+
+toolbar[mode="icons"] :-moz-any(#back-button, #forward-button) {
+  margin: 0px !important;
+}
+
+/* ----- BOOKMARK BUTTONS ----- */
+
+toolbarbutton.bookmark-item {
+  font-weight: bold;
+/*#---  color: #222; ---*/
+  border: 0;
+  border-radius: 10000px;
+  padding: 1px 8px;
+  margin: 0 0 1px;
+}
+
+.bookmark-item > .toolbarbutton-menu-dropmarker {
+  list-style-image: url("chrome://os_target/skin/folderDropArrow.png");
+  display: -moz-box !important;
+  -moz-image-region: rect(0, 7px, 5px, 0);
+  margin-top: 1px;
+  -moz-margin-start: 3px;
+  -moz-margin-end: -2px;
+}
+/*#+++*/
+.bookmark-item > .toolbarbutton-menu-dropmarker:-moz-lwtheme-brighttext {
+  list-style-image: url("chrome://global/skin/arrow/arrow-dn-white.png");
+}
+/*#+++*/
+.bookmark-item > .toolbarbutton-text {
+  display: -moz-box !important; /* prevent [mode="icons"] from hiding the label */
+  margin: 0 !important;
+}
+
+toolbarbutton.bookmark-item:hover,
+toolbarbutton.bookmark-item[open="true"] {
+  background-color: rgba(0, 0, 0, .205);
+}
+
+toolbarbutton.bookmark-item:hover,
+toolbarbutton.bookmark-item[open="true"] {
+  color: #FFF !important;
+  text-shadow: 0 1px rgba(0, 0, 0, .4) !important;
+}
+
+.bookmark-item:hover > .toolbarbutton-menu-dropmarker,
+.bookmark-item[open="true"] > .toolbarbutton-menu-dropmarker {
+  -moz-image-region: rect(5px, 7px, 10px, 0);
+}
+
+toolbarbutton.bookmark-item:active:hover,
+toolbarbutton.bookmark-item[open="true"] {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4), 0 1px rgba(255, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, .5);
+}
+
+/*#+++*/
+#urlbar-reload-button {
+  margin-right: 0px;
+}
+/*#+++*/
+
+#main-window .panel-promo-box {
+  margin: 8px -16px -16px -16px;
+  padding: 8px 16px;
+  background-color: #f5f5f5;
+  border-top: 1px solid hsla(0,0%,100%,.1);
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  box-shadow: 0 1px 1px hsla(0,0%,0%,.25) inset;
+  color: GrayText;
+}

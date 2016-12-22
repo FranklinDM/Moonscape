@@ -1,0 +1,12 @@
+/**************************************************************************
+ * Tab bar tab animation - Enable
+ * By: Michael Walden
+ **/
+.tabbrowser-tab {
+  transition-delay:                  0s,        0s,   0.02s !important;
+  transition-duration:             0.2s,     0.25s,   0.05s !important;
+  transition-property:        min-width, max-width, opacity !important;
+  transition-timing-function: cubic-bezier(0.000000, 0.000000, 0.580000, 1.000000),
+                              cubic-bezier(0.000000, 0.000000, 0.580000, 1.000000),
+                              cubic-bezier(0.000000, 0.000000, 0.580000, 1.000000) !important;
+}

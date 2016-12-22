@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<bindings id="windowBindings"
+   xmlns="http://www.mozilla.org/xbl"
+   xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+   xmlns:xbl="http://www.mozilla.org/xbl">
+
+  <binding id="theme" extends="chrome://global/content/bindings/general.xml#root-element">
+    <content themer="sailfish" theme="GRN" subskin="" />
+  </binding>
+  
+</bindings>

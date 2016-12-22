@@ -1,0 +1,14 @@
+/**************************************************************************
+ * Gray about blank with splash-3
+ * Skin the "about:blank" page's background to have the gray Windows system
+ * color as done in NS4's default blank page that appeared at start-up.
+ * Also, place an image (splash-3.gif) in the center of the page.
+ * Copy and paste this into your userContent.css file in your profile folder
+ * By: Michael Walden
+ **/
+
+@-moz-document url(about:blank) {
+  html {
+    background:-moz-dialog url("chrome://browser/skin/foxscape/spl/splash-3.gif") no-repeat fixed 50% 50% !important;
+  }
+}

@@ -1,0 +1,11 @@
+/******************************************************************************
+ * Library History - style 2
+ * Make the library history icon, in the tree on the left, look like a clock.
+ * By: Michael Walden
+ **/
+
+/* History */
+/* browser\places\places.css */
+treechildren::-moz-tree-image(title, query, OrganizerQuery_History) {
+  list-style-image: url("chrome://browser/skin/foxscape/img/history2.png") !important;
+}

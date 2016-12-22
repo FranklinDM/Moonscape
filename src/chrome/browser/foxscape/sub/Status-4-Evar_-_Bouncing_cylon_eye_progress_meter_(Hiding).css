@@ -1,0 +1,26 @@
+/******************************************************************************
+ * Status-4-Evar - Bouncing cylon eye progress meter (Hiding)
+ * Netscape 4 Cylon eye style status bar progress meter!
+ * By: Michael Walden
+ * Animated image file taken from Mozilla's Retro.xpi by Neil Rashbrook
+ * Note: You need *not* make sure that the following is not selected...
+ * Status-4-Evar Preferences>Progress>Toolbar>[ ] Always show the toolbar item
+ * ...to allow the progress meter hiding function to work.  This is due to the
+ * visibility override noted below.
+ **/
+#status4evar-progress-bar {
+ -moz-appearance: none !important;
+ visibility: collapse !important
+}
+#status4evar-progress-bar spacer.progress-bar {
+ -moz-appearance: none !important;
+ background: transparent !important
+}
+.progressmeter-statusbar[collapsed="true"] {
+ background: transparent !important;
+ visibility: collapse !important     /* < Override Status-4-Evar visibility settings */
+}
+#status4evar-progress-bar.progressmeter-statusbar:not([collapsed="true"]) {
+ background: transparent url("chrome://browser/skin/foxscape/img/old-progressmeter.gif") !important;
+ visibility: visible !important
+}

@@ -1,0 +1,8 @@
+/**************************************************************************
+ * Always size Menu Bar icons large
+ * By: Michael Walden
+ **/
+#navigator-toolbox[iconsize="small"] #toolbar-menubar,
+#navigator-toolbox[iconsize="large"] #toolbar-menubar {
+  counter-reset: largeicons !important;
+}

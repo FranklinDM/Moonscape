@@ -1,0 +1,26 @@
+/**************************************************************************
+ * BASE Toolbar backrounds - remove from all bars
+ * By: Michael Walden
+ **/
+/*
+toolbar:not(:-moz-lwtheme) {
+  background: none !important;
+}
+*/
+/*
+#navigator-toolbox[tabsontop="true"] > #nav-bar,
+#navigator-toolbox[tabsontop="true"]:not([customizing]) > #nav-bar[collapsed="true"] + toolbar,
+#navigator-toolbox[tabsontop="true"]:not([customizing]) > #nav-bar[collapsed="true"] + #customToolbars + #PersonalToolbar
+*/
+#nav-bar[tabsontop=true],
+#nav-bar[tabsontop=true][collapsed=true]:not([customizing]) + toolbar,
+#nav-bar[tabsontop=true][collapsed=true]:not([customizing]) + #customToolbars + #PersonalToolbar,
+#appmenu-button,              /* Firefox application menu button */
+#navigator-toolbox > toolbar, /* Top bars */
+#browser-bottombox,           /* Bottom find bar */
+#addon-bar,                   /* Add-on Bar */
+#placesToolbox,               /* Library */
+#console-toolbox {            /* Error Console */
+  -moz-appearance: none !important;
+  background-image: none !important;
+}

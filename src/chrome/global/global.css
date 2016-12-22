@@ -1,0 +1,397 @@
+/* ##################################################################################################### */
+/* Begin section by M.W. */
+
+/* Base subskins */
+   @import url("chrome://browser/skin/foxscape/sub/BASE_Appmenu_Button_Skin.css");
+   /* @import url("chrome://browser/skin/foxscape/sub/BASE_Title_Bar_cleanup_Fx.css");                                      Disabled in FOXSCAPE 5.10 for Fx 23 Aero theme bug - fix later */
+   @import url("chrome://browser/skin/foxscape/sub/BASE_Enable_titlebar_and_menubar_separator_Fx.css");
+   @import url("chrome://browser/skin/foxscape/sub/BASE_Toolbar_separators_-_enable_on_all_bars_Fx.css");
+   @import url("chrome://browser/skin/foxscape/sub/BASE_Toolbar_backrounds_-_remove_from_all_bars_Fx.css");
+   @import url("chrome://browser/skin/foxscape/sub/BASE_Allow_toolbar_separators_to_function_properly_on_Mac_OS.css");		/* ## Needed? ## */
+   @import url("chrome://browser/skin/foxscape/sub/BASE_Allow_menubar_bookmarks_to_function_properly_on_Mac_OS.css");		/* ## Needed? ## */
+   @import url("chrome://browser/skin/foxscape/sub/BASE_Set_menubar_height.css");
+   @import url("chrome://browser/skin/foxscape/sub/BASE_Location_bar_cleanup_Fx.css"); 
+   @import url("chrome://browser/skin/foxscape/sub/BASE_Location Bar Combined Go,Reload,Stop button.css");                  /* NEW */
+   @import url("chrome://browser/skin/foxscape/sub/BASE_Tabs_Bar_cleanup_Fx.css");
+   @import url("chrome://browser/skin/foxscape/sub/BASE_Enable_fullscreen_throbber_right-hand_justification_Fx.css");
+   @import url("chrome://browser/skin/foxscape/sub/BASE_Enable_fullscreen_close_button_hover_and_active_state_outline.css");
+   @import url("chrome://browser/skin/foxscape/sub/BASE_Skin_the_tabview_button.css");
+   @import url("chrome://browser/skin/foxscape/sub/BASE_Skin_the_alltabs_button.css");                                      /* NEW */
+   @import url("chrome://browser/skin/foxscape/sub/BASE_Skin_the_bookmarks_menu_button.css");
+   @import url("chrome://browser/skin/foxscape/sub/BASE_Search_Bar_go_button_size_limit.css");
+   @import url("chrome://browser/skin/foxscape/sub/BASE_Find_bar_cleanup.css");
+   /* @import url("chrome://browser/skin/foxscape/sub/BASE_Web_console_filter_toolbar_cleanup_Fx.css"); */
+   @import url("chrome://browser/skin/foxscape/sub/BASE_Resizer_-_Transparent_Fx.css");
+   @import url("chrome://browser/skin/foxscape/sub/BASE_Force_toolbar_background_visibility.css");
+
+/* Default subskins */
+   @import url("chrome://browser/skin/foxscape/sub/Skin_the_Work_Offline_extension1.css");
+   @import url("chrome://browser/skin/foxscape/sub/Work_Offline_-_Enable_outer_recessed_3D_frame_Fx.css");
+   @import url("chrome://browser/skin/foxscape/sub/Status-4-Evar_-_Enable_outer_recessed_3D_frames_Fx.css");
+   @import url("chrome://browser/skin/foxscape/sub/Status-4-Evar_-_Bouncing_cylon_eye_progress_meter_(Always_visible).css");
+   @import url("chrome://browser/skin/foxscape/sub/Skin_the_MinimizeToTray_revived_extension_16x16.css");
+   @import url("chrome://browser/skin/foxscape/sub/Skin_the_Restartless_Restart_extension_appmenu_icon.css");
+   @import url("chrome://browser/skin/foxscape/sub/Toolbar_button_text_color_-_scheme_1.css");
+   @import url("chrome://browser/skin/foxscape/sub/Enable_tree_connecting_lines_-_dotted_Fx.css");
+   @import url("chrome://browser/skin/foxscape/sub/Throbber_-_auto_small,_large_and_extra_large.css");
+   @import url("chrome://browser/skin/foxscape/sub/Throbber_-_Raised_2px_wide_3D_border_(Netscape)_Fx.css");
+   @import url("chrome://browser/skin/foxscape/sub/Location_bar_&_search_bar_style_4_-_Firefox_3.6.css");
+   @import url("chrome://browser/skin/foxscape/sub/Page-proxy_-_style_1.css");
+   @import url("chrome://browser/skin/foxscape/sub/Location_bar_go_button_-_style_1.css");
+   @import url("chrome://browser/skin/foxscape/sub/Location_&_search_splitter_grippy_-_Enable.css");
+   @import url("chrome://browser/skin/foxscape/sub/Search_bar_go_button_-_style_1.css");
+   @import url("chrome://browser/skin/foxscape/sub/Bookmarks_Toolbar_bookmark_icon_-_Windows_style.css");
+   @import url("chrome://browser/skin/foxscape/sub/Tab_bar_tab_animation_-_Disable_Fx.css");
+   @import url("chrome://browser/skin/foxscape/sub/Tab_bar_text_color_scheme_-_Blue_on_hover_(Netscape)_Fx.css");
+
+/* @import url("file:///C:/sub/global_head2.css"); */
+
+/* End section by M.W. */
+/* ##################################################################################################### */
+
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* ===== global.css =====================================================
+  == Styles that apply everywhere.
+  ======================================================================= */
+
+/* all localizable skin settings shall live here */
+@import url("chrome://global/locale/intl.css");
+
+/*#+++*/
+/* Import platform-specific override stylesheets */
+
+@import url("chrome://os_target/skin/global-override.css");
+/*#+++*/
+
+/*#+++*/
+/* Import extension override stylesheets */
+@import url("chrome://mozapps/skin/TMP/TMPOverrides.css");
+@import url("chrome://mozapps/skin/AIOS/AIOSOverrides.css");
+@import url("chrome://mozapps/skin/status4evar/status4evarOverrides.css");
+/*#+++*/
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: XBL bindings ::::: */
+
+/*#+++*/
+/* Added on 20100209 (along with GRNwindowOverlay.xml) to
+ * uniquely identify the theme in the top-level window.
+ */
+window {
+  -moz-binding: url("chrome://global/skin/GRNwindowOverlay.xml#theme");
+}
+/*#+++*/
+
+radio {
+  -moz-binding: url("chrome://global/skin/globalBindings.xml#radio");
+}
+
+menulist > menupopup,
+.menulist-menupopup {
+  -moz-binding: url("chrome://global/content/bindings/popup.xml#popup-scrollbars");
+}
+
+.menulist-compact {
+  -moz-binding: url("chrome://global/skin/globalBindings.xml#menulist-compact");
+}
+
+/* ::::: root elements ::::: */
+
+window,
+page,
+dialog,
+wizard,
+prefwindow {
+  -moz-appearance: window;
+  background-color: -moz-Dialog;
+  color: -moz-DialogText;
+  font: message-box;
+}
+
+/* deprecated */
+window.dialog {
+  padding-top: 8px;
+  padding-bottom: 10px;
+  -moz-padding-start: 8px;
+  -moz-padding-end: 10px;
+}
+
+/* ::::: alert icons :::::*/
+
+.message-icon,
+.alert-icon,
+.error-icon,
+.question-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.message-icon {
+  list-style-image: url("chrome://global/skin/icons/information-32.png");
+}
+
+.alert-icon {
+  list-style-image: url("chrome://global/skin/icons/Warning.png");
+}
+
+.error-icon {
+  list-style-image: url("chrome://global/skin/icons/Error.png");
+}
+
+.question-icon {
+  list-style-image: url("chrome://global/skin/icons/Question.png");
+}
+
+/* ::::: iframe ::::: */
+
+iframe {
+  border: none;
+  width: 100px;
+  height: 100px;
+  min-width: 10px;
+  min-height: 10px;
+}
+
+/* ::::: statusbar ::::: */
+
+statusbar {
+  -moz-appearance: statusbar;
+  border-top: 1px solid ThreeDLightShadow;
+  border-left: 1px solid ThreeDShadow;
+  border-right: 1px solid ThreeDHighlight;
+  border-bottom: 1px solid ThreeDHighlight;
+  background-color: -moz-Dialog;
+  min-height: 22px;
+}
+
+statusbarpanel {
+  -moz-appearance: statusbarpanel;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  border-left: 1px solid ThreeDHighlight;
+  border-top: 1px solid ThreeDHighlight;
+  border-right: 1px solid ThreeDShadow;
+  border-bottom: 1px solid ThreeDShadow;
+  padding: 0 4px;
+}
+
+statusbarpanel:not(.statusbar-resizerpanel):-moz-lwtheme {
+  -moz-appearance: none;
+  border-top-style: none;
+  border-bottom-style: none;
+  -moz-border-start-style: none;
+}
+
+.statusbar-resizerpanel {
+  -moz-box-align: end;
+  -moz-box-pack: end;
+  -moz-appearance: resizerpanel;
+  padding: 0;
+  border: none;
+}
+
+.statusbarpanel-iconic,
+.statusbarpanel-iconic-text,
+.statusbarpanel-menu-iconic {
+  padding: 0 1px;
+}
+
+/* XXXBlake yeah, shoot me -- these don't belong here.  I'll move them later. */
+
+sidebarheader {
+  height: 25px;
+  background-color: -moz-Dialog;
+  -moz-appearance: toolbox;
+  border-bottom: 1px solid ThreeDShadow;
+  border-top: 1px solid ThreeDHighlight;
+}
+
+sidebarheader > label {
+  -moz-padding-start: 4px;
+}
+
+.toolbar-focustarget {
+  -moz-user-focus: ignore !important;
+}
+
+toolbar[mode="text"] .toolbarbutton-text {
+  padding: 0 !important;
+  margin: 3px 5px !important;
+}
+
+/*#+++*/
+toolbar[mode="icons"] .toolbarbutton-text {
+  display: none;
+}
+
+toolbar[mode="text"] .toolbarbutton-icon {
+  display: none;
+}
+
+toolbar[mode="text"] .toolbarbutton-text {
+  padding: 0 !important;
+  margin: 3px 5px !important;
+}
+/*#+++*/
+
+/* ::::: miscellaneous formatting ::::: */
+
+:root:-moz-lwtheme,
+[lwthemefooter="true"] {
+  -moz-appearance: none;
+}
+
+:root:-moz-lwtheme-darktext {
+  text-shadow: 0 0.5px 1.5px white;
+}
+
+:root:-moz-lwtheme-brighttext {
+  text-shadow: 1px 1px 1.5px black;
+}
+
+statusbar:-moz-lwtheme,
+sidebarheader:-moz-lwtheme {
+  -moz-appearance: none;
+  background: none;
+  border-style: none;
+}
+
+.inset {
+  border: 1px solid ThreeDShadow;
+  border-right-color: ThreeDHighlight;
+  border-bottom-color: ThreeDHighlight;
+  margin: 0 5px 5px;
+}
+
+.outset {
+  border: 1px solid ThreeDShadow;
+  border-left-color: ThreeDHighlight;
+  border-top-color: ThreeDHighlight;
+}
+
+/* separators */
+separator:not([orient="vertical"]) {
+  height: 1.5em;
+}
+separator[orient="vertical"] {
+  width: 1.5em;
+}
+
+separator.thin:not([orient="vertical"]) {
+  height: 0.5em;
+}
+separator.thin[orient="vertical"] {
+  width: 0.5em;
+}
+
+separator.groove:not([orient="vertical"]) {
+  border-top: 1px solid ThreeDShadow;
+  border-bottom: 1px solid ThreeDHighlight;
+  height: 0;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+separator.groove[orient="vertical"] {
+  border-left: 1px solid ThreeDShadow;
+  border-right: 1px solid ThreeDHighlight;
+  width: 0;
+  margin-left: 0.4em;
+  margin-right: 0.4em;
+}
+
+.small-margin {
+  margin: 1px 2px;
+}
+
+.plain {
+  -moz-appearance: none;
+  margin: 0 !important;
+  border: none;
+  padding: 0;
+}
+
+description,
+label {
+  cursor: default;
+  margin-top: 1px;
+  margin-bottom: 2px;
+  -moz-margin-start: 6px;
+  -moz-margin-end: 5px;
+}
+
+description {
+  margin-bottom: 4px;
+}
+
+label[disabled="true"] {
+  color: GrayText;
+}
+
+label[disabled="true"]:-moz-system-metric(windows-classic) {
+  color: ThreeDShadow;
+  text-shadow: 1px 1px ThreeDHighlight;
+}
+
+.tooltip-label {
+  margin: 0;
+}
+
+.header {
+  font-weight: bold;
+}
+
+.monospace {
+  font-family: monospace;
+}
+
+.indent {
+  -moz-margin-start: 23px;
+}
+
+.box-padded {
+  padding: 5px;
+}
+
+.spaced {
+  margin: 3px 5px 4px;
+}
+
+.wizard-box {
+  padding: 20px 44px 10px;
+}
+
+.text-link {
+  color: -moz-nativehyperlinktext;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+/* :::::: autoscroll popup ::::: */
+
+.autoscroller {
+  height: 28px;
+  width: 28px;
+  border: none;
+  margin: -14px;
+  padding: 0;
+  background-image: url("chrome://global/skin/icons/autoscroll.png");
+  background-color: transparent;
+  background-position: right top;
+  -moz-appearance: none;
+}
+
+.autoscroller[scrolldir="NS"] {
+  background-position: right center;
+}
+
+.autoscroller[scrolldir="EW"] {
+  background-position: right bottom;
+}

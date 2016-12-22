@@ -1,0 +1,9 @@
+/**************************************************************************
+ * Set menubar height
+ * Override chrome://global/skin/toolbar.css setting min-height: 24px;
+ * By: Michael Walden
+ **/
+
+menubar {
+  min-height: 19px !important;
+} 

@@ -1,0 +1,5 @@
+/**************************************************************************
+ * List all tabs button on tab bar - Always visible
+ * By: Michael Walden
+ **/
+#alltabs-button { visibility: visible !important; }

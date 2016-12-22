@@ -1,0 +1,10 @@
+/**************************************************************************
+ * Bookmarks Toolbar bookmark icon (Mozilla / SeaMonkey new tab button style)
+ * By: Michael Walden
+ **/
+
+toolbarbutton.bookmark-item:not(#home-button):not([container]):not([query]):not(#bookmarks-menu-button),
+.chevron menuitem.bookmark-item {
+  list-style-image: url("chrome://browser/skin/foxscape/img/page-proxy4.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+}

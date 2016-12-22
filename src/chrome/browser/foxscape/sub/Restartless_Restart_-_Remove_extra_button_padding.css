@@ -1,0 +1,7 @@
+/**************************************************************************
+ * Restartless Restart - Remove extra button padding
+ * By: Michael Walden
+ **/
+#restartlessrestart-toolbarbutton {
+ min-width: 16px !important;
+}

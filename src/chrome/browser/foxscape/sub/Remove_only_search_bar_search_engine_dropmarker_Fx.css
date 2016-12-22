@@ -1,0 +1,5 @@
+/**************************************************************************
+ * Remove only search bar search engine dropmarker in FF3
+ * By: Michael Walden
+ **/
+.searchbar-dropmarker-image { display: none !important; }

@@ -1,0 +1,5 @@
+/**************************************************************************
+ * Always show URL bar combined Go/Reload/Stop Stop button
+ * By: Michael Walden
+ **/
+#urlbar-stop-button { visibility: visible !important; }

@@ -1,0 +1,3 @@
+global/menu
+global/notification
+global/scale
