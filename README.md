@@ -1,6 +1,6 @@
-﻿# Moonscape
+﻿# Moonscape Classic
 ![Preview](http://not-yet-available.com/)
-Moonscape - A fork of the "[Foxscape] (https://addons.mozilla.org/en-US/firefox/addon/foxscape/)" theme by Michael Walden for Pale Moon.
+Moonscape Classic - A fork of the "[Foxscape] (https://addons.mozilla.org/en-US/firefox/addon/foxscape/)" theme by Michael Walden for Pale Moon. Features the classic theme that was featured in earlier versions of Netscape.
 
 ## License
 All documentation and code contained in this theme is covered by the
@@ -17,4 +17,4 @@ CC BY-NC-SA 3.0: http://CreativeCommons.org/licenses/by-nc-sa/3.0
 Simply download the contents of the "src" folder  and pack the contents into a .zip file. Then, rename the file to .xpi and drag into the browser.
 
 ## Download
-[not yet available]
+Check the releases page of this repository.
