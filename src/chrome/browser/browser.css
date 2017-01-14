@@ -1339,7 +1339,9 @@ toolbar[iconsize="small"][mode="icons"] #forward-button[chromedir="rtl"]:not([di
 }
 
 /* history sidebar button */
-
+#history-menu-button {
+  -moz-image-region: rect(0px 168px 24px 144px);  
+}
 #history-button {
   -moz-image-region: rect(0px 168px 24px 144px);
 }

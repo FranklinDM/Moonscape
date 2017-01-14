@@ -12,7 +12,7 @@
 	</em:targetApplication>
 
 	<!-- Extension's ID and type -->
-	<em:id>{ef547bbe-6237-45ed-b0d6-bc6ad58af954}</em:id>
+	<em:id>{2C646A52-4EDC-455F-8047-9405795D3E51}</em:id>
 	<!-- Types: 2=Extensions, 4=Themes, 8=Locale, 16=Plugin, 32=Multiple Item Package -->
 	<em:type>4</em:type>
 
@@ -20,9 +20,9 @@
 	<!-- em:unpack>true</em:unpack -->
 
 	<!-- Extension's info and metadata -->
-	<em:name>Moonscape</em:name>
+	<em:name>Moonscape Classic</em:name>
 	<em:version>6.00</em:version>
-	<em:description>Experience Netscape classic on Pale Moon. A fork of the "Foxscape" theme by Michael Walden.</em:description>
+	<em:description>Experience the classic Netscape on Pale Moon. A fork of the "Foxscape" theme by Michael Walden.</em:description>
 	<em:creator>FranklinDM</em:creator>
 	<em:contributor>Michael Walden</em:contributor>
 	<!-- em:homepageURL>http://www.foxscape.net/</em:homepageURL -->
@@ -35,6 +35,6 @@
 	<em:skinnable>true</em:skinnable>
 	
 	<!-- internalName must match the 'skinname' part of the relevant chrome.manifest directives in order for those mappings to be associated with this skin. -->
-	<em:internalName>moonscape</em:internalName>
+	<em:internalName>moonscape-classic</em:internalName>
   </Description>
 </RDF>
