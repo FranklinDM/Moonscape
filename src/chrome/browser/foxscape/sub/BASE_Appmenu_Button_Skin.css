@@ -1,5 +1,5 @@
 /**************************************************************************
- * Skin the Firefox Appmenu Button
+ * Skin the App Menu button
  * By: Michael Walden
  **/
 
@@ -16,7 +16,7 @@
   display: none !important;
 }
 #appmenu-button dropmarker:before {
-  content: "Firefox " !important;
+  content: "Pale Moon " !important;
   color: black !important;
   text-shadow: none !important;
 }
