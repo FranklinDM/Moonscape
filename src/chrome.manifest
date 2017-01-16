@@ -1,3 +1,4 @@
+# Main skin content
 skin	global			moonscape-classic		chrome/global/
 skin	browser			moonscape-classic		chrome/browser/
 skin	mozapps			moonscape-classic		chrome/mozapps/

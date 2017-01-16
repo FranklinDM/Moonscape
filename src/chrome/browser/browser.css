@@ -4,6 +4,11 @@
 
 @import url("chrome://global/skin/");
 
+/* Default subskins
+ * Moved from global.css because the subskins get loaded 3 times.
+ */ 
+@import url("chrome://browser/skin/default_subskins.css");
+
 /*#+++*/
 /* Import download timer and progressmeter stylesheet */
 @import url("chrome://browser/skin/downloads/indicator.css");

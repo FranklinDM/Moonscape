@@ -6,7 +6,6 @@
 
 /* These styles affect only the bound element, not other page content. */
 /* Keep any changes to these styles in sync with plugin-doorhanger.inc.css */
-
 .mainBox {
   font: message-box;
   font-size: 12px;
@@ -17,12 +16,11 @@
   background-color: rgb(72,72,72);
   color: white;
   -moz-user-select: none;
-  position: relative;
 }
 
 .hoverBox {
   display: table-cell;
-  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   padding: 5px;
   vertical-align: middle;
   width: 100%;
@@ -169,20 +167,15 @@ html|a {
 
 .closeIcon {
   display: block;
-  position: absolute;
   width: 16px;
   height: 16px;
-  top: 4px;
-  right: 4px;
+  margin-top: 4px;
+  -moz-margin-start: -20px;
+  -moz-margin-end: 4px;
   border: none;
   background-color: transparent;
   background-image: url("chrome://mozapps/skin/plugins/contentPluginClose.png");
   background-repeat: no-repeat;
-}
-
-.mainBox[chromedir="rtl"] .closeIcon {
-  right: auto;
-  left: 4px;
 }
 
 .closeIcon:hover {
