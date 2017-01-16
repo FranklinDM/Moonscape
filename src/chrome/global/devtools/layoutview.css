@@ -2,45 +2,59 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-.theme-dark .theme-body {
-  background-image: url(layout-background-grid.png);
-}
-
-.theme-light .theme-body {
-  background-image: url(layout-background-grid.png), radial-gradient(circle at 50% 70%, hsl(210,53%,45%) 0%, hsl(210,54%,33%) 100%);
-}
-
-.theme-body {
-  color: hsl(210,100%,85%) !important;
-  -moz-box-sizing: border-box;
+.theme-sidebar {
+  box-sizing: border-box;
 }
 
 #main {
+  background-color: white;
   border-color: hsla(210,100%,85%,0.7);
   border-style: dotted;
+  color: var(--theme-selection-color);
 }
 
-#main > .border {
-  color: hsl(210,53%,45%);
-}
-
-.border > span {
-  background-color: hsl(210,100%,85%);
-  border-radius: 2px;
-  padding: 0 4px;
+.margin,
+.size {
+  color: var(--theme-highlight-blue);
 }
 
 #content {
-  border-color: hsla(210,100%,85%,0.7);
-  border-style: dotted 
+  background-color: #87ceeb;
+  border-color: hsl(210,100%,85%);
+  border-style: dotted;
+}
+
+#padding,
+#margins {
+  border-color: hsla(210,100%,85%,0.2);
+  outline: dotted 1px hsl(210,100%,85%);
 }
 
 #padding {
-  border-color: hsla(210,100%,85%,0.2);
-  border-style: solid;
+  background-color: #6a5acd;
 }
 
 #borders {
-  border-style: solid;
+  background-color: #444444;
+  border-style: dotted;
   border-color: hsl(210,100%,85%);
+}
+
+#margins {
+  background-color: #edff64;
+  /* This opacity applies to all of the regions, since they are nested. */
+  opacity: .8;
+}
+
+.editable {
+  border-bottom: 1px dashed transparent;
+}
+
+.editable:hover {
+  border-bottom-color: hsl(0,0%,50%);
+}
+
+.styleinspector-propertyeditor {
+  border: 1px solid #CCC;
+  padding: 0;
 }
