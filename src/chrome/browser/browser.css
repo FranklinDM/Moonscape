@@ -1630,7 +1630,7 @@ toolbar[iconsize="small"] #fullscreen-button[checked="true"] {
 #ub-feed-button[open="true"],
 #ub-feed-button:hover:active {
   -moz-image-region: rect(0px 48px 16px 32px);
-
+}
 
 /* webrtc status button */
 
