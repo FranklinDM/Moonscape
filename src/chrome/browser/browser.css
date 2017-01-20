@@ -1606,6 +1606,32 @@ toolbar[iconsize="small"] #fullscreen-button[checked="true"] {
   -moz-image-region: rect(96px 456px 120px 432px);
 }
 
+/* Pale Moon: Feed icon */
+#ub-feed-button,
+#ub-feed-button > .button-box,
+#ub-feed-button:hover:active > .button-box {
+  padding: 0px;
+  margin: 0px;
+  border: 0px; 
+  background-color: transparent !important;
+}
+
+#ub-feed-button {
+  -moz-appearance: none; 
+  min-width: 0px; 
+  list-style-image: url("chrome://browser/skin/feeds/feed-icons-16.png");
+  -moz-image-region: rect(0px 16px 16px 0px);
+}
+
+#ub-feed-button:hover {
+  -moz-image-region: rect(0px 32px 16px 16px);
+}
+
+#ub-feed-button[open="true"],
+#ub-feed-button:hover:active {
+  -moz-image-region: rect(0px 48px 16px 32px);
+
+
 /* webrtc status button */
 
 #webrtc-status-button {
