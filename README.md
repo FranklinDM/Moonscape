@@ -1,5 +1,5 @@
 ﻿# Moonscape Classic
-![Preview](https://github.com/FranklinDM/Moonscape-Classic/blob/rebase/src/preview.png)
+![Preview](https://github.com/FranklinDM/Moonscape-Classic/blob/dev/src/preview.png)
 Moonscape Classic - A fork of the "[Foxscape] (https://addons.mozilla.org/en-US/firefox/addon/foxscape/)" theme by Michael Walden for Pale Moon. Features the classic theme that was featured in earlier versions of Netscape.
 
 ## License
