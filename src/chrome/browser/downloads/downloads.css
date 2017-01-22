@@ -481,7 +481,7 @@ toolbar[mode="full"] > #downloads-indicator > .toolbarbutton-text {
   #navigator-toolbox[tabsontop=false] > #nav-bar #downloads-indicator:not(:-moz-lwtheme):not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter,
   /* This is the case where the downloads indicator is in the tabstrip when the tabstrip is the last item in the toolbox (and is therefore over glass) */
   #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child #downloads-indicator:not(:-moz-lwtheme):not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
-    background-image: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"), 0, 108, 18, 90);
+	background: url("chrome://browser/skin/DownloadsPause.png") center no-repeat;
   }
 
   #toolbar-menubar #downloads-indicator-counter:not(:-moz-lwtheme),
@@ -497,3 +497,4 @@ toolbar[mode="full"] > #downloads-indicator > .toolbarbutton-text {
 #downloads-indicator-counter {
   margin-bottom: -1px;
 }
+	
