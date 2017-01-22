@@ -18,6 +18,7 @@
    @import url("chrome://browser/skin/foxscape/sub/BASE_Skin_the_tabview_button.css");
    @import url("chrome://browser/skin/foxscape/sub/BASE_Skin_the_alltabs_button.css");                                      /* NEW */
    @import url("chrome://browser/skin/foxscape/sub/BASE_Skin_the_bookmarks_menu_button.css");
+   @import url("chrome://browser/skin/foxscape/sub/BASE_Skin_the_history_menu_button.css");									/* NEW */
    @import url("chrome://browser/skin/foxscape/sub/BASE_Search_Bar_go_button_size_limit.css");
    @import url("chrome://browser/skin/foxscape/sub/BASE_Find_bar_cleanup.css");
    /* @import url("chrome://browser/skin/foxscape/sub/BASE_Web_console_filter_toolbar_cleanup_Fx.css"); */
