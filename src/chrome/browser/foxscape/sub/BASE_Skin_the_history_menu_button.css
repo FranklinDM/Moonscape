@@ -11,15 +11,15 @@
 }
 /* History menu button, hover */
 #history-menu-button:hover {
- -moz-image-region: rect(60px 32px 20px 0px) !important;  /* Hover */
+ -moz-image-region: rect(20px 32px 40px 0px) !important;  /* Hover */
 }
 /* History menu button, active */
 #history-menu-button[checked="true"],
 #history-menu-button[open="true"] {
- -moz-image-region: rect( 0px 32px 20px 0px) !important;  /* Normal */
+ -moz-image-region: rect(20px 32px 40px 0px) !important;  /* Hover */
 }
 #history-menu-button:hover:active {
- -moz-image-region: rect(20px 32px 40px 0px) !important;  /* Depressed */
+ -moz-image-region: rect(60px 32px 80px 0px) !important;  /* Depressed */
 }
 #history-menu-button[disabled="true"] {
  -moz-image-region: rect(40px 32px 60px 0px) !important;  /* Disabled */
@@ -33,25 +33,6 @@
  width: 32px !important;
  height: 17px !important;
 }
-
-/* vvvvvvvvvvvvvvvvv NOT USED vvvvvvvvvvvvvvvvv */
-/* History menu button - SMALL */
-toolbar[iconsize="small"] #history-menu-button {
-  -moz-image-region: rect(0px 128px 16px 112px);
-}
-/* History menu button, hover+active */
-toolbar[iconsize="small"] #history-menu-button:hover,
-toolbar[iconsize="small"] #history-menu-button[checked="true"],
-toolbar[iconsize="small"] #history-menu-button[open="true"] {
-  -moz-image-region: rect(16px 128px 32px 112px);
-}
-toolbar[iconsize="small"] #history-menu-button.history-item {
-  list-style-image: url("chrome://browser/skin/themed-Toolbar-small.png");
-}
-toolbar[iconsize="small"] #history-menu-button.toolbarbutton-1 {
-  -moz-box-orient: horizontal;
-}
-/* ^^^^^^^^^^^^^^^^^ NOT USED ^^^^^^^^^^^^^^^^^ */
 
 /*-------------------------------------------------------------------------
  * Remove history menu button dropmarker
