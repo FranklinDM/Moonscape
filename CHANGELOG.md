@@ -9,6 +9,8 @@
   - Devtools code on browser.css
 - Minor fix on the download button
 - Added history menu subskin
+- Change of directory (from foxscape to moonscape)
+- Changed splash logo (4 and 5)
 
 ## Moonscape 6.05 - 2017-01-21
 - Removed default subskins from global.css and moved it to its own css file (default_subskins.css)

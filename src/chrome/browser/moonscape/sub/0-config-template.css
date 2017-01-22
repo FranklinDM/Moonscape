@@ -1,0 +1,270 @@
+
+
+/* ########################################################################## */
+/* ##  Copy this text block and paste it at the bottom of userContent.css in  */
+/* ##  your profile-directory/chrome/ folder or create a new userContent.css  */
+/* ##  in your profile-directory/chrome/ folder with this text block in it.   */
+/* ##  Un-comment lines to enable them.  See FOXSCAPE readme for more info.   */
+/* [Settings]================================================================ */
+/* @import url("chrome://browser/skin/moonscape/sub/Gray_about_blank_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Gray_about_blank_with_splash-3.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Directory_Listing_-_style_2.css"); */
+/* ########################################################################## */
+
+
+/* ########################################################################## */
+/* ##  Copy this text block and paste it at the top of userChrome.css in your */
+/* ##  profile-directory/chrome/ folder or create a new userChrome.css in     */
+/* ##  your profile-directory/chrome/ with this text block in it and read     */
+/* ##  the [Firefox Requirement] section at the bottom of this text block.    */
+/* ##  Un-comment lines to enable them.  See FOXSCAPE readme for more info.   */
+/* ========================================================================== */
+/* [Add-ons]                                                                  */
+/* -import url("chrome://browser/skin/moonscape/sub/Skin_the_Work_Offline_extension1.css"); */ /* ------------------------------------ DEFAULT */
+/* @import url("chrome://browser/skin/moonscape/sub/Skin_the_Work_Offline_extension2.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Skin_the_Work_Offline_extension3.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Skin_the_Work_Offline_extension4.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Skin_the_Work_Offline_extension5.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Skin_the_Work_Offline_extension6.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Skin_the_Work_Offline_extension7.css"); */
+/* -import url("chrome://browser/skin/moonscape/sub/Work_Offline_-_Enable_outer_recessed_3D_frame_Fx.css"); */ /* -------------------- DEFAULT */
+/* @import url("chrome://browser/skin/moonscape/sub/Work_Offline_-_Disable_outer_recessed_3D_frame_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Work_Offline_-_Remove_button_text_Fx.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Status-4-Evar_-_Skin_the_download_button_and_remove_extra_padding.css"); */
+/* -import url("chrome://browser/skin/moonscape/sub/Status-4-Evar_-_Enable_outer_recessed_3D_frames_Fx.css"); */ /* ------------------ DEFAULT */
+/* @import url("chrome://browser/skin/moonscape/sub/Status-4-Evar_-_Disable_outer_recessed_3D_frames_Fx.css"); */
+/* -import url("chrome://browser/skin/moonscape/sub/Status-4-Evar_-_Bouncing_cylon_eye_progress_meter_(Always_visible).css"); */ /* -- DEFAULT */
+/* @import url("chrome://browser/skin/moonscape/sub/Status-4-Evar_-_Bouncing_cylon_eye_progress_meter_(Hiding).css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Status-4-Evar_-_Remove_progress_meter_outer_recessed_3D_frame_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Status-4-Evar_-_Gray_progress_meter_(Always_visible)_(No_frame)_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Status-4-Evar_-_Gray_progress_meter_(Always_visible)_(With_frame)_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Status-4-Evar_-_Gray_progress_meter_(Hiding)_(No_frame)_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Status-4-Evar_-_Gray_progress_meter_(Hiding)_(With_frame)_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Show_Status-4-Evar-download-button_text_label_on_right.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_Status-4-Evar-download-button_text_label.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Show_Status-4-Evar-options-button_text_label_on_right.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_Status-4-Evar-options-button_text_label.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* -import url("chrome://browser/skin/moonscape/sub/Skin_the_MinimizeToTray_revived_extension_16x16.css"); */ /* --------------------- DEFAULT */
+/* @import url("chrome://browser/skin/moonscape/sub/Skin_the_MinimizeToTray_revived_extension_16x14.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Show_MinimizeToTray_revived_button_text_label_on_right.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_MinimizeToTray_revived_button_text_label.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Restartless_Restart_-_Remove_extra_button_padding.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Restartless_Restart_-_Remove_button_text_label_Fx.css"); */
+/* -import url("chrome://browser/skin/moonscape/sub/Skin_the_Restartless_Restart_extension_appmenu_icon.css"); */ /* ----------------- DEFAULT */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Close_Button_by_Isaac_-_Remove_extra_button_padding_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Close_Button_by_Isaac_-_Remove_text_label_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Close_Button_by_Isaac_-_Show_text_label_below_button_Fx.css"); */
+/* ========================================================================== */
+/* [Misc]                                                                     */
+/* @import url("chrome://browser/skin/moonscape/sub/Full_screen_mode_window_controls_-_Disable_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Full_screen_mode_toolbar_enhancement_Fx.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_separators_between_toolbars_Fx.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* -import url("chrome://browser/skin/moonscape/sub/Toolbar_button_text_color_-_scheme_1.css"); */ /* -------------------------------- DEFAULT */
+/* @import url("chrome://browser/skin/moonscape/sub/Toolbar_button_text_color_-_scheme_2.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Tab_window_loading_gray_background_with_splash-3.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* -import url("chrome://browser/skin/moonscape/sub/Enable_tree_connecting_lines_-_dotted_Fx.css"); */ /* ---------------------------- DEFAULT */
+/* @import url("chrome://browser/skin/moonscape/sub/Enable_tree_connecting_lines_-_solid_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Disable_tree_connecting_lines_Fx.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Show_Subscribe_button_text_label_on_right_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_Subscribe_button_text_label_Fx.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Show_Tab_Groups_button_text_label_on_right_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_Tab_Groups_button_text_label_Fx.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_Home_button_text_label_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_Home_button_text_label_only_when_on_bookmarks_toolbar_Fx.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Show_bookmarks_menu_button_text_label_on_bottom_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Bookmarks_menu_button_-_Remove_text_label_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_bookmarks_menu_button_icon_Fx.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_zoom_control_button_text_labels_Fx.css"); */
+/* ========================================================================== */
+/* [Title Bar]                                                                */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_Appmenu_Button_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Tabs_in_Titlebar_in_restored_window_on_Windows_XP_Windows_Classic_Theme_Fx.css"); */			/* ## WORKS, BUT A BIT FLAKY ## */
+/* ========================================================================== */
+/* [Menu Bar]                                                                 */
+/* @import url("chrome://browser/skin/moonscape/sub/Menu_bar_text_color_scheme_-_Blue_on_hover_(Netscape)_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Menu_bar_item_hover_borders_like_Netscape_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Menu_popup_item_hover_borders_&_colors_like_Netscape_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_extra_Menu_Bar_padding_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_File_menu_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_Edit_menu_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_View_menu_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_History_menu_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_Bookmarks_menu_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Add_scrollbars_to_all_Bookmark_menus_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_Tools_menu_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_Help_menu_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Always_size_Menu_Bar_icons_small_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Always_size_Menu_Bar_icons_large_Fx.css"); */
+/* ========================================================================== */
+/* [Navigation Toolbar]                                                       */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_extra_Navigation_Toolbar_padding_Fx.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Enable_keyhole_back_and_forward_buttons.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_Back_button_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_Forward_button_Fx.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Toolbar_Downloads_button_-_style_2.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Toolbar_Downloads_button_-_style_3.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Toolbar_Bookmarks_button_-_style_2.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Toolbar_Bookmarks_button_-_style_3.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Toolbar_History_button_-_style_2.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Toolbar_History_button_-_style_3.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Throbber_-_force_small_(16x16).css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Throbber_-_force_medium_(20x20).css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Throbber_-_force_large_(32x32).css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Throbber_-_force_extra_large_(40x40).css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Throbber_-_auto_small_and_medium.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Throbber_-_auto_small_and_large.css"); */
+/* -import url("chrome://browser/skin/moonscape/sub/Throbber_-_auto_small,_large_and_extra_large.css"); */ /* ------------------------ DEFAULT */
+/* @import url("chrome://browser/skin/moonscape/sub/Throbber_-_Mozilla_auto_small_and_large.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Throbber_-_SeaMonkey_1.x_auto_small_and_large.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Throbber_-_SeaMonkey_2.x_auto_small_and_large.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Throbber_-_No_border_Fx.css"); */
+/* -import url("chrome://browser/skin/moonscape/sub/Throbber_-_Raised_2px_wide_3D_border_(Netscape)_Fx.css"); */ /* ------------------ DEFAULT */
+/* @import url("chrome://browser/skin/moonscape/sub/Throbber_-_Raised_2px_wide_3D_border_with_1px_gap_(Netscape)_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Throbber_-_Raised_3px_wide_3D_border_(Mozilla)_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Throbber_-_Raised_3px_wide_3D_border_with_1px_gap_(Mozilla)_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Throbber_-_Recessed_2px_wide_3D_border_on_busy_(Netscape)_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Throbber_-_Recessed_2px_wide_3D_border_with_1px_gap_on_busy_(Netscape)_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Throbber_-_Recessed_3px_wide_3D_border_on_busy_(Mozilla)_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Throbber_-_Recessed_3px_wide_3D_border_with_1px_gap_on_busy_(Mozilla)_Fx.css"); */
+/* ========================================================================== */
+/* [Location Toolbar]                                                         */
+/* @import url("chrome://browser/skin/moonscape/sub/Location_bar_&_search_bar_style_1_-_Minimal.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Location_bar_&_search_bar_style_2_-_Small.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Location_bar_&_search_bar_style_3_-_Netscape_4.css"); */
+/* -import url("chrome://browser/skin/moonscape/sub/Location_bar_&_search_bar_style_4_-_Firefox_3.6.css"); */ /* --------------------- DEFAULT */
+/* @import url("chrome://browser/skin/moonscape/sub/Location_bar_&_search_bar_style_5_-_Firefox_3.6_compact.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Location_bar_&_search_bar_style_6_-_Firefox_4.0.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Location_bar_&_search_bar_style_7_-_Firefox_4.0_compact.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Location_bar_-_Enable_left_end_text_label.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Location_bar_-_Enable_left_end_gray_background_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_location_bar_favicon_and_identity_button_Fx.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Location_bar_icons_-_Only_show_on_mouse_hover_and_focus_Fx.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* -import url("chrome://browser/skin/moonscape/sub/Page-proxy_-_style_1.css"); */ /* ------------------------------------------------ DEFAULT */
+/* @import url("chrome://browser/skin/moonscape/sub/Page-proxy_-_style_2.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Page-proxy_-_style_3.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Page-proxy_-_style_4.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Page-proxy_-_style_5.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_location_bar_identity_button_text_label_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Hide_'Go_to_a_Web_Site'_label_in_location_bar.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_location_bar_edit_bookmark_button_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_location_bar_add_and_edit_bookmark_buttons_Fx.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* -import url("chrome://browser/skin/moonscape/sub/Location_bar_go_button_-_style_1.css"); */ /* ------------------------------------ DEFAULT */
+/* @import url("chrome://browser/skin/moonscape/sub/Location_bar_go_button_-_style_2.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Location_bar_go_button_-_style_3.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_location_bar_Go_button_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Always_show_location_bar_Go_button_Fx.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Location_bar_-_Enable_right_end_gray_background_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_location_bar_dropmarker_button_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Use_native_dropmarker_button_on_location bar_Fx.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Always_show_URL_bar_combined_Go-Reload-Stop_Go_button_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Always_show_URL_bar_combined_Go-Reload-Stop_Reload_button_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Always_show_URL_bar_combined_Go-Reload-Stop_Stop_button_Fx.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* -import url("chrome://browser/skin/moonscape/sub/Location_&_search_splitter_grippy_-_Enable.css"); */ /* -------------------------- DEFAULT */
+/* @import url("chrome://browser/skin/moonscape/sub/Location_&_search_splitter_grippy_-_Disable.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Search_bar_icons_-_Only_show_on_mouse_hover_and_focus_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Search_bar_-_Enable_left_end_text_label_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Search_bar_-_Enable_left_end_gray_background_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_only_search_bar_search_engine_icon_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_only_search_bar_search_engine_dropmarker_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_search_bar_search_engine_icon_&_dropmarker_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_search_bar_search_engine_icon_&_dropmarker_(NO Keyboard Access)_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Search_bar_-_Hide_search_engine_name_label_Fx.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* -import url("chrome://browser/skin/moonscape/sub/Search_bar_go_button_-_style_1.css"); */ /* -------------------------------------- DEFAULT */
+/* @import url("chrome://browser/skin/moonscape/sub/Search_bar_go_button_-_style_2.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_Search-Go_button_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Search_bar_-_Enable_right_end_gray_background_Fx.css"); */
+/* ========================================================================== */
+/* [Bookmarks Toolbar (aka Personal Toolbar)]                                 */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_extra_Bookmarks_Toolbar_padding_Fx.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* -import url("chrome://browser/skin/moonscape/sub/Bookmarks_Toolbar_bookmark_icon_-_Windows_style.css"); */ /* --------------------- DEFAULT */
+/* @import url("chrome://browser/skin/moonscape/sub/Bookmarks_Toolbar_bookmark_icon_-_Linux_style.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Bookmarks_Toolbar_bookmark_icon_-_Mac_style.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Bookmarks_Toolbar_bookmark_icon_-_Mozilla,_SeaMonkey_style.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Bookmarks_Toolbar_bookmark_icon_-_Firefox_outline_style.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Bookmarks_Toolbar_bookmark_mouse_hover_as_a_link_(Mozilla)_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_Bookmarks_Toolbar_bookmark_icons_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_all_Bookmarks_Toolbar_icons_Fx.css"); */
+/* ========================================================================== */
+/* [Tab Bar]                                                                  */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_extra_Tab_Bar_padding_Fx.css"); */
+/* -import url("chrome://browser/skin/moonscape/sub/Tab_bar_tab_animation_-_Disable_Fx.css"); */ /* ---------------------------------- DEFAULT */
+/* @import url("chrome://browser/skin/moonscape/sub/Tab_bar_tab_animation_-_Enable_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Tab_bar_tab_animation_-_Enhance_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Tab_bar_text_style_-_Bold_when_selected_Fx.css"); */
+/* -import url("chrome://browser/skin/moonscape/sub/Tab_bar_text_color_scheme_-_Blue_on_hover_(Netscape)_Fx.css"); */ /* ------------- DEFAULT */
+/* @import url("chrome://browser/skin/moonscape/sub/Tab_bar_text_color_scheme_-_Blue_on_hover_and_selected_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Tab_bar_text_color_scheme_-_Always_black_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Tab_default_animated_favicon_-_style_1.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Tab_default_animated_favicon_-_style_2.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Tab_default_animated_favicon_-_style_3.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Tab_default_animated_favicon_-_style_4.css"); */ 
+/* @import url("chrome://browser/skin/moonscape/sub/Tab_default_animated_favicon_-_style_5.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/New_tab_button_on_tab_bar_-_Mozilla,_SeaMonkey_style.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Always_show_new_tab_button_on_right_end_of_the_tab_bar_Fx.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/List_all_tabs_button_on_tab_bar_-_Mozilla,_SeaMonkey_style.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/List_all_tabs_button_on_tab_bar_-_Always_visible_Fx.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* @import url("chrome://browser/skin/moonscape/sub/Close_buttons_-_style_2.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Close_buttons_-_style_3.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Close_buttons_-_style_4.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Close_buttons_-_style_5.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Close_buttons_-_style_6.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Close_buttons_-_style_7.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Close_buttons_-_style_8.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Tab_close_button_on_tabs_-_Never_shown_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Tab_close_button_on_tabs_-_Always_shown_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Tab_close_button_on_tabs_-_Only_show_on_mouse_hover_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Always_show_tab_close_button_at_far_right_end_of_tab_bar_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Tab_bar_close_button_-_Mozilla,_SeaMonkey_style.css"); */
+/* ========================================================================== */
+/* [Find Bar]                                                                 */
+/* @import url("chrome://browser/skin/moonscape/sub/Remove_extra_Find_Bar_padding_and_enlarge_textbox_Fx.css"); */
+/* ========================================================================== */
+/* [Add-on Bar (was Status Bar)]                                              */
+/* @import url("chrome://browser/skin/moonscape/sub/Addon_bar_button_hover_borders_like_Netscape_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Addon_bar_button_normal_and_hover_borders_like_Netscape_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Change_all_progress_meters_to_gray_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Change_all_progress_meters_to_black_Fx.css"); */
+/* ========================================================================== */
+/* [Show All Bookmarks (was Organize Bookmarks) / Library / Places]           */
+/* @import url("chrome://browser/skin/moonscape/sub/Library_Back_And_Forward_-_style_2.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Library_History_-_style_2.css"); */
+/* ========================================================================== */
+/* [Firefox Requirement]                                                      */
+/* If you create a new userChrome.css file that only contains this block of   */
+/* text, then you should un-comment the following line for proper function.   */
+/* @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); */
+/* ########################################################################## */

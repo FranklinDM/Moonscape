@@ -5,7 +5,7 @@
 @import url("chrome://global/skin/");
 
 /* Default subskins - Moved from global.css because the subskins get loaded 3 times */ 
-@import url("chrome://browser/skin/default_subskins.css");
+@import url("chrome://browser/skin/moonscape/default_subskins.css");
 /* Import padlock.css */
 @import url("chrome://browser/skin/padlock/padlock.css");
 /*#+++*/
@@ -4333,7 +4333,7 @@ toolbar[iconsize="small"] #alltabs-button[open]:active {
 
 /* Skin the Switch to tab icon */
 richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-icon {
-  list-style-image: url("chrome://browser/skin/foxscape/img/actionicon-tab.png") !important;
+  list-style-image: url("chrome://browser/skin/moonscape/img/actionicon-tab.png") !important;
   -moz-image-region: rect(0, 21px, 13px, 0) !important;
   padding: 0 3px !important;
 }
