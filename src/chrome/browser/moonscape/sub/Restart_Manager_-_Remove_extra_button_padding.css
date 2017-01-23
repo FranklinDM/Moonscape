@@ -1,7 +1,7 @@
 /**************************************************************************
- * Restartless Restart - Remove extra button padding
- * By: Michael Walden
+ * Restart Manager - Remove extra button padding
+ * By: Michael Walden, FranklinDM
  **/
-#restartlessrestart-toolbarbutton {
+#restman-button {
  min-width: 16px !important;
 }

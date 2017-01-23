@@ -1,21 +1,21 @@
 /**************************************************************************
- * Skin the Restartless Restart extension appmenu icon
- * By: Michael Walden
+ * Skin the Restart Manager appmenu icon
+ * By: Michael Walden, FranklinDM
  **/
 
-#appmenu_RestartItem {
+#restman-appMenuItem {
   list-style-image: url("chrome://browser/skin/moonscape/img/Restart-small.png") !important;
   -moz-image-region:rect(0px 16px 16px 0px) !important;
 }
 
-#appmenu_RestartItem:hover {
+#restman-appMenuItem:hover {
   -moz-image-region:rect(16px 16px 32px 0px) !important;
 }
 
-#appmenu_RestartItem:hover:active {
+#restman-appMenuItem:hover:active {
   -moz-image-region:rect(64px 16px 80px 0px) !important;
 }
 
-#appmenu_RestartItem[disabled="true"] {
+#restman-appMenuItem[disabled="true"] {
   -moz-image-region:rect(32px 16px 48px 0px) !important;
 }

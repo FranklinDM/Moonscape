@@ -51,9 +51,9 @@
 /* @import url("chrome://browser/skin/moonscape/sub/Show_MinimizeToTray_revived_button_text_label_on_right.css"); */
 /* @import url("chrome://browser/skin/moonscape/sub/Remove_MinimizeToTray_revived_button_text_label.css"); */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-/* @import url("chrome://browser/skin/moonscape/sub/Restartless_Restart_-_Remove_extra_button_padding.css"); */
-/* @import url("chrome://browser/skin/moonscape/sub/Restartless_Restart_-_Remove_button_text_label_Fx.css"); */
-/* -import url("chrome://browser/skin/moonscape/sub/Skin_the_Restartless_Restart_extension_appmenu_icon.css"); */ /* ----------------- DEFAULT */
+/* @import url("chrome://browser/skin/moonscape/sub/Restart_Manager_-_Remove_extra_button_padding.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Restart_Manager_-_Remove_button_text_label_Fx.css"); */
+/* -import url("chrome://browser/skin/moonscape/sub/Skin_the_Restart_Manager_extension_appmenu_icon.css"); */ /* ----------------- DEFAULT */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 /* @import url("chrome://browser/skin/moonscape/sub/Close_Button_by_Isaac_-_Remove_extra_button_padding_Fx.css"); */
 /* @import url("chrome://browser/skin/moonscape/sub/Close_Button_by_Isaac_-_Remove_text_label_Fx.css"); */
@@ -121,6 +121,9 @@
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 /* @import url("chrome://browser/skin/moonscape/sub/Toolbar_Bookmarks_button_-_style_2.css"); */
 /* @import url("chrome://browser/skin/moonscape/sub/Toolbar_Bookmarks_button_-_style_3.css"); */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* default */
+/* -import url("chrome://browser/skin/moonscape/sub/Toolbar_Restart_Manager_button.css"); */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 /* @import url("chrome://browser/skin/moonscape/sub/Toolbar_History_button_-_style_2.css"); */
 /* @import url("chrome://browser/skin/moonscape/sub/Toolbar_History_button_-_style_3.css"); */

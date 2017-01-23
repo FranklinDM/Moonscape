@@ -26,12 +26,13 @@
    @import url("chrome://browser/skin/moonscape/sub/BASE_Force_toolbar_background_visibility.css");
 
 /* Default subskins */
+   @import url("chrome://browser/skin/moonscape/sub/Toolbar_Restart_Manager_button.css");
    @import url("chrome://browser/skin/moonscape/sub/Skin_the_Work_Offline_extension1.css");
    @import url("chrome://browser/skin/moonscape/sub/Work_Offline_-_Enable_outer_recessed_3D_frame_Fx.css");
    @import url("chrome://browser/skin/moonscape/sub/Status-4-Evar_-_Enable_outer_recessed_3D_frames_Fx.css");
    @import url("chrome://browser/skin/moonscape/sub/Status-4-Evar_-_Bouncing_cylon_eye_progress_meter_(Always_visible).css");
    @import url("chrome://browser/skin/moonscape/sub/Skin_the_MinimizeToTray_revived_extension_16x16.css");
-   @import url("chrome://browser/skin/moonscape/sub/Skin_the_Restartless_Restart_extension_appmenu_icon.css");
+   @import url("chrome://browser/skin/moonscape/sub/Skin_the_Restart_Manager_extension_appmenu_icon.css");
    @import url("chrome://browser/skin/moonscape/sub/Toolbar_button_text_color_-_scheme_1.css");
    @import url("chrome://browser/skin/moonscape/sub/Enable_tree_connecting_lines_-_dotted_Fx.css");
    @import url("chrome://browser/skin/moonscape/sub/Throbber_-_auto_small,_large_and_extra_large.css");
