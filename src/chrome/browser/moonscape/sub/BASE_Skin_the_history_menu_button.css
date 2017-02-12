@@ -25,7 +25,7 @@
  -moz-image-region: rect(40px 32px 60px 0px) !important;  /* Disabled */
 }
 /* Personal tool bar special case */
-#PersonalToolbar #history-menu-button.history-item {
+#PersonalToolbar #history-menu-button {
   -moz-box-orient: horizontal !important;
 }
 /* Show full size icon on personal history bar */
