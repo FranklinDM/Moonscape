@@ -218,8 +218,7 @@
     -moz-border-end: none;
   }
   #appmenuSecondaryPane {
-    background-color: #f1f5fb;
-    box-shadow: 1px 0 2px rgb(204,214,234) inset;
+    background-color: -moz-dialog;
     -moz-padding-start: 3px;
     -moz-padding-end: 2px;
     padding-top: 2px;
@@ -233,7 +232,7 @@
 
   #appmenuSecondaryPane menupopup {
     -moz-appearance: none;
-    background-color: #f1f5fb;
+    background-color: -moz-dialog;
     border: 1px solid ThreeDShadow;
     padding: 2px;
   }
@@ -1134,7 +1133,7 @@ toolbar[iconsize="small"] #fullscreen-button[checked="true"] {
 #sync-button[status="active"],
 #sync-button[status="active"]:not([disabled="true"]):hover,
 #sync-button[status="active"][disabled="true"],
-#sync-button[status="active"]:not([disabled="true"]):hover:active {
+#sync-button[status="active"]:not([disabled="true"]):hover:active {	
   list-style-image: url("chrome://browser/skin/sync-throbber.png");
   -moz-image-region: auto;
 }
@@ -1935,36 +1934,7 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
   -moz-padding-start: 10px;
   border-radius: 0;
 }
-/*#---
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"],#nav-bar:not([currentset])) > #unified-back-forward-button + #urlbar-container > #urlbar > #identity-box {
-  border-radius: 0;
-}
 
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"],#nav-bar:not([currentset])) > #unified-back-forward-button[forwarddisabled] + #urlbar-container > #urlbar > #notification-popup-box[hidden] + #identity-box:-moz-locale-dir(ltr) {
-  padding-left: 5px;
-  transition: padding-left;
-}
-
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"],#nav-bar:not([currentset])) > #unified-back-forward-button[forwarddisabled] + #urlbar-container > #urlbar > #notification-popup-box[hidden] + #identity-box:-moz-locale-dir(rtl) {
-  padding-right: 5px;
-  transition: padding-right;
-}
-
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"],#nav-bar:not([currentset])) > #unified-back-forward-button[forwarddisabled]:hover:not([switchingtabs]) + #urlbar-container > #urlbar > #notification-popup-box[hidden] + #identity-box {
-  /* forward button hiding is delayed when hovered * /
-  -moz-transition-delay: 100s;
-}
-
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"],#nav-bar:not([currentset])) > #unified-back-forward-button[forwarddisabled]:not(:hover) + #urlbar-container > #urlbar > #notification-popup-box[hidden] + #identity-box:-moz-locale-dir(ltr) {
-  /* when not hovered anymore, trigger a new non-delayed transition to react to the forward button hiding * /
-  padding-left: 5.01px;
-}
-
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"],#nav-bar:not([currentset])) > #unified-back-forward-button[forwarddisabled]:not(:hover) + #urlbar-container > #urlbar > #notification-popup-box[hidden] + #identity-box:-moz-locale-dir(rtl) {
-  /* when not hovered anymore, trigger a new non-delayed transition to react to the forward button hiding * /
-  padding-right: 5.01px;
-}
-  ---*/
 #urlbar[pageproxystate="valid"] > #identity-box.chromeUI,
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity {
   -moz-margin-end: 4px;
@@ -3267,14 +3237,17 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 
 .KUI-panel {
   -moz-appearance: none;
-  background: rgba(27%,27%,27%,.9) url(KUI-background.png) repeat-x;
+  background-color: -moz-Dialog;
   color: white;
-  border-style: none;
-  border-radius: 20px;
+/*  border-style: none;*/	
+  -moz-border-top-colors:   ThreeDHighlight ThreeDLightShadow;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors:  ThreeDHighlight ThreeDLightShadow;
 }
 
 .KUI-panel[level="top"] {
-  background-color: rgba(27%,27%,27%,.65);
+  background-color: -moz-Dialog;
 }
 
 .KUI-panel-closebutton {
@@ -3301,7 +3274,7 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 #ctrlTab-panel {
   padding: 20px 10px 10px;
   font-weight: bold;
-  text-shadow: 0 0 1px rgb(27%,27%,27%), 0 0 2px rgb(27%,27%,27%);
+  color: -moz-DialogText;
 }
 
 .ctrlTab-favicon[src] {
@@ -4509,18 +4482,6 @@ toolbar[iconsize="small"] #bookmarks-menu-button[open]:active {
     -moz-binding: url("chrome://global/content/bindings/toolbar.xml#toolbar-drag");
   }
 
-  /* Make the menu toolbar and tabs toolbar transparent in Aero+glass IIF tabs are on top and menu toolbar is autohidden */
-  #main-window[sizemode="maximized"] #navigator-toolbox[tabsontop="true"] > #toolbar-menubar[autohide="true"],
-  #main-window[sizemode="maximized"] #navigator-toolbox[tabsontop="true"] > #toolbar-menubar[autohide="true"] ~ #TabsToolbar {
-    background-color: transparent;
-    /* Give text an aura to make it more readable on glass */
-    text-shadow: 0 0 .5em white, 0 0 .5em white, 0 0 .5em white, 0 0 .5em white, 0 1px 0 rgba(255,255,255,.4);
-  }
-  #main-window[sizemode="maximized"] #navigator-toolbox[tabsontop="true"] > #toolbar-menubar[autohide="true"] #main-menubar:not(:-moz-lwtheme):not(:-moz-window-inactive) {
-    background-color: rgba(255,255,255,.5);
-    border-radius: 4px;
-  }
-
   #appcontent:not(:-moz-lwtheme) {
     background-color: -moz-dialog;
   }
@@ -4568,13 +4529,6 @@ toolbar[iconsize="small"] #bookmarks-menu-button[open]:active {
     border: none;
     font: normal 1.2em "Segoe UI";
     color: black;
-    text-shadow: white -1px -1px .35em, white -1px 1px .35em, white 1px 1px .35em, white 1px -1px .35em;
-  }
-
-  #tab-view:-moz-lwtheme {
-    background-image: url("chrome://browser/skin/tabview/grain.png"),
-                      linear-gradient(rgba(255,255,255,0), #CCD9EA 200px, #C7D5E7);
-    background-attachment: fixed;
   }
 }
 
