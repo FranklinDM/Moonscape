@@ -1,0 +1,28 @@
+/**************************************************************************
+ * Tab bar text color scheme - Blue on hover (Netscape)
+ * By: Michael Walden
+ **/
+/* Unselected tab */
+.tabmail-tab:not(:-moz-lwtheme) {
+  color: #000000 !important;
+}
+/* Unselected tab with hover */
+.tabmail-tab:hover:not(:-moz-lwtheme) {
+  color: #0000FF !important;
+}
+/* Selected tab */
+.tabmail-tab[selected="true"]:not(:-moz-lwtheme) {
+  color: #000000 !important;
+}
+/* Selected tab with hover */
+.tabmail-tab[selected="true"]:hover:not(:-moz-lwtheme) {
+  color: #0000FF !important;
+}
+/* Active tab */
+.tabmail-tab[selected="true"]:hover:active:not(:-moz-lwtheme) {
+  color: #000080 !important;
+}
+/* Unselected tab in a persona */
+.tabmail-tab:-moz-lwtheme {
+  color: inherit !important;
+}

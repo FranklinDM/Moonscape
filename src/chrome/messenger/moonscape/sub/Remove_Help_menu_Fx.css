@@ -1,0 +1,5 @@
+/**************************************************************************
+ * Remove Help menu
+ * By: Michael Walden
+ **/
+menu[label="Help"] { display: none !important; }

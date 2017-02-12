@@ -1,0 +1,5 @@
+/**************************************************************************
+ * Remove History menu (was Go menu befor Firefox 2.0)
+ * By: Michael Walden
+ **/
+menu[label="History"] { display: none !important; }

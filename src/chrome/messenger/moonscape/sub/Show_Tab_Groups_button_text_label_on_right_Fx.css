@@ -1,0 +1,5 @@
+/**************************************************************************
+ * Show Tab Groups button text label on right
+ * By: Michael Walden
+ **/
+ #tabview-button { -moz-box-orient: horizontal !important; } 

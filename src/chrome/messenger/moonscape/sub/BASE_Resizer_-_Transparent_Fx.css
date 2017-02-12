@@ -1,0 +1,8 @@
+/**************************************************************************
+ * Resizer - Transparent
+ * By: Michael Walden
+ **/
+#addon-bar resizer {
+  -moz-appearance: none !important;
+  background: url("chrome://global/skin/icons/resizer.png") no-repeat bottom !important;
+}

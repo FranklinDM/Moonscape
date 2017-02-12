@@ -1,0 +1,5 @@
+/**************************************************************************
+ * Always show tab close button at far right end of tab bar
+ * By: Michael Walden
+ **/
+.tabs-closebutton { visibility: visible !important; }

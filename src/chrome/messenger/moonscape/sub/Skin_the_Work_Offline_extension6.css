@@ -1,0 +1,19 @@
+/**************************************************************************
+ * Skin the Work Offline extension #6
+ * By: Michael Walden
+ * Inspired by: Mozilla Milestone 16 to Mozilla Milestone 18
+ **/
+
+#aOffline-status > .toolbarbutton-icon {
+  list-style-image: url("chrome://browser/skin/moonscape/img/Offline-Online6.png") !important;
+  -moz-image-region:rect(0px 40px 12px 20px) !important;
+  width: 20px !important;
+  height: 12px !important;
+  margin: 3px 0px 3px 0px !important;
+}
+#aOffline-status[offline="true"] > .toolbarbutton-icon {
+  -moz-image-region:rect(0px 20px 12px 0px) !important;
+  width: 20px !important;
+  height: 12px !important;
+  margin: 3px 0px 3px 0px !important;
+}
