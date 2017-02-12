@@ -1,6 +1,6 @@
 ﻿# Moonscape Messenger
 ![Preview](https://github.com/FranklinDM/Moonscape-Messenger/blob/master/src/preview.png)
-**Moonscape Messenger** - Based on Classic TB2 and Moonscape Classic. Now, you can experience the classic theme that was featured in earlier versions of Netscape for FossaMail and/or Thunderbird (not tested).
+**Moonscape Messenger** - Based on Classic TB2 and Foxscape. Now, you can experience the classic theme that was featured in earlier versions of Netscape for FossaMail.
 
 ## License
 Portions of the code contained in this theme are covered by the following licenses:
