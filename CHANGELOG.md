@@ -1,6 +1,14 @@
 # Changelog
 
-## Moonscape 6.07 - 2017-01-22
+## Moonscape Classic 6.10 - 2017-01-??
+- Skin Restart Manager instead of Restartless Restart (subskin renamed)
+- Code cleanup, remove unused files
+- Improved appearance and resolution of some icons
+- Separate devtools styling from browser.css
+- Popup styling
+- Updates to internal documentation (readme, icon pack instructions)
+
+## Moonscape Classic 6.07 - 2017-01-22
 - Removed support for PM26
 - Created padlock.css, fixes the missing/double padlock icon in the identity bar
 - Reflect changes from PM26-27
@@ -12,7 +20,7 @@
 - Change of directory (from foxscape to moonscape)
 - Changed splash logo (4 and 5)
 
-## Moonscape 6.05 - 2017-01-21
+## Moonscape Classic 6.05 - 2017-01-21
 - Removed default subskins from global.css and moved it to its own css file (default_subskins.css)
   which is referenced by browser.css instead because it gets loaded 3 times in the past.
   This (somehow) led to an increase in memory usage.
@@ -20,7 +28,7 @@
 - Added homepage url to install.rdf
 - Fix for the missing RSS icon in the address bar.
 
-## Moonscape 6.00 - 2016-12-25
+## Moonscape Classic 6.00 - 2016-12-25
 - Committed the project to GitHub, renamed.
 - Updated manifest files. (supports PM26-27)
 

@@ -1,2 +1,2 @@
-# Hide the new rewritten source for this theme
-newsrc/
+packages/
+compile.bat

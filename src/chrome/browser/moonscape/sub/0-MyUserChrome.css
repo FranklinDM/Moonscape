@@ -3,7 +3,8 @@
 /* ##  profile-directory/chrome/ folder or create a new userChrome.css in     */
 /* ##  your profile-directory/chrome/ with this text block in it and read     */
 /* ##  the [Firefox Requirement] section at the bottom of this text block.    */
-/* ##  Un-comment lines to enable them.  See FOXSCAPE readme for more info.   */
+/* ##  You may also paste the contents of this file as a user style.		  */
+/* ##  Un-comment lines to enable them.  See MOONSCAPE readme for more info.  */
 /* ========================================================================== */
 /* [Add-ons]                                                                  */
 /* -import url("chrome://browser/skin/moonscape/sub/Skin_the_Work_Offline_extension1.css"); */ /* ------------------------------------ DEFAULT */
