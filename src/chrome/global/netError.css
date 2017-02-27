@@ -12,7 +12,7 @@
  */
 
 html {
-  background: -moz-Dialog;
+  background: rgb(192, 192, 192);
 }
 
 body {
@@ -48,7 +48,7 @@ ul {
   max-width: 52em;
   margin: 4em auto;
   border: 1px solid ThreeDShadow;
-  border-radius: 10px;
+  border-radius: 0px;
   padding: 3em;
   -moz-padding-start: 30px;
   background: url("chrome://global/skin/icons/warning-large.png") left 0 no-repeat -moz-Field;
