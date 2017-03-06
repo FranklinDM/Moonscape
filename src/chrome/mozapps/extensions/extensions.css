@@ -4,7 +4,6 @@
 
 @import url("chrome://global/skin/inContentUI.css");
 
-
 .nav-button {
   list-style-image: url(chrome://mozapps/skin/extensions/navigation.png);
 }
@@ -42,9 +41,7 @@
 }
 
 #addons-page[warning] .global-warning-container {
-  background-color: rgba(255, 255, 0, 0.1);
-  background-image: url("chrome://mozapps/skin/extensions/stripes-warning.png");
-  background-repeat: repeat-x;
+  background-color: rgb(255, 255, 224);
 }
 
 #detail-view .global-warning {
@@ -130,12 +127,15 @@
 .alert {
   -moz-box-align: center;
   padding: 10px;
-  color: #373D48;
-  border: 1px solid #A8B8D1;
-  border-radius: 8px;
-  background-image: linear-gradient(#FFF, #ECF1F7);
+  color: black;
   background-clip: padding-box;
-  box-shadow: 2px 2px 4px #999; 
+  background: -moz-dialog !important;
+  border:    2px solid !important;
+  -moz-border-top-colors:   -moz-dialog rgba(0, 0, 0, 0.2) !important;
+  -moz-border-right-colors: -moz-dialog ThreeDDarkShadow !important;
+  -moz-border-left-colors:  -moz-dialog rgba(0, 0, 0, 0.2) !important;
+  -moz-border-bottom-colors: -moz-dialog ThreeDDarkShadow !important;
+  box-shadow: 0px 0px 0px rgb(153, 153, 153) !important;
 }
 
 .alert .alert-title {
@@ -179,19 +179,6 @@
   overflow: hidden;
 }
 
-@media (-moz-os-version: windows-vista),
-       (-moz-os-version: windows-win7) {
-  .category:-moz-locale-dir(ltr) {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
-
-  .category:-moz-locale-dir(rtl) {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
-}
-
 .category[disabled] {
   border-top: 0;
   border-bottom: 0;
@@ -208,10 +195,10 @@
 }
 
 .category[selected] {
-  background-color: rgba(255, 255, 255, 0.4);
   color: #252F3B;
-  border-color: #C3CEDF;
-  -moz-border-end-color: #E2E9F2;
+  background: white;
+  border-radius: 0px;
+  border-color: ThreeDShadow;
 }
 
 .category-name {
@@ -299,39 +286,16 @@
   }
 }
 
-@media (-moz-windows-default-theme) {
-  #header-search {
-    -moz-appearance: none;
-    border: 1px solid rgba(0, 0, 0, 0.32);
-    padding-bottom: 2px;
-    background-color: rgba(255, 255, 255, 0.4);
-  }
-
-@media (-moz-os-version: windows-vista),
-       (-moz-os-version: windows-win7) {
-  #header-search {
-    border-radius: 2.5px;
-  }
-}
-
-  #header-search:hover {
-    background-color: rgba(255, 255, 255, .75);
-  }
-
-  #header-search[focused] {
-    background-color: white;
-  }
+#header-search {
+  -moz-appearance: none;
+  border: 1px solid rgba(0, 0, 0, 0.32);
+  padding-bottom: 2px;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 #header-utils-btn {
   list-style-image: url("chrome://mozapps/skin/extensions/utilities.png");
   -moz-margin-end: 16px;
-}
-
-@media not all and (-moz-windows-default-theme) {
-  #header-utils-btn {
-    list-style-image: url("chrome://mozapps/skin/extensions/utilities.png");
-  }
 }
 
 .view-header {
@@ -341,7 +305,6 @@
   min-height: 31px;
   border-bottom: 1px solid #CAD4E0;
 }
-
 
 /*** sorters ***/
 
@@ -353,8 +316,6 @@
   -moz-appearance: none;
   border: none;
   background-color: transparent;
-  color: #536680;
-  border-radius: 10000px;
   padding: 0 6px;
   margin: 0 6px;
   min-width: 12px !important;
@@ -368,8 +329,10 @@
 
 .sorter[checkState="1"],
 .sorter[checkState="2"] {
-  background-color: rgba(194, 200, 206, 0.4);
-  box-shadow: 1px 1px 2px #B6BBC4 inset;
+  /* set to important because greasemonkey overrides these properties */
+  background-color: Highlight !important;
+  color: HighlightText !important;
+  box-shadow: none !important;
 }
 
 .sorter[checkState="1"] {
@@ -624,8 +587,6 @@
 
 .addon[active="false"] {
   background-color: rgba(135, 135, 135, 0.1);
-  background-image: linear-gradient(rgba(135, 135, 135, 0),
-                                    rgba(135, 135, 135, 0.1));
 }
 
 .addon-view[active="false"],
@@ -634,34 +595,22 @@
 }
 
 .addon-view[notification="warning"] {
-  background-image: url("chrome://mozapps/skin/extensions/stripes-warning.png"),
-                    linear-gradient(rgba(255, 255, 0, 0.04),
-                                    rgba(255, 255, 0, 0));
-  background-repeat: repeat-x;
+  background-color: rgb(255, 255, 224);
 }
 
 .addon-view[notification="error"] {
-  background-image: url("chrome://mozapps/skin/extensions/stripes-error.png"),
-                    linear-gradient(rgba(255, 0, 0, 0.04),
-                                    rgba(255, 0, 0, 0));
-  background-repeat: repeat-x;
+  background-color: rgb(255, 204, 204);
 }
 
 .addon-view[pending="enable"],
 .addon-view[pending="upgrade"],
 .addon-view[pending="install"] {
-  background-image: url("chrome://mozapps/skin/extensions/stripes-info-positive.png"),
-                    linear-gradient(rgba(0, 255, 0, 0.04),
-                                    rgba(0, 255, 0, 0));
-  background-repeat: repeat-x;
+  background-color: rgb(184, 245, 181);
 }
 
 .addon-view[pending="disable"],
 .addon-view[pending="uninstall"] {
-  background-image: url("chrome://mozapps/skin/extensions/stripes-info-negative.png"),
-                    linear-gradient(rgba(128, 128, 128, 0.04),
-                                    rgba(128, 128, 128, 0));
-  background-repeat: repeat-x;
+  background-color: rgb(211, 211, 211);
 }
 
 .addon[selected] {
@@ -712,12 +661,11 @@
   -moz-appearance: none;
   padding: 0 6px;
   margin: 0 3px;
-  border-radius: 10000px;
 }
 
 .search-filter-radio[selected] {
-  background-color: grey;
-  color: white;
+  background-color: Highlight;
+  color: HighlightText;
 }
 
 .search-filter-radio .radio-check-box1 {

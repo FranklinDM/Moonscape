@@ -253,7 +253,7 @@
 /* @import url("chrome://browser/skin/moonscape/sub/Library_Back_And_Forward_-_style_2.css"); */
 /* @import url("chrome://browser/skin/moonscape/sub/Library_History_-_style_2.css"); */
 /* ========================================================================== */
-/* [Firefox Requirement]                                                      */
+/* [Requirement]                                                      		  */
 /* If you create a new userChrome.css file that only contains this block of   */
 /* text, then you should un-comment the following line for proper function.   */
 /* @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); */
