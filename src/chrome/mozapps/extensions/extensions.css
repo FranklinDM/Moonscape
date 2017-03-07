@@ -1103,24 +1103,16 @@ button.button-link:not([disabled="true"]):active:hover {
 }
 
 .header-button {
-  -moz-appearance: none;
-  padding: 1px 3px;
-  color: #444;
-  text-shadow: 0 0 3px white;
-  background: linear-gradient(rgba(251, 252, 253, 0.95), transparent 49%, 
-                              rgba(211, 212, 213, 0.45) 51%, rgba(225, 226, 229, 0.3));
-  background-clip: padding-box;
-  border: 1px solid rgba(31, 64, 100, 0.4);
-  border-top-color: rgba(31, 64, 100, 0.3);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25) inset,
-              0 0 2px 1px rgba(255, 255, 255, 0.25) inset;
-}
-
-@media (-moz-os-version: windows-vista),
-       (-moz-os-version: windows-win7) {
-  .header-button {
-    border-radius: 2.5px;
-  }
+  -moz-appearance: button;
+  margin: 1px 5px 2px 5px;
+  border: 3px solid;
+  -moz-border-top-colors: transparent ThreeDHighlight ThreeDLightShadow;
+  -moz-border-right-colors: transparent ThreeDDarkShadow ThreeDShadow;
+  -moz-border-bottom-colors: transparent ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors: transparent ThreeDHighlight ThreeDLightShadow;
+  background-color: ThreeDFace;
+  color: ButtonText;
+  text-shadow: none;
 }
 
 .header-button[disabled="true"] {
@@ -1131,40 +1123,6 @@ button.button-link:not([disabled="true"]):active:hover {
   opacity: 0.4;
 }
 
-.header-button:not([disabled="true"]):active:hover,
-.header-button[open="true"] {
-  background-color: rgba(61, 76, 92, 0.2);
-  border-color: rgba(39, 53, 68, 0.5);
-  box-shadow: 0 0 3px 1px rgba(39, 53, 68, 0.2) inset;
-}
-
 .header-button > .toolbarbutton-text {
   display: none;
-}
-
-/*** telemetry experiments ***/
-
-#detail-experiment-container {
-  font-size: 80%;
-  margin-bottom: 1em;
-}
-
-#detail-experiment-bullet-container,
-#detail-experiment-state,
-#detail-experiment-time,
-.experiment-bullet-container,
-.experiment-state,
-.experiment-time {
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.addon .experiment-bullet,
-#detail-experiment-bullet {
-  fill: rgb(158, 158, 158);
-}
-
-.addon[active="true"] .experiment-bullet,
-#detail-view[active="true"] #detail-experiment-bullet {
-  fill: rgb(106, 201, 20);
 }
