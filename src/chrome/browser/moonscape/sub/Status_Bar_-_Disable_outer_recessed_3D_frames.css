@@ -1,0 +1,9 @@
+/**************************************************************************
+ * Status Bar - Enable outer recessed 3D frames
+ * By: FranklinDM
+ **/
+ 
+#addon-bar toolbarbutton,
+#addon-bar toolbarbutton > .toolbarbutton-menubutton-button {
+  border: 0px solid !important;
+}

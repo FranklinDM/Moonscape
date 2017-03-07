@@ -15,7 +15,7 @@
 /* ##  Copy this text block and paste it at the top of userChrome.css in your */
 /* ##  profile-directory/chrome/ folder or create a new userChrome.css in     */
 /* ##  your profile-directory/chrome/ with this text block in it and read     */
-/* ##  the [Firefox Requirement] section at the bottom of this text block.    */
+/* ##  the [Requirement] section at the bottom of this text block.    */
 /* ##  You may also paste the contents of this file as a user style.		  */
 /* ##  Un-comment lines to enable them.  See MOONSCAPE readme for more info.  */
 /* ========================================================================== */
@@ -256,11 +256,13 @@
 /* [Find Bar]                                                                 */
 /* @import url("chrome://browser/skin/moonscape/sub/Remove_extra_Find_Bar_padding_and_enlarge_textbox_Fx.css"); */
 /* ========================================================================== */
-/* [Add-on Bar (was Status Bar)]                                              */
+/* [Status Bar]					                                              */
 /* @import url("chrome://browser/skin/moonscape/sub/Addon_bar_button_hover_borders_like_Netscape_Fx.css"); */
 /* @import url("chrome://browser/skin/moonscape/sub/Addon_bar_button_normal_and_hover_borders_like_Netscape_Fx.css"); */
 /* @import url("chrome://browser/skin/moonscape/sub/Change_all_progress_meters_to_gray_Fx.css"); */
 /* @import url("chrome://browser/skin/moonscape/sub/Change_all_progress_meters_to_black_Fx.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Status_Bar_-_Enable_outer_recessed_3D_frames.css"); */
+/* @import url("chrome://browser/skin/moonscape/sub/Status_Bar_-_Disable_outer_recessed_3D_frames.css"); */
 /* ========================================================================== */
 /* [Show All Bookmarks (was Organize Bookmarks) / Library / Places]           */
 /* @import url("chrome://browser/skin/moonscape/sub/Library_Back_And_Forward_-_style_2.css"); */

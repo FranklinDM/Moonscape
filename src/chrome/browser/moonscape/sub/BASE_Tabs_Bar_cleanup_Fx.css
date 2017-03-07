@@ -139,5 +139,5 @@
 }
 .tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] .tab-icon-image:not(:-moz-lwtheme),
 .tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] .tab-throbber:not(:-moz-lwtheme) {
-  margin-top: 3px !important;
+  margin-top: 0px; /* was 3px */
 }
