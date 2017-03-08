@@ -132,6 +132,18 @@ richlistitem[type="download"]:first-child {
 }
 
 @media (-moz-windows-default-theme) {
+  richlistitem[type="download"] {
+    border: 1px solid transparent;
+    border-bottom: 1px solid hsl(213,40%,90%);
+  }
+
+  #downloadsPanel:not([keyfocus]) > #downloadsListBox > richlistitem[type="download"][state="1"][exists]:hover {
+    border: 1px solid hsl(213,45%,65%);
+    box-shadow: 0 0 0 1px hsla(0,0%,100%,.5) inset,
+                0 1px 0 hsla(0,0%,100%,.3) inset;
+    background-image: linear-gradient(hsl(212,86%,92%), hsl(212,91%,86%));
+    color: black;
+  }
   richlistitem[type="download"]:last-child {
     border-bottom: 1px solid transparent;
   }
@@ -442,7 +454,6 @@ toolbar[brighttext] #downloads-indicator-counter {
   background-image: linear-gradient(transparent 1px, rgba(255, 255, 255, 0.4) 1px, rgba(255, 255, 255, 0.4) 2px, transparent 2px), none;
   border: 1px solid;
   border-color: rgba(0,43,86,.6) rgba(0,43,86,.4) rgba(0,43,86,.4);
-  border-radius: 2px 0 0 2px;
 }
 
 #downloads-indicator-progress > .progress-remainder {
@@ -453,7 +464,6 @@ toolbar[brighttext] #downloads-indicator-counter {
   border: 1px solid;
   border-color: hsla(0,0%,0%,.6) hsla(0,0%,0%,.4) hsla(0,0%,0%,.4);
   -moz-border-start: none;
-  border-radius: 0 2px 2px 0;
 }
 
 #downloads-indicator[paused] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-progress > .progress-bar {
@@ -471,4 +481,15 @@ toolbar[mode="full"] > #downloads-indicator > .toolbarbutton-text {
 
 #downloads-indicator-counter {
   margin-bottom: -1px;
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Fix small Downloads indicator button */
+[iconsize="small"] #downloads-indicator-anchor,
+[iconsize="small"] #downloads-indicator-icon {
+  min-height: 16px !important;
+}
+[iconsize="small"] #downloads-indicator-counter {
+  margin: 2px 0px 0px 0px !important;
 }
