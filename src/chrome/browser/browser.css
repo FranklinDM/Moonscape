@@ -10,7 +10,7 @@
 @import url("chrome://browser/skin/devtools.css");
 /* Import padlock.css */
 @import url("chrome://browser/skin/padlock/padlock.css");
-/* OS-specific browser overrides */
+/* os-specific browser overrides */
 @import url("chrome://os_target/skin/browser-override.css");
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
@@ -1873,7 +1873,7 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 
 .searchbar-engine-button,
 .search-go-container {
-  padding: 2px 2px;
+  padding: 0px 2px;
 }
 
 .urlbar-icon:hover {
@@ -2005,13 +2005,12 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 }
 
 /* page proxy icon */
-
 #page-proxy-favicon {
   width: 16px;
   height: 16px;
-  margin-top: 1px;
-  margin-bottom: 1px;
-  -moz-margin-start: 3px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  -moz-margin-start: 2px;
   -moz-margin-end: 2px;
   list-style-image: url(chrome://browser/skin/identity-icons-generic.png);
   -moz-image-region: rect(0, 16px, 16px, 0);
@@ -2035,7 +2034,7 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 }
 */
 
-#identity-box:hover > #page-proxy-favicon {
+#identity-box:hover > 	 {
   -moz-image-region: rect(0, 32px, 16px, 16px);
 }
 
@@ -2143,108 +2142,39 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
   -moz-margin-start: 0;
   padding: 0;
   border: none;
-/*#+++*/
-/*#---
-  margin: -2px;
-  -moz-margin-start: 0;
-  padding: 0 3px;
-  background-origin: border-box;
-  border: none;
-  -moz-border-start: 1px solid rgba(0,0,0,.25);
-  box-shadow: 0 1px 0 rgba(0,0,0,.1) inset,
-              -1px -1px 1px rgba(255,255,255,.25) inset;
 }
 
-#urlbar:-moz-locale-dir(ltr) > toolbarbutton {
-  border-top-right-radius: 1.5px;
-  border-bottom-right-radius: 1.5px;
-}
-
-#urlbar:-moz-locale-dir(rtl) > toolbarbutton {
-  border-top-left-radius: 1.5px;
-  border-bottom-left-radius: 1.5px;
-}
-
-#urlbar > toolbarbutton:not([disabled]):active:hover,
-#urlbar-reload-button:not(:hover) {
-  -moz-border-start-style: none;
-  -moz-padding-start: 4px;
-  box-shadow: none;
-}
-
-#urlbar > toolbarbutton:not([disabled]):active:hover {
-  box-shadow: 0 0 6.5px rgba(0,0,0,.4) inset,
-              0 0 2px rgba(0,0,0,.4) inset;
-}
-  ---*/
-}
-/*#+++*/
 #urlbar > toolbarbutton:-moz-lwtheme-brighttext {
   list-style-image: url("chrome://browser/skin/myToolbar-inverted.png");
 }
-/*#+++*/
-
 #urlbar-go-button {
-/*#+++*/
   -moz-image-region: rect(120px, 118px, 144px, 96px); 
-/*#+++*/
 }
-
 #urlbar-go-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
   transform: scaleX(-1);
 }
 
 #urlbar-go-button:hover {
-/*#+++*/
   -moz-image-region: rect(144px, 118px, 168px, 96px);
 }
 #urlbar-go-button:hover:active {
   -moz-image-region: rect(192px, 118px, 216px, 96px); 
-/*#+++*/ 
 }
-
 #urlbar-reload-button {
-/*#---
-  -moz-image-region: rect(0px, 14px, 14px, 0px);
-  ---*/
-/*#+++*/
   -moz-image-region: rect(120px, 94px, 144px, 72px); 
-/*#+++*/
 }
-
 #urlbar-reload-button:not([disabled]):hover {
-/*#+++*/
   -moz-image-region: rect(144px, 94px, 168px, 72px);
-/*#+++*/
-/*#---  -moz-image-region: rect(0px, 28px, 14px, 14px);
-  background-image: linear-gradient(rgb(162,207,241), rgb(111,178,225) 49%, rgb(91,159,217) 51%, rgb(62,138,200));
-  ---*/
 }
-/*#+++*/
 #urlbar-reload-button:not([disabled]):hover:active {
   -moz-image-region: rect(192px, 94px, 216px, 72px);
 }
-/*#+++*/
-
 #urlbar-stop-button {
-/*#+++*/
   -moz-image-region: rect(120px, 70px, 144px, 48px); 
-/*#+++*/
-/*#---
-	-moz-image-region: rect(0px, 42px, 14px, 28px);
-  background-image: linear-gradient(rgb(231,162,140), rgb(209,119,100) 49%, rgb(193,92,78) 51%, rgb(173,72,58));
-  ---*/
 }
-
 #urlbar-stop-button:hover {
-/*#---
-  background-image: linear-gradient(rgb(244,156,128), rgb(215,101,77) 49%, rgb(194,66,48) 51%, rgb(170,41,23));
-  ---*/
-/*#+++*/
   -moz-image-region: rect(144px, 70px, 168px, 48px); 
-/*#+++*/
 }
-/*#+++*/
 #urlbar-stop-button:hover:active {
   -moz-image-region: rect(192px, 70px, 216px, 48px); 
 }
@@ -2401,7 +2331,7 @@ toolbar:not([mode="text"]):not([iconsize="small"]) > #navigator-throbber:hover:a
 
 /*#+++*/
 toolbar:not([mode="text"]):not([iconsize="small"]) #navigator-throbber {
-  padding: 0px 4px 0px 4px !important;
+  padding: 0px 0px 0px 0px !important;
 }
 /*#+++*/
 
@@ -2436,7 +2366,7 @@ toolbar:not([mode="text"]):not([iconsize="small"]) #navigator-throbber {
   background-repeat: no-repeat;
   margin: 0;
   padding: 2px 0 4px;
-  border-width: 4px 3px 0;
+  border-width: 2px 2px 0;
   border-style: solid;
   border-image: url(tabbrowser/tab.png) 4 3 0 fill repeat stretch;
   border-radius: 0;
@@ -3511,35 +3441,9 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 
 /* vvvvvvvvvvvvvvvvvvvvvvvvvvvvv Simple Green Adjustments by M.W. - Begin vvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
 
-/* remove extra vertical space from search bar */
-/* search-go-container chrome://browser/skin/browser.css line 2293 */
-.searchbar-engine-button,
-.search-go-container {
-  padding: 0px 2px !important;
-}
-
-/* remove extra vertical space from Tabs on tab bar */
-.tabbrowser-tab,
-.tabs-newtab-button {
-  border-width: 2px 2px 0 !important;
-}
-
-/* remove extra space around throbber */
-toolbar:not([mode="text"]):not([iconsize="small"]) #navigator-throbber {
-  padding: 0px 0px 0px 0px !important;
-}
-
 /* remove extra space around small Tab Groups button */
 toolbar[iconsize="small"] #tabview-button > image {
   margin: -1px !important;
-}
-
-/* make page-proxy-favicon full size */
-#page-proxy-favicon {
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-  -moz-margin-start: 2px !important;
-  -moz-margin-end: 2px !important;
 }
 
 /* Status panel clean up */
@@ -3660,13 +3564,13 @@ toolbar[iconsize="small"] #bookmarks-menu-button[open]:active {
 /* ############################################################################## M.W. -  JEZ Additions START */
 
 /* Other-than-Aero specific */
-@media not all and (-moz-windows-theme: aero) {
+/*@media not all and (-moz-windows-theme: aero) {
   @media all and (-moz-windows-default-theme) {
     #main-window[sizemode="normal"] #appmenu-button {
       margin-bottom: 5px;
     }
   }
-}
+}*/
 
 /* Aero specific */
 @media all and (-moz-windows-theme: aero) {
@@ -3718,7 +3622,13 @@ toolbar[iconsize="small"] #bookmarks-menu-button[open]:active {
 	background-color: transparent;
     -moz-appearance: -moz-win-glass;
   }
-
+  
+  [sizemode="normal"] #navigator-toolbox {
+    border-top: 1px solid #909090 !important;
+    border-left: 1px solid #909090 !important;
+    border-right: 1px solid #909090 !important;
+  }
+  
   /* On win 10, if we don't set this on the entire browser container, including
    * the sidebar, then the accent color bleeds through in the titlebar
    * if the sidebar is open. */
@@ -4077,34 +3987,3 @@ toolbar[iconsize="small"] #bookmarks-menu-button[open]:active {
 }
 
 /* ############################################################################## M.W. -  JEZ Additions END */
-
-/* ############################################################################## M.W. -  Download button Begin */
-
-/* downloads.css - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-
-@media (-moz-windows-default-theme) {
-  richlistitem[type="download"] {
-    border: 1px solid transparent;
-    border-bottom: 1px solid hsl(213,40%,90%);
-  }
-
-  #downloadsPanel:not([keyfocus]) > #downloadsListBox > richlistitem[type="download"][state="1"][exists]:hover {
-    border: 1px solid hsl(213,45%,65%);
-    box-shadow: 0 0 0 1px hsla(0,0%,100%,.5) inset,
-                0 1px 0 hsla(0,0%,100%,.3) inset;
-    background-image: linear-gradient(hsl(212,86%,92%), hsl(212,91%,86%));
-    color: black;
-  }
-}
-
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/* Fix small Downloads indicator button */
-[iconsize="small"] #downloads-indicator-anchor,
-[iconsize="small"] #downloads-indicator-icon {
-  min-height: 16px !important;
-}
-[iconsize="small"] #downloads-indicator-counter {
-  margin: 2px 0px 0px 0px !important;
-}
-
-/* ############################################################################## M.W. -  Download button End */
