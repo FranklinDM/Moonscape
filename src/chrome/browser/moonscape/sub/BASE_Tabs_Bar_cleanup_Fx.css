@@ -2,7 +2,8 @@
  * BASE Tabs Bar cleanup
  * By: Michael Walden
  **/
-
+ 
+/* == Tab style (nolw) ============================================= */
 #TabsToolbar:not(:-moz-lwtheme),
 #TabsToolbar[tabsontop=false]:not(:-moz-lwtheme) {
   background-image: none !important;
@@ -44,7 +45,7 @@
   border-bottom: 0px solid transparent !important;
 }
 
-/* lightweight theme */
+/* == Tab style (lwtheme) ============================================= */
 .tabbrowser-tab:-moz-lwtheme,
 .tabs-newtab-button:-moz-lwtheme {
   background: none !important;
@@ -53,29 +54,49 @@
 
 /* Unselected tab */
 .tabbrowser-tab:not([selected="true"]):-moz-lwtheme {               /* inserted not([selected="true"]): */
-  background: rgba(255, 255, 255, 0.1) !important;
+  background: rgba(255, 255, 255, 0.2) !important;
   border-top:    2px solid !important;
   border-right:  2px solid !important;
   border-left:   2px solid !important;
   -moz-border-top-colors:   transparent rgba(255, 255, 255, 0.5) !important;    /* changed -moz-dialog -> transparent */
   -moz-border-right-colors: transparent rgba(255, 255, 255, 0.3) !important;      /* changed -moz-dialog -> transparent */
   -moz-border-left-colors:  transparent rgba(255, 255, 255, 0.5) !important;    /* changed -moz-dialog -> transparent */
-  border-bottom: 0px solid transparent !important;
+  -moz-border-bottom-colors: transparent rgba(255, 255, 255, 0.3) !important;      /* changed -moz-dialog -> transparent */
+  border-bottom: 2px solid !important;
   color: -moz-DialogText !important;
 }
 
 /* Unselected tab with hover */
 .tabbrowser-tab:hover:not([selected="true"]):-moz-lwtheme {         /* inserted not([selected="true"]): */
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: rgba(255, 255, 255, 0.25) !important;
 }
 
-/* Selected tab */
-.tabbrowser-tab[selected="true"]:-moz-lwtheme {
-  background: rgba(255, 255, 255, 0.3) !important;
+.tabs-newtab-button:-moz-lwtheme,
+#TabsToolbar > #new-tab-button:-moz-lwtheme {
+  border-bottom: 2px solid transparent !important;
+}
+
+/* new tab hover*/
+.tabs-newtab-button:hover:-moz-lwtheme,
+#TabsToolbar > #new-tab-button:hover:-moz-lwtheme {
   -moz-border-top-colors:   transparent rgba(255, 255, 255, 0.5) !important;    /* changed -moz-dialog -> transparent */
   -moz-border-right-colors: transparent rgba(255, 255, 255, 0.3) !important;      /* changed -moz-dialog -> transparent */
   -moz-border-left-colors:  transparent rgba(255, 255, 255, 0.5) !important;    /* changed -moz-dialog -> transparent */
-  border-bottom: 0px solid transparent !important;
+  -moz-border-bottom-colors: transparent rgba(255, 255, 255, 0.3) !important;      /* changed -moz-dialog -> transparent */  
+  background: rgba(255, 255, 255, 0.25) !important;
+  border-bottom: 2px solid !important;
+}
+
+/* Selected tab */
+.tabbrowser-tab[selected="true"]:-moz-lwtheme,
+.tabs-newtab-button:hover:active:-moz-lwtheme,
+#TabsToolbar > #new-tab-button:hover:active:-moz-lwtheme {
+  background: rgba(255, 255, 255, 0.3) !important;
+  -moz-border-top-colors:   transparent rgba(255, 255, 255, 0.5) !important;      /* changed -moz-dialog -> transparent */
+  -moz-border-right-colors: transparent rgba(255, 255, 255, 0.3) !important;      /* changed -moz-dialog -> transparent */
+  -moz-border-left-colors:  transparent rgba(255, 255, 255, 0.5) !important;      /* changed -moz-dialog -> transparent */
+  -moz-border-bottom-colors:transparent rgba(255, 255, 255, 0.3) !important;      /* changed -moz-dialog -> transparent */
+  border-bottom: 2px solid !important;
 }
 
 /* Set gap above tabs on tabs toolbar when on bottom */

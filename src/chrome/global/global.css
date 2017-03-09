@@ -9,31 +9,17 @@
 /* all localizable skin settings shall live here */
 @import url("chrome://global/locale/intl.css");
 
-/*#+++*/
 /* Import platform-specific override stylesheets */
-
 @import url("chrome://os_target/skin/global-override.css");
-/*#+++*/
 
-/*#+++*/
 /* Import extension override stylesheets */
 @import url("chrome://mozapps/skin/TMP/TMPOverrides.css");
 @import url("chrome://mozapps/skin/AIOS/AIOSOverrides.css");
 @import url("chrome://mozapps/skin/status4evar/status4evarOverrides.css");
-/*#+++*/
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 /* ::::: XBL bindings ::::: */
-
-/*#+++*/
-/* Added on 20100209 (along with GRNwindowOverlay.xml) to
- * uniquely identify the theme in the top-level window.
- */
-window {
-  -moz-binding: url("chrome://global/skin/GRNwindowOverlay.xml#theme");
-}
-/*#+++*/
 
 radio {
   -moz-binding: url("chrome://global/skin/globalBindings.xml#radio");
@@ -195,7 +181,7 @@ toolbar[mode="text"] .toolbarbutton-text {
 }
 
 :root:-moz-lwtheme-darktext {
-  text-shadow: 0 0.5px 1.5px white;
+  text-shadow: 0 -0.5px 1.5px white;
 }
 
 :root:-moz-lwtheme-brighttext {
@@ -323,6 +309,10 @@ label[disabled="true"]:-moz-system-metric(windows-classic) {
   text-decoration: underline;
 }
 
+.text-link:-moz-focusring {
+  border: 1px dotted -moz-DialogText;
+}
+
 /* :::::: autoscroll popup ::::: */
 
 .autoscroller {
@@ -343,4 +333,19 @@ label[disabled="true"]:-moz-system-metric(windows-classic) {
 
 .autoscroller[scrolldir="EW"] {
   background-position: right bottom;
+}
+
+/* :::::: Close button icons ::::: */
+
+.close-icon {
+  list-style-image: url("chrome://global/skin/icons/close.png");
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+.close-icon:hover {
+  -moz-image-region: rect(0, 32px, 16px, 16px);
+}
+
+.close-icon:hover:active {
+  -moz-image-region: rect(0, 48px, 16px, 32px);
 }
