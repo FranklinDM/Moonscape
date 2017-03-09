@@ -43,15 +43,40 @@
   -moz-border-left-colors:  ThreeDHighlight ThreeDLightShadow !important;
   border-bottom: 0px solid transparent !important;
 }
-/*
+
+/* lightweight theme */
+.tabbrowser-tab:-moz-lwtheme,
+.tabs-newtab-button:-moz-lwtheme {
+  background: none !important;
+  -moz-border-image: none !important;
+}
+
+/* Unselected tab */
+.tabbrowser-tab:not([selected="true"]):-moz-lwtheme {               /* inserted not([selected="true"]): */
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-top:    2px solid !important;
+  border-right:  2px solid !important;
+  border-left:   2px solid !important;
+  -moz-border-top-colors:   transparent rgba(255, 255, 255, 0.5) !important;    /* changed -moz-dialog -> transparent */
+  -moz-border-right-colors: transparent rgba(255, 255, 255, 0.3) !important;      /* changed -moz-dialog -> transparent */
+  -moz-border-left-colors:  transparent rgba(255, 255, 255, 0.5) !important;    /* changed -moz-dialog -> transparent */
+  border-bottom: 0px solid transparent !important;
+  color: -moz-DialogText !important;
+}
+
+/* Unselected tab with hover */
+.tabbrowser-tab:hover:not([selected="true"]):-moz-lwtheme {         /* inserted not([selected="true"]): */
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Selected tab */
 .tabbrowser-tab[selected="true"]:-moz-lwtheme {
-  background: rgba(255, 255, 255, 0.2) !important;
-  -moz-border-top-colors:   ThreeDHighlight ThreeDLightShadow !important;
-  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow !important;
-  -moz-border-left-colors:  ThreeDHighlight ThreeDLightShadow !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+  -moz-border-top-colors:   transparent rgba(255, 255, 255, 0.5) !important;    /* changed -moz-dialog -> transparent */
+  -moz-border-right-colors: transparent rgba(255, 255, 255, 0.3) !important;      /* changed -moz-dialog -> transparent */
+  -moz-border-left-colors:  transparent rgba(255, 255, 255, 0.5) !important;    /* changed -moz-dialog -> transparent */
   border-bottom: 0px solid transparent !important;
 }
-*/
 
 /* Set gap above tabs on tabs toolbar when on bottom */
 #TabsToolbar:not([tabsontop="true"]) {

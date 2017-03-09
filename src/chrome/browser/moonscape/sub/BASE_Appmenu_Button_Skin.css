@@ -12,6 +12,7 @@
   /* margin-top: 0px !important; */
   /* margin-bottom: 0px !important; */
 }
+
 #appmenu-button .button-text {
   display: none !important;
 }
@@ -20,6 +21,7 @@
   color: black !important;
   text-shadow: none !important;
 }
+
 #appmenu-button:hover:not(:active):not([open]) {
   box-shadow: none !important;
 }

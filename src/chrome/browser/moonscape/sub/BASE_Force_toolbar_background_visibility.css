@@ -15,7 +15,7 @@
 */
 #browser-bottombox:not(:-moz-lwtheme),
 #addon-bar:not(:-moz-lwtheme) {
-  -moz-appearance: none !important;
+  /* -moz-appearance: none !important; */
   background-color: -moz-dialog !important;
 }
 
