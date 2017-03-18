@@ -1,5 +1,5 @@
-﻿# Moonscape
-![Preview](https://github.com/FranklinDM/Moonscape-Classic/blob/dev/src/preview.png)
+# Moonscape
+![Preview](https://github.com/FranklinDM/Moonscape/blob/dev/src/preview.png)
 
 Moonscape - Features the classic theme that was featured in earlier versions of Netscape for Pale Moon. It is similar to the look of Netscape 4.x, Netscape 6+ "Classic" theme, Mozilla Suite M18+, and SeaMonkey 1.x "Classic" theme running on Windows. It is a fork of the "[Foxscape] (https://addons.mozilla.org/en-US/firefox/addon/foxscape/)" theme by Michael Walden. 
 
@@ -16,4 +16,4 @@ All images contained in this theme are covered by the following license:
 Simply download the contents of the "src" folder and pack the contents into a .zip file. Then, rename the file to .xpi and drag into the browser.
 
 ## Download
-Check the releases page of this repository or visit its page on the [Pale Moon Add-ons Site] (https://addons.palemoon.org/themes/moonscape)
+Check the releases page of this repository or visit its page on the [Pale Moon Add-ons Site](https://addons.palemoon.org/themes/moonscape)
