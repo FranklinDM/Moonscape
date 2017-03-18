@@ -2410,24 +2410,8 @@ toolbar:not([mode="text"]):not([iconsize="small"]) #navigator-throbber {
 /* Tab close button */
 .tab-close-button {
   -moz-appearance: none;
-  -moz-image-region: rect(0, 64px, 16px, 48px);
   border: none;
   padding: 0px;
-  list-style-image: url("chrome://global/skin/icons/close.png");
-}
-
-.tab-close-button:hover,
-.tab-close-button:hover[selected="true"] {
-  -moz-image-region: rect(0, 32px, 16px, 16px);
-}
-
-.tab-close-button:hover:active,
-.tab-close-button:hover:active[selected="true"] {
-  -moz-image-region: rect(0, 48px, 16px, 32px);
-}
-
-.tab-close-button[selected="true"] {
-  -moz-image-region: rect(0, 16px, 16px, 0);
 }
 
 /* Tab scrollbox arrow, tabstrip new tab and all-tabs buttons */
