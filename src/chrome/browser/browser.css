@@ -590,14 +590,6 @@ toolbar[mode="full"] .toolbarbutton-menubutton-button {
 /* ::::: unified back and forward buttons ::::: */
 
 /* unified back button with keyhole icons */
-
-toolbar[mode="icons"] #back-button {
-  -moz-appearance: none;
-  padding: 0;
-  -moz-padding-start: 2px;
-  border: none;
-}
-
 toolbar[iconsize="large"][mode="icons"] #back-button {
   -moz-image-region: rect(120px, 24px, 144px, 0px); 
 }
@@ -627,12 +619,6 @@ toolbar[iconsize="large"][mode="icons"] #back-button:-moz-locale-dir(rtl):not([d
 }
 
 /* unified forward button with keyhole icons */
-
-toolbar[mode="icons"] #forward-button {
-  -moz-appearance: none;
-  padding: 0;
-  border: none;
-}
 
 toolbar[iconsize="large"][mode="icons"] #forward-button {
   -moz-image-region: rect(120px, 48px, 144px, 24px); 
