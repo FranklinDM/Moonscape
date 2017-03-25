@@ -1,12 +1,21 @@
 # Changelog
 
-## Moonscape 6.10 - 2017-01-??
+## Moonscape 6.10 - 2017-03-09
 - Skin Restart Manager instead of Restartless Restart (subskin renamed)
-- Code cleanup, remove unused files
-- Improved appearance and resolution of some icons
+- Massive code cleanup, remove unused files
+- Improved appearance, resolution, and added a lot of new icons (notably Plugins)
 - Separate devtools styling from browser.css
 - Popup styling
 - Updates to internal documentation (readme, icon pack instructions)
+- Drop "Classic" from the theme's name and other references
+- Add Windows 10 support (thanks to Lootyhoof)
+- Allow toolbarbutton-badge be styled by add-ons
+- More precise description
+- Added Linux Icon Pack, updated icon pack readme
+- Added a new subskin (Outer recessed 3D frames for status bar buttons)
+- Small toolbar icons now with more detail (no longer looks like quick resize)
+- Unnecessary margins from the top window are now removed
+- Fix existing references to FX in some images
 
 ## Moonscape 6.07 - 2017-01-22
 - Removed support for PM26
