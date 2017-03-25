@@ -1,5 +1,9 @@
 # Changelog
 
+## Moonscape 6.15 - No date yet
+- Restore regular toolbar button styling to back/forward buttons
+- Remove tab-close button
+
 ## Moonscape 6.10 - 2017-03-09
 - Skin Restart Manager instead of Restartless Restart (subskin renamed)
 - Massive code cleanup, remove unused files
@@ -40,6 +44,8 @@
 ## Moonscape 6.00 - 2016-12-25
 - Committed the project to GitHub, renamed.
 - Updated manifest files. (supports PM26-27)
+
+### Continue version numbering scheme of FOXSCAPE
 
 ## FOXSCAPE 5.16 - 2014-01-30 - This version supports Firefox 27.0.
 - Minimal changes were made to support changes made to Firefox 27.
