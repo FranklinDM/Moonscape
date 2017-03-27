@@ -1,2 +1,6 @@
-packages/
+# package directory
+[Pp]ackages/
 compile.bat
+
+# xcf files (where i test)
+.xcf
