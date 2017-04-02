@@ -13,25 +13,14 @@
 }
 
 /* unified forward button with keyhole icons */
-/*#+++*/
-#back-button,
-#forward-button {
-  -moz-appearance: none;
-  padding: 0;
-  border: none;
-}
-/*#+++*/
-
 #back-button,
 #forward-button {
   list-style-image: url("chrome://browser/skin/myToolbar.png");
 }
 
 #back-button {
-/*#---  -moz-image-region: rect(0, 18px, 18px, 0); ---*/
   -moz-image-region: rect(120px, 24px, 144px, 0px); 
 }
-/*#+++*/
 #back-button:not([disabled="true"]):hover {
   -moz-image-region: rect(144px, 24px, 168px, 0px); 
 }
@@ -41,13 +30,10 @@
 #back-button:not([disabled="true"]):hover:active {
   -moz-image-region: rect(192px, 24px, 216px, 0px); 
 }
-/*#+++*/
 
 #forward-button {
-/*#---  -moz-image-region: rect(0, 36px, 18px, 18px); ---*/
   -moz-image-region: rect(120px, 48px, 144px, 24px); 
 }
-/*#+++*/
 #forward-button:not([disabled="true"]):hover {
   -moz-image-region: rect(144px, 48px, 168px, 24px); 
 }
@@ -57,7 +43,6 @@
 #forward-button:not([disabled="true"]):hover:active {
   -moz-image-region: rect(192px, 48px, 216px, 24px); 
 }
-/*#+++*/
 
 #back-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
 #forward-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
