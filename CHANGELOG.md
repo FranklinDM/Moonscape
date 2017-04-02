@@ -1,8 +1,9 @@
 # Changelog
 
 ## Moonscape 6.15 - No date yet
-- Restore regular toolbar button styling to back/forward buttons
-- Remove tab-close button
+- Restore regular toolbar button styling to back/forward buttons and remove borders
+- Remove tab-close button from browser.css
+- Improve resolution of some icons (warning, info, etc.)
 
 ## Moonscape 6.10 - 2017-03-09
 - Skin Restart Manager instead of Restartless Restart (subskin renamed)
@@ -26,17 +27,17 @@
 - Created padlock.css, fixes the missing/double padlock icon in the identity bar
 - Reflect changes from PM26-27
 - Cleanup on the code
-  - removes a lot of commented sections and the social unused
+  - Removes a lot of commented sections and the social button styling
   - Devtools code on browser.css
 - Minor fix on the download button
-- Added history menu subskin
+- Added history menu subskin (similar to bookmarks menu)
 - Change of directory (from foxscape to moonscape)
 - Changed splash logo (4 and 5)
 
 ## Moonscape 6.05 - 2017-01-21
 - Removed default subskins from global.css and moved it to its own css file (default_subskins.css)
-  which is referenced by browser.css instead because it gets loaded 3 times in the past.
-  This (somehow) led to an increase in memory usage.
+  which is now referenced by browser.css instead because it gets loaded 3 times in the past.
+  This somehow led to an increase in memory usage.
 - Few tweaks and updates. (namely the /mozapps/ directory, some icons, and devtools cleanup)
 - Added homepage url to install.rdf
 - Fix for the missing RSS icon in the address bar.
@@ -47,5 +48,5 @@
 
 ### Continue version numbering scheme of FOXSCAPE
 
-## FOXSCAPE 5.16 - 2014-01-30 - This version supports Firefox 27.0.
+## FOXSCAPE 5.16 - 2014-01-30
 - Minimal changes were made to support changes made to Firefox 27.
