@@ -37,6 +37,10 @@ notification[type="critical"] {
   -moz-margin-end: 1px;
 }
 
+.popup-notification-learnmore-link:not([href]) {
+  display: none;
+}
+
 /* Default icons for notifications */
 
 .messageImage[type="info"] {
