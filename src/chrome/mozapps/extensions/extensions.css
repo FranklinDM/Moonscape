@@ -4,6 +4,10 @@
 
 @import url("chrome://global/skin/inContentUI.css");
 
+.main-content {
+  border-radius: 5px;
+}
+
 .nav-button {
   list-style-image: url(chrome://mozapps/skin/extensions/navigation.png);
 }
@@ -197,8 +201,9 @@
 .category[selected] {
   color: #252F3B;
   background: white;
-  border-radius: 0px;
+  border-radius: 5px 0 0 5px;
   border-color: ThreeDShadow;
+  border-right-color: transparent;
 }
 
 .category-name {

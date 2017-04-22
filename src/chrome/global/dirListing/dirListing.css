@@ -3,7 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 :root {
-  background-color: -moz-dialog;
+  background-color: #C0C0C0;
   color: -moz-dialogtext;
   font: message-box;
   padding-left: 2em;
@@ -75,11 +75,6 @@ th:last-child {
 
 th:hover > a {
   text-decoration: underline;
-}
-
-tbody > tr:hover {
-  outline: 1px solid ThreeDLightShadow;
-  -moz-outline-radius: .3em;
 }
 
 /* let 'Size' and 'Last Modified' take only as much space as they need and 'Name' all the rest */

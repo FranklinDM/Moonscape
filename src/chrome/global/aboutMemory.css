@@ -3,3 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 @import url("chrome://global/content/aboutMemory.css");
+
+html {
+  background: #C0C0C0;
+}

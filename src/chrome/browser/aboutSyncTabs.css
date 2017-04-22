@@ -4,17 +4,13 @@
 
 #tabs-display,
 #tabsList {
-  background-color: transparent;
+  background-color: #C0C0C0;
   -moz-appearance: none;
   margin: 0;
 }
 
 #tabsList {
   width: 100%;
-}
-
-#tabs-display {
-  background: #C0C0C0;
 }
 
 #headers {
