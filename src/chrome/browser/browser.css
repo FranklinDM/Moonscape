@@ -76,7 +76,8 @@
 #nav-bar[tabsontop=true],
 #nav-bar[tabsontop=true][collapsed=true]:not([customizing]) + toolbar,
 #nav-bar[tabsontop=true][collapsed=true]:not([customizing]) + #customToolbars + #PersonalToolbar {
-  background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+  border-top: 2px solid;
+  -moz-border-top-colors: transparent rgba(255, 255, 255, 0.5);
 }
 
 #personal-bookmarks {
@@ -1715,8 +1716,6 @@ toolbar[iconsize="small"] #tabview-button[groups="3"] {
   padding: 0px;
   background-clip: padding-box;
   border: 1px solid ThreeDShadow;
-/*#---  border-radius: 2px; ---*/
-  border-radius: 4px;
 }
 
 #urlbar {
@@ -2430,7 +2429,7 @@ toolbar:not([mode="text"]):not([iconsize="small"]) #navigator-throbber {
 .tabs-newtab-button,
 #TabsToolbar > #new-tab-button,
 #TabsToolbar > toolbarpaletteitem > #new-tab-button {
-  list-style-image: url(chrome://browser/skin/tabbrowser/newtab.png);
+/* TODO: Integ. part1*/
 }
 
 .tabs-newtab-button,
@@ -2463,7 +2462,7 @@ toolbar:not([mode="text"]):not([iconsize="small"]) #navigator-throbber {
   padding: 2px;
   -moz-box-align: center;
   -moz-box-pack: center;
-  list-style-image: url("chrome://browser/skin/tabbrowser/tabs-list.png");
+  /* TODO: integ. part1 */
   -moz-image-region: rect(0px, 24px, 24px, 0px);
 }
 
