@@ -1,0 +1,7 @@
+/**************************************************************************
+ * Remove Home button text label
+ * By: Michael Walden
+ **/
+#home-button { min-width: 16px !important; } 
+#home-button > .toolbarbutton-text { display: none !important; } 
+#home-button > .toolbarbutton-icon { margin-right: 0px !important; } 

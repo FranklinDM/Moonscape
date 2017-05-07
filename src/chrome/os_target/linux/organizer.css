@@ -1,0 +1,139 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+/* Toolbar */
+#placesToolbar {
+  border: none;
+}
+/*#---
+/* back button * /
+
+#back-button {
+  list-style-image: url("moz-icon://stock/gtk-go-back-ltr?size=toolbar");
+}
+#back-button[disabled="true"] {
+  list-style-image: url("moz-icon://stock/gtk-go-back-ltr?size=toolbar&state=disabled");
+}
+
+#back-button:-moz-locale-dir(rtl) {
+  list-style-image: url("moz-icon://stock/gtk-go-back-rtl?size=toolbar");
+}
+#back-button[disabled="true"]:-moz-locale-dir(rtl) {
+  list-style-image: url("moz-icon://stock/gtk-go-back-rtl?size=toolbar&state=disabled");
+}
+
+/* forward button * /
+
+#forward-button {
+  list-style-image: url("moz-icon://stock/gtk-go-forward-ltr?size=toolbar");
+}
+#forward-button[disabled="true"] {
+  list-style-image: url("moz-icon://stock/gtk-go-forward-ltr?size=toolbar&state=disabled");
+}
+
+#forward-button:-moz-locale-dir(rtl) {
+  list-style-image: url("moz-icon://stock/gtk-go-forward-rtl?size=toolbar");
+}
+#forward-button[disabled="true"]:-moz-locale-dir(rtl) {
+  list-style-image: url("moz-icon://stock/gtk-go-forward-rtl?size=toolbar&state=disabled");
+}
+  ---*/
+/*#+++*/
+#back-button,
+#forward-button {
+  -moz-appearance: none;
+  padding: 0;
+  border: none;
+}
+
+#back-button,
+#forward-button {
+  list-style-image: url("chrome://browser/skin/places/libraryToolbar.png");
+}
+
+/* back and forward button */
+#back-button:-moz-locale-dir(ltr),
+#forward-button:-moz-locale-dir(rtl) {
+/*#---  -moz-image-region: rect(0px, 16px, 16px, 0px);---*/
+  -moz-image-region: rect(0px, 64px, 16px, 48px);
+  margin-right: 0;
+}
+
+#forward-button:-moz-locale-dir(ltr),
+#back-button:-moz-locale-dir(rtl) {
+/*#---  -moz-image-region: rect(0px, 32px, 16px, 16px);---*/
+  -moz-image-region: rect(0px, 80px, 16px, 64px);
+  margin-left: 0;
+}
+
+#back-button > .toolbarbutton-icon {
+  -moz-margin-start: 3px !important;
+  -moz-margin-end: 2px !important;
+}
+
+#forward-button > .toolbarbutton-icon {
+  -moz-margin-start: 2px !important;
+  -moz-margin-end: 3px !important;
+}
+/*#+++*/
+
+/* Menu */
+#placesMenu {
+  -moz-appearance: none;
+  border: none;
+}
+
+#placesMenu > menu {
+  -moz-padding-start: 4px;
+/*#---  -moz-binding: url("chrome://browser/skin/places/organizer.xml#toolbarbutton-dropdown");---*/
+  -moz-binding: url("chrome://os_target/skin/organizer.xml#toolbarbutton-dropdown");
+  -moz-appearance: toolbarbutton;
+  color: -moz-DialogText;
+}
+
+#placesMenu > menu:hover:not(:active):not([open="true"]) {
+  color: -moz-buttonhovertext;
+}
+
+#placesMenu > menu > .menubar-right {
+  -moz-appearance: toolbarbutton-dropdown;
+  width: 12px;
+  height: 12px;
+}
+
+/* Root View */
+#placesView {
+  background-color: Window;
+}
+
+/* Info box */
+#detailsDeck {
+  padding: 5px;
+}
+
+#infoBoxExpanderLabel {
+  -moz-padding-start: 2px;
+}
+
+/**** menuitem stock icons ****/
+#orgClose {
+  list-style-image: url("moz-icon://stock/gtk-close?size=menu");
+}
+
+#fileImport {
+  list-style-image: url("moz-icon://stock/gtk-revert-to-saved?size=menu");
+}
+
+#fileExport {
+  list-style-image: url("moz-icon://stock/gtk-save-as?size=menu");
+}
+
+/**
+ * Downloads pane
+ */
+
+#clearDownloadsButton > .toolbarbutton-icon {
+  display: none;
+}

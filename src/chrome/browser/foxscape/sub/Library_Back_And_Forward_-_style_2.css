@@ -1,0 +1,12 @@
+/******************************************************************************
+ * Library Back And Forward - style 2
+ * Make the library back & forward buttons match the keyhole back and forward
+ * buttons in the navigation toolbar (if enabled).
+ * By: Michael Walden
+ **/
+
+/* back & forward buttons */
+#placesToolbar > #back-button,
+#placesToolbar > #forward-button {
+  list-style-image: url("chrome://browser/skin/foxscape/img/libraryNavigation2.png") !important;
+}

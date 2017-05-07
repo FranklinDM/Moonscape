@@ -1,0 +1,5 @@
+/**************************************************************************
+ * Use native dropmarker button on location bar in FF3 (bug #430414)
+ * Source: ClassicFox Firefox <http://mozilla.ktechcomputing.com/classicfox/>
+ **/
+#urlbar > .autocomplete-history-dropmarker { -moz-appearance: menulist-button ! important; }

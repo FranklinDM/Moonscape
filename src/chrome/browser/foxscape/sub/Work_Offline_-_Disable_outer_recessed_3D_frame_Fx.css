@@ -1,0 +1,8 @@
+/**************************************************************************
+ * Work Offline - Disable outer recessed 3D frame
+ * By: Michael Walden
+ **/
+#aOffline-status,
+#aOffline-status[offline="true"] {
+  border-width: 0px !important;
+}

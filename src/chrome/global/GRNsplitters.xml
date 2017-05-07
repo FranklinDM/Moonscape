@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<bindings id="splitterBindings"
+          xmlns="http://www.mozilla.org/xbl"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+          xmlns:xbl="http://www.mozilla.org/xbl">
+
+  <!-- :::/ splitters \ ::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+  <binding id="splitter" extends="chrome://global/content/bindings/splitter.xml#splitter">
+    <content>
+      <grippy xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"/>
+    </content>
+  </binding>
+
+  <!-- :::::::/ Firefox/Thunderbird horizontal splitter \ ::::::::::::::::::::::::::::::::: -->
+
+  <binding id="horz-splitter" extends="chrome://global/content/bindings/splitter.xml#splitter">
+    <content orient="horizontal"
+             collapse="before"
+             style="" autostretch="always">
+      <grippy xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"/>
+    </content>
+  </binding>
+
+  <!-- :::::::/ Firefox/Thunderbird vertical splitter \ ::::::::::::::::::::::::::::::::: -->
+
+  <binding id="vert-splitter" extends="chrome://global/content/bindings/splitter.xml#splitter">
+    <content orient="vertical"
+             collapse="after"
+             style="" autostretch="always">
+      <grippy xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"/>
+    </content>
+  </binding>
+  
+</bindings>
+

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+<!--
+ File structure documented here:
+  http://developer.mozilla.org/en/docs/Extension_Versioning%2C_Update_and_Compatibility
+   and here:
+  http://www.bengoodger.com/software/mb/extensions/packaging/themes.html
+-->
+
+  <Description about="urn:mozilla:install-manifest">
+
+    <!-- Target Application(s) this extension can install into, with minimum and maximum supported versions. -->
+
+    <!-- Describe Firefox -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>27.0a1</em:minVersion>
+        <em:maxVersion>28.0.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+	<!-- Extension's ID and type -->
+    <em:id>{da7f40f0-8675-11db-b606-0800200c9a66}</em:id>
+	<!-- Types: 2=Extensions, 4=Themes, 8=Locale, 16=Plugin, 32=Multiple Item Package -->
+	<em:type>4</em:type>
+
+	<!-- Extension developers can opt back into unpacked installation by setting 'true' below -->
+	<!-- em:unpack>true</em:unpack -->
+
+    <!-- Extension's info and metadata -->
+    <em:name>FOXSCAPE</em:name>
+    <em:version>5.16</em:version>
+    <em:description>A full featured retro theme for Firefox that looks like Netscape 4.x, Netscape 6+ "Classic" theme, Mozilla Suite M18+, and SeaMonkey 1.x "Classic" theme running on Windows.</em:description>
+    <em:creator>Michael Walden</em:creator>
+    <!-- em:contributor>Michael Walden</em:contributor -->
+    <em:homepageURL>http://FOXSCAPE.net</em:homepageURL>
+
+    <!-- Front End Integration Hooks (used by Add-ons Manager)-->
+	<!-- em:aboutURL>http://example.com/</em:aboutURL -->
+    <!-- em:updateURL>http://example.com/</em:updateURL -->
+
+    <!-- Allow lightweight themes / personas to apply to this theme, using 'skinnable' -->
+    <em:skinnable>true</em:skinnable>
+
+    <!-- internalName must match the 'skinname' part of the relevant chrome.manifest directives in order for those mappings to be associated with this skin. -->
+    <em:internalName>FOXSCAPE</em:internalName>
+
+  </Description>
+
+</RDF>

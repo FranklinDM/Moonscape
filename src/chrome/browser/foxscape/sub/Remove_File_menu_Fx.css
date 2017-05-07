@@ -1,0 +1,5 @@
+/**************************************************************************
+ * Remove File menu
+ * By: Michael Walden
+ **/
+menu[label="File"] { display: none !important; }

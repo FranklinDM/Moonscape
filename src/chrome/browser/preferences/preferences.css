@@ -1,0 +1,221 @@
+/* -*- Mode: Java; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 2 -*-
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+/* Global Styles */
+#BrowserPreferences radio[pane] {
+  list-style-image: url("chrome://browser/skin/preferences/Options.png"); 
+  padding: 5px 3px 1px;
+}
+
+radio[pane=paneMain] {
+  -moz-image-region: rect(0, 32px,  32px, 0);
+}
+
+radio[pane=paneTabs] {
+  -moz-image-region: rect(0, 64px, 32px, 32px);
+}
+
+radio[pane=paneContent] {
+  -moz-image-region: rect(0, 96px,  32px, 64px);
+}
+
+radio[pane=paneApplications] {
+  -moz-image-region: rect(0, 128px,  32px, 96px);
+}
+
+radio[pane=panePrivacy] {
+  -moz-image-region: rect(0, 160px,  32px, 128px);
+}
+
+radio[pane=paneSecurity] {
+  -moz-image-region: rect(0, 192px,  32px, 160px);
+}
+
+radio[pane=paneAdvanced] {
+  -moz-image-region: rect(0, 224px, 32px, 192px);
+}
+
+radio[pane=paneSync] {
+/*#---  list-style-image: url("chrome://browser/skin/preferences/Options-sync.png") !important; ---*/
+/*#+++*/
+  -moz-image-region: rect(0, 288px, 32px, 256px);
+/*#+++*/
+}
+
+/*#+++*/
+radio[pane=paneMain]:hover, 
+radio[pane=paneMain][selected="true"]{
+  -moz-image-region: rect(32px, 32px,  64px, 0);
+}
+
+radio[pane=paneTabs]:hover,
+radio[pane=paneTabs][selected="true"] {
+  -moz-image-region: rect(32px, 64px, 64px, 32px);
+}
+
+radio[pane=paneContent]:hover,
+radio[pane=paneContent][selected="true"] {
+  -moz-image-region: rect(32px, 96px,  64px, 64px);
+}
+
+radio[pane=paneApplications]:hover,
+radio[pane=paneApplications][selected="true"] {
+  -moz-image-region: rect(32px, 128px,  64px, 96px);
+}
+
+radio[pane=panePrivacy]:hover,
+radio[pane=panePrivacy][selected="true"] {
+  -moz-image-region: rect(32px, 160px,  64px, 128px);
+}
+
+radio[pane=paneSecurity]:hover,
+radio[pane=paneSecurity][selected="true"] {
+  -moz-image-region: rect(32px, 192px,  64px, 160px);
+}
+
+radio[pane=paneAdvanced]:hover,
+radio[pane=paneAdvanced][selected="true"] {
+  -moz-image-region: rect(32px, 224px, 64px, 192px);
+}
+
+radio[pane=paneSync]:hover,
+radio[pane=paneSync][selected="true"] {
+  -moz-image-region: rect(32px, 288px, 64px, 256px);
+}
+/*#+++*/
+
+/* Applications Pane */
+#BrowserPreferences[animated="true"] #handlersView {
+  height: 25em;
+}
+
+#BrowserPreferences[animated="false"] #handlersView {
+  -moz-box-flex: 1;
+}
+
+/* Privacy Pane */
+
+/* styles for the link elements copied from .text-link in global.css */
+.inline-link {
+  color: -moz-nativehyperlinktext;
+  text-decoration: none;
+}
+
+.inline-link:hover {
+  text-decoration: underline;
+}
+
+/* Modeless Window Dialogs */
+.windowDialog,
+.windowDialog prefpane {
+  padding: 0;
+}
+
+.contentPane {
+  margin: 9px 8px 5px;
+}
+
+.actionButtons {
+  margin: 0 3px 6px !important;
+}
+
+/* Cookies Manager */
+#cookiesChildren::-moz-tree-image(domainCol) {
+  width: 16px;
+  height: 16px;
+  margin: 0 2px;
+  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png") !important;
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+#cookiesChildren::-moz-tree-image(domainCol, container) {
+  list-style-image: url("chrome://global/skin/icons/folder-item.png") !important;
+  -moz-image-region: rect(0, 32px, 16px, 16px);
+}
+
+#cookiesChildren::-moz-tree-image(domainCol, container, open) {
+  -moz-image-region: rect(16px, 32px, 32px, 16px);
+}
+
+#cookieInfoBox {
+  border: 1px solid ThreeDShadow;
+  border-radius: 0;
+  margin: 4px;
+  padding: 0;
+}
+
+/* Advanced Pane */
+
+/* Adding padding-bottom prevents the bottom of the tabpanel from being cutoff
+   when browser.preferences.animateFadeIn = true */
+#advancedPrefs {
+  padding-bottom: 8px;
+}
+
+/* bottom-most box containing a groupbox in a prefpane. Prevents the bottom
+   of the groupbox from being cutoff */
+.bottomBox {
+  padding-bottom: 4px;
+}
+
+/* Sync Pane */
+
+#syncDesc {
+  padding: 0 8em;
+}
+
+.syncGroupBox {
+  padding: 10px;
+}
+
+#accountCaptionImage {
+  list-style-image: url("chrome://mozapps/skin/profile/profileicon.png");
+}
+
+#syncAddDeviceLabel {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* ############################################################################## M.W. - Additions START */
+
+/* Fix options toolbar sync button */
+radio[pane=paneSync] {
+  list-style-image: url("chrome://browser/skin/preferences/Options-sync.png") !important;
+  -moz-image-region: rect(0, 32px,  32px, 0) !important;
+}
+
+/* Theme the Options window's buttons bar */
+.paneSelector {
+  background-color: transparent !important;
+}
+radio[pane] {
+  border: 1px solid !important;
+  -moz-border-top-colors:    transparent !important;
+  -moz-border-right-colors:  transparent !important;
+  -moz-border-bottom-colors: transparent !important;
+  -moz-border-left-colors:   transparent !important;
+}
+radio[pane]:hover {
+  background-color: transparent !important;
+  border: 1px solid !important;
+  -moz-border-top-colors:    ThreeDHighlight !important;
+  -moz-border-right-colors:  ThreeDShadow    !important;
+  -moz-border-bottom-colors: ThreeDShadow    !important;
+  -moz-border-left-colors:   ThreeDHighlight !important;
+}
+radio[pane][selected="true"] {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid !important;
+  -moz-border-top-colors:    ThreeDShadow    !important;
+  -moz-border-right-colors:  ThreeDHighlight !important;
+  -moz-border-bottom-colors: ThreeDHighlight !important;
+  -moz-border-left-colors:   ThreeDShadow    !important;
+}
+radio[pane][selected="true"]:hover {
+}
+
+/* ############################################################################## M.W. - Additions END */

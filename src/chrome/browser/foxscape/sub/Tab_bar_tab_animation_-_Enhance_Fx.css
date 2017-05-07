@@ -1,0 +1,8 @@
+/**************************************************************************
+ * Tab bar tab animation - Enhance
+ * By: Michael Walden
+ **/
+.tabbrowser-tab {
+  transition-duration: .5s !important;
+  transition-delay: .0001s !important;
+}

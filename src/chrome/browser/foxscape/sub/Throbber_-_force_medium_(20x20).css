@@ -1,0 +1,12 @@
+/**************************************************************************
+ * Force medium 20x20 throbber for both small and large icon modes
+ * By: Michael Walden
+ **/
+
+#navigator-throbber {
+  list-style-image: url("chrome://browser/skin/foxscape/thr/Throbber20S.png") !important;
+}
+
+#navigator-throbber[busy="true"] {
+  list-style-image: url("chrome://browser/skin/foxscape/thr/Throbber20A.gif") !important;
+}

@@ -1,0 +1,18 @@
+/**************************************************************************
+ * BASE Toolbar separators - enable on all bars
+ * By: Michael Walden
+ **/
+toolbar:not(:-moz-lwtheme) {
+  border-top-color:          ThreeDHighlight !important;
+  -moz-border-bottom-colors: ThreeDHighlight !important; /* For good measure - see below */
+  border-top-style:          solid !important;
+  border-top-width:          1px !important;
+  border-bottom-color:       ThreeDShadow !important;
+  -moz-border-bottom-colors: ThreeDShadow !important;    /* Magic! - needed for #TabsToolbar, border-bottom-color: will not work in this case */
+  border-bottom-style: solid !important;
+  border-bottom-width: 1px !important;
+}
+/* chrome://browser/skin/browser.css */
+#navigator-toolbox:not(:-moz-lwtheme)::after {
+  height: 0px !important;
+}

@@ -1,0 +1,47 @@
+/**************************************************************************
+ * Close buttons - style 7
+ * By: Michael Walden
+ **/
+
+/* ###### close.png ###### */
+
+/* Tab close button */
+/* browser\browser.css */
+.tab-close-button {
+  list-style-image: url("chrome://browser/skin/foxscape/img/close7.png") !important;
+}
+
+/* Tabstrip close button */
+/* browser\browser.css */
+.tabs-closebutton {
+  list-style-image: url("chrome://browser/skin/foxscape/img/close7.png") !important;
+}
+
+/* Search Bar - Fx3.5 */
+/* browser\places\organizer.css */
+.textbox-input-closebutton {
+  list-style-image: url("chrome://browser/skin/foxscape/img/close7.png") !important;
+}
+
+/* Default icons for notifications */
+/* global\notification.css */
+.messageCloseButton {
+  list-style-image: url("chrome://browser/skin/foxscape/img/close7.png") !important;
+}
+
+/* help\help.css - Fx3.5 */
+#search-sidebar-closebutton {
+  list-style-image: url("chrome://browser/skin/foxscape/img/close7.png") !important;
+}
+
+/* ###### closeSidebar.png ###### */
+
+/* browser\browser.css */
+#sidebar-box .tabs-closebutton {
+  list-style-image: url("chrome://browser/skin/foxscape/img/close7.png") !important;
+}
+
+/* global\findBar.css */
+.findbar-closebutton {
+  list-style-image: url("chrome://browser/skin/foxscape/img/close7.png") !important;
+}

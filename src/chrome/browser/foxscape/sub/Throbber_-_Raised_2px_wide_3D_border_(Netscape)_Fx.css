@@ -1,0 +1,12 @@
+/**************************************************************************
+ * Throbber - Raised 2px wide 3D border (Netscape)
+ * By: Michael Walden
+ * Netscape Navigator 4.0 (1997-06-??) - Netscape Communicator 4.8 (2002-08-??), Gecko Preview (1998-12-??)
+ **/
+#navigator-throbber > image {
+  border: 2px solid !important;
+  -moz-border-top-colors:    ThreeDHighlight  ThreeDLightShadow !important;
+  -moz-border-right-colors:  ThreeDDarkShadow ThreeDShadow      !important;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow      !important;
+  -moz-border-left-colors:   ThreeDHighlight  ThreeDLightShadow !important;
+}

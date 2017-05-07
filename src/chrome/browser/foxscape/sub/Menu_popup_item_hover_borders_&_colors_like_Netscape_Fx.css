@@ -1,0 +1,78 @@
+/**************************************************************************
+ * Menu popup item hover borders & colors like Netscape
+ * By: Michael Walden
+ **/
+/* --- Change background on all popups --- */
+menupopup {
+  background: -moz-dialog !important;
+}
+/* --- Popup menu item FG & BG colors and borders - Normal --- */
+#appmenu-popup menu,
+#appmenu-popup menuitem,
+#appmenu-popup .splitmenu-menu,
+#appmenu-popup .splitmenu-menuitem,
+menupopup > menu,
+menupopup > menuitem,
+popup > menu,
+popup > menuitem {
+  -moz-appearance: none !important;
+  color: #000000 !important;
+  background: transparent !important;
+  border: 2px solid !important;
+  -moz-border-top-colors:    transparent !important;
+  -moz-border-right-colors:  transparent !important;
+  -moz-border-bottom-colors: transparent !important;
+  -moz-border-left-colors:   transparent !important;
+}
+/* --- Popup menu item FG & BG colors and borders - Hover --- */
+#appmenu-popup menu[_moz-menuactive="true"]:not([disabled="true"]),
+#appmenu-popup menuitem[_moz-menuactive="true"]:not([disabled="true"]),
+#appmenu-popup .splitmenu-menu[_moz-menuactive="true"]:not([disabled="true"]),
+#appmenu-popup .splitmenu-menuitem[_moz-menuactive="true"]:not([disabled="true"]),
+menupopup > menu[_moz-menuactive="true"]:not([disabled="true"]),
+menupopup > menuitem[_moz-menuactive="true"]:not([disabled="true"]),
+popup > menu[_moz-menuactive="true"]:not([disabled="true"]),
+popup > menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
+  color: #0000FF !important;
+  -moz-border-top-colors:    ThreeDDarkShadow ThreeDHighlight !important;
+  -moz-border-right-colors:  ThreeDDarkShadow ThreeDShadow    !important;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow    !important;
+  -moz-border-left-colors:   ThreeDDarkShadow ThreeDHighlight !important;
+}
+/* --- Popup menu item FG & BG colors and borders - Hover & Active --- */
+#appmenu-popup menu[_moz-menuactive="true"]:not([disabled="true"]):active,
+#appmenu-popup menuitem[_moz-menuactive="true"]:not([disabled="true"]):active,
+#appmenu-popup .splitmenu-menu[_moz-menuactive="true"]:not([disabled="true"]):active,
+#appmenu-popup .splitmenu-menuitem[_moz-menuactive="true"]:not([disabled="true"]):active,
+menupopup > menu[_moz-menuactive="true"]:not([disabled="true"]):active,
+menupopup > menuitem[_moz-menuactive="true"]:not([disabled="true"]):active,
+popup > menu[_moz-menuactive="true"]:not([disabled="true"]):active,
+popup > menuitem[_moz-menuactive="true"]:not([disabled="true"]):active {
+  color: #000080 !important;
+  -moz-border-top-colors:    ThreeDDarkShadow ThreeDShadow    !important;
+  -moz-border-right-colors:  ThreeDDarkShadow ThreeDHighlight !important;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDHighlight !important;
+  -moz-border-left-colors:   ThreeDDarkShadow ThreeDShadow    !important;
+}
+/* --- Popup menu item FG & BG colors and borders - Hover & Disabled --- */
+#appmenu-popup menu[_moz-menuactive="true"][disabled="true"],
+#appmenu-popup menuitem[_moz-menuactive="true"][disabled="true"],
+#appmenu-popup .splitmenu-menu[_moz-menuactive="true"][disabled="true"],
+#appmenu-popup .splitmenu-menuitem[_moz-menuactive="true"][disabled="true"],
+menupopup > menu[_moz-menuactive="true"][disabled="true"],
+menupopup > menuitem[_moz-menuactive="true"][disabled="true"],
+popup > menu[_moz-menuactive="true"][disabled="true"],
+popup > menuitem[_moz-menuactive="true"][disabled="true"] {
+  color: GrayText !important;
+  text-shadow: 1px 1px ThreeDHighlight !important;
+/*
+  -moz-border-top-colors:    ThreeDDarkShadow ThreeDHighlight !important;
+  -moz-border-right-colors:  ThreeDDarkShadow ThreeDShadow    !important;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow    !important;
+  -moz-border-left-colors:   ThreeDDarkShadow ThreeDHighlight !important;
+*/
+  -moz-border-top-colors:    transparent transparent !important;
+  -moz-border-right-colors:  transparent transparent !important;
+  -moz-border-bottom-colors: transparent transparent !important;
+  -moz-border-left-colors:   transparent transparent !important;
+}

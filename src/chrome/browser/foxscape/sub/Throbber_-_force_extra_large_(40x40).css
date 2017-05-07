@@ -1,0 +1,12 @@
+/**************************************************************************
+ * Force extra large 40x40 throbber for both small and large icon modes
+ * By: Michael Walden
+ **/
+
+#navigator-throbber {
+  list-style-image: url("chrome://browser/skin/foxscape/thr/Throbber40S.gif") !important;
+}
+
+#navigator-throbber[busy="true"] {
+  list-style-image: url("chrome://browser/skin/foxscape/thr/Throbber40A.gif") !important;
+}

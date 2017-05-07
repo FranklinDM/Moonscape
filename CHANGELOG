@@ -1,0 +1,371 @@
+FOXSCAPE Changelog
+========================================================================
+
+5.16 - 2014-01-30 - This version supports Firefox 27.0.
+Minimal changes were made to support changes made to Firefox 27.
+
+5.15 - 2013-12-05 - This version supports Firefox 26.0.
+Minimal changes were made to support changes made to Firefox 26.
+
+5.14 - 2013-10-25 - This version supports Firefox 25.0.
+Added theme for the Options dialog toolbar buttons. 
+Minimal changes were made to support changes made to Firefox 25.
+
+5.13 - 2013-09-20 - This version supports Firefox 24.0.
+This version of FOXSCAPE fixes several bugs in version 5.12
+
+5.12 - 2013-09-17 - This version supports Firefox 24.0.
+This version of FOXSCAPE is a major reconstruction of the theme using
+Sailfish's Simple Green theme as the template. I hope this fixes a couple of
+issues reported on Linux and Mac OS X.
+
+5.11 - 2013-08-14 - This version supports Firefox 23.0.
+Minimal changes were made to support changes made to Firefox 23.
+
+5.10 - 2013-08-03 - This version supports Firefox 23.0.
+Minimal changes were made to support changes made to Firefox 23.
+(Never went public due to Windows Aero theme bug)
+
+5.09 - 2013-06-26 - This version supports Firefox 22.0.
+Minimal changes were made to support changes made to Firefox 22.
+
+5.08 - 2013-05-30 - This version supports Firefox 21.0.
+Minimal changes were made to support changes made to Firefox 21.
+Updated the included FOXSCAPE Icon Pack for Windows
+
+5.07 - 2013-04-10 - This version supports Firefox 20.0.
+Minimal changes were made to support changes made to Firefox 20.
+
+5.06 - 2013-02-05 - This version supports Firefox 19.0.
+Minimal changes were made to support changes made to Firefox 19.
+
+5.05 - 2012-10-17 - This version supports Firefox 16.0.
+Minimal changes were made to support changes made to Firefox 16.
+
+5.04 - 2012-09-07 - This version supports Firefox 15.
+Minimal changes were made to support changes made to Firefox 15.
+
+5.03 - 2012-07-24 - First public release version for Firefox 14.
+ * The following files were updated to support Firefox 14.
+  ...\browser\browser.css
+  ...\browser\sync-bg.png
+  ...\browser\syncSetup.css
+  ...\browser\webapps-16.png
+  ...\browser\webapps-64.png
+  ...\browser\preferences\aboutPermissions.css
+  ...\global\notification.css
+  ...\mozapps\plugins\pluginProblem.css
+ * The following files were added to support Firefox 14.
+  ...\browser\identity-icons-generic.png    (Earth      x3)
+  ...\browser\identity-icons-https-ev.png   (Grey Lock  x3)
+  ...\browser\identity-icons-https.png      (Green Lock x3)
+  ...\browser\devtools\*
+  ...\browser\downloads\*
+  ...\global\TopLevelImageDocument.css
+  ...\global\TopLevelVideoDocument.css
+  ...\mozapps\plugins\contentPluginClickToPlay.png
+ * Fixed 'no dropmarker' bug in some Windows themes (global\menulist.css)
+ * The followng folder icons were slightly changed
+  ...\browser\foxscape\img\BookmarkFolderClosed.png
+  ...\browser\foxscape\img\BookmarkFolderOpen.png
+  ...\browser\foxscape\img\folder2.png
+  ...\browser\foxscape\img\up2.png
+  ...\global\icons\folder-item.png
+  ...\browser\places\query.png
+ * The following LiveMark icons were slightly changed
+  ...\browser\foxscape\img\livemark-item-visited.png
+  ...\browser\places\livemark-item.png
+
+5.02 - 2012-06-04 - First public release version for Firefox 13.
+This version only adds support for Firefox 13.
+Changes:
+ * Newtab page
+ * Web Developer Tools (Inspect, etc.)
+ * Visited livemark items
+ * WebApps notification and install icons
+ * Reset Firefox button on Troubleshooting Information page
+
+5.01 - 2012-05-27 - Second public release version for Firefox 12.
+Many changes made since last version.  I will update this section later.
+
+5.00 - 2012-05-06 - First public release version for Firefox 12.0.
+Many changes made since last version.  I will update this section later.
+* Mozilla Add-ons: FOXSCAPE 5.00.0 Rejected - Your add-on, FOXSCAPE 5.00.0,
+  has been reviewed by an editor and did not meet the criteria for being
+  hosted in our gallery. Your version was rejected because of the following
+  problems:
+  * The identity box doesn't show the difference between unsecured, secure,
+    and extended validation sites.
+  * The following web developer tools have many bugs.
+    Tools > Web Developer > Inspect
+    Tools > Web Developer > Scratchpad
+    Tools > Web Developer > Style Editor
+
+4.01 - 2011-04-08 - First public release version for Firefox 4.0
+ADDED the Firefox menu (AppMenu), List all tabs, Tab groups, Zoom in,
+      Zoom out, Subscribe, Sync, and Location bar reload-stop-go buttons
+Subskin changes:
+ * Skins listed below prefixed by NEW were newly added in this version.
+ * Skins listed below prefixed by NEW DEFAULT were in the prior version
+   of FOXSCAPE, just not set as a default.
+ * Skins listed below prefixed by UPDATED were in the prior version of
+   FOXSCAPE, but revised to support Firefox 4.0 or improve functionality.
+ * Skins listed below prefixed by REMOVED were in the prior version of
+   FOXSCAPE, but removed from this version due to their function being
+   unneeded in Firefox 4.0.
+==========================================================================
+[Add-ons]
+NEW DEFAULT - Skin_the_QuickRestart_extension.css  (DEFAULT)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+NEW DEFAULT - Skin_the_Work_Offline_extension1.css  (DEFAULT)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+NEW - Skin_the_Status-4-Evar_extension_download_button.css  (DEFAULT)
+NEW - Show_Status-4-Evar-options-button_text_label_on_right.css
+NEW - Remove_Status-4-Evar-options-button_text_label.css 
+NEW - Show_Status-4-Evar-download-button_text_label_on_right.css
+NEW - Remove_Status-4-Evar-download-button_text_label.css 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+NEW - Skin_the_MinimizeToTray_revived_extension.css  (DEFAULT)
+NEW - Show_MinimizeToTray_revived_button_text_label_on_right.css
+NEW - Remove_MinimizeToTray_revived_button_text_label.css 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+NEW - Skin_the_Restartless_Restart_extension_appmenu_icon.css  (DEFAULT)
+==========================================================================
+[Misc]
+UPDATED - Remove_separators_between_toolbars_Fx.css 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+NEW - Show_Subscribe_button_text_label_on_right_Fx.css
+NEW - Remove_Subscribe_button_text_label_Fx.css 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+NEW - Show_Tab_Groups_button_text_label_on_right_Fx.css
+NEW - Remove_Tab_Groups_button_text_label_Fx.css
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+NEW - Remove_Home_button_text_label_Fx.css
+NEW - Remove_Home_button_text_label_only_when_on_bookmarks_toolbar_Fx.css
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+NEW - Show_bookmarks_menu_button_text_label_on_bottom_Fx.css
+NEW - Remove_bookmarks_menu_button_text_label_Fx.css 
+NEW - Remove_bookmarks_menu_button_icon_Fx.css
+NEW - Show_bookmarks_toolbar_bookmarks_menu_button_even_when_menu_bar_is_visible_Fx.css
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+NEW - Remove_zoom_control_button_text_labels_Fx.css 
+==========================================================================
+NEW [Title Bar]
+NEW - Remove_Appmenu_Button_Fx.css
+NEW - Remove_blue_background_from_tabs_toolbar_with_tabs_on_top_in_a_maximized_window_Fx.css 
+NEW - Tabs_in_Titlebar_in_restored_window_on_Windows_XP_Windows_Classic_Theme_Fx.css 
+==========================================================================
+[Menu Bar]
+UPDATED - Add_scrollbars_to_all_Bookmark_menus_Fx.css - This subskin was
+          also RENAMED. It was called:
+          Add_scrollbars_to_the_Bookmarks_menu_Fx.css
+==========================================================================
+[Navigation Toolbar]
+UPDATED - Enable_keyhole_back_and_forward_buttons.css
+NEW - Remove_Back_button_Fx.css
+NEW - Remove_Forward_button_Fx.css
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+REMOVED - Remove_Back-Forward_Dropmarker_Fx.css - This is not needed due
+          to no dropmarks appearing in Firefox 4 
+REMOVED - Combine_Stop_and_Reload_buttons_Fx.css - This function is now
+          implemented in Firefox 4.
+==========================================================================
+[Location Toolbar]
+UPDATED - Remove_location_bar_identity_button_text_label_Fx.css
+NEW - Hide_'Go_to_a_Web_Site'_label_in_location_bar.css
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+REMOVED - Remove_location_bar_livemark-button_(RSS)_Fx.css - This is not
+          needed due to the removal of the location bar RSS Feed/livemark
+          button.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+NEW - Always_show_URL_bar_combined_Go-Reload-Stop_Go_button_Fx.css
+NEW - Remove_URL_bar_combined_Go-Reload-Stop_Go_button_background_Fx.css  (DEFAULT)
+NEW - Always_show_URL_bar_combined_Go-Reload-Stop_Reload_button_Fx.css
+NEW - Remove_URL_bar_combined_Go-Reload-Stop_Reload_button_background_Fx.css  (DEFAULT)
+NEW - Always_show_URL_bar_combined_Go-Reload-Stop_Stop_button_Fx.css
+NEW - Remove_URL_bar_combined_Go-Reload-Stop_Stop_button_background_Fx.css  (DEFAULT)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+RENAMED - Enable_search_bar_search_engine_button_gray_background_Fx.css 
+          It was called:
+          Flat_search_bar_search_engine_button_Fx.css
+REMOVED - Remove_search_bar_add_engine_blue_highlighting_Fx.css - This is
+          not needed due to the removal of the search bar add engine blue
+          highlighting.
+NEW - Hide_search_engine_name_label_in_search_bar.css
+==========================================================================
+[Bookmarks Toolbar (aka Personal Toolbar)]
+UPDATED - Bookmarks_Toolbar_bookmark_icon_-_Windows_style.css  (DEFAULT)
+UPDATED - Bookmarks_Toolbar_bookmark_icon_-_Linux_style.css
+UPDATED - Bookmarks_Toolbar_bookmark_icon_-_Mac_style.css
+==========================================================================
+[Tab Bar]
+REMOVED - Always_show_new_tab_tab_on_far_left_end_of_the_tab_bar_Fx.css -
+          This function is now implemented in Firefox 4.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+NEW - Always_show_new_tab_button_stuck_to_right_end_of_right_tab_Fx.css
+UPDATED - Always_show_new_tab_button_on_right_end_of_the_tab_bar_Fx.css 
+          This subskin was also RENAMED. It was called:
+          Always_show_new_tab_tab_on_right_end_of_the_tab_bar_Fx.css
+REMOVED - Remove_New_Tab_button_Fx.css - This function is now implemented
+          in Firefox 4.
+REMOVED - Remove_List_Tabs_button_Fx.css - This function is now
+          implemented in Firefox 4.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+NEW - Never_show_tab_close_button_on_tabs_Fx.css
+NEW - Always_show_tab_close_button_on_tabs_Fx.css
+NEW - Always_show_tab_close_button_at_far_right_end_of_tab_bar_Fx.css 
+==========================================================================
+[Add-on Bar (was Status Bar)]
+ * All of the following status bar related subskins are now broken due to
+the replacement of the status bar with the addon bar in Firefox.  Similar
+subskins will need to be developed for the Status-4-Evar extension, if
+possible.
+REMOVED - Never_display_the_status_bar_progress_meter_Fx.css
+REMOVED - Gray_status_bar_progress_meter_(Hiding)_(With_frame)_Fx.css
+REMOVED - Gray_status_bar_progress_meter_(Hiding)_(No_frame)_Fx.css
+REMOVED - Gray_status_bar_progress_meter_(Always_visible)_(With_frame)_Fx.css
+REMOVED - Gray_status_bar_progress_meter_(Always_visible)_(No_frame)_Fx.css
+REMOVED - Bouncing_status_bar_progress_meter_(Hiding).css
+REMOVED - Bouncing_status_bar_progress_meter_(Always_visible).css
+REMOVED - Always_display_the_status_bar_download_button_(without_text)_Fx.css
+REMOVED - Never_display_the_status_bar_download_button_Fx.css
+REMOVED - Always_display_the_status_bar_security_button_Fx.css
+REMOVED - Never_display_the_status_bar_security_button_Fx.css
+REMOVED - Remove_status_bar_security_button_text_Fx.css  (Not needed in Fx 3.6+)
+REMOVED - Always_display_the_status_bar_pop-up_blocker_button_Fx.css
+REMOVED - Never_display_the_status_bar_pop-up_blocker_button_Fx.css
+==========================================================================
+
+3.04 - 2010-04-25 - Updated to have better Mac OS and Linux support.
+ADDED Mac OS and Linux support with the help of Sailfish and his Simple
+  Green theme. ( see: http://Addons.Mozilla.org/addon/6269 )
+  Scroll bars, menu bar bookmarks, and toolbar separators now function on
+  Mac OS.  There may still be some slight bugs on Mac OS and Linux.
+ADDED subskin: Enable_tree_connecting_lines_-_dotted_Fx.css (DEFAULT)
+ADDED subskin: Enable_tree_connecting_lines_-_solid_Fx.css
+ADDED subskin: Disable_tree_connecting_lines_Fx.css
+ADDED subskin: Always_display_the_status_bar_pop-up_blocker_button_Fx.css
+ADDED subskin: Always_display_the_status_bar_download_button_(without_text)_Fx.css
+ADDED subskin: Never_display_the_status_bar_pop-up_blocker_button_Fx.css
+ADDED subskin: Never_display_the_status_bar_download_button_Fx.css
+ADDED subskin: Location_bar_go_button_-_style_3.css
+ADDED subskin: Change_new_tab,_list_all_tabs,_and_close_tab_tabs_to_the_same_size_Fx.css
+ADDED subskin: Always_show_new_tab_tab_on_far_left_end_of_the_tab_bar_Fx.css
+ADDED subskin: Always_show_new_tab_tab_on_right_end_of_the_tab_bar_Fx.css
+UPDATED Remove_List_Tabs_button_Fx.css to improve operation with other subskins.
+UPDATED Gray_about_blank_FX.css to allow current OS color in background.
+UPDATED Gray_about_blank_with_splash-3.css to allow current OS color in background.
+FIXED full screen toolbar throbber positioning to be at the far right.
+
+3.03 - 2010-03-02 - First public release version for Firefox 3.6
+ADDED Full Screen toolbar button (New in Firefox 3.6)
+Reorganized theme files to simplify future updates
+Renamed *_in_FF3.css subskins to *_Fx.css
+Renamed several subskins to improve naming consistency and clarity
+Relocated all base theme .css file changes to separate subskins
+Exposed all base theme subskins as entries in the 0-config-template.css file
+ADDED subskin: Black toolbar button text
+  chrome://browser/skin/foxscape/sub/Toolbar_button_text_color_-_scheme_2.css
+ADDED subskin: Always display extra large Netscape 4.x throbber
+  chrome://browser/skin/foxscape/sub/Throbber_-_force_extra_large_(40x40).css
+IMPROVED subskin: Automatic small and large Netscape 4.x throbber
+  chrome://browser/skin/foxscape/sub/Throbber_-_auto_small_and_large.css
+  This was the base subskin in FOXSCAPE 3.02
+  This subskin now behaves as follows
+    Throbber on Menu Bar toolbar: always small
+    Throbber on other toolbars:
+      Show: [Icons and Text]  [ ] Use Small Icons  Throbber size: Large
+      Show: [Icons and Text]  [/] Use Small Icons  Throbber size: Large
+      Show: [Icons         ]  [ ] Use Small Icons  Throbber size: Large
+      Show: [Icons         ]  [/] Use Small Icons  Throbber size: Small
+      Show: [Text          ]  [x] Use Small Icons  Throbber size: Small
+ADDED subskin: Automatic small, large and extra large Netscape 4.x throbber
+  chrome://browser/skin/foxscape/sub/Throbber_-_auto_small,_large_and_extra_large.css
+  This is the new base subskin
+  This base subskin behaves like the one above with the following change
+    Throbber on other toolbars:
+      Show: [Icons and Text]  [ ] Use Small Icons  Throbber size: Extra Large
+ADDED subskin: Automatic small and large Mozilla throbber
+  chrome://browser/skin/foxscape/sub/Throbber_-_Mozilla_auto_small_and_large.css
+ADDED subskin: Automatic small and large SeaMonkey 1.x throbber 
+  chrome://browser/skin/foxscape/sub/Throbber_-_SeaMonkey_1.x_auto_small_and_large.css
+ADDED subskin: Automatic small and large SeaMonkey 2.x throbber
+  chrome://browser/skin/foxscape/sub/Throbber_-_SeaMonkey_2.x_auto_small_and_large.css
+ADDED subskin: Location bar go button arrow WITHOUT green dot
+  chrome://browser/skin/foxscape/sub/Location_bar_go_button_-_style_2.css
+ADDED subskin: Search bar go button magnifying glass
+  chrome://browser/skin/foxscape/sub/Search_bar_go_button_-_style_2.css
+
+3.02 - 2009-08-16 - First public release version for Firefox 3.5
+ADDED Open a tab button (New in Firefox 3.5)
+ADDED Private Browsing related icons (New in Firefox 3.5)
+ADDED customizable features via subskins
+CHANGED the default back and forward buttons to non unified (classic) style
+CHANGED unified back and forward buttons to have a transparent background
+CHANGED default History button icon to a folder style
+ADDED location & search splitter grippy
+ADDED location bar search spinner
+ADDED optional classic Cylon eye style progressmeter
+ADDED an alternate older icon style for the Work Offline extension
+ADDED two alternate icon styles for the History button
+ADDED two alternate icon styles for the Downloads button
+ADDED two alternate icon styles for the Bookmarks button
+ADDED location bar "Bookmark this page" button with an improved metaphor:
+      Bookmark + Glint of light instead of a Gray Star
+ADDED location bar "Edit this bookmark" button  with an improved metaphor:
+      Bookmark + Pen instead of a Gold Star
+CHANGED library/places Tag icon to a less bright color scheme
+CHANGED library/places query icon from the incorrect folder with a tag icon
+        to the correct magnifying glass on a folder icon
+ADDED library/places Import and Backup button
+CHANGED library/places History icon to a less bright color scheme
+ADDED an alternate style for library/places History icon
+ADDED Bookmarks toolbar drop marker
+CHANGED default library/places back and forward buttons to non unified
+        (classic) style
+CHANGED library/places unified back and forward buttons to have a
+        transparent background
+ADDED an alternate style for library/places unified back and forward
+      buttons
+ADDED dir listing folder, up, local, and remote icons
+ADDED an alternate style for dir listing
+ADDED seven alternate tab close button styles
+ADDED two alternate page-proxy icon styles 
+
+3.01 - 2008-09-07
+ADDED new web site address - http://FOXSCAPE.net
+ADDED missing large RTL keyhole style unified back & forward icons
+ADDED keyhole style unified back & forward Recent pages menu arrows
+ADDED go button
+ADDED search go button
+ADDED flat appearance passport officer (Larry) icons
+      (Gray, Blue, Green, Red, and Yellow)
+ADDED most of the Organize Bookmarks... / Library / Places icons
+      (Including: History, Tags, All Bookmarks, Bookmarks Toolbar,
+                  Bookmarks Menu, and Unsorted Bookmarks icons)
+ADDED Page Info tab buttons
+ADDED Applications tab button in Options
+ADDED other minor changes
+
+3.00 - 2008-08-04 - First public release version for Firefox 3.0
+PORTED to Firefox 3 platform
+ADDED keyhole style unified back and forward button
+
+2.02 - 2008-07-31 - Last Firefox 2.0 compatible version
+ADDED internal viewable readme. Go to: chrome://browser/skin/readme
+ADDED internal icon pack. Go to: chrome://browser/skin/iconpack
+ADDED original Page Proxy icon to the left end of the Location control.
+ADDED Report Site button depressed (active) state icon.
+IMPROVED consistency of icon size in the following Bookmarks Manager icons:
+         New Bookmark..., New Folder..., New Separator, and Move...
+ADDED images for the Splash extension and the about:blank page.
+ADDED skin for the Work Offline extension.
+ADDED skin for the QuickRestart extension's restart button.
+
+2.01 - 2006-12-14
+ADDED: Toolbar button text labels display in bright blue and dark blue
+       during mouse hover and mouse click, respectively.
+	   
+2.00 - 2006-12-13 - First public release version for Firefox 2.0
+
+1.xx - My never completed theme for Firefox 1.5
