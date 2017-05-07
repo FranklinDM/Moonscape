@@ -39,53 +39,9 @@ radio[pane=paneAdvanced] {
 }
 
 radio[pane=paneSync] {
-/*#---  list-style-image: url("chrome://browser/skin/preferences/Options-sync.png") !important; ---*/
-/*#+++*/
-  -moz-image-region: rect(0, 288px, 32px, 256px);
-/*#+++*/
+  list-style-image: url("chrome://browser/skin/preferences/Options-sync.png");
+  -moz-image-region: rect(0, 32px,  32px, 0);
 }
-
-/*#+++*/
-radio[pane=paneMain]:hover, 
-radio[pane=paneMain][selected="true"]{
-  -moz-image-region: rect(32px, 32px,  64px, 0);
-}
-
-radio[pane=paneTabs]:hover,
-radio[pane=paneTabs][selected="true"] {
-  -moz-image-region: rect(32px, 64px, 64px, 32px);
-}
-
-radio[pane=paneContent]:hover,
-radio[pane=paneContent][selected="true"] {
-  -moz-image-region: rect(32px, 96px,  64px, 64px);
-}
-
-radio[pane=paneApplications]:hover,
-radio[pane=paneApplications][selected="true"] {
-  -moz-image-region: rect(32px, 128px,  64px, 96px);
-}
-
-radio[pane=panePrivacy]:hover,
-radio[pane=panePrivacy][selected="true"] {
-  -moz-image-region: rect(32px, 160px,  64px, 128px);
-}
-
-radio[pane=paneSecurity]:hover,
-radio[pane=paneSecurity][selected="true"] {
-  -moz-image-region: rect(32px, 192px,  64px, 160px);
-}
-
-radio[pane=paneAdvanced]:hover,
-radio[pane=paneAdvanced][selected="true"] {
-  -moz-image-region: rect(32px, 224px, 64px, 192px);
-}
-
-radio[pane=paneSync]:hover,
-radio[pane=paneSync][selected="true"] {
-  -moz-image-region: rect(32px, 288px, 64px, 256px);
-}
-/*#+++*/
 
 /* Applications Pane */
 #BrowserPreferences[animated="true"] #handlersView {
@@ -179,43 +135,3 @@ radio[pane=paneSync][selected="true"] {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-
-/* ############################################################################## M.W. - Additions START */
-
-/* Fix options toolbar sync button */
-radio[pane=paneSync] {
-  list-style-image: url("chrome://browser/skin/preferences/Options-sync.png") !important;
-  -moz-image-region: rect(0, 32px,  32px, 0) !important;
-}
-
-/* Theme the Options window's buttons bar */
-.paneSelector {
-  background-color: transparent !important;
-}
-radio[pane] {
-  border: 1px solid !important;
-  -moz-border-top-colors:    transparent !important;
-  -moz-border-right-colors:  transparent !important;
-  -moz-border-bottom-colors: transparent !important;
-  -moz-border-left-colors:   transparent !important;
-}
-radio[pane]:hover {
-  background-color: transparent !important;
-  border: 1px solid !important;
-  -moz-border-top-colors:    ThreeDHighlight !important;
-  -moz-border-right-colors:  ThreeDShadow    !important;
-  -moz-border-bottom-colors: ThreeDShadow    !important;
-  -moz-border-left-colors:   ThreeDHighlight !important;
-}
-radio[pane][selected="true"] {
-  background-color: rgba(255, 255, 255, 0.5) !important;
-  border: 1px solid !important;
-  -moz-border-top-colors:    ThreeDShadow    !important;
-  -moz-border-right-colors:  ThreeDHighlight !important;
-  -moz-border-bottom-colors: ThreeDHighlight !important;
-  -moz-border-left-colors:   ThreeDShadow    !important;
-}
-radio[pane][selected="true"]:hover {
-}
-
-/* ############################################################################## M.W. - Additions END */

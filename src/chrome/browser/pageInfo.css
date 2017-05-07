@@ -14,25 +14,30 @@
   -moz-box-orient: vertical;
   -moz-box-align: center;
   -moz-appearance: none;
-  padding: 5px 3px 1px 3px;
-  margin: 0 1px;
+  margin: 0px 1px 0px 1px;
+  padding: 1px 3px 1px 3px;
   min-width: 4.5em;
+  border: 1px solid transparent;
 }
 
-#viewGroup > radio:hover {
-  background-color: #E0E8F6;
-  color: black;
+#viewGroup > radio:hover:not([selected="true"]) {
+  -moz-border-top-colors:    ThreeDHighlight;
+  -moz-border-right-colors:  ThreeDShadow;
+  -moz-border-bottom-colors: ThreeDShadow;
+  -moz-border-left-colors:   ThreeDHighlight;
 }
 
 #viewGroup > radio[selected="true"] {
-  background-color: #C1D2EE;
-  color: black;
+  background-color: rgba(255, 255, 255, 0.5);
+  -moz-border-top-colors:    ThreeDShadow;
+  -moz-border-right-colors:  ThreeDHighlight;
+  -moz-border-bottom-colors: ThreeDHighlight;
+  -moz-border-left-colors:   ThreeDShadow;
 }
 
 #topBar {
   border-bottom: 2px groove ThreeDFace;
   -moz-padding-start: 10px;
-  background-color: -moz-Field;
   color: -moz-FieldText;
 }
 
@@ -40,40 +45,20 @@
   -moz-image-region: rect(0px, 32px, 32px, 0px)
 }
 
-#generalTab:hover, #generalTab[selected="true"] {
-  -moz-image-region: rect(32px, 32px, 64px, 0px)
-}
-
 #mediaTab {
   -moz-image-region: rect(0px, 64px, 32px, 32px)
-}
-
-#mediaTab:hover, #mediaTab[selected="true"] {
-  -moz-image-region: rect(32px, 64px, 64px, 32px)
 }
 
 #feedTab {
   -moz-image-region: rect(0px, 96px, 32px, 64px)
 }
 
-#feedTab:hover, #feedTab[selected="true"] {
-  -moz-image-region: rect(32px, 96px, 64px, 64px)
-}
-
 #permTab {
   -moz-image-region: rect(0px, 128px, 32px, 96px)
 }
 
-#permTab:hover, #permTab[selected="true"] {
-  -moz-image-region: rect(32px, 128px, 64px, 96px)
-}
-
 #securityTab {
   -moz-image-region: rect(0px, 160px, 32px, 128px)
-}
-
-#securityTab:hover, #securityTab[selected="true"] {
-  -moz-image-region: rect(32px, 160px, 64px, 128px)
 }
 
 deck {
