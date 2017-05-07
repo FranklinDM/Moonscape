@@ -6,21 +6,19 @@
    /* @import url("chrome://browser/skin/moonscape/sub/BASE_Title_Bar_cleanup_Fx.css");                                      Disabled in FOXSCAPE 5.10 for Fx 23 Aero theme bug - fix later */
    @import url("chrome://browser/skin/moonscape/sub/BASE_Enable_titlebar_and_menubar_separator_Fx.css");
    @import url("chrome://browser/skin/moonscape/sub/BASE_Toolbar_separators_-_enable_on_all_bars_Fx.css");
-   @import url("chrome://browser/skin/moonscape/sub/BASE_Toolbar_backrounds_-_remove_from_all_bars_Fx.css");
    @import url("chrome://browser/skin/moonscape/sub/BASE_Allow_toolbar_separators_to_function_properly_on_Mac_OS.css");		/* ## Needed? ## */
    @import url("chrome://browser/skin/moonscape/sub/BASE_Allow_menubar_bookmarks_to_function_properly_on_Mac_OS.css");		/* ## Needed? ## */
    @import url("chrome://browser/skin/moonscape/sub/BASE_Set_menubar_height.css");
    @import url("chrome://browser/skin/moonscape/sub/BASE_Location_bar_cleanup_Fx.css"); 
-   @import url("chrome://browser/skin/moonscape/sub/BASE_Location Bar Combined Go,Reload,Stop button.css");                  /* NEW */
+   @import url("chrome://browser/skin/moonscape/sub/BASE_Location_bar_combined_Go_Reload_Stop_button.css");                  /* NEW */
    @import url("chrome://browser/skin/moonscape/sub/BASE_Tabs_Bar_cleanup_Fx.css");
    @import url("chrome://browser/skin/moonscape/sub/BASE_Enable_fullscreen_throbber_right-hand_justification_Fx.css");
    @import url("chrome://browser/skin/moonscape/sub/BASE_Enable_fullscreen_close_button_hover_and_active_state_outline.css");
    @import url("chrome://browser/skin/moonscape/sub/BASE_Skin_the_tabview_button.css");
    @import url("chrome://browser/skin/moonscape/sub/BASE_Skin_the_alltabs_button.css");                                      /* NEW */
    @import url("chrome://browser/skin/moonscape/sub/BASE_Skin_the_bookmarks_menu_button.css");
-   @import url("chrome://browser/skin/moonscape/sub/BASE_Skin_the_history_menu_button.css");									/* NEW */
+   @import url("chrome://browser/skin/moonscape/sub/BASE_Skin_the_history_menu_button.css");								 /* NEW */
    @import url("chrome://browser/skin/moonscape/sub/BASE_Search_Bar_go_button_size_limit.css");
-   @import url("chrome://browser/skin/moonscape/sub/BASE_Find_bar_cleanup.css");
    /* @import url("chrome://browser/skin/moonscape/sub/BASE_Web_console_filter_toolbar_cleanup_Fx.css"); */
    @import url("chrome://browser/skin/moonscape/sub/BASE_Resizer_-_Transparent_Fx.css");
    @import url("chrome://browser/skin/moonscape/sub/BASE_Force_toolbar_background_visibility.css");

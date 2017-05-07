@@ -50,13 +50,9 @@
 }
 
 #main-window[tabsintitlebar]:not([inFullscreen]) #toolbar-menubar[inactive] ~ #TabsToolbar:not(:-moz-lwtheme) {
-  background: linear-gradient(to top, rgba(10%,10%,10%,.4) 1px, transparent 1px),
-              linear-gradient(rgba(50%,50%,50%,0), ActiveCaption 85%);
   color: CaptionText;
 }
 #main-window[tabsintitlebar]:not([inFullscreen]) #toolbar-menubar[inactive] ~ #TabsToolbar:not(:-moz-lwtheme):-moz-window-inactive {
-  background: linear-gradient(to top, rgba(10%,10%,10%,.4) 1px, transparent 1px),
-              linear-gradient(rgba(50%,50%,50%,0), InactiveCaption 85%);
   color: InactiveCaptionText;
 }
 
@@ -2012,12 +2008,12 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 
 richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-icon {
   list-style-image: url("chrome://browser/skin/actionicon-tab.png");
-  -moz-image-region: rect(0, 16px, 11px, 0);
+  -moz-image-region: rect(0, 21px, 13px, 0);
   padding: 0 3px;
 }
 
 richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-box > .ac-action-icon {
-  -moz-image-region: rect(11px, 16px, 22px, 0);
+  -moz-image-region: rect(13px, 21px, 26px, 0);
 }
 
 .ac-comment[selected="true"],
@@ -2512,9 +2508,9 @@ toolbar:not([mode="text"]):not([iconsize="small"]) #navigator-throbber {
   -moz-appearance: none;
   list-style-image: url("chrome://global/skin/icons/close.png");
   -moz-image-region: rect(0, 16px, 16px, 0);
-  padding: 4px 2px;
   margin: 0px;
   border: none;
+  outline: 0;
 }
 
 .tabs-closebutton > .toolbarbutton-icon {
@@ -3384,21 +3380,12 @@ toolbar[iconsize="small"] #alltabs-button[open]:active {
   -moz-border-left-colors:   ThreeDShadow    !important;
 }
 
-/* Skin the Switch to tab icon */
-richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-icon {
-  list-style-image: url("chrome://browser/skin/moonscape/img/actionicon-tab.png") !important;
-  -moz-image-region: rect(0, 21px, 13px, 0) !important;
-  padding: 0 3px !important;
+/* AIOS Toolbar */.
+#aios-sbhtoolbar {
+  border: none !important; 
 }
-richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-box > .ac-action-icon {
-  -moz-image-region: rect(13px, 21px, 26px, 0) !important;
-}
-
-/* Fix missing menu bar private browsing indicator (broken by my theme elsewhere) */
-#main-window[privatebrowsingmode=temporary] #toolbar-menubar {
-  background-image: url("chrome://browser/skin/privatebrowsing-dark.png") !important;
-  background-position: top right !important;
-  background-repeat: no-repeat !important;
+#aios-toolbar {
+  border-right: 1px solid ThreeDShadow;
 }
 
 /* Add Bookmarks menu button depressed highlighting */
@@ -3416,15 +3403,6 @@ toolbar[iconsize="small"] #bookmarks-menu-button[open]:active {
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Simple Green Adjustments by M.W. - End ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
 /* ############################################################################## M.W. -  JEZ Additions START */
-
-/* Other-than-Aero specific */
-/*@media not all and (-moz-windows-theme: aero) {
-  @media all and (-moz-windows-default-theme) {
-    #main-window[sizemode="normal"] #appmenu-button {
-      margin-bottom: 5px;
-    }
-  }
-}*/
 
 /* Aero specific */
 @media all and (-moz-windows-theme: aero) {
@@ -3460,7 +3438,6 @@ toolbar[iconsize="small"] #bookmarks-menu-button[open]:active {
 
   sidebarheader {
     -moz-appearance: none !important;
-    /* background-image: linear-gradient(bottom, rgba(0,0,0,.05) 1px, transparent 50%);  Disabled by M.W. in FOXSCAPE 5.10  */
   }
 
   #minimize-button:-moz-locale-dir(rtl),
