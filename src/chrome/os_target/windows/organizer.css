@@ -15,33 +15,33 @@
 /* unified forward button with keyhole icons */
 #back-button,
 #forward-button {
-  list-style-image: url("chrome://browser/skin/myToolbar.png");
+  list-style-image: url("chrome://browser/skin/myToolbar-small.png");
 }
 
 #back-button {
-  -moz-image-region: rect(120px, 24px, 144px, 0px); 
+  -moz-image-region: rect(80px, 16px, 96px, 0px);
 }
 #back-button:not([disabled="true"]):hover {
-  -moz-image-region: rect(144px, 24px, 168px, 0px); 
+  -moz-image-region: rect(96px, 16px, 112px, 0px);
 }
 #back-button[disabled="true"] {
-  -moz-image-region: rect(168px, 24px, 192px, 0px); 
+  -moz-image-region: rect(112px, 16px, 128px, 0px);
 }
 #back-button:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(192px, 24px, 216px, 0px); 
+  -moz-image-region: rect(128px, 16px, 144px, 0px);
 }
 
 #forward-button {
-  -moz-image-region: rect(120px, 48px, 144px, 24px); 
+  -moz-image-region: rect(80px, 32px, 96px, 16px);
 }
 #forward-button:not([disabled="true"]):hover {
-  -moz-image-region: rect(144px, 48px, 168px, 24px); 
+  -moz-image-region: rect(96px, 32px, 112px, 16px);
 }
 #forward-button[disabled="true"] {
-  -moz-image-region: rect(168px, 48px, 192px, 24px); 
+  -moz-image-region: rect(112px, 32px, 128px, 16px);
 }
 #forward-button:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(192px, 48px, 216px, 24px); 
+  -moz-image-region: rect(128px, 32px, 144px, 16px);
 }
 
 #back-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
