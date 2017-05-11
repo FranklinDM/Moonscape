@@ -1,8 +1,9 @@
-/* -*- Mode: Java; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 2 -*-
- * This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/.
- */
+/*
+# -*- Mode: Java; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+*/
 
 /* Global Styles */
 #BrowserPreferences radio[pane] {
@@ -39,8 +40,7 @@ radio[pane=paneAdvanced] {
 }
 
 radio[pane=paneSync] {
-  list-style-image: url("chrome://browser/skin/preferences/Options-sync.png");
-  -moz-image-region: rect(0, 32px,  32px, 0);
+  list-style-image: url("chrome://browser/skin/preferences/Options-sync.png") !important;
 }
 
 /* Applications Pane */
@@ -84,7 +84,6 @@ radio[pane=paneSync] {
   height: 16px;
   margin: 0 2px;
   list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png") !important;
-  -moz-image-region: rect(0, 16px, 16px, 0);
 }
 
 #cookiesChildren::-moz-tree-image(domainCol, container) {
