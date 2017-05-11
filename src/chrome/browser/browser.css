@@ -8,7 +8,7 @@
 @import url("chrome://browser/skin/moonscape/default_subskins.css");
 /* PM Developer Tools (much easier if moved to other file) */
 @import url("chrome://browser/skin/devtools.css");
-/* Import padlock.css */
+/* PM Padlock */
 @import url("chrome://browser/skin/padlock/padlock.css");
 /* os-specific browser overrides */
 @import url("chrome://os_target/skin/browser-override.css");
@@ -76,6 +76,13 @@
 #nav-bar[tabsontop=true],
 #nav-bar[tabsontop=true][collapsed=true]:not([customizing]) + toolbar,
 #nav-bar[tabsontop=true][collapsed=true]:not([customizing]) + #customToolbars + #PersonalToolbar {
+  border-top: 2px solid;
+}
+
+/* lwtheme appearance */
+#nav-bar[tabsontop=true]:-moz-lwtheme,
+#nav-bar[tabsontop=true][collapsed=true]:not([customizing]):-moz-lwtheme + toolbar,
+#nav-bar[tabsontop=true][collapsed=true]:not([customizing]):-moz-lwtheme + #customToolbars + #PersonalToolbar {
   border-top: 2px solid;
   -moz-border-top-colors: transparent rgba(255, 255, 255, 0.5);
 }
