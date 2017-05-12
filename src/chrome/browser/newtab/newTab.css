@@ -11,7 +11,7 @@
 /* SCROLLBOX */
 #newtab-scrollbox:not([page-disabled]) {
   color: rgb(0,0,0);
-  background-color: hsl(0,0%,95%);
+  background-color: #C0C0C0;
 }
 
 /* UNDO */
@@ -127,11 +127,6 @@
 .newtab-site {
   text-decoration: none;
   transition-property: top, left, opacity, box-shadow, background-color;
-}
-
-.newtab-site:hover,
-.newtab-site[dragged] {
-  box-shadow: 0 0 10px rgba(8,22,37,.3);
 }
 
 .newtab-site[dragged] {
