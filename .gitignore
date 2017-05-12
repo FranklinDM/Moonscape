@@ -3,7 +3,7 @@
 compile.bat
 
 # xcf files (where i test)
-.xcf
+*.xcf
 
 # newsrc
 [Nn]ewsrc/
