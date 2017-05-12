@@ -5,17 +5,12 @@
 /* ===== global.css =====================================================
   == Styles that apply everywhere.
   ======================================================================= */
-
+  
 /* all localizable skin settings shall live here */
 @import url("chrome://global/locale/intl.css");
 
 /* Import platform-specific override stylesheets */
 @import url("chrome://os_target/skin/global-override.css");
-
-/* Import extension override stylesheets */
-@import url("chrome://mozapps/skin/TMP/TMPOverrides.css");
-@import url("chrome://mozapps/skin/AIOS/AIOSOverrides.css");
-@import url("chrome://mozapps/skin/status4evar/status4evarOverrides.css");
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
