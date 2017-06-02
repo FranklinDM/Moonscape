@@ -3820,6 +3820,10 @@ toolbar[iconsize="small"] #bookmarks-menu-button[open]:active {
 #addon-bar toolbarbutton {
   -moz-box-orient: horizontal !important;  
 }
+/* add a small gap between the icon and text of statusbar buttons */
+#addon-bar toolbarbutton > .toolbarbutton-icon {
+  -moz-margin-end: 2px;
+}
 
 /* set a min width to toolbar icons to prevent looking weird */
 [iconsize="small"][mode="full"] #nav-bar .toolbarbutton-1 {
