@@ -181,7 +181,7 @@
 /* == Adjust pinned tabs when scrollbutton-up is visible =================== */
 
 .tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned]:not(:-moz-lwtheme) {
-  height: 24px !important;
+  padding-bottom: 5px;
 }
 .tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] .tab-icon-image:not(:-moz-lwtheme),
 .tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] .tab-throbber:not(:-moz-lwtheme) {
