@@ -1,6 +1,7 @@
 /**************************************************************************
  * Enable keyhole back and forward buttons
- * This subskin restores the two sections removed from the browser.css
+ * This subskin restores keyhole-style back/forward buttons and
+ * forward button hiding when it is in disabled state
  * By: Michael Walden
  **/
  
@@ -14,43 +15,19 @@
 }
 
 toolbar[mode="icons"] #back-button {
-  -moz-appearance: none !important;
   padding: 0 !important;
   -moz-padding-start: 4px !important;
-  border: none !important;
-}
-
-toolbar[iconsize="large"][mode="icons"] #back-button {
-  -moz-image-region: rect(0px 396px 34px 360px) !important;
-}
-toolbar[iconsize="large"][mode="icons"] #back-button:hover {
-  -moz-image-region: rect(34px 396px 68px 360px) !important;
-}
-toolbar[iconsize="large"][mode="icons"] #back-button[disabled="true"] {
-  -moz-image-region: rect(68px 396px 102px 360px) !important;
-}
-toolbar[iconsize="large"][mode="icons"] #back-button:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(102px 396px 136px 360px) !important;
 }
 
 toolbar[mode="icons"] #forward-button {
-  -moz-appearance: none !important;
-  padding: 0 !important;
-  border: none !important;
-  -moz-padding-end: 4px !important;
+  transition: transform, margin 250ms;
 }
 
-toolbar[iconsize="large"][mode="icons"] #forward-button {
-  -moz-image-region: rect(3px 426px 31px 396px) !important;
-}
-toolbar[iconsize="large"][mode="icons"] #forward-button:hover {
-  -moz-image-region: rect(37px 426px 65px 396px) !important;
-}
-toolbar[iconsize="large"][mode="icons"] #forward-button[disabled="true"] {
-  -moz-image-region: rect(71px 426px 99px 396px) !important;
-}
-toolbar[iconsize="large"][mode="icons"] #forward-button:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(105px 426px 133px 396px) !important;
+toolbar[mode="icons"] #forward-button[disabled="true"] {
+  transition: transform, margin 250ms;
+  transform: scale(0);
+  opacity: 0;
+  margin-left: -25px;
 }
 
 /* ########################################################################## */
@@ -58,43 +35,24 @@ toolbar[iconsize="large"][mode="icons"] #forward-button:not([disabled="true"]):h
 /* Unified small back/forward buttons, for icons mode... */
 
 toolbar[iconsize="small"][mode="icons"] #back-button {
-  -moz-appearance: none !important;
   padding: 0 !important;
   -moz-padding-start: 4px !important;
-  border: none !important;
-}
-
-toolbar[iconsize="small"][mode="icons"] #back-button {
-  -moz-image-region: rect(0px 264px 24px 240px) !important;
-}
-toolbar[iconsize="small"][mode="icons"] #back-button:hover {
-  -moz-image-region: rect(24px 264px 48px 240px) !important;
-}
-toolbar[iconsize="small"][mode="icons"] #back-button[disabled="true"] {
-  -moz-image-region: rect(48px 264px 72px 240px) !important;
-}
-toolbar[iconsize="small"][mode="icons"] #back-button:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 264px 96px 240px) !important;
 }
 
 toolbar[iconsize="small"][mode="icons"] #forward-button {
-  -moz-appearance: none !important;
-  padding: 0 !important;
-  border: none !important;
   -moz-padding-end: 4px !important;
 }
 
 toolbar[iconsize="small"][mode="icons"] #forward-button {
-  -moz-image-region: rect(0px 288px 24px 264px) !important;
+  transition: transform, margin 250ms;
 }
-toolbar[iconsize="small"][mode="icons"] #forward-button:hover {
-  -moz-image-region: rect(24px 288px 48px 264px) !important;
-}
+
 toolbar[iconsize="small"][mode="icons"] #forward-button[disabled="true"] {
-  -moz-image-region: rect(48px 288px 72px 264px) !important;
+  transition: transform, margin 250ms;
+  transform: scale(0);
+  opacity: 0;
+  margin-left: -20px;
 }
-toolbar[iconsize="small"][mode="icons"] #forward-button:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 288px 96px 264px) !important;
-}
+
 
 /* ########################################################################## */
