@@ -38,6 +38,7 @@ toolbar[mode="icons"] #forward-button {
 /* Unified large back/forward buttons, 'keyhole' style, for icons mode... */
 toolbar[mode="icons"] #forward-button, toolbar[mode="icons"] #back-button {
   border: none;
+  -moz-appearance: none;
 }
 
 /* ########################################################################## */
