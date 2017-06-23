@@ -187,3 +187,55 @@
 .tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] .tab-throbber:not(:-moz-lwtheme) {
   margin-top: 0px; /* was 3px */
 }
+
+/**************************************************************************
+ * Tabs bar appearance for vertical tree-style tab modes
+ * By: FranklinDM, Michael Walden
+ **/
+
+/* Unselected tab */
+#tabbrowser-tabs[treestyletab-mode=vertical] .tabbrowser-tab:not([selected="true"]) {
+  background: rgba(0, 0, 0, 0.10) !important;                                /* was 0.07 */
+  border:     2px solid           !important;
+  -moz-border-top-colors:    transparent rgba(0, 0, 0, 0.2) !important;      /* changed -moz-dialog -> transparent */
+  -moz-border-bottom-colors: transparent ThreeDDarkShadow   !important;      /* changed -moz-dialog -> transparent */
+  -moz-border-left-colors:   transparent rgba(0, 0, 0, 0.2) !important;      /* changed -moz-dialog -> transparent */
+  -moz-border-right-colors:  transparent ThreeDDarkShadow   !important;      /* changed -moz-dialog -> transparent */
+  color: -moz-DialogText !important;
+}
+
+/* Unselected tab with hover */
+#tabbrowser-tabs[treestyletab-mode=vertical] .tabbrowser-tab:hover:not([selected="true"]) {  /* inserted not([selected="true"]): */
+  background: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Selected tab */
+#tabbrowser-tabs[treestyletab-mode=vertical] .tabbrowser-tab[selected="true"] {
+  background: transparent  !important;                                       /* changed -moz-dialog -> transparent */
+  border:     2px solid    !important;
+  -moz-border-top-colors:    ThreeDHighlight  ThreeDLightShadow !important;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow      !important;
+  -moz-border-left-colors:   ThreeDHighlight  ThreeDLightShadow !important;
+  -moz-border-right-colors:  ThreeDDarkShadow ThreeDShadow      !important;
+}
+
+/* new tab button */
+#tabbrowser-tabs[treestyletab-mode=vertical] .tabs-newtab-button {
+  height: 20px 				!important;
+  width: 16px 				!important;
+  border: 2px solid 		!important;
+  border-color: transparent !important;
+}
+#tabbrowser-tabs[treestyletab-mode=vertical] .tabs-newtab-button:hover {
+  background: transparent    !important;                                    /* changed -moz-dialog -> transparent */
+  -moz-border-top-colors:    ThreeDHighlight  ThreeDHighlight !important;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow    !important;
+  -moz-border-left-colors:   ThreeDHighlight  ThreeDHighlight !important;
+  -moz-border-right-colors:  ThreeDDarkShadow ThreeDShadow    !important;
+}
+#tabbrowser-tabs[treestyletab-mode=vertical] .tabs-newtab-button:hover:active {
+  -moz-border-bottom-colors: ThreeDHighlight  ThreeDHighlight !important;
+  -moz-border-top-colors:    ThreeDDarkShadow ThreeDShadow    !important;
+  -moz-border-right-colors:  ThreeDHighlight  ThreeDHighlight !important;
+  -moz-border-left-colors:   ThreeDDarkShadow ThreeDShadow    !important;
+}

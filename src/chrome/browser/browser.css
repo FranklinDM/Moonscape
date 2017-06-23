@@ -2408,7 +2408,7 @@ toolbar:not([mode="text"]):not([iconsize="small"]) #navigator-throbber {
 
 .tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-locale-dir(rtl),
 .tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-locale-dir(ltr) {
-  transform: scaleX(-1);
+  list-style-image: url("chrome://browser/skin/tabbrowser/tab-arrow-right.png");
 }
 
 .tabbrowser-arrowscrollbox > .scrollbutton-down {
@@ -3271,28 +3271,16 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 }
 
 #main-window[privatebrowsingmode=temporary] #appmenu-button > .button-box > .box-inherit > .button-icon {
-  list-style-image: url("chrome://browser/skin/privatebrowsing-light.png");
-  width: 20px;
+  list-style-image: url("chrome://browser/skin/Privacy-16.png");
+  width: 16px;
   height: 16px;
 }
 
-/*#+++*/
 /* Add grippy to the sidebar splitter */
-
-#sidebar-splitter {
-  -moz-binding: url("chrome://global/skin/GRNsplitters.xml#horz-splitter");
-  background-color: ThreeDFace !important;
-}
-
-/* Overrides to restore to default splitter * /
 #sidebar-splitter {
   -moz-binding: url("chrome://global/content/bindings/splitter.xml#splitter");
-  border: 0;
-  -moz-border-end: 1px solid #A9B7C9;
-  min-width: 0;
-  position: relative;
+  background-color: ThreeDFace !important;
 }
-/*#+++*/
 
 /* vvvvvvvvvvvvvvvvvvvvvvvvvvvvv Simple Green Adjustments by M.W. - Begin vvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
 
