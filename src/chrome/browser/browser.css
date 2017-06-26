@@ -3101,10 +3101,11 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
   min-height: 20px;
   border-top-style: none;
   border-bottom-style: none;
-  padding-top: 1px;
+  padding-top: 2px;
   background-image: linear-gradient(rgba(0,0,0,.15) 1px, rgba(255,255,255,.15) 1px);
   background-size: 100% 2px;
   background-repeat: no-repeat;
+  border-bottom: none !important;
 }
 
 #status-bar {
