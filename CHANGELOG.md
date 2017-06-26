@@ -1,5 +1,20 @@
 # Changelog
 
+## Moonscape 6.15 - 2017-06-??
+- New logo and icon for Moonscape
+- Add small gap to toolbar buttons on status bar
+- Improve resolution of privacy icons and all standard icons (finally)
+- Fix for pinned tabs that seem like floating
+- Icon for mixed content, pointer lock, minor tweaks to plugin icons
+- Fix the keyhole back/forward buttons subskin
+- New sync icons (including throbber animation)
+- Improve appearance of tabs for "Tree-Style Tabs" add-on
+- Query and livemark folders now have the "open" state
+- Restore missing icons from some menus
+- Remove some subskins
+- Remove excess borders from status bar
+
+
 ## Moonscape 6.12 - 2017-05-12
 - Restore regular toolbar button styling to back/forward buttons and remove borders
 - Remove tab-close button
@@ -20,7 +35,7 @@
 - Certificate error background is now the same as netError
 - Restore dotted tree-connecting lines
 - Minor revisions to internal documentation (readme)
-
+	
 ## Moonscape 6.10 - 2017-03-09
 - Skin Restart Manager instead of Restartless Restart (subskin renamed)
 - Massive code cleanup, remove unused files
