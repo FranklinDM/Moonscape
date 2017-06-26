@@ -309,8 +309,26 @@
   font-style: italic;
 }
 
-#appmenu_bookmarks {
+#appmenu_showAllBookmarks,
+#bookmarksShowAll,
+#BMB_bookmarksShowAll {
   list-style-image: url("chrome://browser/skin/places/allBookmarks.png");
+}
+
+#appmenu_bookmarks {
+  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
+}
+
+#appmenu_sanitizeHistory,
+#sanitizeItem,
+#HMB_sanitizeItem {
+  list-style-image: url("chrome://browser/skin/sanitize.png");
+}
+
+#appmenu_showAllHistory,
+#menu_showAllHistory,
+#HMB_showAllHistory {
+  list-style-image: url("chrome://browser/skin/places/history.png");
 }
 
 #appmenu_privateBrowsing,
@@ -336,6 +354,7 @@
 }
 
 #BMB_bookmarkThisPage,
+#menu_bookmarkThisPage,
 #appmenu_bookmarkThisPage {
   list-style-image: url("chrome://browser/skin/places/bookmark.png");
   -moz-image-region: rect(0 16px 16px 0);
@@ -473,6 +492,11 @@ menuitem.bookmark-item {
   -moz-image-region: auto;
 }
 
+.bookmark-item[container][livemark][open] {
+  list-style-image: url("chrome://browser/skin/livemark-folder-open.png");
+  -moz-image-region: auto;
+}
+
 .bookmark-item[container][livemark] .bookmark-item {
   list-style-image: url("chrome://browser/skin/places/livemark-item.png");
   -moz-image-region: rect(0px, 16px, 16px, 0px);
@@ -484,6 +508,11 @@ menuitem.bookmark-item {
 
 .bookmark-item[container][query] {
   list-style-image: url("chrome://browser/skin/places/query.png");
+  -moz-image-region: auto;
+}
+
+.bookmark-item[container][query][open]:not(:-moz-any([tagContainer],[dayContainer],[hostContainer])) {
+  list-style-image: url("chrome://browser/skin/places/query-open.png");
   -moz-image-region: auto;
 }
 

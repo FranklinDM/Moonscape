@@ -323,11 +323,11 @@
 }
 
 .view-header {
-  background-color: rgba(251, 252, 253, 0.25);
+  background-color: #D0D0D0;
   padding: 4px;
   margin: 0;
   min-height: 31px;
-  border-bottom: 1px solid #CAD4E0;
+  border-bottom: 1px solid #D4D0C8;
 }
 
 /*** sorters ***/
@@ -354,8 +354,8 @@
 .sorter[checkState="1"],
 .sorter[checkState="2"] {
   /* set to important because greasemonkey overrides this selector */
-  background-color: #0A246A !important;
-  color: white !important;
+  background-color: #C0C0C0 !important;
+  color: black !important;
   box-shadow: none !important;
 }
 
@@ -417,24 +417,12 @@
 
 .addon {
   color: black;
-  border-top: 2px solid;
-  -moz-border-top-colors: rgba(0, 0, 0, 0.1) rgba(255, 255, 255, 0.1);
+  border-top: 1x solid;
+  -moz-border-top-colors: #D4D0C8;
   border-bottom: 1px solid;
-  -moz-border-bottom-colors: rgba(255, 255, 255, 0.1);
+  -moz-border-bottom-colors: #D4D0C8;
   padding: 5px;
   background-origin: border-box;
-}
-
-.view-pane:not(#search-view) .addon:first-of-type,
-#search-view .addon[first] {
-  border-top-width: 1px;
-  -moz-border-top-colors: rgba(255, 255, 255, 0.1);
-}
-
-.view-pane:not(#search-view) .addon:last-of-type,
-#search-view .addon[last] {
-  border-bottom-width: 2px;
-  -moz-border-bottom-colors: rgba(0, 0, 0, 0.1) rgba(255, 255, 255, 0.1);
 }
 
 .details {
@@ -638,7 +626,7 @@
 }
 
 .addon[selected] {
-  background-color: rgba(148, 172, 204, 0.39);
+  background-color: rgb(148, 172, 204);
   color: black;
 }
 
