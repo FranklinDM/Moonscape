@@ -1,6 +1,10 @@
 # Changelog
 
-## Moonscape 6.15 - 2017-06-??
+## Moonscape 6.16 - 2017-07-19
+- Minor revisions to documentation
+- Remove design file from XPI package (only applies to APO)
+
+## Moonscape 6.15 - 2017-06-27
 - New logo and icon for Moonscape
 - Add small gap to toolbar buttons on status bar
 - Improve resolution of privacy icons and all standard icons (finally)
@@ -13,7 +17,6 @@
 - Restore missing icons from some menus
 - Remove some subskins
 - Remove excess borders from status bar
-
 
 ## Moonscape 6.12 - 2017-05-12
 - Restore regular toolbar button styling to back/forward buttons and remove borders
