@@ -3408,7 +3408,7 @@ toolbar[iconsize="small"] #alltabs-button[open]:active {
   border: none !important; 
 }
 #aios-toolbar {
-  border-right: 1px solid ThreeDShadow;
+  border-right: 1px solid ThreeDShadow !important;
 }
 
 /* Add Bookmarks menu button depressed highlighting */
