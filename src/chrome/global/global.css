@@ -64,6 +64,7 @@ window.dialog {
   list-style-image: url("chrome://global/skin/icons/information-32.png");
 }
 
+.alert-dialog #info\.icon,
 .alert-icon {
   list-style-image: url("chrome://global/skin/icons/Warning.png");
 }
@@ -343,4 +344,19 @@ label[disabled="true"]:-moz-system-metric(windows-classic) {
 
 .close-icon:hover:active {
   -moz-image-region: rect(0, 48px, 16px, 32px);
+}
+
+@media (min-resolution: 2dppx) {
+  .close-icon {
+    list-style-image: url("chrome://global/skin/icons/close@2x.png");
+    -moz-image-region: rect(0, 32px, 32px, 0);
+  }
+
+  .close-icon:hover {
+    -moz-image-region: rect(0, 64px, 32px, 32px);
+  }
+
+  .close-icon:hover:active {
+    -moz-image-region: rect(0, 96px, 32px, 64px);
+  }
 }

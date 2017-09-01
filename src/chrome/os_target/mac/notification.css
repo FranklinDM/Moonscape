@@ -11,23 +11,28 @@ notification {
 
 notification[type="info"] {
   color: rgba(255,255,255,0.95);
-  background: url("chrome://global/skin/notification/info-bar-background.png") #404040 repeat-x top left;
+  background: #404040 repeat-x top left;
   border-top: 1px solid #707070;
   border-bottom: 1px solid #2a2a2a;
 }
 
 notification[type="warning"] {
   color: rgba(0,0,0,0.95);
-  background: url("chrome://global/skin/notification/warning-bar-background.png") #ffc703 repeat-x top left;
+  background: #ffc703 repeat-x top left;
   border-top: 1px solid #ffe970;
   border-bottom: 1px solid #bf8a01;
 }
 
 notification[type="critical"] {
   color: rgba(255,255,255,0.95);
-  background: url("chrome://global/skin/notification/critical-bar-background.png") #980000 repeat-x top left;
+  background: #980000 repeat-x top left;
   border-top: 1px solid #e35959;
   border-bottom: 1px solid #5d0000;
+}
+
+.messageText > .text-link {
+  color: inherit !important;
+  text-decoration: underline;
 }
 
 .messageImage {
@@ -36,21 +41,17 @@ notification[type="critical"] {
   margin: 0 4px;
 }
 
-.popup-notification-learnmore-link:not([href]) {
-  display: none;
-}
-
 /* Default icons for notifications */
 
-.messageImage[type="info"] {
+notification[type="info"] .messageImage {
   list-style-image: url("chrome://global/skin/notification/info-icon.png");
 }
 
-.messageImage[type="warning"] {
+notification[type="warning"] .messageImage {
   list-style-image: url("chrome://global/skin/notification/warning-icon.png");
 }
 
-.messageImage[type="critical"] {
+notification[type="critical"] .messageImage {
   list-style-image: url("chrome://global/skin/notification/error-icon.png");
 }
 
@@ -68,21 +69,11 @@ notification[type="critical"] {
   -moz-appearance: none;
   padding: 0;
   margin: 0 2px;
-  list-style-image: url("chrome://global/skin/icons/close.png");
   border: none;
-  -moz-image-region: rect(0, 16px, 16px, 0);
 }
 
 .messageCloseButton > .toolbarbutton-text {
   display: none;
-}
-
-.messageCloseButton:hover {
-  -moz-image-region: rect(0, 32px, 16px, 16px);
-}
-
-.messageCloseButton:hover:active {
-  -moz-image-region: rect(0, 48px, 16px, 32px);
 }
 
 .messageCloseButton:-moz-focusring > .toolbarbutton-icon {
@@ -92,19 +83,6 @@ notification[type="critical"] {
 }
 
 @media (min-resolution: 2dppx) {
-  .messageCloseButton {
-    list-style-image: url("chrome://global/skin/icons/close@2x.png");
-    -moz-image-region: rect(0, 32px, 32px, 0);
-  }
-
-  .messageCloseButton:hover {
-    -moz-image-region: rect(0, 64px, 32px, 32px);
-  }
-
-  .messageCloseButton:hover:active {
-    -moz-image-region: rect(0, 96px, 32px, 64px);
-  }
-
   .messageCloseButton > .toolbarbutton-icon {
     width: 16px;
   }
@@ -114,6 +92,15 @@ notification[type="critical"] {
 
 .popup-notification-description {
   max-width: 24em;
+}
+
+.popup-notification-learnmore-link {
+  margin-top: 1em !important;
+  -moz-margin-start: 0 !important; /* override default label margin to match description margin */
+}
+
+.popup-notification-learnmore-link:not([href]) {
+  display: none;
 }
 
 .popup-notification-button-container {
