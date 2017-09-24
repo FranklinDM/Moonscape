@@ -1,5 +1,17 @@
 # Changelog
 
+## Moonscape 6.17 - 2017-09-24
+- Drop support for versions lower than PM27.4
+- Improve resolution of error console icons
+- Enforce right border on AiOS toolbar
+- Update devtools styling
+- Missing notification icons in other platforms
+  - Was applied only to windows/notification.css
+  - Remove background images from mac notifications
+- Remove redundant close icon attributes and selectors
+  - Above may have been done in the past but applies only to tab-close, see 820ee4fc6fac0baa748ce03bc9ae0bf85d5de90b
+  - New 2x close icon has been created for mac (and other uses, ie. HiDPI)
+
 ## Moonscape 6.16 - 2017-07-19
 - Minor revisions to documentation
 - Remove design file from XPI package (only applies to APO)
