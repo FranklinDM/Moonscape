@@ -1,5 +1,12 @@
 # Changelog
 
+## Moonscape 6.18 - 2017-09-26
+- Drop support for PM 27.4.* and lower
+- Support PM 27.5's Win10 window styling implementation
+- All tabs button should change accordingly to its state
+  - Dropdown (used when previews are disabled)
+  - Boxes (used when previews are enabled - default)
+
 ## Moonscape 6.17 - 2017-09-24
 - Drop support for versions lower than PM27.4
 - Improve resolution of error console icons
