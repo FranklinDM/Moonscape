@@ -44,23 +44,24 @@ toolbar[iconsize="small"] #alltabs-button[open="true"] {
   display: none !important;
 }
 
-/* Firefox dropdown-style (disabled) */
-/* Special case alltabs dropdown-arrow display in tabs toolbar * /
-#TabsToolbar #alltabs-button {
+/* Drop-down icon (previews are disabled) */
+
+/* Special case alltabs dropdown-arrow display in tabs toolbar */
+#TabsToolbar #alltabs-button[type="menu"] {
   list-style-image: url("chrome://browser/skin/searchbar-dropdown-arrow.png") !important;
   -moz-image-region: rect(0, 13px, 11px, 0) !important;
 }
-/ * Special case alltabs dropdown-arrow display in tabs toolbar, hover (same as non-hover) * /
-#TabsToolbar #alltabs-button:hover {
+/* Special case alltabs dropdown-arrow display in tabs toolbar, hover (same as non-hover) */
+#TabsToolbar #alltabs-button[type="menu"]:hover {
   -moz-image-region: rect(0, 13px, 11px, 0) !important;
 }
-/ * Special case alltabs dropdown-arrow display in tabs toolbar, active (glowing) * /
-#TabsToolbar #alltabs-button:hover:active,
-#TabsToolbar #alltabs-button[open="true"] {
+/* Special case alltabs dropdown-arrow display in tabs toolbar, active (glowing) */
+#TabsToolbar #alltabs-button[type="menu"]:hover:active,
+#TabsToolbar #alltabs-button[type="menu"][open="true"] {
   -moz-image-region: rect(0, 26px, 11px, 13px) !important;
-}*/
+}
 
-/* Pale Moon box-style */
+/* Boxes icon (previews are enabled) */
 
 /* Special case alltabs dropdown-arrow display in tabs toolbar */
 #TabsToolbar #alltabs-button {
