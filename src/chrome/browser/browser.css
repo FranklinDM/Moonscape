@@ -3467,40 +3467,45 @@ toolbar[iconsize="small"] #bookmarks-menu-button[open]:active {
     @media (-moz-windows-accent-color-applies: 0) {
       /* Default styling for when no accent color is applied */
       #main-window:not(:-moz-window-inactive):not(:-moz-lwtheme) {
-        background-color: hsl(239, 33%, 38%);
+        background-color: white;
       }
-            
+      
+      :root:not(:-moz-window-inactive):not(:-moz-lwtheme) {
+        --window-text-color: black;
+      }
+      
       #titlebar-min:not(:-moz-window-inactive):not(:-moz-lwtheme) {
-        list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize-highlight);
+        list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize);
       }
 
       #titlebar-max:not(:-moz-window-inactive):not(:-moz-lwtheme) {
-        list-style-image: url(chrome://browser/skin/caption-buttons.svg#maximize-highlight);
+        list-style-image: url(chrome://browser/skin/caption-buttons.svg#maximize);
       }
 
       #main-window[sizemode="maximized"] #titlebar-max:not(:-moz-window-inactive):not(:-moz-lwtheme) {
-        list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore-highlight);
+        list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore);
       }
       
       #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme) {
-        list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-highlight);
+        list-style-image: url(chrome://browser/skin/caption-buttons.svg#close);
       }
 
       .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
-        background-color: hsla(0, 0%, 100%, .17);
+        background-color: hsla(0, 0%, 0%, .17);
       }
 
       .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active	{
-        background-color: hsla(0, 0%, 100%, .27);
+        background-color: hsla(0, 0%, 0%, .27);
         transition: none;
       }
       
       #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+        list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-highlight);
         background-color: hsla(0, 86%, 49%, 1);
       }
 
       #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active	{
-        background-color: hsla(0, 60%, 39%, 1);
+        background-color: hsla(0, 60%, 49%, 0.6);
         transition: none;
       }
     }
@@ -3510,7 +3515,11 @@ toolbar[iconsize="small"] #bookmarks-menu-button[open]:active {
       #main-window:not(:-moz-window-inactive):not(:-moz-lwtheme) {
         background-color: -moz-win-accentcolor;
       }
-            
+      
+      :root:not(:-moz-window-inactive):not(:-moz-lwtheme) {
+        --window-text-color: -moz-win-accentcolortext;
+      }
+      
       #titlebar-min {
         list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize);
       }
@@ -3575,7 +3584,14 @@ toolbar[iconsize="small"] #bookmarks-menu-button[open]:active {
     }
     
     #main-window:-moz-window-inactive:not(:-moz-lwtheme) {
-      background-color: hsl(0, 0%, 90%);
+      background-color: hsl(0, 0%, 95%);
+    }
+
+    /* If we don't have [chromemargin], it means the menubar is active; set the
+       window background to transparent in that case to match it with the dwm
+       color and prevent a drawing delay between title bar and UI region */
+    #main-window:not([chromemargin]):not(:-moz-lwtheme) {
+      background-color: transparent;
     }
 
     #titlebar-buttonbox,
@@ -3587,7 +3603,7 @@ toolbar[iconsize="small"] #bookmarks-menu-button[open]:active {
       border: none;
       margin: 0 !important;
       padding: 9px 17px;
-	  transition: background-color linear 120ms;
+      transition: background-color linear 120ms;
     }
         
     #main-window[sizemode="maximized"][tabsontop=true] #tabbrowser-tabs {
@@ -3603,7 +3619,7 @@ toolbar[iconsize="small"] #bookmarks-menu-button[open]:active {
       width: 12px;
       height: 12px;
     }
-    
+
     .titlebar-button:not(:hover) > .toolbarbutton-icon:-moz-window-inactive {
       opacity: 0.5;
     }
@@ -3626,7 +3642,7 @@ toolbar[iconsize="small"] #bookmarks-menu-button[open]:active {
       background-color: hsla(0, 86%, 49%, 0.6); 
       transition: none;
     }
-	
+    
     /* inactive window */
 
     #titlebar-min:-moz-window-inactive:not(:-moz-lwtheme) {
@@ -3655,7 +3671,7 @@ toolbar[iconsize="small"] #bookmarks-menu-button[open]:active {
     }
     
     /* light persona */
-
+    
     .titlebar-button:-moz-lwtheme-darktext:hover {
       background-color: hsla(0, 0%, 0%, .17);
     }
