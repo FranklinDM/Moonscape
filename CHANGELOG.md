@@ -1,5 +1,10 @@
 # Changelog
 
+## Moonscape 6.19 - 2017-11-11
+- Style the 'about:plugins' page
+  - Somewhat requested here: https://forum.palemoon.org/viewtopic.php?f=45&p=126731#p126731
+- Use white-on-black as titlebar style (Win10)
+
 ## Moonscape 6.18 - 2017-09-26
 - Drop support for PM 27.4.* and lower
 - Support PM 27.5's Win10 window styling implementation
