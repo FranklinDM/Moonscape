@@ -66,13 +66,14 @@ spacer.big {
   -moz-padding-start: 45px;
   margin-top: .55em;
   margin-bottom: .55em;
-  min-height: 32px; /* icon height */
+  min-height: 24px; /* icon height */
 }
 
 .acctCentralNewAcctText {
   color: WindowText;
   -moz-padding-start: 20px;
   -moz-padding-end: 10px;
+  background-position: 0 2px;
 }
 
 .acctCentralLinkText {
@@ -91,7 +92,7 @@ spacer.big {
 #CreateAccountsList {
   display: block;
   -moz-padding-start: 45px;
-  height: 50px;
+  margin-bottom: .6em;
 }
 
 #ReadMessages label {
@@ -120,10 +121,12 @@ spacer.big {
 
 #CreateAccount label {
   background: url("chrome://messenger/skin/accountcentral/create-account.png") no-repeat !important;
+  background-position: 0% -4px !important;
 }
 
 #CreateAccount label:-moz-locale-dir(rtl) {
   background: url("chrome://messenger/skin/accountcentral/create-account.png") right no-repeat !important;
+  background-position: 0% -4px !important;
 }
 
 #SearchMessages label {
@@ -157,7 +160,8 @@ spacer.big {
 }
 
 #CreateAccountChat {
-  background: url("chrome://chat/skin/chat-16.png") no-repeat;
+  background-image: url("chrome://chat/skin/chat-16.png");
+  background-repeat: no-repeat;
 }
 
 #CreateAccountNewsgroups {

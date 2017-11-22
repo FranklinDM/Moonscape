@@ -1,25 +1,37 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 .findbar-closebutton {
-  border: 1px solid transparent;
-  padding: 2px !important;
-  list-style-image: url("chrome://global/skin/icons/closeSidebar.png");
+  border: none;
+  padding: 3px 5px;
   -moz-appearance: none;
-  -moz-image-region: rect(0px, 14px, 14px, 0px);
 }
 
-.findbar-closebutton > .toolbarbutton-icon {
-  -moz-margin-end: 0px !important;
-  -moz-padding-end: 2px !important;
-  -moz-padding-start: 2px !important;
+.findbar-closebutton:-moz-lwtheme-brighttext {
+  list-style-image: url("chrome://global/skin/icons/close-inverted.png");
 }
 
-.findbar-closebutton:hover {
-  -moz-image-region: rect(0px, 28px, 14px, 14px);
+findbar {
+  padding-top: 1px;
+  background-image: linear-gradient(rgba(0,0,0,.15) 1px, rgba(255,255,255,.15) 1px);
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  min-width: 1px;
+  transition-property: margin-bottom, opacity, visibility;
+  transition-duration: 150ms, 150ms, 0s;
+  transition-timing-function: ease-in-out, ease-in-out, linear;
 }
 
-.findbar-closebutton:hover:active {
-  -moz-image-region: rect(0px, 42px, 14px, 28px);
+findbar[hidden] {
+  /* Override display:none to make the transition work. */
+  display: -moz-box;
+  visibility: collapse;
+  margin-bottom: -1em;
+  opacity: 0;
+  transition-delay: 0s, 0s, 150ms;
 }
 
 /* find-next button */
@@ -85,7 +97,8 @@
   height: 16px;
 }
 
-.findbar-find-status {
+.findbar-find-status,
+.found-matches {
   margin: 0 !important;
   -moz-margin-start: 3px !important;
   padding: 2px !important;
@@ -107,4 +120,8 @@
 
 .find-status-icon[status="wrapped"] {
   list-style-image: url("chrome://global/skin/icons/wrap.png");
+}
+
+.find-status-icon[status="pending"] {
+  list-style-image: url("chrome://global/skin/icons/loading_16.png");
 }

@@ -53,6 +53,6 @@
   min-width: 15em;
 }
 
-textbox html|*.textbox-input:-moz-placeholder {
+textbox html|*.textbox-input::-moz-placeholder {
   font-style: normal;
 }

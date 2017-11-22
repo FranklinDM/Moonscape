@@ -1,3 +1,7 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
 /* Because this sheet is loaded synchronously while the user is waiting for the
    compose window to appear, it must not @import a ton of other things, and
    especially must not trigger network access. */
@@ -10,14 +14,12 @@
 
 /* ::::: signature ::::: */
 
-.moz-txt-sig,
-.moz-signature {
-  color: rgb(136,138,133); /* Aluminum 4 */
-}
-
-.moz-txt-sig > a,
-.moz-signature > a {
-  color: rgb(114,159,207); /* Sky Blue 1 */
+@media not print {
+  div.moz-text-flowed > div.moz-txt-sig,
+  div.moz-text-plain > pre > div.moz-txt-sig,
+  pre.moz-signature {
+    opacity: 0.6;
+  }
 }
 
 /* ::::: Turn on borders and padding for quotes. ::::: */

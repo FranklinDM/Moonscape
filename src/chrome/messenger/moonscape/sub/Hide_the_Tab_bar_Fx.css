@@ -1,5 +1,0 @@
-/******************************************************************************
- * Title:  Hide the Tab bar
- * By:     Michael Walden
- **/
-#TabsToolbar { visibility: collapse !important; }

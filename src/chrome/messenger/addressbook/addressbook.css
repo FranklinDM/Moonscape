@@ -1,50 +1,21 @@
-/* ***** BEGIN LICENSE BLOCK *****
- * Version: MPL 1.1/GPL 2.0/LGPL 2.1
- *
- * The contents of this file are subject to the Mozilla Public License Version
- * 1.1 (the "License"); you may not use this file except in compliance with
- * the License. You may obtain a copy of the License at
- * http://www.mozilla.org/MPL/
- *
- * Software distributed under the License is distributed on an "AS IS" basis,
- * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
- * for the specific language governing rights and limitations under the
- * License.
- *
- * The Original Code is Mozilla Communicator client code, released
- * March 31, 1998.
- *
- * The Initial Developer of the Original Code is
- * Netscape Communications Corporation.
- * Portions created by the Initial Developer are Copyright (C) 1998-2001
- * the Initial Developer. All Rights Reserved.
- *
- * Contributor(s):
- *   Joe Hewitt (hewitt@netscape.com)
- *
- * Alternatively, the contents of this file may be used under the terms of
- * either the GNU General Public License Version 2 or later (the "GPL"), or
- * the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
- * in which case the provisions of the GPL or the LGPL are applicable instead
- * of those above. If you wish to allow use of your version of this file only
- * under the terms of either the GPL or the LGPL, and not to allow others to
- * use your version of this file under the terms of the MPL, indicate your
- * decision by deleting the provisions above and replace them with the notice
- * and other provisions required by the GPL or the LGPL. If you do not delete
- * the provisions above, a recipient may use your version of this file under
- * the terms of any one of the MPL, the GPL or the LGPL.
- *
- * ***** END LICENSE BLOCK ***** */
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 /* ===== addressbook.css ================================================
   == Styles for the main Address Book window.
   ======================================================================= */
 
 @import url("chrome://messenger/skin/");
-@import url("chrome://global/skin/toolbar.css");
+@import url("chrome://messenger/skin/shared/addressbook.css");
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
+
+#addressbookWindow:-moz-lwtheme {
+  background-repeat: no-repeat;
+  background-position: top right;
+}
 
 /* ::::: primary toolbar buttons ::::: */
 
@@ -72,15 +43,15 @@ toolbox[labelalign="end"] > toolbar[mode="full"] deck .toolbarbutton-text {
 
 #button-newcard:hover {
   -moz-image-region: rect(24px 24px 48px 0px);
-} 
+}
 
-#button-newcard:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 24px 96px 0px);
+#button-newcard:hover:active {
+  -moz-image-region: rect(24px 24px 48px 0px);
 }
 
 #button-newcard[disabled="true"] {
   -moz-image-region: rect(48px 24px 72px 0px) !important;
-} 
+}
 
 #button-newlist {
   list-style-image: url("chrome://messenger/skin/addressbook/icons/addressbook-toolbar.png");
@@ -89,14 +60,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] deck .toolbarbutton-text {
 
 #button-newlist:hover {
   -moz-image-region: rect(24px 48px 48px 24px);
-} 
+}
 
 #button-newlist[disabled="true"] {
   -moz-image-region: rect(48px 48px 72px 24px) !important;
-} 
-
-#button-newlist:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 48px 96px 24px);
 }
 
 #button-editcard {
@@ -112,10 +79,6 @@ toolbox[labelalign="end"] > toolbar[mode="full"] deck .toolbarbutton-text {
   -moz-image-region: rect(48px 72px 72px 48px) !important;
 }
 
-#button-editcard:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 72px 96px 48px);
-}
-
 #button-newmessage {
   list-style-image: url("chrome://messenger/skin/addressbook/icons/addressbook-toolbar.png");
   -moz-image-region: rect(0px 96px 24px 72px);
@@ -123,31 +86,23 @@ toolbox[labelalign="end"] > toolbar[mode="full"] deck .toolbarbutton-text {
 
 #button-newmessage:hover {
   -moz-image-region: rect(24px 96px 48px 72px);
-} 
+}
 
 #button-newmessage[disabled] {
   -moz-image-region: rect(48px 96px 72px 72px) !important;
-}
-
-#button-newmessage:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 96px 96px 72px);
 }
 
 #button-newim {
  list-style-image: url("chrome://messenger/skin/addressbook/icons/addressbook-toolbar.png");
  -moz-image-region: rect(0px 120px 24px 96px);
 }
- 
+
 #button-newim:hover {
   -moz-image-region: rect(24px 120px 48px 96px);
-} 
- 
+}
+
 #button-newim[disabled] {
   -moz-image-region: rect(48px 120px 72px 96px) !important;
-} 
-
-#button-newim:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 120px 96px 96px);
 }
 
 #button-abdelete {
@@ -157,14 +112,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] deck .toolbarbutton-text {
 
 #button-abdelete:hover {
   -moz-image-region: rect(24px 144px 48px 120px);
-} 
+}
 
 #button-abdelete[disabled] {
   -moz-image-region: rect(48px 144px 72px 120px) !important;
-}
-
-#button-abdelete:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 144px 96px 120px);
 }
 
 /* ::::: small primary toolbar buttons ::::: */
@@ -176,11 +127,11 @@ toolbar[iconsize="small"] #button-newcard {
 
 toolbar[iconsize="small"] #button-newcard:hover {
   -moz-image-region: rect(16px 16px 32px 0px);
-} 
+}
 
 toolbar[iconsize="small"] #button-newcard[disabled] {
   -moz-image-region: rect(32px 16px 48px 0px) !important;
-} 
+}
 
 toolbar[iconsize="small"] #button-newlist {
   list-style-image: url("chrome://messenger/skin/addressbook/icons/addressbook-toolbar-small.png");
@@ -189,11 +140,11 @@ toolbar[iconsize="small"] #button-newlist {
 
 toolbar[iconsize="small"] #button-newlist:hover {
   -moz-image-region: rect(16px 32px 32px 16px);
-} 
+}
 
 toolbar[iconsize="small"] #button-newlist[disabled] {
    -moz-image-region: rect(32px 32px 48px 16px) !important;
-} 
+}
 
 toolbar[iconsize="small"] #button-editcard {
   list-style-image: url("chrome://messenger/skin/addressbook/icons/addressbook-toolbar-small.png");
@@ -202,11 +153,11 @@ toolbar[iconsize="small"] #button-editcard {
 
 toolbar[iconsize="small"] #button-editcard:hover {
   -moz-image-region: rect(16px 48px 32px 32px);
-} 
+}
 
 toolbar[iconsize="small"] #button-editcard[disabled="true"] {
   -moz-image-region: rect(32px 48px 48px 32px) !important;
-} 
+}
 
 toolbar[iconsize="small"] #button-newmessage {
   list-style-image: url("chrome://messenger/skin/addressbook/icons/addressbook-toolbar-small.png");
@@ -215,11 +166,11 @@ toolbar[iconsize="small"] #button-newmessage {
 
 toolbar[iconsize="small"] #button-newmessage:hover {
   -moz-image-region: rect(16px 64px 32px 48px);
-} 
+}
 
 toolbar[iconsize="small"] #button-newmessage[disabled] {
   -moz-image-region: rect(32px 64px 48px 48px) !important;
-} 
+}
 
 toolbar[iconsize="small"] #button-newim {
   list-style-image: url("chrome://messenger/skin/addressbook/icons/addressbook-toolbar-small.png");
@@ -228,11 +179,11 @@ toolbar[iconsize="small"] #button-newim {
 
 toolbar[iconsize="small"] #button-newim:hover {
   -moz-image-region: rect(16px 80px 32px 64px);
-} 
+}
 
 toolbar[iconsize="small"] #button-newim[disabled] {
   -moz-image-region: rect(32px 80px 48px 64px) !important;
-} 
+}
 
 toolbar[iconsize="small"] #button-abdelete {
    list-style-image: url("chrome://messenger/skin/addressbook/icons/addressbook-toolbar-small.png");
@@ -241,20 +192,16 @@ toolbar[iconsize="small"] #button-abdelete {
 
 toolbar[iconsize="small"] #button-abdelete:hover {
   -moz-image-region: rect(16px 96px 32px 80px);
-} 
+}
 
 toolbar[iconsize="small"] #button-abdelete[disabled] {
   -moz-image-region: rect(32px 96px 48px 80px) !important;
 }
 
 #abContent {
-  -moz-appearance: toolbox;
+  text-shadow: none;
   background-color: -moz-Dialog;
   border-top: 1px solid ThreeDShadow;
-}
-
-#ab-toolbox {
-  border-bottom: 1px solid threedshadow;
 }
 
 /* ::::: directory pane adjustments ::::: */
@@ -291,12 +238,6 @@ treechildren::-moz-tree-image(DirCol, IsRemote-true, IsSecure-true) {
   -moz-appearance:  none;
   background-color: -moz-Field;
   color: -moz-FieldText;
-  -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow;
-  -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
-  -moz-border-right-colors: ThreeDHighlight ThreeDLightShadow;
-  border-right: 1px solid;
-  border-bottom: 1px solid;
-  padding-top : 1px;
 }
 
 #dirTree [sortDirection="ascending"],
@@ -306,13 +247,29 @@ treechildren::-moz-tree-image(DirCol, IsRemote-true, IsSecure-true) {
 
 /* ::::: splitters ::::: */
 
-#dirTree-splitter {
-  border-right: none;
+#results-splitter {
+  -moz-margin-start: -1px;
 }
 
-#results-splitter {
-  border: none;
-  min-height: 5px;
+#dirTree-splitter:-moz-locale-dir(rtl) {
+  /* Don't draw the splitter's border here... */
+  border-left: 0;
+}
+
+#abResultsTree:-moz-locale-dir(rtl),
+#CardViewOuterBox:-moz-locale-dir(rtl){
+  /* ... draw it here instead! (This removes the white highlight just below the
+     folder pane splitter so everything looks pretty.) */
+  margin-right: -2px !important;
+  border-right: 2px solid;
+  -moz-border-right-colors: ThreeDHighlight ThreeDShadow;
+}
+
+#abResultsTree:-moz-locale-dir(rtl) {
+  /* Make sure we have a white dot in the top-left corner where the splitters
+     meet. */
+  margin-bottom: -2px;
+  padding-bottom: 2px;
 }
 
 /* ::::: results pane ::::: */
@@ -321,13 +278,10 @@ treechildren::-moz-tree-image(DirCol, IsRemote-true, IsSecure-true) {
   -moz-appearance:  none;
   background-color: -moz-Field;
   color: -moz-FieldText;
-  border-left: 1px solid ThreeDShadow;
-  border-bottom: 1px solid ThreeDShadow !important;
 }
 
-#abContactsPanel #abResultsTree {
-  border-top: 1px solid ThreeDShadow;
-  border-left: 0;
+#GeneratedName {
+  -moz-padding-start: 30px;
 }
 
 treechildren::-moz-tree-image(GeneratedName) {
@@ -340,12 +294,11 @@ treechildren::-moz-tree-image(GeneratedName, MailList) {
   list-style-image: url("chrome://messenger/skin/addressbook/icons/ablist.png");
 }
 
-/* ::::: card view pane ::::: */
-
-#CardViewOuterBox {
-  border-top: 1px solid ThreeDShadow;
-  border-left: 1px solid ThreeDShadow;
+treechildren::-moz-tree-cell-text(GeneratedName) {
+  -moz-padding-start: 0 !important;
 }
+
+/* ::::: card view pane ::::: */
 
 #CardViewBox {
   -moz-user-focus: ignore;
@@ -368,7 +321,7 @@ treechildren::-moz-tree-image(GeneratedName, MailList) {
   min-width: 120px;
   margin: 0px;
 }
- 
+
 .cardViewGroup {
   margin-top: 8px;
   padding-bottom: 5px;
@@ -382,6 +335,10 @@ treechildren::-moz-tree-image(GeneratedName, MailList) {
   color: HighlightText;
   font-weight: bold;
   min-width: 30px;
+}
+
+#cvPhoto {
+  list-style-image: url("chrome://messenger/skin/addressbook/icons/contact-generic.png");
 }
 
 #cvBuddyIcon {

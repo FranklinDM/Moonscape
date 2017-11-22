@@ -13,51 +13,175 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+/* We want a 4px gap between the tabs-toolbar and the mail-toolbar-menubar2
+   when the toolbar-menu is displayed, and a 16px gap when it is not. 1px is
+   taken care of by the (light) outer shadow of the tab, the remaining 3/15
+   are these margins. */
+#mail-toolbar-menubar2:not([autohide="true"]) ~ #tabs-toolbar,
+#mail-toolbar-menubar2[autohide="true"]:not([inactive]) ~ #tabs-toolbar {
+  margin-top: 3px;
+}
+
+#messengerWindow[tabsintitlebar][sizemode="normal"]
+#mail-toolbar-menubar2[autohide="true"][inactive] ~ #tabs-toolbar {
+  margin-top: 15px;
+}
+
+  #mail-toolbar-menubar2:not([autohide="true"]) {
+    -moz-binding: url("chrome://global/content/bindings/toolbar.xml#toolbar-drag");
+  }
+
+#messengerWindow[tabsintitlebar] #mail-menubar > menu:not(:-moz-lwtheme) {
+  color: CaptionText;
+}
+
+#messengerWindow[tabsintitlebar] #mail-menubar >
+menu:not(:-moz-lwtheme):-moz-window-inactive {
+  color: InactiveCaptionText;
+}
+
+@media (-moz-windows-default-theme) {
+  #messengerWindow[tabsintitlebar][sizemode="normal"] #mail-toolbar-menubar2 {
+    margin-top: 4px;
+  }
+}
+
 #navigation-toolbox {
   -moz-appearance: none;
   border-top-width: 0;
+  background-color: transparent;
 }
 
 #tabs-toolbar {
+  border-bottom-width: 0;
   -moz-appearance: none;
-  border-bottom: 1px solid rgba(10, 31, 51, .35);
+  background-image: linear-gradient(to top, hsla(209, 67%, 12%, 0.35) 1px,
+                                    transparent 1px);
 }
 
-#tabs-toolbar:-moz-lwtheme {
-  border-bottom-color: transparent;
-}
+  #mail-toolbar-menubar2 {
+    background-color: transparent !important
+  }
 
-#tabs-toolbar {
-  -moz-box-ordinal-group: 20;
-}
+  #messengerWindow[tabsintitlebar]:not([inFullscreen])
+  #tabs-toolbar:not(:-moz-lwtheme) {
+    color: CaptionText;
+  }
 
-#tabs-toolbar[collapsed=true] {
-  visibility: inherit;
-  max-height: 1px;
-  min-height: 1px;
-}
-#tabs-toolbar[collapsed=true] * {
-  visibility: hidden;
-}
+  #messengerWindow[tabsintitlebar]:not([inFullscreen])
+  #tabs-toolbar:not(:-moz-lwtheme):-moz-window-inactive {
+    color: InactiveCaptionText;
+  }
 
-#mail-toolbar-menubar2 {
-  -moz-box-ordinal-group: 10;
-  padding: 0px 0 0;
-  margin: 0 0 0px;
+  #messengerWindow[tabsintitlebar] #titlebar:-moz-lwtheme {
+    visibility: hidden;
+  }
+
+  #messengerWindow[tabsintitlebar] #titlebar-content:-moz-lwtheme {
+    -moz-binding: url("chrome://global/content/bindings/general.xml#windowdragbox");
+    visibility: visible;
+  }
+
+/**
+ * In the classic themes, the titlebar has a horizontal gradient, which is
+ * problematic for reading the text of background tabs when they're in the
+ * titlebar. We side-step this issue by layering our own background underneath
+ * the tabs. Unfortunately, this requires a bunch of positioning in order to
+ * get text and icons to not appear fuzzy.
+ */
+@media (-moz-windows-classic) {
+  #messengerWindow[tabsintitlebar]:not([sizemode=fullscreen])
+  .tabmail-tabs:not(:-moz-lwtheme) {
+    position: relative;
+    z-index: 2;
+  }
+
+  #messengerWindow[tabsintitlebar] #tabs-toolbar:not(:-moz-lwtheme) {
+    position: relative;
+  }
+
+  #messengerWindow[tabsintitlebar]:not([sizemode=fullscreen])
+  #tabs-toolbar:not(:-moz-lwtheme)::after {
+    /* Because we use placeholders for window controls etc. in the tabstrip,
+     * and position those with ordinal attributes, and because our layout code
+     * expects :before/:after nodes to come first/last in the frame list,
+     * we have to reorder this element to come last, hence the
+     * ordinal group value (see bug 853415). */
+    -moz-box-ordinal-group: 1001;
+    box-shadow: 0 0 50px 8px ActiveCaption;
+    content: "";
+    display: -moz-box;
+    height: 0;
+    margin: 0 50px;
+    position: absolute;
+    pointer-events: none;
+    top: 100%;
+    width: -moz-available;
+  }
+
+  #messengerWindow[tabsintitlebar]:not([sizemode=fullscreen])
+  #tabs-toolbar:not(:-moz-lwtheme):-moz-window-inactive::after {
+    box-shadow: 0 0 50px 8px InactiveCaption;
+  }
+
+  #messengerWindow[tabsintitlebar]:not([sizemode=fullscreen])
+  #tabmail-container:not(:-moz-lwtheme) {
+    position: relative;
+    z-index: 2;
+  }
+
+  /**
+   * With the tabbrowser-tabs element z-index'd above the nav-bar, we now get the
+   * scrollbox button borders leaking over the nav-bar highlight. This transparent bottom
+   * border forces the scrollbox button borders to terminate a pixel early, working
+   * around the issue.
+   */
+  #messengerWindow[tabsintitlebar]:not([sizemode=fullscreen])
+  .tabmail-arrowscrollbox > .scrollbutton-up:not(:-moz-lwtheme),
+  #messengerWindow[tabsintitlebar]:not([sizemode=fullscreen])
+  .tabmail-arrowscrollbox > .scrollbutton-down-stack >
+  .scrollbutton-down:not(:-moz-lwtheme) {
+    border-bottom: 1px solid transparent;
+  }
+
+  #messengerWindow[tabsintitlebar]:not([sizemode=fullscreen])
+  .mail-toolbox:not(:-moz-lwtheme),
+  #messengerWindow[tabsintitlebar]:not([sizemode=fullscreen])
+  .contentTabToolbox:not(:-moz-lwtheme) {
+    box-shadow: none;
+  }
+
+  #messengerWindow[tabsintitlebar][sizemode="normal"]
+  #titlebar-content:-moz-lwtheme {
+    /* Render a window top border: */
+    background-image: linear-gradient(to bottom, ThreeDLightShadow 0,
+                                      ThreeDLightShadow 1px, ThreeDHighlight 1px,
+                                      ThreeDHighlight 2px, ActiveBorder 2px,
+                                      ActiveBorder 4px, transparent 4px);
+  }
+
+  /* End classic titlebar gradient */
+
+  #messengerWindow[tabsintitlebar]:not([inFullscreen])
+  :-moz-any(#tabs-toolbar, #mail-toolbar-menubar2)
+  toolbarbutton:not(:-moz-lwtheme) {
+    color: inherit;
+  }
 }
 
 .mail-toolbox,
 .contentTabToolbox {
   -moz-appearance: none;
   border-top: none;
-  border-bottom: 1px solid threedshadow;
-  background-color: -moz-dialog;
+  background-image: linear-gradient(rgba(253, 253, 253, 0.45),
+                                    rgba(255, 255, 255, 0));
+  box-shadow: 0 1px 0 rgba(253, 253, 253, 0.45) inset,
+              0 -1px 0 ThreeDShadow inset;
 }
 
 .mail-toolbox > toolbar:-moz-lwtheme,
 .contentTabToolbox > toolbar:-moz-lwtheme {
   border-top: none;
-  border-bottom: 1px solid threedshadow;
 }
 
 #mail-bar3 {
@@ -99,14 +223,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
 
 #button-getmsg:hover {
   -moz-image-region: rect(24px 24px 48px 0px);
-} 
+}
 
 #button-getmsg[disabled] {
   -moz-image-region: rect(48px 24px 72px 0px) !important;
-} 
-
-#button-getmsg:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 24px 96px 0px) !important;
 }
 
 #button-newmsg {
@@ -116,14 +236,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
 
 #button-newmsg:hover {
   -moz-image-region: rect(24px 48px 48px 24px);
-} 
+}
 
 #button-newmsg[disabled] {
   -moz-image-region: rect(48px 48px 72px 24px) !important;
-} 
-
-#button-newmsg:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 48px 96px 24px) !important;
 }
 
 #button-address {
@@ -133,14 +249,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
 
 #button-address:hover {
   -moz-image-region: rect(24px 72px 48px 48px);
-} 
+}
 
 #button-address[disabled="true"] {
   -moz-image-region: rect(48px 72px 72px 48px) !important;
-} 
-
-#button-address:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 72px 96px 48px) !important;
 }
 
 #button-reply {
@@ -150,14 +262,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
 
 #button-reply:hover {
   -moz-image-region: rect(24px 96px 48px 72px);
-} 
+}
 
 #button-reply[disabled] {
   -moz-image-region: rect(48px 96px 72px 72px) !important;
-} 
-
-#button-reply:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 96px 96px 72px) !important;
 }
 
 #button-replyall {
@@ -167,14 +275,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
 
 #button-replyall:hover {
   -moz-image-region: rect(24px 120px 48px 96px);
-} 
+}
 
 #button-replyall[disabled] {
   -moz-image-region: rect(48px 120px 72px 96px) !important;
-} 
-
-#button-replyall:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 120px 96px 96px) !important;
 }
 
 #button-forward {
@@ -184,14 +288,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
 
 #button-forward:hover {
   -moz-image-region: rect(24px 144px 48px 120px);
-} 
+}
 
 #button-forward[disabled] {
   -moz-image-region: rect(48px 144px 72px 120px) !important;
-}
-
-#button-forward:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 144px 96px 120px) !important;
 }
 
 #button-replylist {
@@ -207,10 +307,6 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
   -moz-image-region: rect(48px 168px 72px 144px) !important;
 }
 
-#button-replylist:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 168px 96px 144px) !important;
-}
-
 .delete-button {
   list-style-image: url("chrome://messenger/skin/icons/mail-toolbar.png");
   -moz-image-region: rect(0px 192px 24px 168px);
@@ -218,14 +314,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
 
 .delete-button:hover {
   -moz-image-region: rect(24px 192px 48px 168px);
-} 
+}
 
 .delete-button[disabled] {
   -moz-image-region: rect(48px 192px 72px 168px) !important;
-}
-
-.delete-button:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 192px 96px 168px) !important;
 }
 
 #button-compact {
@@ -241,10 +333,6 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
   -moz-image-region: rect(48px 456px 72px 432px) !important;
 }
 
-#button-compact:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 456px 96px 432px) !important;
-}
-
 .junk-button {
   list-style-image: url("chrome://messenger/skin/icons/mail-toolbar.png");
   -moz-image-region: rect(0px 216px 24px 192px);
@@ -256,10 +344,6 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
 
 .junk-button[disabled="true"] {
   -moz-image-region: rect(48px 216px 72px 192px) !important;
-}
-
-.junk-button:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 216px 96px 192px) !important;
 }
 
 #button-print {
@@ -275,10 +359,6 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
   -moz-image-region: rect(48px 240px 72px 216px) !important;
 }
 
-#button-print:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 240px 96px 216px) !important;
-}
-
 #button-stop {
   list-style-image: url("chrome://messenger/skin/icons/mail-toolbar.png");
   -moz-image-region: rect(0px 264px 24px 240px);
@@ -286,14 +366,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
 
 #button-stop:hover {
   -moz-image-region: rect(24px 264px 48px 240px);
-} 
+}
 
 #button-stop[disabled="true"] {
   -moz-image-region: rect(48px 264px 72px 240px) !important;
-}
-
-#button-stop:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 264px 96px 240px) !important;
 }
 
 #button-file {
@@ -304,14 +380,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
 #button-file:hover,
 #button-file[open] {
   -moz-image-region: rect(24px 288px 48px 264px);
-} 
+}
 
 #button-file[disabled] {
   -moz-image-region: rect(48px 288px 72px 264px) !important;
-}
-
-#button-file:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 288px 96px 264px) !important;
 }
 
 #button-nextUnread {
@@ -327,10 +399,6 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
   -moz-image-region: rect(48px 312px 72px 288px) !important;
 }
 
-#button-nextUnread:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 312px 96px 288px) !important;
-}
-
 #button-previousUnread {
   list-style-image: url("chrome://messenger/skin/icons/mail-toolbar.png");
   -moz-image-region: rect(0px 336px 24px 312px);
@@ -344,10 +412,6 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
   -moz-image-region: rect(48px 336px 72px 312px) !important;
 }
 
-#button-previousUnread:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 336px 96px 312px) !important;
-}
-
 #button-mark {
   list-style-image: url("chrome://messenger/skin/icons/mail-toolbar.png");
   -moz-image-region: rect(0px 360px 24px 336px);
@@ -355,14 +419,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
 
 #button-mark:hover {
   -moz-image-region: rect(24px 360px 48px 336px);
-} 
+}
 
 #button-mark[disabled] {
   -moz-image-region: rect(48px 360px 72px 336px) !important;
-} 
-
-#button-mark:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 360px 96px 336px) !important;
 }
 
 #button-tag {
@@ -372,14 +432,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
 
 #button-tag:hover {
   -moz-image-region: rect(24px 384px 48px 360px);
-} 
+}
 
 #button-tag[disabled] {
   -moz-image-region: rect(48px 384px 72px 360px) !important;
-}
-
-#button-tag:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 384px 96px 360px) !important;
 }
 
 #button-goback, #button-goforward:-moz-locale-dir(rtl) {
@@ -389,14 +445,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
 
 #button-goback:hover, #button-goforward:hover:-moz-locale-dir(rtl) {
   -moz-image-region: rect(24px 408px 48px 384px);
-} 
+}
 
 #button-goback[disabled], #button-goforward:-moz-locale-dir(rtl)[disabled] {
   -moz-image-region: rect(48px 408px 72px 384px) !important;
-} 
-
-#button-goback:not([disabled="true"]):hover:active, #button-goforward:-moz-locale-dir(rtl):not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 408px 96px 384px) !important;
 }
 
 #button-goforward, #button-goback:-moz-locale-dir(rtl) {
@@ -406,14 +458,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
 
 #button-goforward:hover, #button-goback:hover:-moz-locale-dir(rtl) {
   -moz-image-region: rect(24px 432px 48px 408px);
-} 
+}
 
 #button-goforward[disabled], #button-goback:-moz-locale-dir(rtl)[disabled] {
   -moz-image-region: rect(48px 432px 72px 408px) !important;
-}
-
-#button-goforward:not([disabled="true"]):hover:active, #button-goback:-moz-locale-dir(rtl):not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 432px 96px 408px) !important;
 }
 
 #button-archive {
@@ -427,10 +475,6 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
 
 #button-archive[disabled] {
   -moz-image-region: rect(48px 480px 72px 456px) !important;
-}
-
-#button-archive:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 480px 96px 456px) !important;
 }
 
 #button-chat {
@@ -450,25 +494,17 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
   -moz-image-region: rect(72px 528px 96px 504px);
 }
 
-#button-chat:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 600px 96px 576px) !important;
-}
-
 #button-nextMsg {
   list-style-image: url("chrome://messenger/skin/icons/mail-toolbar.png");
   -moz-image-region: rect(0px 552px 24px 528px);
 }
- 
+
 #button-nextMsg:hover {
   -moz-image-region: rect(24px 552px 48px 528px);
 }
- 
+
 #button-nextMsg[disabled] {
   -moz-image-region: rect(48px 552px 72px 528px) !important;
-}
-
-#button-nextMsg:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 552px 96px 528px) !important;
 }
 
 #button-previousMsg {
@@ -482,10 +518,6 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
 
 #button-previousMsg[disabled] {
   -moz-image-region: rect(48px 576px 72px 552px) !important;
-}
-
-#button-previousMsg:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 576px 96px 552px) !important;
 }
 
 .button-appmenu {
@@ -520,11 +552,11 @@ toolbar[iconsize="small"] #button-getmsg {
 
 toolbar[iconsize="small"] #button-getmsg:hover {
   -moz-image-region: rect(16px 16px 32px 0px);
-} 
+}
 
 toolbar[iconsize="small"] #button-getmsg[disabled] {
   -moz-image-region: rect(32px 16px 48px 0px) !important;
-} 
+}
 
 toolbar[iconsize="small"] #button-newmsg {
   list-style-image: url("chrome://messenger/skin/icons/mail-toolbar-small.png");
@@ -533,11 +565,11 @@ toolbar[iconsize="small"] #button-newmsg {
 
 toolbar[iconsize="small"] #button-newmsg:hover {
   -moz-image-region: rect(16px 32px 32px 16px);
-} 
+}
 
 toolbar[iconsize="small"] #button-newmsg[disabled] {
    -moz-image-region: rect(32px 32px 48px 16px) !important;
-} 
+}
 
 toolbar[iconsize="small"] #button-address {
   list-style-image: url("chrome://messenger/skin/icons/mail-toolbar-small.png");
@@ -546,11 +578,11 @@ toolbar[iconsize="small"] #button-address {
 
 toolbar[iconsize="small"] #button-address:hover {
   -moz-image-region: rect(16px 48px 32px 32px);
-} 
+}
 
 toolbar[iconsize="small"] #button-address[disabled="true"] {
   -moz-image-region: rect(32px 48px 48px 32px) !important;
-} 
+}
 
 toolbar[iconsize="small"] #button-reply {
   list-style-image: url("chrome://messenger/skin/icons/mail-toolbar-small.png");
@@ -559,11 +591,11 @@ toolbar[iconsize="small"] #button-reply {
 
 toolbar[iconsize="small"] #button-reply:hover {
   -moz-image-region: rect(16px 64px 32px 48px);
-} 
+}
 
 toolbar[iconsize="small"] #button-reply[disabled] {
   -moz-image-region: rect(32px 64px 48px 48px) !important;
-} 
+}
 
 toolbar[iconsize="small"] #button-replyall {
   list-style-image: url("chrome://messenger/skin/icons/mail-toolbar-small.png");
@@ -572,11 +604,11 @@ toolbar[iconsize="small"] #button-replyall {
 
 toolbar[iconsize="small"] #button-replyall:hover {
   -moz-image-region: rect(16px 80px 32px 64px);
-} 
+}
 
 toolbar[iconsize="small"] #button-replyall[disabled] {
   -moz-image-region: rect(32px 80px 48px 64px) !important;
-} 
+}
 
 toolbar[iconsize="small"] #button-forward {
   list-style-image: url("chrome://messenger/skin/icons/mail-toolbar-small.png");
@@ -585,7 +617,7 @@ toolbar[iconsize="small"] #button-forward {
 
 toolbar[iconsize="small"] #button-forward:hover {
   -moz-image-region: rect(16px 96px 32px 80px);
-} 
+}
 
 toolbar[iconsize="small"] #button-forward[disabled] {
   -moz-image-region: rect(32px 96px 48px 80px) !important;
@@ -611,11 +643,11 @@ toolbar[iconsize="small"] .delete-button {
 
 toolbar[iconsize="small"] .delete-button:hover {
   -moz-image-region: rect(16px 128px 32px 112px);
-} 
+}
 
 toolbar[iconsize="small"] .delete-button[disabled] {
   -moz-image-region: rect(32px 128px 48px 112px) !important;
-} 
+}
 
 toolbar[iconsize="small"] .junk-button{
   list-style-image: url("chrome://messenger/skin/icons/mail-toolbar-small.png");
@@ -650,7 +682,7 @@ toolbar[iconsize="small"] #button-stop {
 
 toolbar[iconsize="small"] #button-stop:hover {
   -moz-image-region: rect(16px 176px 32px 160px);
-} 
+}
 
 toolbar[iconsize="small"] #button-stop[disabled="true"] {
   -moz-image-region: rect(32px 176px 48px 160px) !important;
@@ -664,11 +696,11 @@ toolbar[iconsize="small"] #button-file {
 toolbar[iconsize="small"] #button-file:hover,
 toolbar[iconsize="small"] #button-file[open] {
   -moz-image-region: rect(16px 192px 32px 176px);
-} 
+}
 
 toolbar[iconsize="small"] #button-file[disabled] {
   -moz-image-region: rect(32px 192px 48px 176px) !important;
-} 
+}
 
 toolbar[iconsize="small"] #button-nextUnread {
   list-style-image: url("chrome://messenger/skin/icons/mail-toolbar-small.png");
@@ -704,7 +736,7 @@ toolbar[iconsize="small"] #button-mark {
 
 toolbar[iconsize="small"] #button-mark:hover {
   -moz-image-region: rect(16px 240px 32px 224px);
-} 
+}
 
 toolbar[iconsize="small"] #button-mark[disabled] {
   -moz-image-region: rect(32px 240px 48px 224px) !important;
@@ -717,7 +749,7 @@ toolbar[iconsize="small"] #button-tag {
 
 toolbar[iconsize="small"] #button-tag:hover {
   -moz-image-region: rect(16px 256px 32px 240px);
-} 
+}
 
 toolbar[iconsize="small"] #button-tag[disabled] {
   -moz-image-region: rect(32px 256px 48px 240px) !important;
@@ -730,7 +762,7 @@ toolbar[iconsize="small"] #button-goback {
 
 toolbar[iconsize="small"] #button-goback:hover {
   -moz-image-region: rect(16px 272px 32px 256px);
-} 
+}
 
 toolbar[iconsize="small"] #button-goback[disabled] {
   -moz-image-region: rect(32px 272px 48px 256px) !important;
@@ -743,7 +775,7 @@ toolbar[iconsize="small"] #button-goforward {
 
 toolbar[iconsize="small"] #button-goforward:hover {
   -moz-image-region: rect(16px 288px 32px 272px);
-} 
+}
 
 toolbar[iconsize="small"] #button-goforward[disabled] {
   -moz-image-region: rect(32px 288px 48px 272px) !important;
@@ -860,19 +892,6 @@ toolbar[iconsize="small"] .button-appmenu[disabled] {
   -moz-image-region: rect(0px 504px 24px 480px);
 }
 
-#palette-box #qfb-show-filter-bar:hover {
-  -moz-image-region: rect(24px 504px 48px 480px);
-}
-
-#palette-box #qfb-show-filter-bar[disabled] {
-  -moz-image-region: rect(48px 504px 72px 480px);
-}
-
-#palette-box #qfb-show-filter-bar:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(72px 504px 96px 480px) !important;
-}
-
-
 /* Force the folder location and mail view items to fit in the available width
    in the Customize Toolbar dialog. */
 #palette-box #locationFolders,
@@ -885,7 +904,7 @@ toolbar[iconsize="small"] .button-appmenu[disabled] {
 
 .msgNotificationBar {
   background-color: InfoBackground;
-  color: InfoText;  
+  color: InfoText;
   border-bottom: 1px solid ThreeDDarkShadow;
   padding: 3px;
 }
@@ -897,26 +916,6 @@ toolbar[iconsize="small"] .button-appmenu[disabled] {
 .msgNotificaton-smallText {
   -moz-padding-start: 10px;
   font-size: 90%;
-}
-
-#junkBarImage {
-  list-style-image: url("chrome://messenger/skin/icons/junk.png");
-}
-
-#junkIcon {
-  list-style-image: url("chrome://messenger/skin/icons/folder-junk.png");
-}
-
-#remoteContentImage {
-  list-style-image: url("chrome://messenger/skin/icons/remote-blocked.png"); 
-}
-
-#phishingBarImage {
-  list-style-image: url("chrome://messenger/skin/icons/phishing.png");
-}
-
-#mdnBarImage {
-  list-style-image: url("chrome://global/skin/icons/question-24.png");
 }
 
 /* AppMenu styling */
@@ -945,10 +944,17 @@ toolbar[iconsize="small"] .button-appmenu[disabled] {
   -moz-border-end: 1px solid ThreeDShadow;
 }
 
+  @media (-moz-windows-default-theme) {
+    #appmenuSecondaryPane {
+      --appMenu-bg-color: #f1f5fb;
+      --appMenu-bg-box-shadow: rgb(204, 214, 234);
+    }
+  }
+
 @media (-moz-windows-default-theme) {
   #appmenu-popup {
     -moz-appearance: none;
-    background: white;
+    background: -moz-Field;
     border: 1px solid ThreeDShadow;
   }
   #appmenuPrimaryPane {
@@ -957,8 +963,8 @@ toolbar[iconsize="small"] .button-appmenu[disabled] {
     -moz-border-end: none;
   }
   #appmenuSecondaryPane {
-    background-color: #f1f5fb;
-    box-shadow: 1px 0 2px rgb(204, 214, 234) inset;
+    background-color: var(--appMenu-bg-color);
+    box-shadow: 1px 0 2px var(--appMenu-bg-box-shadow) inset;
     -moz-padding-start: 3px;
     -moz-padding-end: 2px;
     padding-top: 2px;
@@ -966,12 +972,12 @@ toolbar[iconsize="small"] .button-appmenu[disabled] {
     font-family: "Segoe UI Semibold", "Segoe UI", sans-serif;
   }
   #appmenuSecondaryPane:-moz-locale-dir(rtl) {
-    box-shadow: -1px 0 2px rgb(204, 214, 234) inset;
+    box-shadow: -1px 0 2px var(--appMenu-bg-box-shadow) inset;
   }
 
   #appmenuSecondaryPane menupopup {
     -moz-appearance: none;
-    background-color: #f1f5fb;
+    background-color: var(--appMenu-bg-color);
     border: 1px solid ThreeDShadow;
     padding: 2px;
   }
@@ -980,7 +986,8 @@ toolbar[iconsize="small"] .button-appmenu[disabled] {
     -moz-appearance: none;
     margin-top: 3px;
     margin-bottom: 3px;
-    -moz-margin-start: -moz-calc(1.45em + 4px);
+    /* menu-iconic-left min-width + some margin */
+    -moz-margin-start: calc(1.45em + 4px);
     padding: 0;
     border-top: 1px solid #d6e5f5;
     border-bottom: none;
@@ -989,7 +996,7 @@ toolbar[iconsize="small"] .button-appmenu[disabled] {
   .appmenu-edit-button:not([disabled]):hover {
     border: 1px solid #b8d6fb;
     box-shadow: inset 0 0 1px white;
-    background: -moz-linear-gradient(#fafbfd, #ebf3fd);
+    background: linear-gradient(#fafbfd, #ebf3fd);
     transition: .2s ease-in;
   }
 }

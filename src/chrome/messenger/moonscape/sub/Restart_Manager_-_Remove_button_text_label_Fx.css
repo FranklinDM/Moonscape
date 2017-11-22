@@ -1,7 +1,0 @@
-/**************************************************************************
- * Restart Manager - Remove button text
- * By: Michael Walden, FranklinDM
- **/
-#restman-button > .toolbarbutton-text {
- display: none !important;
-}

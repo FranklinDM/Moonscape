@@ -1,5 +1,0 @@
-/**************************************************************************
- * Remove bookmarks menu button icon
- * By: Michael Walden
- **/
-#bookmarks-menu-button > .toolbarbutton-icon { display: none !important; } 

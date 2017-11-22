@@ -1,3 +1,7 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
 
@@ -6,80 +10,96 @@
   background-color: rgba(35,31,32,.74);
 }
 
-.playButton {
-  background: url(chrome://global/skin/media/pauseButton.png) no-repeat center;
-  /* Remove the native button appearance and styling */
-  -moz-appearance: none;
+.playButton,
+.muteButton,
+.fullscreenButton {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-appearance: none;   /* Remove the native button appearance and styling */
   margin: 0;
   padding: 0;
   min-height: 28px;
   min-width: 28px;
   border: none;
+  opacity: 0.7;
+}
+
+.playButton:hover,
+.muteButton:hover,
+.fullscreenButton:hover {
+  opacity: 1;
+}
+
+.playButton:hover:active,
+.muteButton:hover:active,
+.fullscreenButton:hover:active {
+  opacity: 0.4;
+}
+
+.playButton {
+  background-image: url(chrome://global/skin/media/pauseButton.png);
   margin-right: -22px; /* 1/2 of scrubber thumb width, for overhang. */
   position: relative; /* Trick to work around negative margin interfering with clicking on the button. */
 }
+
 .playButton[paused] {
-  background: url(chrome://global/skin/media/playButton.png) no-repeat center;
+  background-image: url(chrome://global/skin/media/playButton.png);
 }
 
 .muteButton {
-  background: url(chrome://global/skin/media/muteButton.png) no-repeat center;
-  /* Remove the native button appearance and styling */
-  -moz-appearance: none;
-  margin: 0;
-  padding: 0;
-  min-height: 28px;
+  background-image: url(chrome://global/skin/media/muteButton.png);
   min-width: 33px;
-  border: none;
 }
 .muteButton[muted] {
-  background: url(chrome://global/skin/media/unmuteButton.png) no-repeat center;
+  background-image: url(chrome://global/skin/media/unmuteButton.png);
+}
+
+.muteButton[noAudio] {
+  background-image: url(chrome://global/skin/media/noAudio.png);
+}
+
+.muteButton[noAudio] + .volumeStack {
+  display: none;
 }
 
 .fullscreenButton {
-  background: -moz-image-rect(url("chrome://global/skin/media/fullscreenButton.png"), 0, 16, 16, 0) no-repeat center;
-  -moz-appearance: none;
-  margin: 0;
-  padding: 0;
-  min-height: 28px;
-  min-width: 28px;
-  border: none;
+  background-image: -moz-image-rect(url("chrome://global/skin/media/fullscreenButton.png"), 0, 16, 16, 0);
 }
 
 .fullscreenButton[fullscreened] {
   background-image: -moz-image-rect(url("chrome://global/skin/media/fullscreenButton.png"), 0, 32, 16, 16);
 }
 
-.volumeStack {
-  width: 28px;
-  height: 70px;
-  background-color: rgba(35,31,32,.74);
-  /* use negative margin to place stack over the mute button to its left. */
-  margin: -70px 3px 28px -31px;
-  overflow: hidden; /* crop it when sliding down, don't grow the control bar */
-  position: relative; /* Trick to work around negative margin interfering with dragging the thumb. */
-  padding-top: 6px;
-}
-
 .volumeControl {
-  min-height: 64px;
+  width: 32px;
+  opacity: 0;
 }
 
-/* .scale-thumb is an element inside the <scale> implementation. */
+.volumeBackground,
+.volumeForeground {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 32px;
+}
+
+.volumeBackground {
+  background-image: url(chrome://global/skin/media/volume-empty.png);
+}
+
+.volumeForeground {
+  background-image: url(chrome://global/skin/media/volume-full.png);
+  background-clip: content-box;
+}
+
+.controlBar[fullscreen-unavailable] > .volumeStack {
+  /* This value is duplicated in the videocontrols.xml adjustControlSize function. */
+  -moz-margin-end: 8px;
+}
+
 .volumeControl .scale-thumb {
-  /* Override the default thumb appearance with a custom image. */
-  -moz-appearance: none;
-  background: url(chrome://global/skin/media/volumeThumb.png) no-repeat center;
-  border: none;
-  min-width: 16px;
-  min-height: 11px;
-}
-
-.volumeBackgroundBar {
-  /* margin left/right: make bar 8px wide (control width = 28, minus 2 * 10 margin) */
-  margin: 0 10px;
-  background-color: rgba(255,255,255,.5);
-  border-radius: 4px 4px;
+  min-width: 0;
+  opacity: 0;
 }
 
 .durationBox {
@@ -104,7 +124,7 @@
   /* margin left/right: 1/2 of scrubber thumb width, for overhang. */
   margin: 10px 22px;
   background-color: rgba(255,255,255,.5);
-  border-radius: 4px;
+  border-radius: 2.5px;
 }
 
 .bufferBar,
@@ -127,13 +147,13 @@
    * compositing gives it a different visual appearance.
    */
   background-color: rgba(255,255,255,.5);
-  border-radius: 4px;
+  border-radius: 2.5px;
   -moz-appearance: none;
 }
 
 .progressBar .progress-bar {
   background-color: white;
-  border-radius: 4px 0 0 4px;
+  border-radius: 2.5px;
   -moz-appearance: none;
 }
 
@@ -153,7 +173,8 @@
 }
 
 /* .scale-thumb is an element inside the <scale> implementation. */
-.scrubber .scale-thumb {
+.scrubber .scale-thumb,
+.volumeControl .scale-thumb {
   /* Override the default thumb appearance with a custom image. */
   -moz-appearance: none;
   background: transparent;
@@ -168,7 +189,7 @@
 }
 
 .timeThumb[showhours="true"] {
-  background: url(chrome://global/skin/media/scrubberThumbWide.png) no-repeat center;
+  background-image: url(chrome://global/skin/media/scrubberThumbWide.png);
 }
 
 .timeLabel {
@@ -248,36 +269,36 @@ html|table {
 
 /* CSS Transitions */
 .clickToPlay {
-  -moz-transition-property: opacity, background-size;
-  -moz-transition-duration: 400ms, 400ms;
+  transition-property: opacity, background-size;
+  transition-duration: 400ms, 400ms;
 }
 .clickToPlay[fadeout] {
   background-size: auto, 192px 192px;
   opacity: 0;
 }
 .clickToPlay[fadeout][immediate] {
-  -moz-transition-property: opacity, background-size;
-  -moz-transition-duration: 0s, 0s;
+  transition-property: opacity, background-size;
+  transition-duration: 0s, 0s;
 }
 .controlBar:not([immediate]) {
-  -moz-transition-property: opacity;
-  -moz-transition-duration: 200ms;
+  transition-property: opacity;
+  transition-duration: 200ms;
 }
 .controlBar[fadeout] {
   opacity: 0;
 }
 .volumeStack:not([immediate]) {
-  -moz-transition-property: opacity, margin-top;
-  -moz-transition-duration: 200ms, 200ms;
+  transition-property: opacity, margin-top;
+  transition-duration: 200ms, 200ms;
 }
 .volumeStack[fadeout] {
   opacity: 0;
   margin-top: 0;
 }
 .statusOverlay:not([immediate]) {
-  -moz-transition-property: opacity;
-  -moz-transition-duration: 300ms;
-  -moz-transition-delay: 750ms;
+  transition-property: opacity;
+  transition-duration: 300ms;
+  transition-delay: 750ms;
 }
 .statusOverlay[fadeout] {
   opacity: 0;

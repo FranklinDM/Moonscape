@@ -1,5 +1,0 @@
-/**************************************************************************
- * Remove Edit menu
- * By: Michael Walden
- **/
-menu[label="Edit"] { display: none !important; }

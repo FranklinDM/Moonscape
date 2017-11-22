@@ -1,40 +1,6 @@
-/* ***** BEGIN LICENSE BLOCK *****
- * Version: MPL 1.1/GPL 2.0/LGPL 2.1
- *
- * The contents of this file are subject to the Mozilla Public License Version
- * 1.1 (the "License"); you may not use this file except in compliance with
- * the License. You may obtain a copy of the License at
- * http://www.mozilla.org/MPL/
- *
- * Software distributed under the License is distributed on an "AS IS" basis,
- * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
- * for the specific language governing rights and limitations under the
- * License.
- *
- * The Original Code is In-Content UI.
- *
- * The Initial Developer of the Original Code is
- * the Mozilla Foundation.
- * Portions created by the Initial Developer are Copyright (C) 2011
- * the Initial Developer. All Rights Reserved.
- *
- * Contributor(s):
- *   Blair McBride <bmcbride@mozilla.com>
- *   Philipp von Weitershausen <philipp@weitershausen.de>
- *
- * Alternatively, the contents of this file may be used under the terms of
- * either the GNU General Public License Version 2 or later (the "GPL"), or
- * the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
- * in which case the provisions of the GPL or the LGPL are applicable instead
- * of those above. If you wish to allow use of your version of this file only
- * under the terms of either the GPL or the LGPL, and not to allow others to
- * use your version of this file under the terms of the MPL, indicate your
- * decision by deleting the provisions above and replace them with the notice
- * and other provisions required by the GPL or the LGPL. If you do not delete
- * the provisions above, a recipient may use your version of this file under
- * the terms of any one of the MPL, the GPL or the LGPL.
- *
- * ***** END LICENSE BLOCK ***** */
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 /*
  * The default namespace for this file is XUL. Be sure to prefix rules that
@@ -50,9 +16,7 @@
   background-repeat: repeat;
   color: -moz-dialogText;
   background-color: -moz-dialog;
-  background-image: /* Fade-out texture at the top, and blend with browser tab */
-                    -moz-linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0) 30%),
-                    /* Texture */
+  background-image: /* Texture */
                     url("chrome://global/skin/inContentUI/background-texture.png");
 }
 
@@ -60,21 +24,129 @@ html|html {
   font: message-box;
 }
 
+@media (-moz-windows-default-theme) and (-moz-os-version: windows-vista),
+       (-moz-windows-default-theme) and (-moz-os-version: windows-win7) {
+  *|*:root {
+    color: #000;
+    background-color: #CCD9EA;
+  }
+}
+
+@media (-moz-windows-glass) {
+  *|*:root {
+    /* Blame shorlander for this monstrosity. */
+    background-image: /* Side gradients */
+                      linear-gradient(to right,
+                                      rgba(255,255,255,0.2), transparent 40%,
+                                      transparent 60%, rgba(255,255,255,0.2)),
+                      /* Aero-style light beams */
+                      -moz-linear-gradient(left 32deg,
+                                           /* First light beam */
+                                           transparent 19.5%, rgba(255,255,255,0.1) 20%,
+                                           rgba(255,255,255,0.1) 21.5%, rgba(255,255,255,0.2) 22%,
+                                           rgba(255,255,255,0.2) 25.5%, rgba(255,255,255,0.1) 26%,
+                                           rgba(255,255,255,0.1) 27.5%, transparent 28%,
+                                           /* Second light beam */
+                                           transparent 49.5%, rgba(255,255,255,0.1) 50%,
+                                           rgba(255,255,255,0.1) 52.5%, rgba(255,255,255,0.2) 53%,
+                                           rgba(255,255,255,0.2) 54.5%, rgba(255,255,255,0.1) 55%,
+                                           rgba(255,255,255,0.1) 57.5%, transparent 58%,
+                                           /* Third light beam */
+                                           transparent 87%, rgba(255,255,255,0.2) 90%),
+                      /* Texture */
+                      url("chrome://global/skin/inContentUI/background-texture.png");
+  }
+}
+
+/* Use the new in-content colors for #contentAreaDownloadsView. After landing
+   of bug 989469 the colors can be moved to *|*:root */
+*|*#contentAreaDownloadsView {
+  background: #f1f1f1;
+  color: #424e5a;
+}
 
 /* Content */
 *|*.main-content {
   /* Needed to allow the radius to clip the inner content, see bug 595656 */
-  /* Disabled because of bug 623615
   overflow: hidden;
-  */
   background-color: rgba(255, 255, 255, 0.35);
-  background-image: -moz-linear-gradient(top,
-                                         rgba(255, 255, 255, 0),
-                                         rgba(255, 255, 255, 0.75));
+  background-image: linear-gradient(rgba(255, 255, 255, 0),
+                                    rgba(255, 255, 255, 0.75));
   border: 1px solid #C3CEDF;
-  border-radius: 5px;
 }
 
+@media (-moz-os-version: windows-vista),
+       (-moz-os-version: windows-win7) {
+  *|*.main-content {
+    border-radius: 5px;
+  }
+}
+
+@media (-moz-windows-glass) {
+  /* Buttons */
+  *|button,
+  menulist,
+  colorpicker[type="button"] {
+    -moz-appearance: none;
+    color: black;
+    padding: 0 5px;
+    background: linear-gradient(rgba(251, 252, 253, 0.95), transparent 49%, 
+                                rgba(211, 212, 213, 0.45) 51%, rgba(225, 226, 229, 0.3));
+    background-clip: padding-box;
+    border-radius: 3px;
+    border: 1px solid rgba(31, 64, 100, 0.4);
+    border-top-color: rgba(31, 64, 100, 0.3);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25) inset,
+                0 0 2px 1px rgba(255, 255, 255, 0.25) inset;
+  }
+
+  menulist {
+    -moz-padding-end: 0;
+  }
+
+  colorpicker[type="button"]:-moz-focusring:not([open="true"]) > .colorpicker-button-colorbox {
+    outline: 1px dotted ThreeDDarkShadow;
+  }
+
+  html|button[disabled],
+  button[disabled="true"],
+  menulist[disabled="true"],
+  colorpicker[type="button"][disabled="true"] {
+    -moz-border-top-colors: rgba(31, 64, 100, 0.3) !important;
+    -moz-border-right-colors: rgba(31, 64, 100, 0.4) !important;
+    -moz-border-bottom-colors: rgba(31, 64, 100, 0.4) !important;
+    -moz-border-left-colors: rgba(31, 64, 100, 0.4) !important;
+    opacity: 0.8;
+    color: #505050;
+  }
+
+  html|button:not([disabled]):active:hover,
+  button:not([disabled="true"]):active:hover,
+  menulist[open="true"]:not([disabled="true"]),
+  colorpicker[type="button"][open="true"]:not([disabled="true"]) {
+    background-color: rgba(61, 76, 92, 0.2);
+    border-color: rgba(39, 53, 68, 0.5);
+    box-shadow: 0 0 3px 1px rgba(39, 53, 68, 0.2) inset;
+  }
+
+  button > .button-box {
+    padding: 1px !important;
+  }
+
+  spinbuttons > .spinbuttons-box > .spinbuttons-button {
+    border-radius: 0;
+    padding: 0 4px;
+  }
+
+  spinbuttons > .spinbuttons-box > .spinbuttons-up {
+    list-style-image: url("chrome://global/skin/arrow/arrow-up.gif");
+    border-bottom-width: 0;
+  }
+
+  spinbuttons > .spinbuttons-box > .spinbuttons-down {
+    list-style-image: url("chrome://global/skin/arrow/arrow-dn.gif");
+  }
+}
 
 colorpicker[type="button"] {
   margin: 1px 5px 2px 5px;

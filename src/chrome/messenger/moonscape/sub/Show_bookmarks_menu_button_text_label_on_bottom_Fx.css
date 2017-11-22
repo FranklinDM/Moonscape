@@ -1,6 +1,0 @@
-/**************************************************************************
- * Show bookmarks menu button text label on bottom
- * By: Michael Walden
- **/
-#bookmarks-menu-button { -moz-box-orient: vertical !important; } 
-#bookmarks-menu-button > .toolbarbutton-icon { margin-right: 0px !important; }

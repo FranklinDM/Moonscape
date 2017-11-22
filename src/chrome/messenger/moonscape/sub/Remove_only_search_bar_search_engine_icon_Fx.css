@@ -1,5 +1,0 @@
-/**************************************************************************
- * Remove only search bar search engine icon in FF3
- * By: Michael Walden
- **/
-.searchbar-engine-image { display: none !important; }

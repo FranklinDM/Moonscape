@@ -2,19 +2,20 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-@import url(chrome://calendar/skin/common/calendar-views.css);
+@import url(chrome://calendar-common/skin/calendar-views.css);
 
 /* Navigation controls for the views */
 #calendar-nav-control {
     background-color: ButtonFace;
-    border: solid ThreeDShadow;
-    border-width: 1px 0 0 1px;
+    border-top: 1px solid ThreeDShadow;
+    -moz-border-start: 1px solid ThreeDShadow;
     padding-top: 1px;
 }
 
 #view-deck {
     background-color: -moz-Field;
-    border-width: 0 0 0 1px;
+    border-width: 0;
+    -moz-border-start: 1px;
 }
 
 tab[calview] {

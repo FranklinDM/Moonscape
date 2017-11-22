@@ -1,0 +1,311 @@
+/* - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this file,
+   - You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@namespace html "http://www.w3.org/1999/xhtml";
+
+#MailPreferences {
+  -moz-appearance: none;
+  font-size: 12px;
+  background-color: #fbfbfb;
+  color: #424e5a;
+}
+
+/* Don't show the Close button on tab content */
+#MailPreferences > .prefWindow-dlgbuttons {
+  display: none;
+}
+
+#prefBox {
+  position: relative;
+}
+
+#prefBox > windowdragbox {
+  background-color: #424e5a;
+  -moz-border-end: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+caption > label {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 22px;
+  margin: 0 !important;
+}
+
+#preferencesContainer {
+  padding: 40px 48px;
+  overflow: auto;
+}
+
+#MailPreferences > prefpane {
+  max-width: 800px;
+  padding: 0;
+  font: message-box;
+  font-size: 1.25rem;
+  line-height: 22px;
+}
+
+/* Category List */
+
+.paneSelector {
+  -moz-appearance: none;
+  background-color: #424e5a;
+  border-bottom: none;
+  padding: 39px 0 0;
+  margin: 0;
+  max-height: 100vh;
+  overflow-x: auto;
+}
+
+radio[pane] {
+  -moz-box-orient: horizontal;
+  -moz-appearance: none;
+  color: #c1c1c1;
+  border-right-width: 0;
+  border-left-width: 0;
+  -moz-margin-end: 0;
+  -moz-padding-start: 15px;
+  -moz-padding-end: 21px;
+  min-height: 40px;
+  transition: background-color 150ms;
+}
+
+radio[pane]:hover {
+  color: #c1c1c1;
+  background-color: #5e6972;
+}
+
+radio[pane][selected] {
+  background-image: none;
+  background-color: #343f48;
+  color: #f2f2f2;
+  -moz-padding-start: 11px; /* compensate the 4px border */
+  -moz-border-start: solid 4px #ff9500;
+}
+
+radio[pane]:hover::before,
+radio[pane][selected]::before {
+  display: none;
+}
+
+.paneButtonLabel {
+  line-height: 22px;
+  font: message-box;
+  font-size: 1.25rem;
+  padding-bottom: 2px;
+  -moz-padding-start: 9px;
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  radio[pane] {
+    min-width: 54px;
+    -moz-padding-end: 15px;
+  }
+
+  .paneButtonLabel {
+    display: none;
+  }
+}
+
+.paneButtonIcon {
+  width: 24px;
+  height: 24px;
+  -moz-image-region: auto;
+}
+
+radio[pane=paneGeneral] > .paneButtonIcon {
+  list-style-image: url("chrome://messenger/skin/shared/in-content/icons.svg#general");
+}
+
+radio[pane=paneDisplay] > .paneButtonIcon {
+  list-style-image: url("chrome://messenger/skin/shared/in-content/icons.svg#display");
+}
+
+radio[pane=paneApplications] > .paneButtonIcon {
+  list-style-image: url("chrome://messenger/skin/shared/in-content/icons.svg#applications");
+}
+
+radio[pane=panePrivacy] > .paneButtonIcon {
+  list-style-image: url("chrome://messenger/skin/shared/in-content/icons.svg#privacy");
+}
+
+radio[pane=paneSecurity]> .paneButtonIcon {
+  list-style-image: url("chrome://messenger/skin/shared/in-content/icons.svg#security");
+}
+
+radio[pane=paneCompose] > .paneButtonIcon {
+  list-style-image: url("chrome://messenger/skin/shared/in-content/icons.svg#compose");
+}
+
+radio[pane=paneAdvanced] > .paneButtonIcon {
+  list-style-image: url("chrome://messenger/skin/shared/in-content/icons.svg#advanced");
+}
+
+radio[pane=paneChat] > .paneButtonIcon {
+  list-style-image: url("chrome://messenger/skin/shared/in-content/icons.svg#chat");
+}
+
+radio[pane=paneLightning] > .paneButtonIcon {
+  list-style-image: url("chrome://messenger/skin/shared/in-content/icons.svg#calendar");
+}
+
+radio[pane=paneAccount] > .paneButtonIcon {
+  list-style-image: url("chrome://messenger/skin/shared/in-content/icons.svg#account");
+}
+
+/* Applications Pane Styles */
+
+#applications-content {
+  padding: 15px;
+}
+
+#filter {
+  -moz-margin-start: 0;
+}
+
+#handlersView > richlistitem {
+  min-height: 36px !important;
+}
+
+.typeIcon {
+  -moz-margin-start: 10px !important;
+  -moz-margin-end: 9px !important;
+}
+
+.actionIcon {
+  -moz-margin-start: 11px !important;
+  -moz-margin-end: 8px !important;
+}
+
+.actionsMenu {
+  min-height: 36px;
+}
+
+.actionsMenu > menupopup > menuitem {
+  -moz-padding-start: 10px !important;
+}
+
+.actionsMenu > menupopup > menuitem > .menu-iconic-left {
+  -moz-margin-end: 8px !important;
+}
+
+listhead > listheader:first-of-type:-moz-locale-dir(ltr),
+listhead > listheader:last-of-type:-moz-locale-dir(rtl) {
+  margin-left: -2px;
+}
+
+listhead > listheader:first-of-type:-moz-locale-dir(rtl),
+listhead > listheader:last-of-type:-moz-locale-dir(ltr) {
+  margin-right: -2px;
+}
+
+/* XXX This style is for bug 740213 and should be removed once that
+   bug has a solution. */
+description > html|a {
+  cursor: pointer;
+}
+
+#paneChat {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+tabs {
+  -moz-margin-end: 4px; /* add the 4px end-margin of other elements */
+}
+
+.indent {
+  -moz-margin-start: 33px;
+}
+
+.inset {
+  border-color: #424e5a;
+}
+
+#telemetryLearnMore,
+#crashReporterLearnMore {
+  -moz-margin-end: 4px !important;
+}
+
+/**
+ * Dialog
+ */
+
+#dialogOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  visibility: hidden;
+}
+
+#dialogContainer {
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  width: 100%;
+  height: 100%;
+}
+
+#dialogBox {
+  background-color: #fbfbfb;
+  color: #424e5a;
+  font-size: 14px;
+  /* `transparent` will use the dialogText color in high-contrast themes and
+     when page colors are disabled */
+  border: 1px solid transparent;
+  border-radius: 2.5px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  display: -moz-box;
+  margin: 0;
+  padding: 0;
+}
+
+#dialogBox[resizable="true"] {
+  resize: both;
+  overflow: hidden;
+  min-height: 20em;
+  min-width: 66ch;
+}
+
+#dialogBox > .groupbox-title {
+  padding: 3.5px 0;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #c1c1c1;
+}
+
+#dialogTitle {
+  text-align: center;
+}
+
+.close-icon {
+  background-color: transparent !important;
+  border: none;
+  box-shadow: none;
+  height: 18px;
+  padding: 0;
+  min-width: 18px;
+}
+
+#dialogBox > .groupbox-body {
+  -moz-appearance: none;
+  padding: 20px;
+}
+
+#dialogFrame {
+  -moz-box-flex: 1;
+  /* Default dialog dimensions */
+  height: 20em;
+  width: 66ch;
+}
+
+.largeDialogContainer.doScroll {
+  overflow-y: auto;
+  -moz-box-flex: 1;
+}
+
+/**
+ * End Dialog
+ */

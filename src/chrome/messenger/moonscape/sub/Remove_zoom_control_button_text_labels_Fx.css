@@ -1,8 +1,0 @@
-/**************************************************************************
- * Remove zoom control button text labels
- * By: Michael Walden
- **/
-#zoom-out-button { min-width: 16px !important; } 
-#zoom-out-button > .toolbarbutton-text { display: none !important; }
-#zoom-in-button { min-width: 16px !important; } 
-#zoom-in-button > .toolbarbutton-text { display: none !important; }

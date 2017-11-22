@@ -1,7 +1,0 @@
-/**************************************************************************
- * Search Bar go button size limit - Make Search Bar height match URL bar
- * By: Michael Walden
- **/
-.search-go-button {
-  height: 18px !important;
-}

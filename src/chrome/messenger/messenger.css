@@ -1,42 +1,43 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
 /* ===== messenger.css ==================================================
   == Styles shared throughout the Messenger application.
   ======================================================================= */
 
 @import url("chrome://global/skin/");
 @import url("chrome://messenger/content/messenger.css");
+@import url("chrome://messenger/skin/shared/messenger.css");
 
-/* import base subskins */
-@import url("chrome://messenger/skin/moonscape/default_subskins.css");
-
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
-description.error {
-  color: #FF0000;
+toolbox:-moz-lwtheme {
+  border-top-width: 0;
 }
 
+  #tabmail:not(:-moz-lwtheme) {
+    background-color: ActiveCaption;
+  }
+
+  #tabmail:not(:-moz-lwtheme):-moz-window-inactive {
+    background-color: InactiveCaption;
+  }
+
 .toolbar-primary {
-  -moz-binding: url("chrome://global/content/bindings/toolbar.xml#toolbar");
   border-top: none;
 }
 
-toolbar[printpreview="true"] {
-  -moz-binding: url("chrome://global/content/printPreviewBindings.xml#printpreviewtoolbar");
-}
-
-menu.menu-iconic > .menu-iconic-left,
-menuitem.menuitem-iconic > .menu-iconic-left {
+.menu-iconic > .menu-iconic-left,
+.menuitem-iconic > .menu-iconic-left {
   display: -moz-box;
+  padding-top: 0;
 }
 
 #tabbar-toolbar {
-  -moz-appearance: none;
-  padding: 0;
   border: none;
 }
 
 #tabbar-toolbar[customizing="true"] {
   min-width: 24px;
-  min-height: 10px;
 }
 
 /* ::::: menubar ::::: */
@@ -48,37 +49,6 @@ menuitem.menuitem-iconic > .menu-iconic-left {
 
 #menubar-items > menubar {
   -moz-box-flex: 1; /* make menu items expand to fill toolbar height */
-} 
-
-/* ::::: throbber ::::: */
-
-#throbber-box {
-  width: 16px;
-  min-height: 16px;
-  margin: 0 3px;
-}
-
-#throbber-box[busy="true"] {
-  list-style-image: url("chrome://global/skin/icons/loading_16.png");
-}
-
-#throbber-box,
-#wrapper-throbber-box > #throbber-box {
-  list-style-image: url("chrome://global/skin/icons/notloading_16.png");
-}
-
-/* ::::: online/offline icons ::::: */
-
-#offline-status {
-  padding: 0 2px;
-}
-
-#offline-status[offline="true"] {
-  list-style-image: url("chrome://messenger/skin/icons/offline.png");
-}
-
-#offline-status {
-  list-style-image: url("chrome://messenger/skin/icons/online.png");
 }
 
 /* ::::: toolbarbutton ::::: */
@@ -128,6 +98,7 @@ sidebarheader .toolbarbutton-text:not([value]) {
 }
 
 #searchInput,
+#IMSearchInput,
 .remote-gloda-search {
   -moz-appearance: none;
   min-height: 22px;
@@ -137,6 +108,7 @@ sidebarheader .toolbarbutton-text:not([value]) {
 }
 
 #searchInput:-moz-lwtheme:not([focused="true"]),
+#IMSearchInput:-moz-lwtheme:not([focused="true"]),
 .remote-gloda-search:-moz-lwtheme:not([focused="true"]) {
   opacity: .85;
 }
@@ -158,10 +130,30 @@ sidebarheader .toolbarbutton-text:not([value]) {
 
 treechildren::-moz-tree-cell-text {
   -moz-padding-start: 5px;
+  padding-bottom: 2px;
 }
 
 @media not all and (-moz-windows-default-theme) {
   treechildren::-moz-tree-cell-text {
     -moz-padding-start: 4px !important;
   }
+}
+
+/* ::::: Notifications ::::: */
+
+notification[value="addon-install-failed"] .messageCloseButton {
+  list-style-image: url("chrome://messenger/skin/icons/closeTab.png");
+}
+
+notification[type="critical"] .messageCloseButton:not(:hover):not(:active) {
+  -moz-image-region: rect(0, 64px, 16px, 48px);
+}
+
+menulist.folderMenuItem > .menulist-label-box > .menulist-label {
+  -moz-margin-start: 2px !important;
+}
+
+menulist.folderMenuItem menu:not(.folderMenuItem) {
+  padding-top: 2px;
+  padding-bottom: 2px;
 }

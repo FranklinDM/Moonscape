@@ -1,7 +1,0 @@
-/**************************************************************************
- * Remove Subscribe button text label
- * By: Michael Walden
- **/
-#feed-button { min-width: 16px !important; } 
-#feed-button > .toolbarbutton-text { display: none !important; } 
-

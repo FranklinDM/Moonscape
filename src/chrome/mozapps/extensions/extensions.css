@@ -1,43 +1,8 @@
-/* ***** BEGIN LICENSE BLOCK *****
- * Version: MPL 1.1/GPL 2.0/LGPL 2.1
- *
- * The contents of this file are subject to the Mozilla Public License Version
- * 1.1 (the "License"); you may not use this file except in compliance with
- * the License. You may obtain a copy of the License at
- * http://www.mozilla.org/MPL/
- *
- * Software distributed under the License is distributed on an "AS IS" basis,
- * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
- * for the specific language governing rights and limitations under the
- * License.
- *
- * The Original Code is the Extension Manager UI.
- *
- * The Initial Developer of the Original Code is
- * the Mozilla Foundation.
- * Portions created by the Initial Developer are Copyright (C) 2010
- * the Initial Developer. All Rights Reserved.
- *
- * Contributor(s):
- *   Blair McBride <bmcbride@mozilla.com>
- *
- * Alternatively, the contents of this file may be used under the terms of
- * either the GNU General Public License Version 2 or later (the "GPL"), or
- * the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
- * in which case the provisions of the GPL or the LGPL are applicable instead
- * of those above. If you wish to allow use of your version of this file only
- * under the terms of either the GPL or the LGPL, and not to allow others to
- * use your version of this file under the terms of the MPL, indicate your
- * decision by deleting the provisions above and replace them with the notice
- * and other provisions required by the GPL or the LGPL. If you do not delete
- * the provisions above, a recipient may use your version of this file under
- * the terms of any one of the MPL, the GPL or the LGPL.
- *
- * ***** END LICENSE BLOCK ***** */
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 @import url("chrome://global/skin/inContentUI.css");
-
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 
 .nav-button {
@@ -168,7 +133,7 @@
   color: #373D48;
   border: 1px solid #A8B8D1;
   border-radius: 8px;
-  background-image: -moz-linear-gradient(top, #FFF, #ECF1F7);
+  background-image: linear-gradient(#FFF, #ECF1F7);
   background-clip: padding-box;
   box-shadow: 2px 2px 4px #999; 
 }
@@ -214,14 +179,17 @@
   overflow: hidden;
 }
 
-.category:-moz-locale-dir(ltr) {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
+@media (-moz-os-version: windows-vista),
+       (-moz-os-version: windows-win7) {
+  .category:-moz-locale-dir(ltr) {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
 
-.category:-moz-locale-dir(rtl) {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  .category:-moz-locale-dir(rtl) {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
 }
 
 .category[disabled] {
@@ -229,14 +197,14 @@
   border-bottom: 0;
   height: 0;
   opacity: 0;
-  -moz-transition-property: height, opacity;
-  -moz-transition-duration: 1s, 0.8s;
+  transition-property: height, opacity;
+  transition-duration: 1s, 0.8s;
 }
 
 .category:not([disabled]) {
   height: 52px;
-  -moz-transition-property: height, opacity;
-  -moz-transition-duration: 1s, 0.8s;
+  transition-property: height, opacity;
+  transition-duration: 1s, 0.8s;
 }
 
 .category[selected] {
@@ -292,6 +260,9 @@
 #category-extension > .category-icon {
   list-style-image: url("chrome://mozapps/skin/extensions/category-extensions.png");
 }
+#category-service > .category-icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/category-service.png");
+}
 #category-theme > .category-icon {
   list-style-image: url("chrome://mozapps/skin/extensions/category-themes.png");
 }
@@ -300,6 +271,9 @@
 }
 #category-dictionary > .category-icon {
   list-style-image: url("chrome://mozapps/skin/extensions/category-dictionaries.png");
+}
+#category-experiment > .category-icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/category-experiments.png");
 }
 #category-availableUpdates > .category-icon {
   list-style-image: url("chrome://mozapps/skin/extensions/category-available.png");
@@ -319,14 +293,26 @@
   margin: 0;
 }
 
+@media (max-width: 600px) {
+  #header-search {
+    width: 12em;
+  }
+}
+
 @media (-moz-windows-default-theme) {
   #header-search {
     -moz-appearance: none;
     border: 1px solid rgba(0, 0, 0, 0.32);
-    border-radius: 2.5px;
     padding-bottom: 2px;
     background-color: rgba(255, 255, 255, 0.4);
   }
+
+@media (-moz-os-version: windows-vista),
+       (-moz-os-version: windows-win7) {
+  #header-search {
+    border-radius: 2.5px;
+  }
+}
 
   #header-search:hover {
     background-color: rgba(255, 255, 255, .75);
@@ -338,8 +324,14 @@
 }
 
 #header-utils-btn {
-  list-style-image: url("chrome://mozapps/skin/extensions/utilities.png");
+  list-style-image: url("chrome://mozapps/skin/extensions/utilities.svg#utilities");
   -moz-margin-end: 16px;
+}
+
+@media not all and (-moz-windows-default-theme) {
+  #header-utils-btn {
+    list-style-image: url("chrome://mozapps/skin/extensions/utilities.svg#utilities-native");
+  }
 }
 
 .view-header {
@@ -479,7 +471,7 @@
 }
 
 .addon[active="false"] .icon {
-  filter: url("chrome://mozapps/skin/extensions/extensions.svg#greyscale");
+  filter: grayscale(1);
 }
 
 
@@ -497,6 +489,10 @@
 
 .addon-view[type="dictionary"] .icon {
   list-style-image: url("chrome://mozapps/skin/extensions/dictionaryGeneric.png");
+}
+
+.addon-view[type="experiment"] .icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/experimentGeneric.png");
 }
 
 .name-container {
@@ -593,14 +589,14 @@
   height: 0;
   overflow: hidden;
   opacity: 0;
-  -moz-transition-property: height, opacity;
-  -moz-transition-duration: 0.5s, 0.5s;
+  transition-property: height, opacity;
+  transition-duration: 0.5s, 0.5s;
 }
 
 .addon[show-relnotes] .relnotes-container {
   opacity: 1;
-  -moz-transition-property: height, opacity;
-  -moz-transition-duration: 0.5s, 0.5s;
+  transition-property: height, opacity;
+  transition-duration: 0.5s, 0.5s;
 }
 
 .addon .relnotes-header {
@@ -628,8 +624,8 @@
 
 .addon[active="false"] {
   background-color: rgba(135, 135, 135, 0.1);
-  background-image: -moz-linear-gradient(rgba(135, 135, 135, 0),
-                                         rgba(135, 135, 135, 0.1));
+  background-image: linear-gradient(rgba(135, 135, 135, 0),
+                                    rgba(135, 135, 135, 0.1));
 }
 
 .addon-view[active="false"],
@@ -639,15 +635,15 @@
 
 .addon-view[notification="warning"] {
   background-image: url("chrome://mozapps/skin/extensions/stripes-warning.png"),
-                    -moz-linear-gradient(rgba(255, 255, 0, 0.04),
-                                         rgba(255, 255, 0, 0));
+                    linear-gradient(rgba(255, 255, 0, 0.04),
+                                    rgba(255, 255, 0, 0));
   background-repeat: repeat-x;
 }
 
 .addon-view[notification="error"] {
   background-image: url("chrome://mozapps/skin/extensions/stripes-error.png"),
-                    -moz-linear-gradient(rgba(255, 0, 0, 0.04),
-                                         rgba(255, 0, 0, 0));
+                    linear-gradient(rgba(255, 0, 0, 0.04),
+                                    rgba(255, 0, 0, 0));
   background-repeat: repeat-x;
 }
 
@@ -655,16 +651,16 @@
 .addon-view[pending="upgrade"],
 .addon-view[pending="install"] {
   background-image: url("chrome://mozapps/skin/extensions/stripes-info-positive.png"),
-                    -moz-linear-gradient(rgba(0, 255, 0, 0.04),
-                                         rgba(0, 255, 0, 0));
+                    linear-gradient(rgba(0, 255, 0, 0.04),
+                                    rgba(0, 255, 0, 0));
   background-repeat: repeat-x;
 }
 
 .addon-view[pending="disable"],
 .addon-view[pending="uninstall"] {
   background-image: url("chrome://mozapps/skin/extensions/stripes-info-negative.png"),
-                    -moz-linear-gradient(rgba(128, 128, 128, 0.04),
-                                         rgba(128, 128, 128, 0));
+                    linear-gradient(rgba(128, 128, 128, 0.04),
+                                    rgba(128, 128, 128, 0));
   background-repeat: repeat-x;
 }
 
@@ -745,8 +741,8 @@
 
 #detail-view[loading-extended] .loading {
   opacity: 1;
-  -moz-transition-property: opacity;
-  -moz-transition-duration: 1s;
+  transition-property: opacity;
+  transition-duration: 1s;
 }
 
 .detail-view-container {
@@ -792,7 +788,7 @@
 
 #detail-screenshot[loading] {
   background-image: url("chrome://global/skin/icons/loading_16.png"),
-                    -moz-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+                    linear-gradient(rgba(255, 255, 255, 0.5), transparent);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   border-radius: 3px;
@@ -800,7 +796,7 @@
 
 #detail-screenshot[loading="error"] {
   background-image: url("chrome://global/skin/media/error.png"),
-                    -moz-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+                    linear-gradient(rgba(255, 255, 255, 0.5), transparent);
 }
 
 #detail-desc-container {
@@ -846,8 +842,8 @@
   border-radius: 3px;
   list-style-image: url("chrome://mozapps/skin/extensions/heart.png");
   background-color: #2F73EF;
-  background-image: -moz-linear-gradient(rgba(251, 252, 253, 0.70), rgba(246, 247, 248, 0.27) 49%, 
-                                         rgba(231, 232, 233, 0.25) 51%, rgba(225, 226, 229, 0.1));
+  background-image: linear-gradient(rgba(251, 252, 253, 0.70), rgba(246, 247, 248, 0.27) 49%, 
+                                    rgba(231, 232, 233, 0.25) 51%, rgba(225, 226, 229, 0.1));
 }
 
 #detail-contrib-btn .button-box {
@@ -863,9 +859,9 @@
   background-color: #0459F7;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1),
               0 0 3.5px hsl(190, 90%, 80%);
-  -moz-transition: background-color .4s ease-in,
-                   border-color .3s ease-in,
-                   box-shadow .3s ease-in
+  transition: background-color .4s ease-in,
+              border-color .3s ease-in,
+              box-shadow .3s ease-in;
 }
 
 #detail-contrib-btn:active:hover {
@@ -905,12 +901,21 @@ setting {
 }
 
 #detail-view[active="false"]:not([pending]):not([notification]) {
-  background-image: -moz-linear-gradient(rgba(135, 135, 135, 0.1),
-                                         rgba(135, 135, 135, 0));
+  background-image: linear-gradient(rgba(135, 135, 135, 0.1),
+                                    rgba(135, 135, 135, 0));
 }
 
 setting[first-row="true"] {
   margin-top: 2em;
+}
+
+setting {
+  -moz-box-align: start;
+}
+
+.preferences-alignment {
+  min-height: 30px;
+  -moz-box-align: center;
 }
 
 .preferences-description {
@@ -918,10 +923,11 @@ setting[first-row="true"] {
   color: graytext;
   margin-top: -2px;
   -moz-margin-start: 2em;
+  white-space: pre-wrap;
 }
 
-setting[type="string"] > .setting-input > textbox {
-  -moz-box-flex: 1;
+.preferences-description:empty {
+  display: none;
 }
 
 setting[type="radio"] > radiogroup {
@@ -966,8 +972,8 @@ menulist { /* Fixes some styling inconsistencies */
 
 .download-progress {
   background-color: rgba(151,152,153,.05);
-  background-image: -moz-linear-gradient(rgba(251, 252, 253, 0.95), rgba(246, 247, 248, 0.47) 49%, 
-                                         rgba(231, 232, 233, 0.45) 51%, rgba(225, 226, 229, 0.3));
+  background-image: linear-gradient(rgba(251, 252, 253, 0.95), rgba(246, 247, 248, 0.47) 49%, 
+                                    rgba(231, 232, 233, 0.45) 51%, rgba(225, 226, 229, 0.3));
   background-clip: padding-box;
   border-radius: 3px;
   border: 1px solid;
@@ -992,7 +998,7 @@ menulist { /* Fixes some styling inconsistencies */
 .download-progress[mode="undetermined"] .end-cap,
 .download-progress .progress .progress-bar {
   -moz-appearance: none;
-  background-image: -moz-linear-gradient(#92DDA0, #6FC483 49%, #5EB272 51%, #80CE91);
+  background-image: linear-gradient(#92DDA0, #6FC483 49%, #5EB272 51%, #80CE91);
   margin-top: -1px;
   margin-bottom: -1px;
   border: 1px solid;
@@ -1112,8 +1118,12 @@ menulist { /* Fixes some styling inconsistencies */
 
 /*** buttons ***/
 
-.addon-control[disabled="true"] {
+.addon-control[disabled="true"]:not(.no-auto-hide) {
   display: none;
+}
+
+.no-auto-hide .addon-control {
+  display: block !important;
 }
 
 button.button-link {
@@ -1149,14 +1159,20 @@ button.button-link:not([disabled="true"]):active:hover {
   padding: 1px 3px;
   color: #444;
   text-shadow: 0 0 3px white;
-  background: -moz-linear-gradient(rgba(251, 252, 253, 0.95), rgba(246, 247, 248, 0) 49%, 
-                                   rgba(211, 212, 213, 0.45) 51%, rgba(225, 226, 229, 0.3));
+  background: linear-gradient(rgba(251, 252, 253, 0.95), transparent 49%, 
+                              rgba(211, 212, 213, 0.45) 51%, rgba(225, 226, 229, 0.3));
   background-clip: padding-box;
-  border-radius: 2.5px;
   border: 1px solid rgba(31, 64, 100, 0.4);
   border-top-color: rgba(31, 64, 100, 0.3);
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25) inset,
               0 0 2px 1px rgba(255, 255, 255, 0.25) inset;
+}
+
+@media (-moz-os-version: windows-vista),
+       (-moz-os-version: windows-win7) {
+  .header-button {
+    border-radius: 2.5px;
+  }
 }
 
 .header-button[disabled="true"] {
@@ -1176,4 +1192,31 @@ button.button-link:not([disabled="true"]):active:hover {
 
 .header-button > .toolbarbutton-text {
   display: none;
+}
+
+/*** telemetry experiments ***/
+
+#detail-experiment-container {
+  font-size: 80%;
+  margin-bottom: 1em;
+}
+
+#detail-experiment-bullet-container,
+#detail-experiment-state,
+#detail-experiment-time,
+.experiment-bullet-container,
+.experiment-state,
+.experiment-time {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.addon .experiment-bullet,
+#detail-experiment-bullet {
+  fill: rgb(158, 158, 158);
+}
+
+.addon[active="true"] .experiment-bullet,
+#detail-view[active="true"] #detail-experiment-bullet {
+  fill: rgb(106, 201, 20);
 }

@@ -1,5 +1,0 @@
-/**************************************************************************
- * Remove View menu
- * By: Michael Walden
- **/
-menu[label="View"] { display: none !important; }

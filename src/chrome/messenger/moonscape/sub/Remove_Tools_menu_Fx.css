@@ -1,5 +1,0 @@
-/**************************************************************************
- * Remove Tools menu
- * By: Michael Walden
- **/
-menu[label="Tools"] { display: none !important; }

@@ -1,7 +1,0 @@
-/**************************************************************************
- * Restart Manager - Remove extra button padding
- * By: Michael Walden, FranklinDM
- **/
-#restman-button {
- min-width: 16px !important;
-}

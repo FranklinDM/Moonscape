@@ -1,28 +1,34 @@
 <?xml version="1.0"?>
-
-<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
-
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
   <Description about="urn:mozilla:install-manifest">
-    <em:id>moonscape-messenger@franklindm</em:id>
-	<!--em:id>{8C384F65-661A-4533-90F9-1DE699BFA348}</em:id-->
-    <em:version>1.00</em:version>
-    <em:type>4</em:type>
-    <em:name>Moonscape Messenger</em:name>
-    <em:internalName>moonscape-messenger</em:internalName>
-    <em:description>Experience the classic Netscape on FossaMail. Based on ClassicTB2 and Foxscape.</em:description>
-    <em:creator>FranklinDM</em:creator>
-	<em:contributor>Michael Walden</em:contributor>
-    <em:contributor>Classic TB2 by Corey Drechsler</em:contributor>
-    <em:contributor>TB3 Classic by Zamula</em:contributor>
-    <em:contributor>ClassicReloaded by Christoph Wirsching</em:contributor>
+	<!-- Target Application(s) this extension can install into, with minimum and maximum supported versions. -->
+	<em:targetApplication>
+		<!-- Pale Moon -->
+		<Description>
+			<em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+			<em:minVersion>38.6.0a1</em:minVersion>
+			<em:maxVersion>38.*</em:maxVersion>
+		</Description>
+	</em:targetApplication>
 
-    <em:targetApplication>
-      <Description>
-        <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
-        <em:minVersion>27.0.0</em:minVersion>
-        <em:maxVersion>27.*</em:maxVersion>
-      </Description>
-    </em:targetApplication>
+	<!-- Extension's ID and type -->
+	<em:id>moonscape@franklindm</em:id>
+	<!-- Types: 2=Extensions, 4=Themes, 8=Locale, 16=Plugin, 32=Multiple Item Package -->
+	<em:type>4</em:type>
+
+	<!-- Extension's info and metadata -->
+	<em:name>Moonscape FM</em:name>
+	<em:version>dev-build</em:version>
+	<em:description>Experience the look and feel of the classic Netscape on FossaMail.</em:description>
+	<em:creator>FranklinDM</em:creator>
+	<em:contributor>Michael Walden</em:contributor>
+	<em:contributor>Netscape</em:contributor>
+	<em:homepageURL>http://franklindm.github.io/docs/moonscape-fm</em:homepageURL>
+
+	<!-- Allow lightweight themes / personas to apply to this theme, using 'skinnable' -->
+	<em:skinnable>true</em:skinnable>
+	
+	<!-- internalName must match the 'skinname' part of the relevant chrome.manifest directives in order for those mappings to be associated with this skin. -->
+	<em:internalName>moonscape</em:internalName>
   </Description>
 </RDF>

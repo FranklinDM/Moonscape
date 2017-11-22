@@ -1,5 +1,0 @@
-/**************************************************************************
- * Remove location bar add and edit bookmark buttons in FF3
- * By: Michael Walden
- **/
-#star-button { display: none !important; }

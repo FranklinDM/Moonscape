@@ -1,44 +1,11 @@
-/* ***** BEGIN LICENSE BLOCK *****
- * Version: MPL 1.1/GPL 2.0/LGPL 2.1
- *
- * The contents of this file are subject to the Mozilla Public License Version
- * 1.1 (the "License"); you may not use this file except in compliance with
- * the License. You may obtain a copy of the License at
- * http://www.mozilla.org/MPL/
- *
- * Software distributed under the License is distributed on an "AS IS" basis,
- * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
- * for the specific language governing rights and limitations under the
- * License.
- *
- * The Original Code is Mozilla Communicator client code, released
- * March 31, 1998.
- *
- * The Initial Developer of the Original Code is
- * Netscape Communications Corporation.
- * Portions created by the Initial Developer are Copyright (C) 1998-2001
- * the Initial Developer. All Rights Reserved.
- *
- * Contributor(s):
- *   Joe Hewitt (hewitt@netscape.com)
- *
- * Alternatively, the contents of this file may be used under the terms of
- * either the GNU General Public License Version 2 or later (the "GPL"), or
- * the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
- * in which case the provisions of the GPL or the LGPL are applicable instead
- * of those above. If you wish to allow use of your version of this file only
- * under the terms of either the GPL or the LGPL, and not to allow others to
- * use your version of this file under the terms of the MPL, indicate your
- * decision by deleting the provisions above and replace them with the notice
- * and other provisions required by the GPL or the LGPL. If you do not delete
- * the provisions above, a recipient may use your version of this file under
- * the terms of any one of the MPL, the GPL or the LGPL.
- *
- * ***** END LICENSE BLOCK ***** */
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 /* ===== listbox.css =======================================================
   == Styles used by XUL listbox-related elements.
   ======================================================================= */
+
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
@@ -87,7 +54,7 @@ listbox:focus > listitem[selected="true"] {
 
 /* ::::: listheader ::::: */
 
-listheader { 
+listheader {
   -moz-appearance: treeheadercell;
   -moz-box-align: center;
   border: 2px solid;
@@ -174,4 +141,98 @@ listheader[sortable="true"]:hover:active {
   min-width: 13px;
   min-height: 13px;
   background: -moz-Field no-repeat 50% 50%;
+}
+
+@media (-moz-windows-default-theme) {
+  listitem {
+    --listitem-selectedColor: rgb(217,217,217);
+    --listitem-selectedBorder: var(--listitem-selectedColor);
+    --listitem-selectedBottomBorder: rgb(204,204,204);
+    --listitem-selectedBackground: var(--listitem-selectedColor);
+    --listitem-selectedImage: none;
+    --listitem-selectedCurrentBorder: rgb(123,195,255);
+    --listitem-selectedFocusColor: rgb(205,232,255);
+    --listitem-selectedFocusBorder: var(--listitem-selectedFocusColor);
+    --listitem-selectedFocusBottomBorder: rgb(165,214,255);
+    --listitem-selectedFocusBackground: var(--listitem-selectedFocusColor);
+    --listitem-selectedFocusImage: none;
+    --listitem-selectedFocusCurrentBorder: var(--listitem-selectedFocusColor);
+    --listitem-selectedFocusCurrentBottomBorder: var(--listitem-selectedFocusBottomBorder);
+    --listitem-selectedFocusCurrentBackground: var(--listitem-selectedFocusColor);
+
+    color: -moz-FieldText;
+    -moz-margin-start: 1px;
+    -moz-margin-end: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-width: 1px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  listitem[selected="true"] {
+    border-top-color: var(--listitem-selectedBorder);
+    border-right-color: var(--listitem-selectedBorder);
+    border-left-color: var(--listitem-selectedBorder);
+    border-bottom-color: var(--listitem-selectedBottomBorder);
+    background-image: var(--listitem-selectedImage);
+    background-color: var(--listitem-selectedBackground);
+    color: -moz-DialogText;
+  }
+
+  listbox:focus > listitem[selected="true"] {
+    border-top-color: var(--listitem-selectedFocusBorder);
+    border-right-color: var(--listitem-selectedFocusBorder);
+    border-left-color: var(--listitem-selectedFocusBorder);
+    border-bottom-color: var(--listitem-selectedFocusBottomBorder);
+    background-image: var(--listitem-selectedFocusImage);
+    background-color: var(--listitem-selectedFocusBackground);
+    color: -moz-DialogText;
+  }
+
+  listbox:focus > listitem[current="true"] {
+    border-color: var(--listitem-selectedCurrentBorder);
+    outline: none;
+  }
+
+  listbox:focus > listitem[selected="true"][current="true"] {
+    border-top-color: var(--listitem-selectedFocusCurrentBorder);
+    border-right-color: var(--listitem-selectedFocusCurrentBorder);
+    border-left-color: var(--listitem-selectedFocusCurrentBorder);
+    border-bottom-color: var(--listitem-selectedFocusCurrentBottomBorder);
+    background-color: var(--listitem-selectedFocusCurrentBackground);
+    outline: none;
+  }
+
+  @media (-moz-os-version: windows-vista),
+         (-moz-os-version: windows-win7) {
+    listitem {
+      --listitem-selectedBottomBorder: var(--listitem-selectedColor);
+      --listitem-selectedBackground: rgba(190,190,190,.15);
+      --listitem-selectedImage: linear-gradient(rgba(190,190,190,.1), rgba(190,190,190,.4));
+      --listitem-selectedCurrentBorder: rgb(125,162,206);
+      --listitem-selectedFocusColor: rgb(132,172,221);
+      --listitem-selectedFocusBottomBorder: var(--listitem-selectedFocusColor);
+      --listitem-selectedFocusBackground: rgba(131,183,249,.02);
+      --listitem-selectedFocusImage: linear-gradient(rgba(131,183,249,.16), rgba(131,183,249,.375));
+      --listitem-selectedFocusCurrentBackground: rgba(131,183,249,.15);
+
+      border-radius: 3px;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.4), inset 0 -1px 0 1px rgba(255,255,255,.2);
+    }
+  }
+
+  @media (-moz-os-version: windows-win8) {
+    listitem {
+      --listitem-selectedBottomBorder: var(--listitem-selectedColor);
+      --listitem-selectedBackground: rgba(190,190,190,.15);
+      --listitem-selectedImage: linear-gradient(rgba(190,190,190,.4), rgba(190,190,190,.4));
+      --listitem-selectedCurrentBorder: rgb(125,162,206);
+      --listitem-selectedFocusColor: rgb(132,172,221);
+      --listitem-selectedFocusBottomBorder: var(--listitem-selectedFocusColor);
+      --listitem-selectedFocusBackground: rgba(131,183,249,.02);
+      --listitem-selectedFocusImage: linear-gradient(rgba(131,183,249,.375), rgba(131,183,249,.375));
+      --listitem-selectedFocusCurrentBackground: rgba(131,183,249,.15);
+    }
+  }
 }
