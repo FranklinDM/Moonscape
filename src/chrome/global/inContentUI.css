@@ -32,32 +32,6 @@ html|html {
   }
 }
 
-@media (-moz-windows-glass) {
-  *|*:root {
-    /* Blame shorlander for this monstrosity. */
-    background-image: /* Side gradients */
-                      linear-gradient(to right,
-                                      rgba(255,255,255,0.2), transparent 40%,
-                                      transparent 60%, rgba(255,255,255,0.2)),
-                      /* Aero-style light beams */
-                      -moz-linear-gradient(left 32deg,
-                                           /* First light beam */
-                                           transparent 19.5%, rgba(255,255,255,0.1) 20%,
-                                           rgba(255,255,255,0.1) 21.5%, rgba(255,255,255,0.2) 22%,
-                                           rgba(255,255,255,0.2) 25.5%, rgba(255,255,255,0.1) 26%,
-                                           rgba(255,255,255,0.1) 27.5%, transparent 28%,
-                                           /* Second light beam */
-                                           transparent 49.5%, rgba(255,255,255,0.1) 50%,
-                                           rgba(255,255,255,0.1) 52.5%, rgba(255,255,255,0.2) 53%,
-                                           rgba(255,255,255,0.2) 54.5%, rgba(255,255,255,0.1) 55%,
-                                           rgba(255,255,255,0.1) 57.5%, transparent 58%,
-                                           /* Third light beam */
-                                           transparent 87%, rgba(255,255,255,0.2) 90%),
-                      /* Texture */
-                      url("chrome://global/skin/inContentUI/background-texture.png");
-  }
-}
-
 /* Use the new in-content colors for #contentAreaDownloadsView. After landing
    of bug 989469 the colors can be moved to *|*:root */
 *|*#contentAreaDownloadsView {
