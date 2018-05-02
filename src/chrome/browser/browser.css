@@ -3225,22 +3225,26 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 }
 
 /* toolbarbutton badged */
+.toolbarbutton-badge-stack,
 .toolbarbutton-badge-container {
   margin: 0;
   padding: 0;
   position: relative;
 }
 
+#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-badge-stack,
 #navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-badge-container {
   padding: 2px 5px;
 }
 
+.toolbarbutton-1 > .toolbarbutton-badge-stack > .toolbar-icon,
 .toolbarbutton-1 > .toolbarbutton-badge-container > .toolbar-icon {
   position: absolute;
   top: 2px;
   right: 2px;
 }
 
+.toolbarbutton-badge-stack > .toolbarbutton-icon[label]:not([label=""]),
 .toolbarbutton-badge-container > .toolbarbutton-icon[label]:not([label=""]) {
   -moz-margin-end: 0;
 }

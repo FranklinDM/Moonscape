@@ -1,16 +1,21 @@
 # Main skin content
-skin	global			moonscape-classic		chrome/global/
-skin	browser			moonscape-classic		chrome/browser/
-skin	mozapps			moonscape-classic		chrome/mozapps/
+skin    global          moonscape-classic       chrome/global/
+skin    browser         moonscape-classic       chrome/browser/
+skin    mozapps         moonscape-classic       chrome/mozapps/
 
 # Define a new package name (os_target) that will have different paths for Windows XP, Linux and Mac OS
 # These paths will contain replacement stylesheets for platform dependent versions, explained here:
 #   http://forums.mozillazine.org/viewtopic.php?f=18&t=906535&p=4756995#p4756995
 
 # Fallback OS-specific skin for any OSes not matched below
-skin	os_target		moonscape-classic		chrome/os_target/windows/
+skin    os_target       moonscape-classic       chrome/os_target/windows/
 
 # OS-specific skin content overrides
-skin	os_target		moonscape-classic		chrome/os_target/windows/	os=WINNT
-skin	os_target		moonscape-classic		chrome/os_target/mac/		os=Darwin
-skin	os_target		moonscape-classic		chrome/os_target/linux/		os=Linux
+skin    os_target       moonscape-classic       chrome/os_target/windows/   os=WINNT
+skin    os_target       moonscape-classic       chrome/os_target/mac/       os=Darwin
+skin    os_target       moonscape-classic       chrome/os_target/linux/     os=Linux
+
+# PM 28 Compatibility
+override chrome://global/skin/autocomplete.css                          chrome://global/skin/autocomplete_28.css                    appversion>=28.0.0a1
+override chrome://browser/skin/permissions/aboutPermissions.css         chrome://browser/skin/preferences/aboutPermissions.css      appversion>=28.0.0a1
+override chrome://mozapps/skin/aboutNetworking.css                      chrome://mozapps/skin/aboutNetworking_28.css                appversion>=28.0.0a1
