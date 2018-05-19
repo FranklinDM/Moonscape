@@ -1,19 +1,6 @@
-
 @import url("chrome://global/skin/in-content/common.css");
-/* Body and container */
-body {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  min-height: 100vh;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-inline-start: calc(48px + 4.6em);
-  padding-inline-end: 48px;
-  align-items: center;
-  justify-content: center;
-}
 
+/* Body and container */
 .container {
   min-width: 13em;
   max-width: 52em;
@@ -28,17 +15,18 @@ body {
 
 /* Typography */
 .title {
-  background-image: url("chrome://global/skin/icons/info.svg");
-  background-position: left 0;
+  background-image: url("chrome://global/skin/icons/warning-large.png");
+  background-position: left -1px;
   background-repeat: no-repeat;
-  background-size: 1.6em;
-  margin-inline-start: -2.3em;
-  padding-inline-start: 2.3em;
-  font-size: 2.5em;
+}
+
+.title,
+.description {
+  padding-inline-start: 6em;
 }
 
 .title:dir(rtl) {
-  background-position: right 0;
+  background-position: right -1px;
 }
 
 .title-text {
@@ -80,14 +68,6 @@ ul {
 /* Buttons */
 .button-container {
   margin-top: 1.2em;
-}
-
-.button-container > button {
-  min-width: 150px;
-}
-
-.button-container > button:first-child {
-  margin-inline-start: 0;
 }
 
 /* Trees */
