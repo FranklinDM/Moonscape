@@ -19,3 +19,4 @@ skin    os_target       moonscape-classic       chrome/os_target/linux/     os=L
 override chrome://global/skin/autocomplete.css                          chrome://global/skin/autocomplete_28.css                    appversion>=28.0.0a1
 override chrome://browser/skin/permissions/aboutPermissions.css         chrome://browser/skin/preferences/aboutPermissions.css      appversion>=28.0.0a1
 override chrome://mozapps/skin/aboutNetworking.css                      chrome://mozapps/skin/aboutNetworking_28.css                appversion>=28.0.0a1
+override chrome://global/skin/alerts/alert.css                          chrome://global/skin/alerts/alert_28.css                    appversion>=28.0.0a1

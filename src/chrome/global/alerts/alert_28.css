@@ -1,0 +1,42 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* ===== alert.css =====================================================
+  == Styles specific to the alerts dialog.
+  ======================================================================= */
+
+@import url("chrome://global/skin/alerts/alert-common.css");
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#alertNotification {
+  -moz-appearance: none;
+  background: transparent;
+  padding: 10px;
+}
+
+#alertBox {
+  border: 2px solid;
+  -moz-border-top-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors: ThreeDHighlight ThreeDLightShadow;
+  background-color: -moz-Dialog;
+  color: -moz-DialogText;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.59);
+}
+
+.alertCloseButton {
+  -moz-appearance: none;
+  padding: 4px 2px;
+  border: none !important;
+}
+
+.alertCloseBox {
+  margin-inline-end: 2px;
+}
+
+#alertSettings {
+  margin-inline-end: 3px;
+}
