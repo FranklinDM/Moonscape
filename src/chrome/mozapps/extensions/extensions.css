@@ -207,7 +207,7 @@
 
 .category[selected] {
   color: #000080;
-  background: #C0C0C0;
+  background: -moz-Dialog;
 }
 
 .category-name {
@@ -354,7 +354,7 @@
 .sorter[checkState="1"],
 .sorter[checkState="2"] {
   /* set to important because greasemonkey overrides this selector */
-  background-color: #C0C0C0 !important;
+  background-color: -moz-Dialog !important;
   color: black !important;
   box-shadow: none !important;
 }

@@ -4,7 +4,7 @@
 
 #tabs-display,
 #tabsList {
-  background-color: #C0C0C0;
+  background-color: -moz-Dialog;
   -moz-appearance: none;
   margin: 0;
 }

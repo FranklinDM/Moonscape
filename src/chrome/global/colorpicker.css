@@ -36,7 +36,7 @@ colorpicker[type="button"] {
 }
 
 .colorpickertile[selected="true"] {
-  border: 2px outset #C0C0C0;
+  border: 2px outset -moz-Dialog;
 }
 
 .colorpickertile[hover="true"] {

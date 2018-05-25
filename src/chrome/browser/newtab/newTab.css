@@ -11,7 +11,7 @@
 /* SCROLLBOX */
 #newtab-scrollbox:not([page-disabled]) {
   color: rgb(0,0,0);
-  background-color: #C0C0C0;
+  background-color: -moz-Dialog;
 }
 
 /* UNDO */

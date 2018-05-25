@@ -7,7 +7,7 @@
 
 *|*:root {
   --in-content-page-color: #000;
-  --in-content-page-background: rgb(192, 192, 192);
+  --in-content-page-background: -moz-Dialog;
   --in-content-text-color: #333;
   --in-content-selected-text: #fff;
   --in-content-header-border-color: #c8c8c8;

@@ -134,11 +134,11 @@ tree[seltype="text"] > treechildren::-moz-tree-cell-text(active, current, focus)
 }
 
 tree[seltype="cell"] > treechildren::-moz-tree-cell(active, selected, current, focus) {
-  border: 1px dotted #C0C0C0;
+  border: 1px dotted -moz-Dialog;
 }
 
 tree[seltype="text"] > treechildren::-moz-tree-cell-text(active, selected, current, focus) {
-  border: 1px dotted #C0C0C0;
+  border: 1px dotted -moz-Dialog;
 }
 
 /* ::::: lines connecting cells ::::: */

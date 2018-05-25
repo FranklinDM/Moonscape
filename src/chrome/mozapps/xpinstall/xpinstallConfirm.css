@@ -32,7 +32,7 @@ installitem {
   padding-bottom: 5px;
   -moz-padding-start: 5px;
   -moz-padding-end: 0;
-  border-bottom: 1px dotted #C0C0C0;
+  border-bottom: 1px dotted -moz-Dialog;
   margin-bottom: 5px;
 }
 

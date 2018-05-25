@@ -7,7 +7,7 @@
    ======================================================================= */
 
 body {
-  background-color: #C0C0C0;
+  background-color: -moz-Dialog;
   color: #000;
   font: message-box;
 }

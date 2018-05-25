@@ -175,7 +175,7 @@ treechildren::-moz-tree-cell-text(broken) {
   -moz-padding-start: 7px;
   -moz-padding-end: 7px;
   min-height: 25px;
-  border-bottom: 1px dotted #C0C0C0;
+  border-bottom: 1px dotted -moz-Dialog;
 }
 
 #feedListbox richlistitem[selected="true"] {
@@ -213,7 +213,7 @@ treechildren::-moz-tree-cell-text(broken) {
   -moz-padding-start: 7px;
   -moz-padding-end: 7px;
   min-height: 25px;
-  border-bottom: 1px dotted #C0C0C0;
+  border-bottom: 1px dotted -moz-Dialog;
 }
 
 .permissionLabel {

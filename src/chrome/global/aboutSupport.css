@@ -3,7 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 html {
-  background-color: #C0C0C0;
+  background-color: -moz-Dialog;
   color: -moz-FieldText;
   font: message-box;
 }
