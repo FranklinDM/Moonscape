@@ -1,5 +1,11 @@
 # Changelog
 
+## Moonscape 6.20 - 2018-06-27
+- Initial support for Pale Moon 28
+  - This is the last version that will support Pale Moon 27
+  - Serves as a transition release (so that in case you updated to PM 28, this theme will not be disabled)
+- Revert back to -moz-Dialog as color for most pages instead of using the dark gray color
+
 ## Moonscape 6.19 - 2017-11-11
 - Style the 'about:plugins' page
   - Somewhat requested here: https://forum.palemoon.org/viewtopic.php?f=45&p=126731#p126731
