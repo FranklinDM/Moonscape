@@ -12,7 +12,7 @@
 #newtab-vertical-margin,
 #newtab-scrollbox:not([page-disabled]) {
   color: rgb(0,0,0);
-  background-color: -moz-Dialog;
+  background-color: #C0C0C0;
 }
 
 /* UNDO */

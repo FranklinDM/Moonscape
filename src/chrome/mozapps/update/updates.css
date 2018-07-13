@@ -151,7 +151,7 @@ wizardpage {
 
 /* Update History Window */
 update {
-  border-bottom: 1px dotted -moz-Dialog;
+  border-bottom: 1px dotted #C0C0C0;
 }
 
 .update-name {
