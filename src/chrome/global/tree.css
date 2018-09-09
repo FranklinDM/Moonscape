@@ -7,7 +7,7 @@
   ======================================================================= */
   
 /* Always show tree-connecting lines */
-@treechildren::-moz-tree-line {
+treechildren::-moz-tree-line {
     visibility: visible  !important;
     border-style: dotted !important;
 }

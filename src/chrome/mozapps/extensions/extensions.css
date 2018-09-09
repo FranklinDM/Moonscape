@@ -417,7 +417,7 @@
 
 .addon {
   color: black;
-  border-top: 1x solid;
+  border-top: 1px solid;
   -moz-border-top-colors: #D4D0C8;
   border-bottom: 1px solid;
   -moz-border-bottom-colors: #D4D0C8;
