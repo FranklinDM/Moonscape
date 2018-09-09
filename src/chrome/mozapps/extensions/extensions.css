@@ -4,6 +4,13 @@
 
 @import url("chrome://global/skin/inContentUI.css");
 
+.main-content {
+  background: none;
+  border: none;
+  margin-right: -18px;
+  margin-bottom: -18px;
+  border-radius: 0;
+}
 
 .nav-button {
   list-style-image: url(chrome://mozapps/skin/extensions/navigation.png);
@@ -42,9 +49,7 @@
 }
 
 #addons-page[warning] .global-warning-container {
-  background-color: rgba(255, 255, 0, 0.1);
-  background-image: url("chrome://mozapps/skin/extensions/stripes-warning.png");
-  background-repeat: repeat-x;
+  background-color: rgb(255, 255, 224);
 }
 
 #detail-view .global-warning {
@@ -130,12 +135,15 @@
 .alert {
   -moz-box-align: center;
   padding: 10px;
-  color: #373D48;
-  border: 1px solid #A8B8D1;
-  border-radius: 8px;
-  background-image: linear-gradient(#FFF, #ECF1F7);
+  color: black;
   background-clip: padding-box;
-  box-shadow: 2px 2px 4px #999; 
+  background: -moz-dialog !important;
+  border:    2px solid !important;
+  -moz-border-top-colors:   -moz-dialog rgba(0, 0, 0, 0.2) !important;
+  -moz-border-right-colors: -moz-dialog ThreeDDarkShadow !important;
+  -moz-border-left-colors:  -moz-dialog rgba(0, 0, 0, 0.2) !important;
+  -moz-border-bottom-colors: -moz-dialog ThreeDDarkShadow !important;
+  box-shadow: 0px 0px 0px rgb(153, 153, 153) !important;
 }
 
 .alert .alert-title {
@@ -161,35 +169,21 @@
   -moz-appearance: none;
   border: none;
   -moz-margin-end: -1px;
-  background-color: transparent;
+  background-color: #FFFFFF;
   position: relative;
-  margin-top: 31px;
+  padding-top: 50px;
+  margin-top: -90px;
+  margin-left: -20px;
+  margin-bottom: -20px;
 }
 
 .category {
   -moz-appearance: none;
   background-color: transparent;
-  color: #252F3B;
   min-height: 0;
   padding: 10px 4px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: transparent;
   -moz-box-align: center;
   overflow: hidden;
-}
-
-@media (-moz-os-version: windows-vista),
-       (-moz-os-version: windows-win7) {
-  .category:-moz-locale-dir(ltr) {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
-
-  .category:-moz-locale-dir(rtl) {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
 }
 
 .category[disabled] {
@@ -207,15 +201,22 @@
   transition-duration: 1s, 0.8s;
 }
 
+.category:hover {
+  color: #120EFD;
+}	
+
 .category[selected] {
-  background-color: rgba(255, 255, 255, 0.4);
-  color: #252F3B;
-  border-color: #C3CEDF;
-  -moz-border-end-color: #E2E9F2;
+  color: #000080;
+  background: #C0C0C0;
 }
 
 .category-name {
-  font-size: 150%;
+  font-size: 125%;
+  margin-left: 10px;
+}
+
+.category[selected] .category-name{
+  font-weight: bold;
 }
 
 /* Maximize the size of the viewport when the window is small */
@@ -290,6 +291,7 @@
 }
 
 #header-search {
+  -moz-appearance: none;
   margin: 0;
 }
 
@@ -299,49 +301,34 @@
   }
 }
 
-@media (-moz-windows-default-theme) {
-  #header-search {
-    -moz-appearance: none;
-    border: 1px solid rgba(0, 0, 0, 0.32);
-    padding-bottom: 2px;
-    background-color: rgba(255, 255, 255, 0.4);
-  }
-
-@media (-moz-os-version: windows-vista),
-       (-moz-os-version: windows-win7) {
-  #header-search {
-    border-radius: 2.5px;
-  }
-}
-
-  #header-search:hover {
-    background-color: rgba(255, 255, 255, .75);
-  }
-
-  #header-search[focused] {
-    background-color: white;
-  }
-}
-
 #header-utils-btn {
-  list-style-image: url("chrome://mozapps/skin/extensions/utilities.svg#utilities");
+  -moz-appearance: none;
+  border: 2px solid 		!important;
+  background: -moz-Dialog    !important;                                    
+  -moz-border-top-colors:    ThreeDHighlight  ThreeDHighlight !important;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow !important;
+  -moz-border-left-colors:   ThreeDHighlight  ThreeDHighlight !important;
+  -moz-border-right-colors:  ThreeDDarkShadow ThreeDShadow !important;
+  list-style-image: url("chrome://mozapps/skin/extensions/utilities.png");
   -moz-margin-end: 16px;
+  padding: 2px;
 }
 
-@media not all and (-moz-windows-default-theme) {
-  #header-utils-btn {
-    list-style-image: url("chrome://mozapps/skin/extensions/utilities.svg#utilities-native");
-  }
+#header-utils-btn:hover:active,
+#header-utils-btn[open]{
+  -moz-border-bottom-colors: ThreeDHighlight  ThreeDHighlight !important;
+  -moz-border-top-colors:    ThreeDDarkShadow ThreeDShadow !important;
+  -moz-border-right-colors:  ThreeDHighlight  ThreeDHighlight !important;
+  -moz-border-left-colors:   ThreeDDarkShadow ThreeDShadow !important;
 }
 
 .view-header {
-  background-color: rgba(251, 252, 253, 0.25);
+  background-color: #D0D0D0;
   padding: 4px;
   margin: 0;
   min-height: 31px;
-  border-bottom: 1px solid #CAD4E0;
+  border-bottom: 1px solid #D4D0C8;
 }
-
 
 /*** sorters ***/
 
@@ -353,8 +340,6 @@
   -moz-appearance: none;
   border: none;
   background-color: transparent;
-  color: #536680;
-  border-radius: 10000px;
   padding: 0 6px;
   margin: 0 6px;
   min-width: 12px !important;
@@ -368,8 +353,10 @@
 
 .sorter[checkState="1"],
 .sorter[checkState="2"] {
-  background-color: rgba(194, 200, 206, 0.4);
-  box-shadow: 1px 1px 2px #B6BBC4 inset;
+  /* set to important because greasemonkey overrides this selector */
+  background-color: #C0C0C0 !important;
+  color: black !important;
+  box-shadow: none !important;
 }
 
 .sorter[checkState="1"] {
@@ -430,24 +417,12 @@
 
 .addon {
   color: black;
-  border-top: 2px solid;
-  -moz-border-top-colors: rgba(0, 0, 0, 0.1) rgba(255, 255, 255, 0.1);
+  border-top: 1x solid;
+  -moz-border-top-colors: #D4D0C8;
   border-bottom: 1px solid;
-  -moz-border-bottom-colors: rgba(255, 255, 255, 0.1);
+  -moz-border-bottom-colors: #D4D0C8;
   padding: 5px;
   background-origin: border-box;
-}
-
-.view-pane:not(#search-view) .addon:first-of-type,
-#search-view .addon[first] {
-  border-top-width: 1px;
-  -moz-border-top-colors: rgba(255, 255, 255, 0.1);
-}
-
-.view-pane:not(#search-view) .addon:last-of-type,
-#search-view .addon[last] {
-  border-bottom-width: 2px;
-  -moz-border-bottom-colors: rgba(0, 0, 0, 0.1) rgba(255, 255, 255, 0.1);
 }
 
 .details {
@@ -624,8 +599,6 @@
 
 .addon[active="false"] {
   background-color: rgba(135, 135, 135, 0.1);
-  background-image: linear-gradient(rgba(135, 135, 135, 0),
-                                    rgba(135, 135, 135, 0.1));
 }
 
 .addon-view[active="false"],
@@ -634,38 +607,26 @@
 }
 
 .addon-view[notification="warning"] {
-  background-image: url("chrome://mozapps/skin/extensions/stripes-warning.png"),
-                    linear-gradient(rgba(255, 255, 0, 0.04),
-                                    rgba(255, 255, 0, 0));
-  background-repeat: repeat-x;
+  background-color: rgb(255, 255, 224);
 }
 
 .addon-view[notification="error"] {
-  background-image: url("chrome://mozapps/skin/extensions/stripes-error.png"),
-                    linear-gradient(rgba(255, 0, 0, 0.04),
-                                    rgba(255, 0, 0, 0));
-  background-repeat: repeat-x;
+  background-color: rgb(255, 204, 204);
 }
 
 .addon-view[pending="enable"],
 .addon-view[pending="upgrade"],
 .addon-view[pending="install"] {
-  background-image: url("chrome://mozapps/skin/extensions/stripes-info-positive.png"),
-                    linear-gradient(rgba(0, 255, 0, 0.04),
-                                    rgba(0, 255, 0, 0));
-  background-repeat: repeat-x;
+  background-color: rgb(184, 245, 181);
 }
 
 .addon-view[pending="disable"],
 .addon-view[pending="uninstall"] {
-  background-image: url("chrome://mozapps/skin/extensions/stripes-info-negative.png"),
-                    linear-gradient(rgba(128, 128, 128, 0.04),
-                                    rgba(128, 128, 128, 0));
-  background-repeat: repeat-x;
+  background-color: rgb(211, 211, 211);
 }
 
 .addon[selected] {
-  background-color: rgba(148, 172, 204, 0.39);
+  background-color: rgb(148, 172, 204);
   color: black;
 }
 
@@ -712,12 +673,11 @@
   -moz-appearance: none;
   padding: 0 6px;
   margin: 0 3px;
-  border-radius: 10000px;
 }
 
 .search-filter-radio[selected] {
-  background-color: grey;
-  color: white;
+  background-color: Highlight;
+  color: HighlightText;
 }
 
 .search-filter-radio .radio-check-box1 {
@@ -1155,24 +1115,16 @@ button.button-link:not([disabled="true"]):active:hover {
 }
 
 .header-button {
-  -moz-appearance: none;
-  padding: 1px 3px;
-  color: #444;
-  text-shadow: 0 0 3px white;
-  background: linear-gradient(rgba(251, 252, 253, 0.95), transparent 49%, 
-                              rgba(211, 212, 213, 0.45) 51%, rgba(225, 226, 229, 0.3));
-  background-clip: padding-box;
-  border: 1px solid rgba(31, 64, 100, 0.4);
-  border-top-color: rgba(31, 64, 100, 0.3);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25) inset,
-              0 0 2px 1px rgba(255, 255, 255, 0.25) inset;
-}
-
-@media (-moz-os-version: windows-vista),
-       (-moz-os-version: windows-win7) {
-  .header-button {
-    border-radius: 2.5px;
-  }
+  -moz-appearance: button;
+  margin: 1px 5px 2px 5px;
+  border: 3px solid;
+  -moz-border-top-colors: transparent ThreeDHighlight ThreeDLightShadow;
+  -moz-border-right-colors: transparent ThreeDDarkShadow ThreeDShadow;
+  -moz-border-bottom-colors: transparent ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors: transparent ThreeDHighlight ThreeDLightShadow;
+  background-color: ThreeDFace;
+  color: ButtonText;
+  text-shadow: none;
 }
 
 .header-button[disabled="true"] {
@@ -1183,40 +1135,6 @@ button.button-link:not([disabled="true"]):active:hover {
   opacity: 0.4;
 }
 
-.header-button:not([disabled="true"]):active:hover,
-.header-button[open="true"] {
-  background-color: rgba(61, 76, 92, 0.2);
-  border-color: rgba(39, 53, 68, 0.5);
-  box-shadow: 0 0 3px 1px rgba(39, 53, 68, 0.2) inset;
-}
-
 .header-button > .toolbarbutton-text {
   display: none;
-}
-
-/*** telemetry experiments ***/
-
-#detail-experiment-container {
-  font-size: 80%;
-  margin-bottom: 1em;
-}
-
-#detail-experiment-bullet-container,
-#detail-experiment-state,
-#detail-experiment-time,
-.experiment-bullet-container,
-.experiment-state,
-.experiment-time {
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.addon .experiment-bullet,
-#detail-experiment-bullet {
-  fill: rgb(158, 158, 158);
-}
-
-.addon[active="true"] .experiment-bullet,
-#detail-view[active="true"] #detail-experiment-bullet {
-  fill: rgb(106, 201, 20);
 }
