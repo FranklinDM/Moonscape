@@ -2,14 +2,13 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-
 @import url("chrome://global/skin/");
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 
 #warningScreen
 {
-  background-color: -moz-Dialog;
+  background-color: #C0C0C0;
 }
 
 #warningBox
@@ -17,11 +16,11 @@
   background-color: -moz-Field;
   color: -moz-FieldText;
   border: 1px solid ThreeDShadow;
-  border-radius: 10px;
   padding: 3em;
   -moz-padding-start: 30px;
   margin-left: 1em;
   margin-right: 1em;
+  border-radius: 10px;
 }
 
 #warningInnerBox

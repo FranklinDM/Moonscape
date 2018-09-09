@@ -47,13 +47,14 @@ radio[pane] {
   margin: 0px 1px 0px 1px;
   padding: 1px 3px 1px 3px;
   min-width: 4.5em;
+  border: 1px solid transparent;
+  color: black;
 }
 
 .paneSelector {
   border-bottom: 2px groove ThreeDFace;
   margin: 0px;
   -moz-padding-start: 10px;
-  background-color: -moz-Field;
   color: -moz-FieldText;
 }
 
@@ -62,15 +63,19 @@ radio[pane] {
   height: 32px;
 }
 
-radio[pane]:hover {
-  background-color: #E0E8F6;
-  color: black;
+radio[pane]:hover:not([selected="true"]) {
   -moz-appearance: none;
+  -moz-border-top-colors:    ThreeDHighlight;
+  -moz-border-right-colors:  ThreeDShadow;
+  -moz-border-bottom-colors: ThreeDShadow;
+  -moz-border-left-colors:   ThreeDHighlight;
 }
 
 radio[pane][selected="true"] {
-  background-color: #C1D2EE;
-  color: black; 
   -moz-appearance: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  -moz-border-top-colors:    ThreeDShadow;
+  -moz-border-right-colors:  ThreeDHighlight;
+  -moz-border-bottom-colors: ThreeDHighlight;
+  -moz-border-left-colors:   ThreeDShadow;
 }
-

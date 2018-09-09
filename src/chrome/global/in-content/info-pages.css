@@ -1,35 +1,32 @@
 @import url("chrome://global/skin/in-content/common.css");
-/* Body and container */
-body {
-  display: flex;
-  box-sizing: padding-box;
-  min-height: 100vh;
-  padding-top: 0;
-  padding-bottom: 0;
-  -moz-padding-start: calc(48px + 4.6em);
-  -moz-padding-end: 48px;
-  align-items: center;
-  justify-content: center;
-}
 
+/* Body and container */
 .container {
   min-width: 13em;
   max-width: 52em;
 }
 
-/* Typography */
-.title {
-  background-image: url("chrome://browser/skin/aboutNetError_info.svg");
-  background-position: left 0;
-  background-repeat: no-repeat;
-  background-size: 1.6em;
-  -moz-margin-start: -2.3em;
-  -moz-padding-start: 2.3em;
-  font-size: 2.5em;
+.container.restore-chosen {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 10vh 0;
 }
 
-.title:-moz-dir(rtl) {
-  background-position: right 0;
+/* Typography */
+.title {
+  background-image: url("chrome://global/skin/icons/warning-large.png");
+  background-position: left -1px;
+  background-repeat: no-repeat;
+}
+
+.title,
+.description {
+  padding-inline-start: 6em;
+}
+
+.title:dir(rtl) {
+  background-position: right -1px;
 }
 
 .title-text {
@@ -45,8 +42,8 @@ body {
 
   .title {
     background-image: none !important;
-    -moz-padding-start: 0;
-    -moz-margin-start: 0;
+    padding-inline-start: 0;
+    margin-inline-start: 0;
   }
 
   .title-text {
@@ -57,7 +54,7 @@ body {
 ul, ol {
   margin: 0;
   padding: 0;
-  -moz-margin-start: 1em;
+  margin-inline-start: 1em;
 }
 
 ul > li, ol > li {
@@ -73,17 +70,17 @@ ul {
   margin-top: 1.2em;
 }
 
-.button-container > button {
-  min-width: 150px;
-}
-
-.button-container > button:first-child {
-  -moz-margin-start: 0;
-}
-
 /* Trees */
-tree {
-  min-height: 12em;
+.tree-container {
   margin-top: 1.2em;
+  flex-grow: 1;
+  min-height: 12em;
+}
+
+.tree-container > tree {
+  height: 100%;
+}
+
+tree {
   width: 100%;
 }

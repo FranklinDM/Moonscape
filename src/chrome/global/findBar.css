@@ -10,10 +10,6 @@
   -moz-appearance: none;
 }
 
-.findbar-closebutton:-moz-lwtheme-brighttext {
-  list-style-image: url("chrome://global/skin/icons/close-inverted.png");
-}
-
 findbar {
   padding-top: 1px;
   background-image: linear-gradient(rgba(0,0,0,.15) 1px, rgba(255,255,255,.15) 1px);
@@ -104,8 +100,20 @@ findbar[hidden] {
   padding: 2px !important;
 }
 
-.find-status-icon[status="notfound"] {
-  list-style-image: url("chrome://global/skin/icons/information-16.png");
+/* findbar search field */
+
+.findbar-textbox {
+  -moz-appearance: none;
+  border: 2px solid rgb(0, 0, 0);
+  -moz-border-top-colors:     threedshadow    threeddarkshadow;
+  -moz-border-right-colors:   threedhighlight threedlightshadow;
+  -moz-border-bottom-colors:  threedhighlight threedlightshadow;
+  -moz-border-left-colors:    threedshadow    threeddarkshadow;
+  min-width: 220px;
+}
+
+.findbar-textbox[focused="true"] {
+  border-color: Highlight;
 }
 
 .findbar-textbox[status="notfound"] {
@@ -116,6 +124,10 @@ findbar[hidden] {
 .findbar-textbox[flash="true"] {
   box-shadow: 0 0 0 1em yellow inset;
   color: black;
+}
+
+.find-status-icon[status="notfound"] {
+  list-style-image: url("chrome://global/skin/icons/information-16.png");
 }
 
 .find-status-icon[status="wrapped"] {

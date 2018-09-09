@@ -5,7 +5,7 @@
 /* ===== global.css =====================================================
   == Styles that apply everywhere.
   ======================================================================= */
-
+  
 /* all localizable skin settings shall live here */
 @import url("chrome://global/locale/intl.css");
 
@@ -17,8 +17,13 @@ radio {
   -moz-binding: url("chrome://global/skin/globalBindings.xml#radio");
 }
 
-menulist > menupopup {
+menulist > menupopup,
+.menulist-menupopup {
   -moz-binding: url("chrome://global/content/bindings/popup.xml#popup-scrollbars");
+}
+
+.menulist-compact {
+  -moz-binding: url("chrome://global/skin/globalBindings.xml#menulist-compact");
 }
 
 /* ::::: root elements ::::: */
@@ -145,6 +150,21 @@ toolbar[mode="text"] .toolbarbutton-text {
   padding: 0 !important;
   margin: 3px 5px !important;
 }
+
+/*#+++*/
+toolbar[mode="icons"] .toolbarbutton-text {
+  display: none;
+}
+
+toolbar[mode="text"] .toolbarbutton-icon {
+  display: none;
+}
+
+toolbar[mode="text"] .toolbarbutton-text {
+  padding: 0 !important;
+  margin: 3px 5px !important;
+}
+/*#+++*/
 
 /* ::::: miscellaneous formatting ::::: */
 
@@ -321,4 +341,19 @@ label[disabled="true"]:-moz-system-metric(windows-classic) {
 
 .close-icon:hover:active {
   -moz-image-region: rect(0, 48px, 16px, 32px);
+}
+
+@media (min-resolution: 2dppx) {
+  .close-icon {
+    list-style-image: url("chrome://global/skin/icons/close@2x.png");
+    -moz-image-region: rect(0, 32px, 32px, 0);
+  }
+
+  .close-icon:hover {
+    -moz-image-region: rect(0, 64px, 32px, 32px);
+  }
+
+  .close-icon:hover:active {
+    -moz-image-region: rect(0, 96px, 32px, 64px);
+  }
 }

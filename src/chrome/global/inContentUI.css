@@ -15,112 +15,23 @@
   padding: 18px;
   background-repeat: repeat;
   color: -moz-dialogText;
-  background-color: -moz-dialog;
-  background-image: /* Texture */
-                    url("chrome://global/skin/inContentUI/background-texture.png");
+  background-color: #C0C0C0;
 }
 
 html|html {
   font: message-box;
 }
 
-@media (-moz-windows-default-theme) and (-moz-os-version: windows-vista),
-       (-moz-windows-default-theme) and (-moz-os-version: windows-win7) {
-  *|*:root {
-    color: #000;
-    background-color: #CCD9EA;
-  }
-}
-
-/* Use the new in-content colors for #contentAreaDownloadsView. After landing
-   of bug 989469 the colors can be moved to *|*:root */
-*|*#contentAreaDownloadsView {
-  background: #f1f1f1;
-  color: #424e5a;
-}
 
 /* Content */
 *|*.main-content {
   /* Needed to allow the radius to clip the inner content, see bug 595656 */
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.35);
-  background-image: linear-gradient(rgba(255, 255, 255, 0),
-                                    rgba(255, 255, 255, 0.75));
-  border: 1px solid #C3CEDF;
+  background-color: white;
+  border: 1px solid ThreeDShadow;
+  border-radius: 10px;
 }
 
-@media (-moz-os-version: windows-vista),
-       (-moz-os-version: windows-win7) {
-  *|*.main-content {
-    border-radius: 5px;
-  }
-}
-
-@media (-moz-windows-glass) {
-  /* Buttons */
-  *|button,
-  menulist,
-  colorpicker[type="button"] {
-    -moz-appearance: none;
-    color: black;
-    padding: 0 5px;
-    background: linear-gradient(rgba(251, 252, 253, 0.95), transparent 49%, 
-                                rgba(211, 212, 213, 0.45) 51%, rgba(225, 226, 229, 0.3));
-    background-clip: padding-box;
-    border-radius: 3px;
-    border: 1px solid rgba(31, 64, 100, 0.4);
-    border-top-color: rgba(31, 64, 100, 0.3);
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25) inset,
-                0 0 2px 1px rgba(255, 255, 255, 0.25) inset;
-  }
-
-  menulist {
-    -moz-padding-end: 0;
-  }
-
-  colorpicker[type="button"]:-moz-focusring:not([open="true"]) > .colorpicker-button-colorbox {
-    outline: 1px dotted ThreeDDarkShadow;
-  }
-
-  html|button[disabled],
-  button[disabled="true"],
-  menulist[disabled="true"],
-  colorpicker[type="button"][disabled="true"] {
-    -moz-border-top-colors: rgba(31, 64, 100, 0.3) !important;
-    -moz-border-right-colors: rgba(31, 64, 100, 0.4) !important;
-    -moz-border-bottom-colors: rgba(31, 64, 100, 0.4) !important;
-    -moz-border-left-colors: rgba(31, 64, 100, 0.4) !important;
-    opacity: 0.8;
-    color: #505050;
-  }
-
-  html|button:not([disabled]):active:hover,
-  button:not([disabled="true"]):active:hover,
-  menulist[open="true"]:not([disabled="true"]),
-  colorpicker[type="button"][open="true"]:not([disabled="true"]) {
-    background-color: rgba(61, 76, 92, 0.2);
-    border-color: rgba(39, 53, 68, 0.5);
-    box-shadow: 0 0 3px 1px rgba(39, 53, 68, 0.2) inset;
-  }
-
-  button > .button-box {
-    padding: 1px !important;
-  }
-
-  spinbuttons > .spinbuttons-box > .spinbuttons-button {
-    border-radius: 0;
-    padding: 0 4px;
-  }
-
-  spinbuttons > .spinbuttons-box > .spinbuttons-up {
-    list-style-image: url("chrome://global/skin/arrow/arrow-up.gif");
-    border-bottom-width: 0;
-  }
-
-  spinbuttons > .spinbuttons-box > .spinbuttons-down {
-    list-style-image: url("chrome://global/skin/arrow/arrow-dn.gif");
-  }
-}
 
 colorpicker[type="button"] {
   margin: 1px 5px 2px 5px;

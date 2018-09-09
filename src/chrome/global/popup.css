@@ -4,13 +4,6 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-/* ::::: Variables ::::: */
-.panel-arrowcontent {
-  --panel-arrowcontent-background: -moz-field;
-  --panel-arrowcontent-color: -moz-FieldText;
-  --panel-arrowcontent-border: 1px solid ThreeDShadow;
-}
-
 /* ::::: menupopup ::::: */
 
 menupopup,
@@ -40,6 +33,33 @@ panel[type="arrow"] {
   -moz-appearance: none;
   background: transparent;
   border: none;
+  transition: opacity 300ms;
+}
+
+.panel-arrowcontainer[panelopen] {
+  transition-duration: 200ms, 150ms;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-out;
+}
+
+.panel-arrowcontainer:not([panelopen]) {
+  opacity: 0;
+}
+
+.panel-arrowcontainer:not([panelopen])[side="top"] {
+  transform: translateY(-20px);
+}
+
+.panel-arrowcontainer:not([panelopen])[side="bottom"] {
+  transform: translateY(20px);
+}
+
+.panel-arrowcontainer:not([panelopen])[side="left"] {
+  transform: translateX(-20px);
+}
+
+.panel-arrowcontainer:not([panelopen])[side="right"] {
+  transform: translateX(20px);
 }
 
 panel[type="arrow"][side="top"],
@@ -56,70 +76,49 @@ panel[type="arrow"][side="right"] {
 
 .panel-arrowcontent {
   padding: 10px;
-  color: var(--panel-arrowcontent-color);
-  background: var(--panel-arrowcontent-background);
+  color: -moz-DialogText;
+  background: -moz-Dialog;
   background-clip: padding-box;
-  border: var(--panel-arrowcontent-border);
   margin: 4px;
-}
-
-@media (-moz-os-version: windows-vista),
-       (-moz-os-version: windows-win7) {
-/* < Win8 */
-.panel-arrowcontent {
-  border-radius: 4px;
-}
+  border: 2px solid;
+  -moz-border-top-colors   : ThreeDLightShadow ThreeDHighlight ThreeDFace;
+  -moz-border-left-colors  : ThreeDLightShadow ThreeDHighlight ThreeDFace;
+  -moz-border-right-colors : ThreeDDarkShadow  ThreeDShadow    ThreeDFace;
+  -moz-border-bottom-colors: ThreeDDarkShadow  ThreeDShadow    ThreeDFace;
 }
 
 .panel-arrow[side="top"],
 .panel-arrow[side="bottom"] {
-  list-style-image: url("chrome://global/skin/arrow/panelarrow-vertical-themed.svg");
+  list-style-image: url("chrome://global/skin/arrow/panelarrow-vertical.svg");
   position: relative;
   margin-left: 10px;
   margin-right: 10px;
 }
 
 .panel-arrow[side="top"] {
-  margin-bottom: -5px;
+  margin-bottom: -6px;
 }
 
 .panel-arrow[side="bottom"] {
   transform: scaleY(-1);
-  margin-top: -5px;
+  margin-top: -6px;
 }
 
 .panel-arrow[side="left"],
 .panel-arrow[side="right"] {
-  list-style-image: url("chrome://global/skin/arrow/panelarrow-horizontal-themed.svg");
+  list-style-image: url("chrome://global/skin/arrow/panelarrow-horizontal.svg");
   position: relative;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .panel-arrow[side="left"] {
-  margin-right: -5px;
+  margin-right: -6px;
 }
 
 .panel-arrow[side="right"] {
   transform: scaleX(-1);
-  margin-left: -5px;
-}
-
-@media (-moz-windows-default-theme) {
-  .panel-arrowcontent {
-    --panel-arrowcontent-border: 1px solid hsla(210,4%,10%,.2);
-    box-shadow: 0 0 4px hsla(210,4%,10%,.2);
-  }
-
-  .panel-arrow[side="top"],
-  .panel-arrow[side="bottom"] {
-    list-style-image: url("chrome://global/skin/arrow/panelarrow-vertical.svg");
-  }
-
-  .panel-arrow[side="left"],
-  .panel-arrow[side="right"] {
-    list-style-image: url("chrome://global/skin/arrow/panelarrow-horizontal.svg");
-  }
+  margin-left: -6px;
 }
 
 /* ::::: tooltip ::::: */
@@ -141,10 +140,11 @@ tooltip[titletip="true"] {
   */
   max-width: none;
 }
-
+	
 /* rules for popups associated with menulists */
 
-menulist > menupopup {
+menulist > menupopup,
+.menulist-menupopup {
   -moz-appearance: none;
   border-width: 1px;
   -moz-border-top-colors: -moz-FieldText;

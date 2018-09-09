@@ -77,7 +77,8 @@
 /* ..... selected state ..... */
 
 .console-row[selected="true"] {
-    background-image: url("chrome://global/skin/console/itemSelected.png");
+  background: Highlight;
+  color: HighlightText;
 }
 
 .console-row-code[selected="true"],
@@ -102,7 +103,7 @@
 }
 
 .console-row[type="message"] {
-  list-style-image: url("chrome://global/skin/icons/information-16.png");
+  list-style-image: url("chrome://global/skin/icons/question-16.png");
 }
 
 /* ::::: toolbars ::::: */
@@ -150,45 +151,20 @@ toolbar#ToolbarMode toolbarbutton {
   -moz-image-region: rect(0px 24px 24px 0px);
 }
 
-#Console\:modeAll:hover,
-#Console\:modeAll[checked="true"] {
-  -moz-image-region: rect(24px 24px 48px 0px);
-}
-
 #Console\:modeErrors {
   -moz-image-region: rect(0px 96px 24px 72px);
-}
-
-#Console\:modeErrors:hover,
-#Console\:modeErrors[checked="true"] {
-  -moz-image-region: rect(24px 96px 48px 72px);
 }
 
 #Console\:modeWarnings {
   -moz-image-region: rect(0px 72px 24px 48px);
 }
 
-#Console\:modeWarnings:hover,
-#Console\:modeWarnings[checked="true"] {
-  -moz-image-region: rect(24px 72px 48px 48px);
-}
-
 #Console\:modeMessages {
   -moz-image-region: rect(0px 48px 24px 24px);
 }
 
-#Console\:modeMessages:hover,
-#Console\:modeMessages[checked="true"] {
-  -moz-image-region: rect(24px 48px 48px 24px);
-}
-
 #Console\:clear {
   -moz-image-region: rect(0px 120px 24px 96px);
-}
-
-#Console\:clear:hover,
-#Console\:clear[checked="true"] {
-  -moz-image-region: rect(24px 120px 48px 96px);
 }
 
 toolbar#ToolbarMode .toolbarbutton-icon {
@@ -205,12 +181,4 @@ toolbar#ToolbarMode .toolbarbutton-text {
 .toolbarbutton-text {
   -moz-padding-start: 0px;
   -moz-padding-end: 5px;
-}
-
-#ToolbarMode {
-  -moz-appearance: -moz-win-browsertabbar-toolbox;
-}
-
-#ToolbarEval {
-  -moz-appearance: toolbox;
 }

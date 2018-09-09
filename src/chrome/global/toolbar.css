@@ -118,3 +118,17 @@ toolbarpaletteitem[dragover="left"] {
 toolbarpaletteitem[dragover="right"] {
   border-right-color: #000000;
 }
+
+/*#+++*/
+/* ::::: PersonalToolbar & toolbarseparator ::::: */
+
+toolbar#PersonalToolbar {
+	min-height:16px;
+}
+/* toolbarseparator {                      remarked out by M.W.
+  margin: 6px 2px 6px 2px;
+  border-right: 1px solid ThreeDHighlight;
+  border-left: 1px solid ThreeDShadow;
+  width:2px;
+}*/
+/*#+++*/

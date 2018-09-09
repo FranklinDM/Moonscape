@@ -6,13 +6,12 @@
   /* N.B.: Remember to update ImageDocument.css in the tree or reftests may fail! */
 
   body {
-    color: #eee;
-    /* background-image: url("chrome://global/skin/media/imagedoc-darknoise.png"); */
-    background: #2E3B41;
+    color: black;
+    background: rgb(192, 192, 192);
   }
 
-  img.transparent {
-    /* background: hsl(0,0%,90%) url("chrome://global/skin/media/imagedoc-lightnoise.png"); */
-    /* color: #222; */
+  img.decoded {
+    background: rgb(192, 192, 192);
+    color: black;
   }
 }

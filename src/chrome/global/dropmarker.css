@@ -18,7 +18,11 @@ dropmarker {
   list-style-image: url("chrome://global/skin/arrow/arrow-dn.gif");
   -moz-image-region: auto;
 }
-
+/*#+++*/
+dropmarker:-moz-lwtheme-brighttext {
+  list-style-image: url("chrome://global/skin/arrow/arrow-dn-white.png");
+}
+/*#+++*/
 dropmarker:hover:active:not([disabled="true"]) {
   -moz-border-top-colors: ThreeDShadow ThreeDFace;
   -moz-border-right-colors: ThreeDShadow ThreeDFace;
