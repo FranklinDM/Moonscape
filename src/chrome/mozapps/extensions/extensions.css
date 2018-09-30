@@ -95,9 +95,9 @@
 }
 
 .error-icon {
-  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-error.png");
-  width: 16px;
-  height: 15px;
+  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-error.png") !important;
+  width: 16px !important;
+  height: 15px !important;
   margin: 3px 0;
 }
 
