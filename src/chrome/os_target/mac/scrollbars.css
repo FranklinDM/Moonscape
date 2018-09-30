@@ -10,7 +10,6 @@ scrollbar {
   -moz-binding: url(chrome://global/content/bindings/scrollbar.xml#scrollbar);
   cursor: default;
   background-color: white;
-  pointer-events: auto;
 }
 
 scrollbar[root="true"] {
@@ -18,16 +17,16 @@ scrollbar[root="true"] {
   z-index: 2147483647; /* largest positive value of a signed 32-bit integer */
 }
 
+html|select[size]:not([size="0"]):not([size="1"]) > scrollbar,
+html|select[multiple] > scrollbar {
+  -moz-appearance: scrollbar-small;
+}
+
 @media all and (-moz-overlay-scrollbars) {
   scrollbar:not([active="true"]),
   scrollbar[disabled="true"] {
     visibility: hidden;
   }
-}
-
-html|select[size]:not([size="0"]):not([size="1"]) > scrollbar,
-html|select[multiple] > scrollbar {
-  -moz-appearance: scrollbar-small;
 }
 
 /* ..... track ..... */
