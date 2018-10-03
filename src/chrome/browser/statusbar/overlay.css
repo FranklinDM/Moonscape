@@ -291,29 +291,29 @@ splitter.status4evar-status-splitter:not(:hover)
 
 #urlbar .urlbar-origin-label
 {
-	-moz-padding-start: 1px;
+	padding-inline-start: 1px;
 }
 
 #urlbar .urlbar-over-link-box:-moz-locale-dir(ltr)
 {
-	-moz-padding-start: 18px;
-	-moz-padding-end: 2px;
+	padding-inline-start: 18px;
+	padding-inline-end: 2px;
 }
 
 #urlbar .urlbar-over-link-box:-moz-locale-dir(rtl)
 {
-	-moz-padding-end: 18px;
-	-moz-padding-start: 2px;
+	padding-inline-end: 18px;
+	padding-inline-start: 2px;
 }
 
 #urlbar[s4esalign="left"] .urlbar-over-link-box:-moz-locale-dir(ltr)
 {
-	-moz-padding-start: 1px;
+	padding-inline-start: 1px;
 }
 
 #urlbar[s4esalign="left"] .urlbar-over-link-box:-moz-locale-dir(rtl)
 {
-	-moz-padding-end: 1px;
+	padding-inline-end: 1px;
 }
 
 #urlbar:not([s4esalign="left"]) .urlbar-over-link-box:-moz-locale-dir(ltr)
@@ -383,7 +383,7 @@ splitter.status4evar-status-splitter:not(:hover)
 
 toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label
 {
-	-moz-margin-start: 5px !important;
+	margin-inline-start: 5px !important;
 }
 
 /*
@@ -402,7 +402,7 @@ splitter.status4evar-status-splitter
 
 #urlbar-progress-alt
 {
-	-moz-margin-end: -2px;
+	margin-inline-end: -2px;
 }
 
 /*

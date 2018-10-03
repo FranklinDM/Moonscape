@@ -87,8 +87,8 @@ findbar[hidden] {
   list-style-image: none;
   margin-top: 2px;
   margin-bottom: 0px;
-  -moz-margin-start: 12px;
-  -moz-margin-end: 0px;
+  margin-inline-start: 12px;
+  margin-inline-end: 0px;
   width: 16px;
   height: 16px;
 }
@@ -96,7 +96,7 @@ findbar[hidden] {
 .findbar-find-status,
 .found-matches {
   margin: 0 !important;
-  -moz-margin-start: 3px !important;
+  margin-inline-start: 3px !important;
   padding: 2px !important;
 }
 

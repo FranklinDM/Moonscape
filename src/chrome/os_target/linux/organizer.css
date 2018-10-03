@@ -69,13 +69,13 @@
 }
 
 #back-button > .toolbarbutton-icon {
-  -moz-margin-start: 3px !important;
-  -moz-margin-end: 2px !important;
+  margin-inline-start: 3px !important;
+  margin-inline-end: 2px !important;
 }
 
 #forward-button > .toolbarbutton-icon {
-  -moz-margin-start: 2px !important;
-  -moz-margin-end: 3px !important;
+  margin-inline-start: 2px !important;
+  margin-inline-end: 3px !important;
 }
 /*#+++*/
 
@@ -86,7 +86,7 @@
 }
 
 #placesMenu > menu {
-  -moz-padding-start: 4px;
+  padding-inline-start: 4px;
 /*#---  -moz-binding: url("chrome://browser/skin/places/organizer.xml#toolbarbutton-dropdown");---*/
   -moz-binding: url("chrome://os_target/skin/organizer.xml#toolbarbutton-dropdown");
   -moz-appearance: toolbarbutton;
@@ -114,7 +114,7 @@
 }
 
 #infoBoxExpanderLabel {
-  -moz-padding-start: 2px;
+  padding-inline-start: 2px;
 }
 
 /**** menuitem stock icons ****/

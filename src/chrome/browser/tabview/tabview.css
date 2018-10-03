@@ -19,9 +19,9 @@ body {
 .tab {
   margin: 4px;
   padding-top: 4px;
-  -moz-padding-end: 6px;
+  padding-inline-end: 6px;
   padding-bottom: 6px;
-  -moz-padding-start: 4px;
+  padding-inline-start: 4px;
   background-color: #E0EAF5;
   border-radius: 0.4em;
   cursor: pointer;
@@ -53,9 +53,9 @@ html[dir=rtl] .thumb {
 .favicon {
   background-color: #E0EAF5;
   padding-top: 4px;
-  -moz-padding-end: 6px;
+  padding-inline-end: 6px;
   padding-bottom: 6px;
-  -moz-padding-start: 4px;
+  padding-inline-start: 4px;
   top: 4px;
   left: 4px;
   -moz-border-end: 1px solid rgba(73, 99, 119, 0.3);
@@ -319,8 +319,8 @@ html[dir=rtl] .appTabTrayContainer {
   background-color: #A0A0A0;
   padding-top: 3px;
   padding-bottom: 3px;
-  -moz-padding-start: 5px;
-  -moz-padding-end: 20px;
+  padding-inline-start: 5px;
+  padding-inline-end: 20px;
   width: 135px;
   line-height: 25px;
   box-shadow: 0px 1px 0px rgba(255,255,255,.5), 0px -1px 0px rgba(0,0,0,.24);
@@ -417,9 +417,9 @@ input.name {
   border: 1px solid transparent;
   color: #999;
   margin-top: 3px;
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
   margin-bottom: 0;
-  -moz-margin-start: 3px;
+  margin-inline-start: 3px;
   padding: 1px;
 }
 
@@ -460,9 +460,9 @@ input.name:focus::-moz-placeholder {
 
 .title-shield {
   margin-top: 3px;
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
   margin-bottom: 0;
-  -moz-margin-start: 3px;
+  margin-inline-start: 3px;
   padding: 1px;
   left: 0;
   top: 0;
@@ -536,7 +536,7 @@ html[dir=rtl] .iq-resizable-se {
   height: 18px; ---*/
   width: 24px;
   height: 24px;
-  -moz-margin-end: 4px;
+  margin-inline-end: 4px;
   margin-top: 2px;
 /*#---  background-image: -moz-image-rect(url(chrome://browser/skin/tabview/tabview.png), 0, 90, 18, 72); ---*/
   background-image: -moz-image-rect(url(chrome://browser/skin/tabview/tabview.png), 96, 24, 120, 0);
@@ -581,15 +581,15 @@ html[dir=rtl] .iq-resizable-se {
 #searchbox{
   width: 270px;
   max-width: -moz-available;
-  -moz-margin-start: 20px;
+  margin-inline-start: 20px;
   height: 30px;
   box-shadow: 0px 1px 0px rgba(255,255,255,.5), 0px -1px 0px rgba(0,0,0,1), 0px 0px 9px rgba(0,0,0,.8);
   color: white;
   border: none;
   background-color: #272727;
   border-radius: 0.4em;
-  -moz-padding-start: 5px;
-  -moz-padding-end: 5px;
+  padding-inline-start: 5px;
+  padding-inline-end: 5px;
   font-size: 14px;
 }
 
@@ -624,7 +624,7 @@ html[dir=rtl] #actions {
   width: 20px;
   height: 20px;
   margin-top: 3px;
-  -moz-margin-end: 1px;
+  margin-inline-end: 1px;
 }
 
 .notMainMatch{
@@ -648,8 +648,8 @@ html[dir=rtl] #otherresults {
 #otherresults .label {
   color: #999;
   line-height: 30px;
-  -moz-margin-start: 5px;
-  -moz-margin-end: 5px;
+  margin-inline-start: 5px;
+  margin-inline-end: 5px;
 }
 
 .inlineMatch {
@@ -657,10 +657,10 @@ html[dir=rtl] #otherresults {
   border-radius: 0.4em;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  -moz-padding-start: 3px;
-  -moz-padding-end: 3px;
+  padding-inline-start: 3px;
+  padding-inline-end: 3px;
   height: 20px;
-  -moz-margin-end: 5px;
+  margin-inline-end: 5px;
   cursor: pointer;
 }
 
@@ -669,7 +669,7 @@ html[dir=rtl] #otherresults {
 }
 
 .inlineMatch > img {
-  -moz-margin-end: 5px;
+  margin-inline-end: 5px;
   position: relative;
   top: 2px;
   width: 16px;

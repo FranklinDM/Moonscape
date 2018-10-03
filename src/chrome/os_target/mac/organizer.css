@@ -112,7 +112,7 @@
   list-style-image: url(chrome://browser/skin/toolbarbutton-dropmarker.png);
   padding: 0;
   margin-top: 1px;
-  -moz-margin-end: 2px;
+  margin-inline-end: 2px;
 }
 
 @media (min-resolution: 2dppx) {
@@ -159,13 +159,13 @@
 }
 
 #back-button > .toolbarbutton-icon {
-  -moz-margin-start: 3px !important;
-  -moz-margin-end: 2px !important;
+  margin-inline-start: 3px !important;
+  margin-inline-end: 2px !important;
 }
 
 #forward-button > .toolbarbutton-icon {
-  -moz-margin-start: 2px !important;
-  -moz-margin-end: 3px !important;
+  margin-inline-start: 2px !important;
+  margin-inline-end: 3px !important;
 }
 
 /* organize button */

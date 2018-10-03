@@ -6,7 +6,7 @@
 
 /* View buttons */
 #viewGroup {
-  -moz-padding-start: 10px;
+  padding-inline-start: 10px;
 }
 
 #viewGroup > radio {
@@ -37,7 +37,7 @@
 
 #topBar {
   border-bottom: 2px groove ThreeDFace;
-  -moz-padding-start: 10px;
+  padding-inline-start: 10px;
   color: -moz-FieldText;
 }
 
@@ -83,7 +83,7 @@ textbox {
 }
 
 textbox.header {
-  -moz-margin-start: 0;
+  margin-inline-start: 0;
 }
 
 .iframe {
@@ -106,8 +106,8 @@ groupbox.collapsable caption .caption-icon {
   height: 9px;
   background-repeat: no-repeat;
   background-position: center;
-  -moz-margin-start: 2px;
-  -moz-margin-end: 2px;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
   background-image: url("chrome://global/skin/tree/twisty-open.png");
 }
 
@@ -127,7 +127,7 @@ groupbox tree {
 }
 
 #securityBox description { 
-  -moz-margin-start: 10px;
+  margin-inline-start: 10px;
 }
 
 #general-security-identity {
@@ -172,8 +172,8 @@ treechildren::-moz-tree-cell-text(broken) {
 #feedListbox richlistitem {
   padding-top: 6px;
   padding-bottom: 6px;
-  -moz-padding-start: 7px;
-  -moz-padding-end: 7px;
+  padding-inline-start: 7px;
+  padding-inline-end: 7px;
   min-height: 25px;
   border-bottom: 1px dotted #C0C0C0;
 }
@@ -210,8 +210,8 @@ treechildren::-moz-tree-cell-text(broken) {
 .permission {
   padding-top: 6px;
   padding-bottom: 6px;
-  -moz-padding-start: 7px;
-  -moz-padding-end: 7px;
+  padding-inline-start: 7px;
+  padding-inline-end: 7px;
   min-height: 25px;
   border-bottom: 1px dotted #C0C0C0;
 }

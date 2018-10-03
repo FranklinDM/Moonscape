@@ -96,7 +96,7 @@ notification[type="critical"] .messageImage {
 
 .popup-notification-learnmore-link {
   margin-top: 1em !important;
-  -moz-margin-start: 0 !important; /* override default label margin to match description margin */
+  margin-inline-start: 0 !important; /* override default label margin to match description margin */
 }
 
 .popup-notification-learnmore-link:not([href]) {
@@ -139,15 +139,15 @@ notification[type="critical"] .messageImage {
   margin: 0;
   padding-top: 2px;
   padding-bottom: 2px;
-  -moz-padding-start: 8px;
-  -moz-padding-end: 5px;
+  padding-inline-start: 8px;
+  padding-inline-end: 5px;
 }
 
 .popup-notification-menubutton > .button-menubutton-dropmarker {
   padding: 7px 8px;
   margin-top: 0;
   margin-bottom: 0;
-  -moz-margin-start: -1px;
+  margin-inline-start: -1px;
   list-style-image: url("chrome://global/skin/icons/panel-dropmarker.png");
 }
 
@@ -170,7 +170,7 @@ notification[type="critical"] .messageImage {
 }
 
 .popup-notification-closebutton {
-  -moz-margin-end: -12px;
+  margin-inline-end: -12px;
   margin-top: -13px;
 }
 

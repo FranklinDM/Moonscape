@@ -19,8 +19,8 @@
 }
 #main-window[sizemode=normal] #navigator-toolbox[tabsontop="true"] > #toolbar-menubar[autohide="true"] ~ #TabsToolbar {
  -moz-binding: url("chrome://global/content/bindings/general.xml#windowdragbox")!important; /* allow dragging of window by empty tab bar area */
- -moz-padding-start:10px!important; /* Make blank area on left end of tabs to allow for dragging window */
- -moz-padding-end:10px!important;   /* Make blank area on right end of tabs to allow for dragging window */
+ padding-inline-start:10px!important; /* Make blank area on left end of tabs to allow for dragging window */
+ padding-inline-end:10px!important;   /* Make blank area on right end of tabs to allow for dragging window */
  margin-left:75px !important;       /* Make opening for appbutton to show through */
  margin-right:54px !important;      /* Make opening for Min, Max/Restore, and Close buttons to show through */
 }

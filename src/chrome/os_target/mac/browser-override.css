@@ -32,8 +32,8 @@ toolbarbutton.bookmark-item {
   display: -moz-box !important;
   -moz-image-region: rect(0, 7px, 5px, 0);
   margin-top: 1px;
-  -moz-margin-start: 3px;
-  -moz-margin-end: -2px;
+  margin-inline-start: 3px;
+  margin-inline-end: -2px;
 }
 /*#+++*/
 .bookmark-item > .toolbarbutton-menu-dropmarker:-moz-lwtheme-brighttext {

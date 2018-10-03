@@ -50,7 +50,7 @@ toolbar[mode="full"].chromeclass-menubar  #navigator-throbber[busy="true"] {
 /* sidebar-throbber */
 #sidebar-throbber[loading="true"] {
   list-style-image: url("chrome://browser/skin/moonscape/thr/Throbber16A.gif") !important;
-  -moz-margin-end: 4px !important;
+  margin-inline-end: 4px !important;
 }
 /* ::::: About Popup Blocking dialog ::::: */
 #checkForUpdates[loading="true"] {

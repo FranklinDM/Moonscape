@@ -96,7 +96,7 @@
 
 /* CELLS */
 .newtab-cell {
-  -moz-margin-end: 20px;
+  margin-inline-end: 20px;
   background-color: #F3F3F3;
   border: 1px solid #CFCFCF;
   transition: border-color 100ms ease-out;
@@ -107,7 +107,7 @@
 }
 
 .newtab-cell:last-child {
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
 }
 
 .newtab-cell:hover:not(:empty):not([dragged]) {
@@ -147,7 +147,7 @@
 }
 
 .newtab-site[pinned] .newtab-title {
-  -moz-padding-start: 16px;
+  padding-inline-start: 16px;
 }
 
 .newtab-site[pinned] .newtab-title::before {

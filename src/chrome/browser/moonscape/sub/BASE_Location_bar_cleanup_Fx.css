@@ -36,8 +36,8 @@
   color: rgb(0,0,0) !important;
 }
 #identity-icon-labels {
-  -moz-margin-start: 3px !important;
-  -moz-margin-end: 1px !important;
+  margin-inline-start: 3px !important;
+  margin-inline-end: 1px !important;
 }
 
 

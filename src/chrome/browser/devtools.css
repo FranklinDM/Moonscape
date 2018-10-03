@@ -572,5 +572,5 @@ html|*#gcli-output-frame {
   text-shadow: none;
   background-image: linear-gradient(#B4211B, #8A1915);
   border-radius: 1px;
-  -moz-margin-end: 5px;
+  margin-inline-end: 5px;
 }

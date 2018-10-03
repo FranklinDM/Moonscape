@@ -226,7 +226,7 @@ xul|*.tab-text {
   color: -moz-FieldText;
   border: 1px solid ThreeDShadow;
   padding: 2em 3em;
-  -moz-padding-start: 30px;
+  padding-inline-start: 30px;
   margin-left: 1em;
   margin-right: 1em;
   border-radius: 10px;
