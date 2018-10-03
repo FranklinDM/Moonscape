@@ -9,6 +9,9 @@
 /* all localizable skin settings shall live here */
 @import url("chrome://global/locale/intl.css");
 
+/* Import platform-specific override stylesheets */
+@import url("chrome://os_target/skin/global-override.css");
+
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 /* ::::: XBL bindings ::::: */
@@ -43,8 +46,8 @@ prefwindow {
 window.dialog {
   padding-top: 8px;
   padding-bottom: 10px;
-  -moz-padding-start: 8px;
-  -moz-padding-end: 10px;
+  padding-inline-start: 8px;
+  padding-inline-end: 10px;
 }
 
 /* ::::: alert icons :::::*/
@@ -139,7 +142,7 @@ sidebarheader {
 }
 
 sidebarheader > label {
-  -moz-padding-start: 4px;
+  padding-inline-start: 4px;
 }
 
 .toolbar-focustarget {
@@ -247,8 +250,8 @@ label {
   cursor: default;
   margin-top: 1px;
   margin-bottom: 2px;
-  -moz-margin-start: 6px;
-  -moz-margin-end: 5px;
+  margin-inline-start: 6px;
+  margin-inline-end: 5px;
 }
 
 description {
@@ -277,7 +280,7 @@ label[disabled="true"]:-moz-system-metric(windows-classic) {
 }
 
 .indent {
-  -moz-margin-start: 23px;
+  margin-inline-start: 23px;
 }
 
 .box-padded {

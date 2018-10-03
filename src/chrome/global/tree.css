@@ -6,12 +6,9 @@
   == Styles used by the XUL outline element.
   ======================================================================= */
   
-/* Always show tree-connecting lines */
-treechildren::-moz-tree-line {
-    visibility: visible  !important;
-    border-style: dotted !important;
-}
-
+/* Tree-connecting lines default subskin */
+@import url("chrome://browser/skin/moonscape/sub/Enable_tree_connecting_lines_-_dotted_Fx.css");
+  
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 /* ::::: tree ::::: */
@@ -181,7 +178,7 @@ treechildren::-moz-tree-drop-feedback {
   background-color: Highlight;
   width: 50px;
   height: 2px;
-  -moz-margin-start: 5px;
+  margin-inline-start: 5px;
 }
 
 /* ::::: tree progress meter ::::: */
@@ -251,15 +248,15 @@ treecolpicker:hover:active {
   -moz-border-left-colors: ThreeDShadow -moz-Dialog;
   padding-top: 1px;
   padding-bottom: 0px;
-  -moz-padding-start: 5px;
-  -moz-padding-end: 4px;
+  padding-inline-start: 5px;
+  padding-inline-end: 4px;
 }
 
 .treecol-image:hover:active {
   padding-top: 1px;
   padding-bottom: 0px;
-  -moz-padding-start: 2px;
-  -moz-padding-end: 1px;
+  padding-inline-start: 2px;
+  padding-inline-end: 1px;
 }
 
 /* ::::: column drag and drop styles ::::: */
@@ -322,7 +319,7 @@ treecol:not([hideheader="true"]) > .treecol-sortdirection[sortDirection="descend
 /* ::::: twisty :::::  */
 
 treechildren::-moz-tree-twisty {
-  -moz-padding-end: 4px;
+  padding-inline-end: 4px;
   padding-top: 1px;
   width: 9px; /* The image's width is 9 pixels */
   list-style-image: url("chrome://global/skin/tree/twisty-clsd.png");
@@ -367,6 +364,6 @@ treechildren::-moz-tree-cell-text(selected, editing) {
   -moz-border-left-colors: Highlight;
   -moz-border-right-colors: Highlight;
   margin: 0;
-  -moz-margin-start: -4px;
+  margin-inline-start: -4px;
   padding: 1px;
 }

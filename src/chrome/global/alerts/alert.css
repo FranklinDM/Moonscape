@@ -6,75 +6,25 @@
   == Styles specific to the alerts dialog.
   ======================================================================= */
 
-@import url("chrome://global/skin/");
+@import url("chrome://global/skin/alerts/alert-common.css");
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-.alertBox {
-  border: 1px solid threedshadow;
-  border-radius: 3px;
+#alertNotification {
+  -moz-appearance: none;
+  background: transparent;
+  padding: 10px;
+}
+
+#alertBox {
+  border: 2px solid;
+  -moz-border-top-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors: ThreeDHighlight ThreeDLightShadow;
   background-color: -moz-Dialog;
-}
-
-.alertImageBox {
-  padding: 8px 0;
-  width: 64px;
-  background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.6));
-  -moz-border-end: 1px solid rgba(0,0,0,.1);
-}
-
-.alertTextBox {
-  padding: 8px;
-  -moz-padding-start: 16px;
-  width: 255px;
-}
-
-.alertTextBox,
-.alertCloseBox {
-  background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.1));
-}
-
-.alertTitle {
-  font-weight: bold;
-  font-size: 110%;
-}
-
-#alertImage {
-  max-width: 48px;
-  max-height: 48px;
-  list-style-image: url(chrome://global/skin/alerts/notification-48.png);
-}
-
-#alertNotification[clickable="true"] {
-  cursor: pointer;
-}
-
-label {
-  cursor: inherit;
-}
-
-.alertText[clickable="true"] {
-  color: -moz-nativehyperlinktext;
-  text-decoration: underline;
-}
-
-.alertText[clickable="true"]:hover:active {
-  color: -moz-activehyperlinktext;
-}
-
-@keyframes alert-animation {
-  from {
-    opacity: 0;
-  }
-  6.25% {
-    opacity: 1;
-  }
-  93.75% {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+  color: -moz-DialogText;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.59);
 }
 
 .alertCloseButton {
@@ -83,6 +33,10 @@ label {
   border: none !important;
 }
 
-.alertCloseButton > .toolbarbutton-text {
-  display: none;
+.alertCloseBox {
+  margin-inline-end: 2px;
+}
+
+#alertSettings {
+  margin-inline-end: 3px;
 }

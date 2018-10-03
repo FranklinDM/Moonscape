@@ -3,5 +3,9 @@
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 body {
-  background: rgb(192, 192, 192);
+  background-color: rgb(33,33,33); /* Average color of that ^ image. */
+}
+
+video {
+  box-shadow: 0 0 15px #000;
 }
