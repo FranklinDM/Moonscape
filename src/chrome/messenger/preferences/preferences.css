@@ -1,65 +1,32 @@
-/*
-# -*- Mode: Java; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 4 -*-
-# This Source Code Form is subject to the terms of the Mozilla Public
-# License, v. 2.0. If a copy of the MPL was not distributed with this
-# file, You can obtain one at http://mozilla.org/MPL/2.0/.
-*/
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 /* Global Styles */
-
-.paneSelector {
-  background-color: rgb(90, 116, 164);
-  color: white;
-  background-image: url("chrome://messenger/skin/preferences/background.png");
-  background-position: center bottom;
-  background-repeat: repeat-x;
-  -moz-padding-start: 0;
-}
-
-radio[pane] {
-  -moz-appearance: none;
-  background-color: transparent;
-  background-position: center bottom;
-  background-repeat: repeat-x;
-  min-width: 80px;
-}
-
-radio[pane]:hover {
-  background-color: rgb(94, 138, 188);
-  background-image: url("chrome://messenger/skin/preferences/hover.png");
-  color: white;
-}
-
-radio[pane][selected="true"] {
-  background-color: rgb(174, 198, 226);
-  background-image: none;
-  background-image: url("chrome://messenger/skin/preferences/selected.png");
-  color: black;
+.paneSelector radio[pane] {
+  list-style-image: url("chrome://messenger/skin/preferences/Options.png"); 
 }
 
 radio[pane=paneGeneral] {
-  list-style-image: url("chrome://messenger/skin/preferences/general.png");
+  -moz-image-region: rect(0, 32px,  32px, 0);
 }
 radio[pane=paneDisplay] {
-  list-style-image: url("chrome://messenger/skin/preferences/display.png");
+  -moz-image-region: rect(0, 128px,  32px, 96px);
 }
 radio[pane=paneCompose] {
-  list-style-image: url("chrome://messenger/skin/preferences/composition.png");
-}
-radio[pane=paneChat] {
-  list-style-image: url("chrome://messenger/skin/preferences/chat.png");
+  -moz-image-region: rect(0, 96px,  32px, 64px);
 }
 radio[pane=panePrivacy] {
-  list-style-image: url("chrome://messenger/skin/preferences/privacy.png");
+  -moz-image-region: rect(0, 160px,  32px, 128px);
 }
 radio[pane=paneSecurity] {
-  list-style-image: url("chrome://messenger/skin/preferences/security.png");
+  -moz-image-region: rect(0, 192px,  32px, 160px);
 }
 radio[pane=paneApplications] {
-  list-style-image: url("chrome://messenger/skin/preferences/attachments.png");
+  -moz-image-region: rect(0, 64px, 32px, 32px);
 }
 radio[pane=paneAdvanced] {
-  list-style-image: url("chrome://messenger/skin/preferences/advanced.png");
+  -moz-image-region: rect(0, 224px, 32px, 192px);
 }
 
 /* Attachments Pane */
@@ -85,7 +52,7 @@ radio[pane=paneAdvanced] {
   margin: 0px 3px 6px !important;
 }
 
-/* override the color style for tag items when they
+/* override the color style for tag items when they 
    have selection */
 #tagList listitem[selected="true"] {
   color: -moz-DialogText !important;
@@ -111,6 +78,30 @@ radio[pane=paneAdvanced] {
   -moz-appearance: none;
   background-color: #88AAFF;
   opacity: .5;
+}
+
+/* Cookies Manager */
+#cookiesChildren::-moz-tree-image(domainCol) {
+  width: 16px;
+  height: 16px;
+  margin: 0 2px;
+  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
+}
+
+#cookiesChildren::-moz-tree-image(domainCol, container) {
+  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  -moz-image-region: rect(0 32px 16px 16px);
+}
+
+#cookiesChildren::-moz-tree-image(domainCol, container, open) {
+  -moz-image-region: rect(16px 32px 32px 16px);
+}
+
+#cookieInfoBox {
+  border: 1px solid ThreeDShadow;
+  border-radius: 0;
+  margin: 4px;
+  padding: 0;
 }
 
 /* Attachments */
