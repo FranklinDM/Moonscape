@@ -1,4 +1,11 @@
 # Changelog
+```Format: Release name version - (YYYY-MM-DD)```
+## Moonscape 6.21 - 2018-10-06
+- Drop support for Pale Moon 27
+- Fix inconsistent favicons in Saved Logins
+- Update global styling and shared browser developer tools style
+- Use non-prefixed form of some properties
+- Use small error icon in extensions page
 
 ## Moonscape 6.20 - 2018-07-13
 - Initial support for Pale Moon 28
