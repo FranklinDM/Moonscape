@@ -64,25 +64,12 @@ toolbox[labelalign="end"] #qfb-show-filter-bar {
 
 /* :::: Filter Bar :::: */
 
-#quick-filter-bar:-moz-system-metric(windows-default-theme) {
-  background: linear-gradient(#f2f7fd 0, #e9f2fc 50%, #e3eefb 50%, #e3eefb 100%);
-}
-
 #quick-filter-bar-main-bar {
   border-top: 1px solid ThreeDHighlight;
 }
 
-#quick-filter-bar-main-bar:-moz-system-metric(windows-default-theme) {
-  border-top: 1px solid #fff;
-}
-
 #quick-filter-bar-expando {
   border-bottom: 1px solid ThreeDShadow;
-}
-
-#quick-filter-bar-expando:-moz-system-metric(windows-default-theme) {
-  border-bottom: 2px solid;
-  -moz-border-bottom-colors: #9196a2 #fff;
 }
 
 #threadTree[filterActive="searching"] {
@@ -105,10 +92,6 @@ toolbox[labelalign="end"] #qfb-show-filter-bar {
 #qfb-boolean-mode {
   margin-top: 1px;
   margin-bottom: 1px;
-}
-
-#qfb-filter-label:-moz-system-metric(windows-default-theme) {
-  color: GrayText;
 }
 
 #qfb-sticky {
@@ -176,8 +159,4 @@ toolbox[labelalign="end"] #qfb-show-filter-bar {
   padding-bottom: 1px;
   -moz-margin-start: 1px;
   -moz-margin-end: 1px;
-}
-
-#quick-filter-bar-expando toolbarbutton:not(:-moz-system-metric(windows-default-theme)) {
-  min-height: 24px;
 }

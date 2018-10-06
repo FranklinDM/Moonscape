@@ -14,16 +14,12 @@ toolbox:-moz-lwtheme {
   border-top-width: 0;
 }
 
-  #tabmail:not(:-moz-lwtheme) {
-    background-color: ActiveCaption;
-  }
+#tabmail:not(:-moz-lwtheme) {
+  background-color: ActiveCaption;
+}
 
-  #tabmail:not(:-moz-lwtheme):-moz-window-inactive {
-    background-color: InactiveCaption;
-  }
-
-.toolbar-primary {
-  border-top: none;
+#tabmail:not(:-moz-lwtheme):-moz-window-inactive {
+  background-color: InactiveCaption;
 }
 
 .menu-iconic > .menu-iconic-left,
@@ -131,12 +127,6 @@ sidebarheader .toolbarbutton-text:not([value]) {
 treechildren::-moz-tree-cell-text {
   -moz-padding-start: 5px;
   padding-bottom: 2px;
-}
-
-@media not all and (-moz-windows-default-theme) {
-  treechildren::-moz-tree-cell-text {
-    -moz-padding-start: 4px !important;
-  }
 }
 
 /* ::::: Notifications ::::: */

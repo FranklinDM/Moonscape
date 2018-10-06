@@ -19,39 +19,6 @@
 /**
  * Tab
  */
-
-@media (min-resolution: 1.25dppx) {
-  /* image preloading hack from shared/tabmail.css */
-  #tabs-toolbar::before {
-    background-image: url(tabs/background-end@2x.png),
-                      url(tabs/background-middle@2x.png),
-                      url(tabs/background-start@2x.png);
-  }
-
-  .tabmail-tab:hover > .tab-stack > .tab-background:not([selected=true]),
-  .tabs-newtab-button:hover {
-    background-image: url(tabs/background-start@2x.png),
-                      url(tabs/background-middle@2x.png),
-                      url(tabs/background-end@2x.png);
-  }
-
-  .tab-background-middle[selected=true] {
-    background-image: url(tabs/active-middle@2x.png),
-                      var(--fgTabTexture),
-                      none;
-  }
-
-  .tab-background-start[selected=true]:-moz-locale-dir(ltr)::after,
-  .tab-background-end[selected=true]:-moz-locale-dir(rtl)::after {
-    background-image: url(tabs/stroke-start@2x.png);
-  }
-
-  .tab-background-end[selected=true]:-moz-locale-dir(ltr)::after,
-  .tab-background-start[selected=true]:-moz-locale-dir(rtl)::after {
-    background-image: url(tabs/stroke-end@2x.png);
-  }
-}
-
 #messengerWindow[tabsintitlebar]
 .tabmail-tab:not([selected]):not(:-moz-lwtheme) {
   color: CaptionText;
@@ -64,7 +31,7 @@
 
 .tabmail-tab[busy],
 .tabmail-tab[thinking] {
-  list-style-image: url("chrome://messenger/skin/icons/loading.png") !important;
+  list-style-image: url("chrome://global/skin/icons/loading_16.png") !important;
   -moz-image-region: auto !important;
 }
 
@@ -286,5 +253,5 @@ tabpanels {
 }
 
 .alltabs-item[busy] {
-  list-style-image: url("chrome://messenger/skin/icons/loading.png") !important;
+  list-style-image: url("chrome://global/skin/icons/loading_16.png") !important;
 }
