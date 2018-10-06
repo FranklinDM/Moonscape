@@ -6,10 +6,13 @@
   == Styles used by the XUL outline element.
   ======================================================================= */
   
-/* Tree-connecting lines default subskin */
-@import url("chrome://browser/skin/moonscape/sub/Enable_tree_connecting_lines_-_dotted_Fx.css");
-  
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Always show tree-connecting lines */
+treechildren::-moz-tree-line {
+    visibility: visible  !important;
+    border-style: dotted !important;
+}
 
 /* ::::: tree ::::: */
 
