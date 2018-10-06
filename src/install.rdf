@@ -3,11 +3,11 @@
   <Description about="urn:mozilla:install-manifest">
 	<!-- Target Application(s) this extension can install into, with minimum and maximum supported versions. -->
 	<em:targetApplication>
-		<!-- Pale Moon -->
+		<!-- Interlink -->
 		<Description>
 			<em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
-			<em:minVersion>38.6.0a1</em:minVersion>
-			<em:maxVersion>38.*</em:maxVersion>
+			<em:minVersion>52.0.0</em:minVersion>
+			<em:maxVersion>52.*</em:maxVersion>
 		</Description>
 	</em:targetApplication>
 
@@ -17,9 +17,9 @@
 	<em:type>4</em:type>
 
 	<!-- Extension's info and metadata -->
-	<em:name>Moonscape FM</em:name>
+	<em:name>Moonscape for MailNews</em:name>
 	<em:version>dev-build</em:version>
-	<em:description>Experience the look and feel of the classic Netscape on FossaMail.</em:description>
+	<em:description>A full featured retro theme that looks like Netscape 4.x.</em:description>
 	<em:creator>FranklinDM</em:creator>
 	<em:contributor>Michael Walden</em:contributor>
 	<em:contributor>Netscape</em:contributor>
