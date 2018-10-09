@@ -1,4 +1,4 @@
 # Changelog
 
-## Moonscape Mail 1.00 - 2017-11-??
-- initial release
+## Moonscape for MailNews 1.00 - 2018-00-00
+- Initial release
