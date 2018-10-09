@@ -3,3 +3,13 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 @import url("chrome://messenger/content/glodaFacetView.css");
+
+.facets-sidebar {
+  background-color: -moz-Dialog;
+  border-right: 1px solid ThreeDShadow;
+}
+
+.explanation-fulltext-label,
+span.empty {
+  color: #000;
+}
