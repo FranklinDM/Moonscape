@@ -286,6 +286,10 @@ toolbox[labelalign="end"] toolbar[mode="full"] .msgHeaderView-button .toolbarbut
   border-bottom-width: 0 !important;
 }
 
+#folderPane-toolbar {
+  border-bottom-width: 1px !important;
+}
+
 window[inlinetoolbox] #smallicons,
 window[inlinetoolbox] #newtoolbar {
   display: none;
