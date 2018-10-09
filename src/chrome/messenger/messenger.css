@@ -132,7 +132,7 @@ treechildren::-moz-tree-cell-text {
 /* ::::: Notifications ::::: */
 
 notification[value="addon-install-failed"] .messageCloseButton {
-  list-style-image: url("chrome://messenger/skin/icons/closeTab.png");
+  list-style-image: url("chrome://global/skin/icons/close.png");
 }
 
 notification[type="critical"] .messageCloseButton:not(:hover):not(:active) {

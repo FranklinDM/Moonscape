@@ -108,12 +108,30 @@ tabpanels {
   -moz-image-region: rect(0, 16px, 16px, 0);
   border: none;
   cursor: default;
-  list-style-image: url(icons/closeTab.png);
+  list-style-image: url("chrome://global/skin/icons/close.png");
 }
 
 #tabs-toolbar[brighttext] .tabs-closebutton:not(:hover):not(:active),
 #tabs-toolbar[brighttext] .tab-close-button:not(:hover):not([selected="true"]) {
   -moz-image-region: rect(0, 64px, 16px, 48px);
+}
+
+@media (min-resolution: 2dppx) {
+  .tab-close-button,
+  .tabs-closebutton {
+    list-style-image: url("chrome://global/skin/icons/close@2x.png");
+    -moz-image-region: rect(0, 32px, 32px, 0);
+  }
+
+  .tab-close-button:hover,
+  .tabs-closebutton:hover {
+    -moz-image-region: rect(0, 64px, 32px, 32px);
+  }
+
+  .tab-close-button:hover:active,
+  .tabs-closebutton:hover:active {
+    -moz-image-region: rect(0, 96px, 32px, 64px);
+  }
 }
 
 .tabs-closebutton-box > .tabs-closebutton {
