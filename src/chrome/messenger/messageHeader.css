@@ -16,14 +16,6 @@
   padding: 0.4ex;
 }
 
-/* :::::  message in a tab ::::: */
-
-#displayDeck[collapsed="true"] + splitter + #messagepaneboxwrapper
-.main-header-area {
-  background-image: linear-gradient(rgba(255, 255, 255, .5),
-                                    rgba(255, 255, 255, .5) 100%);
-}
-
 /* ::::: msg header toolbars ::::: */
 
 #expandedHeaderView[show_header_mode="all"] {
@@ -416,13 +408,11 @@ mail-emailaddress[selected="true"] .emailDisplayButton{
 }
 
 .emailStar {
-  max-width: 1em;
-  max-height: 1em;
+  max-width: 16px;
+  max-height: 16px;
   -moz-appearance: none;
   -moz-box-orient: vertical;
   padding: 0px;
-  -moz-margin-start: -2px !important;
-  /*margin: 0px 2px;*/
   list-style-image: url("chrome://messenger/skin/starContact.png");
   -moz-image-region: rect(0px, 16px, 16px, 0px);
 }
