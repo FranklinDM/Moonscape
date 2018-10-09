@@ -4,6 +4,3 @@ skin	global					moonscape		chrome/global/
 skin	messenger				moonscape		chrome/messenger/
 skin	messenger-newsblog		moonscape		chrome/messenger-newsblog/
 skin	mozapps					moonscape		chrome/mozapps/
-skin	calendar				moonscape		chrome/calendar/
-skin	calendar-windows		moonscape		chrome/calendar/
-skin	lightning				moonscape		chrome/lightning/
