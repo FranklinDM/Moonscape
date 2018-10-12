@@ -272,9 +272,10 @@ toolbox[labelalign="end"] toolbar[mode="full"] .msgHeaderView-button .toolbarbut
   height: 23px;
 }
 
-.inline-toolbar {
+.inline-toolbar:not(.chromeclass-toolbar) {
   -moz-appearance: none;
   -moz-box-pack: end;
+  border-top-width: 0 !important;
   border-bottom-width: 0 !important;
 }
 
