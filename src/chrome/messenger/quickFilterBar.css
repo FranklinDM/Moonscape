@@ -107,11 +107,11 @@ toolbox[labelalign="end"] #qfb-show-filter-bar {
 }
 
 #qfb-starred {
-  list-style-image: url("chrome://messenger/skin/icons/flag-empty.png");
+  list-style-image: url("chrome://messenger/skin/icons/readmail.png");
 }
 
 #qfb-starred[checked] {
-  list-style-image: url("chrome://messenger/skin/icons/flag-col.png");
+  list-style-image: url("chrome://messenger/skin/icons/flag.png");
 }
 
 .qfb-starred-nostar {

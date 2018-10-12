@@ -130,7 +130,7 @@ treechildren::-moz-tree-image(attachmentCol, attach) {
 /* ..... flag column ..... */
 
 .flagColumnHeader {
-  list-style-image: url("chrome://messenger/skin/icons/flag-col.svg");
+  list-style-image: url("chrome://messenger/skin/icons/flag.png");
   -moz-padding-end: 5px;
 }
 

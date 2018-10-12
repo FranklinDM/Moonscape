@@ -35,5 +35,5 @@ body {
 }
 
 .starred .star {
-  background-image: url("chrome://messenger/skin/icons/flag-col.png");
+  background-image: url("chrome://messenger/skin/icons/flag.png");
 }
