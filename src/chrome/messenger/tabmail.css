@@ -170,54 +170,30 @@ tabpanels {
   display: none;
 }
 
-.tabmail-arrowscrollbox > .scrollbutton-up {
-  margin-top: 1px;
-  margin-bottom: 1px;
-  padding: 0 0 3px;
-  width: 18px;
-  height: 23px;
-  -moz-margin-start: 0px;
-  -moz-margin-end: 2px;
-  list-style-image: url(tabs/arrow-left.png);
-}
-
-.tabmail-arrowscrollbox > .scrollbutton-up > .toolbarbutton-icon {
-  margin: 2px 0px 0px;
-}
-
-.tabmail-arrowscrollbox > .scrollbutton-down-stack {
-  height: 23px;
-  margin-top: 1px;
-  margin-bottom: 1px;
-  -moz-margin-start: 2px;
-}
-
-.tabmail-arrowscrollbox > stack > .scrollbutton-down-box {
-  width: 18px;
-}
-
+.tabmail-arrowscrollbox > .scrollbutton-up,
 .tabmail-arrowscrollbox > stack > .scrollbutton-down {
-  width: 18px;
-  margin: 0px;
-  padding: 0 0 3px;
-  list-style-image: url(tabs/arrow-left.png);
+  list-style-image: url("tabs/arrow-left.png");
 }
 
-.tabmail-arrowscrollbox > stack > .scrollbutton-down > .toolbarbutton-icon {
-  margin-top: 2px;
-  margin-bottom: 0px;
-  -moz-margin-start: 1px;
-  -moz-margin-end: 0px;
+.tabmail-arrowscrollbox > .scrollbutton-up,
+.tabmail-arrowscrollbox > stack > .scrollbutton-down {
+  -moz-image-region: rect(0px, 11px, 11px, 0px); 
 }
 
-#tabs-toolbar[brighttext] .tabmail-arrowscrollbox > .scrollbutton-up,
-#tabs-toolbar[brighttext] .tabmail-arrowscrollbox > stack > .scrollbutton-down {
-  list-style-image: url(tabs/arrow-left-inverted.png);
+.tabmail-arrowscrollbox > .scrollbutton-up:not([disabled="true"]):hover,
+.tabmail-arrowscrollbox > stack > .scrollbutton-down:not([disabled="true"]):hover {
+  -moz-image-region: rect(0px, 22px, 11px, 11px);
 }
 
 .tabmail-arrowscrollbox > .scrollbutton-up[disabled],
 .tabmail-arrowscrollbox > stack > .scrollbutton-down[disabled] {
+  -moz-image-region: rect(0px, 33px, 11px, 22px);
   opacity: .4;
+}
+
+.tabmail-arrowscrollbox > .scrollbutton-up:not([disabled]):hover:active,
+.tabmail-arrowscrollbox > stack > .scrollbutton-down:not([disabled]):hover:active {
+  -moz-image-region: rect(0px, 44px, 11px, 33px);
 }
 
 .tabmail-arrowscrollbox > .scrollbutton-up:-moz-locale-dir(rtl),
