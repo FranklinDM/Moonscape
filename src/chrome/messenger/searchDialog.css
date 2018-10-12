@@ -84,7 +84,7 @@ treechildren::-moz-tree-cell-text(container, closed, hasUnread, read) {
 /* ..... thread column ..... */
 
 .threadColumnHeader {
-  list-style-image: url("chrome://messenger/skin/icons/thread-col.svg");
+  list-style-image: url("chrome://messenger/skin/icons/thread.png");
   -moz-padding-end: 3px;
 }
 
@@ -103,7 +103,7 @@ treechildren::-moz-tree-image(threadCol, container) {
 /* ..... read column ..... */
 
 .readColumnHeader {
-  list-style-image: url("chrome://messenger/skin/icons/readcol.svg");
+  list-style-image: url("chrome://messenger/skin/icons/read.png");
   -moz-padding-end: 5px;
   padding-bottom: 5px;
 }
@@ -119,7 +119,7 @@ treechildren::-moz-tree-image(unreadButtonColHeader, unread) {
 /* ..... attachment column ..... */
 
 .attachmentColumnHeader {
-  list-style-image: url("chrome://messenger/skin/icons/attachment-col.svg");
+  list-style-image: url("chrome://messenger/skin/icons/attachment-col.png");
   -moz-padding-end: 5px;
 }
 
@@ -146,7 +146,7 @@ treechildren::-moz-tree-image(flaggedCol, flagged) {
 /* ..... junkStatus column ..... */
 
 .junkStatusHeader {
-  list-style-image: url("chrome://messenger/skin/icons/junk-col.svg");
+  list-style-image: url("chrome://messenger/skin/icons/junk.png");
   -moz-padding-end: 5px;
 }
 

@@ -94,7 +94,7 @@ treechildren::-moz-tree-cell-text(imapdeleted) {
 /* ..... thread column ..... */
 
 .threadColumnHeader {
-  list-style-image: url("chrome://messenger/skin/icons/thread-col.svg");
+  list-style-image: url("chrome://messenger/skin/icons/thread.png");
 }
 
 treechildren::-moz-tree-image(threadCol, container) {
@@ -116,7 +116,7 @@ treechildren::-moz-tree-image(threadCol, ignoreSubthread) {
 /* ..... read column ..... */
 
 .readColumnHeader {
-  list-style-image: url("chrome://messenger/skin/icons/readcol.svg");
+  list-style-image: url("chrome://messenger/skin/icons/read.png");
 }
 
 treechildren::-moz-tree-image(unreadButtonColHeader) {
@@ -130,7 +130,7 @@ treechildren::-moz-tree-image(unreadButtonColHeader, unread) {
 /* ..... attachment column ..... */
 
 .attachmentColumnHeader {
-  list-style-image: url("chrome://messenger/skin/icons/attachment-col.svg");
+  list-style-image: url("chrome://messenger/skin/icons/attachment-col.png");
 }
 
 treechildren::-moz-tree-image(attachmentCol, attach) {
@@ -156,7 +156,7 @@ treechildren::-moz-tree-image(flaggedCol, flagged) {
 /* ..... junkStatus column ..... */
 
 .junkStatusHeader {
-  list-style-image: url("chrome://messenger/skin/icons/junk-col.svg");
+  list-style-image: url("chrome://messenger/skin/icons/junk.png");
 }
 
 /* "unknown" now looks like "not junk".  see bug #182386 */
