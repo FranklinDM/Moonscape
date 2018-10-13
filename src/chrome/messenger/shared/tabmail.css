@@ -5,7 +5,8 @@
 @import url("chrome://messenger/skin/sharedPlatform.css");
 
 #tabs-toolbar {
-  --tabHeight: 28px;
+  --tabHeight: 23px;
+  --tabSidePadding: 3px;
 }
 
 /* == Tab style ============================================= */
@@ -43,8 +44,8 @@
 }
 
 .tab-content {
-  -moz-padding-end: 9px;
-  -moz-padding-start: 9px;
+  -moz-padding-end: var(--tabSidePadding);
+  -moz-padding-start: var(--tabSidePadding);
 }
 
 .tab-throbber,
