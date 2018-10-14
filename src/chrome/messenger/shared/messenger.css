@@ -56,16 +56,10 @@ toolbar[printpreview="true"] {
 /* ::::: Notifications ::::: */
 
 notification[value="addon-install-blocked"],
-notification[value="addon-install-complete"] {
-  background-image: url("chrome://mozapps/skin/extensions/stripes-info-negative.png"),
-                    linear-gradient(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0));
-  background-repeat: repeat-x;
-  border-top: none;
-  border-bottom: none;
-}
-
+notification[value="addon-install-complete"],
 notification[value="addon-install-failed"] {
-  background-image: linear-gradient(rgb(255, 100, 100), rgb(204, 85, 85));
+  border-top: 1px solid ThreeDHighlight;
+  border-bottom: 1px solid ThreeDShadow;
 }
 
 notification[value="addon-install-blocked"] .notification-inner,
