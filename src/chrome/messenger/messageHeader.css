@@ -453,3 +453,7 @@ mail-emailaddress[selected="true"] .emailDisplayButton{
   float: right;
   padding-top: 3px;
 }
+
+#header-view-toolbox:-moz-locale-dir(rtl) {
+  float: left;
+}
