@@ -1,5 +1,11 @@
 # Changelog
 ```Format: Release name version - (YYYY-MM-DD)```
+## Moonscape 6.22 - 2019-01-02
+- Update extension icon to use a flatter one
+- Add tab audio indicator
+- Remove icon pack from XPI package
+- Restore missing animations from GIF splash images
+
 ## Moonscape 6.21 - 2018-10-06
 - Drop support for Pale Moon 27
 - Fix inconsistent favicons in Saved Logins
