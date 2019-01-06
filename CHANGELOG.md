@@ -2,7 +2,7 @@
 ```Format: Release name version - (YYYY-MM-DD)```
 ## Moonscape 6.22 - 2019-01-02
 - Update extension icon to use a flatter one
-- Add tab audio indicator
+- Add tab audio indicator (for Pale Moon 28.3+)
 - Remove icon pack from XPI package
 - Restore missing animations from GIF splash images
 
