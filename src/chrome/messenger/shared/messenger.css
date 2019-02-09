@@ -34,12 +34,39 @@ toolbar[printpreview="true"] {
   margin: 0 3px;
 }
 
-#throbber-box[busy="true"] {
-  list-style-image: url("chrome://global/skin/icons/loading_16.png");
+#throbber-box > image {
+  border: 2px solid;
+  -moz-border-top-colors:    ThreeDHighlight  ThreeDLightShadow;
+  -moz-border-right-colors:  ThreeDDarkShadow ThreeDShadow;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors:   ThreeDHighlight  ThreeDLightShadow;
 }
 
-#wrapper-throbber-box > #throbber-box {
-  list-style-image: url("chrome://global/skin/icons/notloading_16.png");
+#throbber-box,
+toolbar[mode="full"] #throbber-box {
+  list-style-image: url("chrome://messenger/skin/thr/Throbber32S.png");
+}
+#throbber-box[busy="true"],
+toolbar[mode="full"] #throbber-box[busy="true"] {
+  list-style-image: url("chrome://messenger/skin/thr/Throbber32A.gif");
+}
+toolbar[iconsize="large"][mode="full"] #throbber-box {
+  list-style-image: url("chrome://messenger/skin/thr/Throbber40S.gif");
+}
+toolbar[iconsize="large"][mode="full"] #throbber-box[busy="true"] {
+  list-style-image: url("chrome://messenger/skin/thr/Throbber40A.gif");
+}
+toolbar[iconsize="small"]:not([mode="full"]) #throbber-box,
+toolbar[mode="text"] #throbber-box,
+.chromeclass-menubar #throbber-box,
+toolbar[mode="full"].chromeclass-menubar  #throbber-box {
+  list-style-image: url("chrome://messenger/skin/thr/Throbber16S.png");
+}
+toolbar[iconsize="small"]:not([mode="full"]) #throbber-box[busy="true"],
+toolbar[mode="text"] #throbber-box[busy="true"],
+.chromeclass-menubar #throbber-box[busy="true"],
+toolbar[mode="full"].chromeclass-menubar  #throbber-box[busy="true"] {
+  list-style-image: url("chrome://messenger/skin/thr/Throbber16A.gif");
 }
 
 /* ::::: online/offline icons ::::: */
