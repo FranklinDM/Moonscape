@@ -14,7 +14,7 @@
   -moz-appearance: none;
   padding: 18px;
   background-repeat: repeat;
-  color: -moz-dialogText;
+  color: #000;
   background-color: #C0C0C0;
 }
 
@@ -22,16 +22,18 @@ html|html {
   font: message-box;
 }
 
-
 /* Content */
 *|*.main-content {
   /* Needed to allow the radius to clip the inner content, see bug 595656 */
   overflow: hidden;
-  background-color: white;
-  border: 1px solid ThreeDShadow;
-  border-radius: 10px;
+  border: 2px solid;
+  -moz-border-top-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors: ThreeDHighlight ThreeDLightShadow;
+  background-color: -moz-dialog;
+  color: -moz-DialogText;
 }
-
 
 colorpicker[type="button"] {
   margin: 1px 5px 2px 5px;
