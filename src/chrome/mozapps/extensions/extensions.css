@@ -4,34 +4,19 @@
 
 @import url("chrome://global/skin/inContentUI.css");
 
-.main-content {
-  background: none;
-  border: none;
-  margin-right: -18px;
-  margin-bottom: -18px;
-  border-radius: 0;
-}
 
 .nav-button {
   list-style-image: url(chrome://mozapps/skin/extensions/navigation.png);
 }
 
-#forward-btn {
-  -moz-border-start: none;
-}
-
 #back-btn:-moz-locale-dir(ltr),
 #forward-btn:-moz-locale-dir(rtl) {
   -moz-image-region: rect(0, 18px, 18px, 0);
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 #back-btn:-moz-locale-dir(rtl),
 #forward-btn:-moz-locale-dir(ltr) {
   -moz-image-region: rect(0, 36px, 18px, 18px);
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
 }
 
 
@@ -54,7 +39,7 @@
 
 #detail-view .global-warning {
   padding: 4px 12px;
-  border-bottom: 1px solid #CAD4E0;  
+  border-bottom: 1px solid ThreeDShadow;  
 }
 
 @media (max-width: 600px) {
@@ -135,15 +120,13 @@
 .alert {
   -moz-box-align: center;
   padding: 10px;
-  color: black;
-  background-clip: padding-box;
-  background: -moz-dialog !important;
-  border:    2px solid !important;
-  -moz-border-top-colors:   -moz-dialog rgba(0, 0, 0, 0.2) !important;
-  -moz-border-right-colors: -moz-dialog ThreeDDarkShadow !important;
-  -moz-border-left-colors:  -moz-dialog rgba(0, 0, 0, 0.2) !important;
-  -moz-border-bottom-colors: -moz-dialog ThreeDDarkShadow !important;
-  box-shadow: 0px 0px 0px rgb(153, 153, 153) !important;
+  border: 2px solid;
+  -moz-border-top-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors: ThreeDHighlight ThreeDLightShadow;
+  background-color: -moz-dialog;
+  color: -moz-DialogText;
 }
 
 .alert .alert-title {
@@ -168,22 +151,24 @@
 #categories {
   -moz-appearance: none;
   border: none;
-  margin-inline-end: -1px;
-  background-color: #FFFFFF;
+  background-color: transparent;
   position: relative;
-  padding-top: 50px;
-  margin-top: -90px;
-  margin-left: -20px;
-  margin-bottom: -20px;
+  margin: 0;
 }
 
 .category {
   -moz-appearance: none;
-  background-color: transparent;
+  border: 2px solid;
+  -moz-border-top-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors: ThreeDHighlight ThreeDLightShadow;
+  background-color: -moz-dialog;
+  color: -moz-DialogText;
   min-height: 0;
-  padding: 10px 4px;
   -moz-box-align: center;
   overflow: hidden;
+  margin-right: 5px;
 }
 
 .category[disabled] {
@@ -196,27 +181,20 @@
 }
 
 .category:not([disabled]) {
-  height: 52px;
+  height: 50px;
   transition-property: height, opacity;
   transition-duration: 1s, 0.8s;
 }
 
-.category:hover {
-  color: #120EFD;
-}	
-
 .category[selected] {
-  color: #000080;
-  background: #C0C0C0;
+  -moz-border-top-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors: ThreeDDarkShadow ThreeDShadow;
 }
 
 .category-name {
-  font-size: 125%;
-  margin-left: 10px;
-}
-
-.category[selected] .category-name{
-  font-weight: bold;
+  font-size: 120%;
 }
 
 /* Maximize the size of the viewport when the window is small */
@@ -273,9 +251,6 @@
 #category-dictionary > .category-icon {
   list-style-image: url("chrome://mozapps/skin/extensions/category-dictionaries.png");
 }
-#category-experiment > .category-icon {
-  list-style-image: url("chrome://mozapps/skin/extensions/category-experiments.png");
-}
 #category-availableUpdates > .category-icon {
   list-style-image: url("chrome://mozapps/skin/extensions/category-available.png");
 }
@@ -302,33 +277,17 @@
 }
 
 #header-utils-btn {
-  -moz-appearance: none;
-  border: 2px solid 		!important;
-  background: -moz-Dialog    !important;                                    
-  -moz-border-top-colors:    ThreeDHighlight  ThreeDHighlight !important;
-  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow !important;
-  -moz-border-left-colors:   ThreeDHighlight  ThreeDHighlight !important;
-  -moz-border-right-colors:  ThreeDDarkShadow ThreeDShadow !important;
   list-style-image: url("chrome://mozapps/skin/extensions/utilities.png");
   margin-inline-end: 16px;
-  padding: 2px;
-}
-
-#header-utils-btn:hover:active,
-#header-utils-btn[open]{
-  -moz-border-bottom-colors: ThreeDHighlight  ThreeDHighlight !important;
-  -moz-border-top-colors:    ThreeDDarkShadow ThreeDShadow !important;
-  -moz-border-right-colors:  ThreeDHighlight  ThreeDHighlight !important;
-  -moz-border-left-colors:   ThreeDDarkShadow ThreeDShadow !important;
 }
 
 .view-header {
-  background-color: #D0D0D0;
   padding: 4px;
   margin: 0;
   min-height: 31px;
-  border-bottom: 1px solid #D4D0C8;
+  border-bottom: 1px solid ThreeDShadow;
 }
+
 
 /*** sorters ***/
 
@@ -355,7 +314,7 @@
 .sorter[checkState="2"] {
   /* set to important because greasemonkey overrides this selector */
   background-color: #C0C0C0 !important;
-  color: black !important;
+  color: #000 !important;
   box-shadow: none !important;
 }
 
@@ -418,9 +377,9 @@
 .addon {
   color: black;
   border-top: 1x solid;
-  -moz-border-top-colors: #D4D0C8;
+  -moz-border-top-colors: ThreeDShadow;
   border-bottom: 1px solid;
-  -moz-border-bottom-colors: #D4D0C8;
+  -moz-border-bottom-colors: ThreeDShadow;
   padding: 5px;
   background-origin: border-box;
 }
@@ -464,10 +423,6 @@
 
 .addon-view[type="dictionary"] .icon {
   list-style-image: url("chrome://mozapps/skin/extensions/dictionaryGeneric.png");
-}
-
-.addon-view[type="experiment"] .icon {
-  list-style-image: url("chrome://mozapps/skin/extensions/experimentGeneric.png");
 }
 
 .name-container {
@@ -660,7 +615,7 @@
 #search-filter {
   padding: 5px 20px;
   font-size: 120%;
-  border-bottom: 1px solid #CAD4E0;
+  border-bottom: 1px solid ThreeDShadow;
   overflow-x: hidden;
 }
 
@@ -931,15 +886,12 @@ menulist { /* Fixes some styling inconsistencies */
 /*** download progress ***/
 
 .download-progress {
-  background-color: rgba(151,152,153,.05);
-  background-image: linear-gradient(rgba(251, 252, 253, 0.95), rgba(246, 247, 248, 0.47) 49%, 
-                                    rgba(231, 232, 233, 0.45) 51%, rgba(225, 226, 229, 0.3));
-  background-clip: padding-box;
-  border-radius: 3px;
-  border: 1px solid;
-  border-color: rgba(0, 0, 0, 0.12) rgba(0, 0, 0, 0.19) rgba(0, 0, 0, 0.38);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3) inset,
-              0 0 0 2px rgba(255, 255, 255, 0.1) inset;
+  border: 2px solid;
+  -moz-border-top-colors: ThreeDShadow -moz-Dialog;
+  -moz-border-right-colors: ThreeDHighlight -moz-Dialog;
+  -moz-border-bottom-colors: ThreeDHighlight -moz-Dialog;
+  -moz-border-left-colors: ThreeDShadow -moz-Dialog;
+  background-color: -moz-Dialog;
   width: 200px;
   height: 21px;
   margin: 0 8px;
@@ -958,20 +910,14 @@ menulist { /* Fixes some styling inconsistencies */
 .download-progress[mode="undetermined"] .end-cap,
 .download-progress .progress .progress-bar {
   -moz-appearance: none;
-  background-image: linear-gradient(#92DDA0, #6FC483 49%, #5EB272 51%, #80CE91);
-  margin-top: -1px;
-  margin-bottom: -1px;
-  border: 1px solid;
-  border-color: #358942 #317F3D #2E773A;
+  background-color: darkblue;
 }
 
 .download-progress .start-cap {
-  margin-inline-start: -1px;
   -moz-border-end-width: 0;
 }
 
 .download-progress .end-cap {
-  margin-inline-end: -1px;
   -moz-border-start-width: 0px !important;
 }
 
@@ -994,33 +940,21 @@ menulist { /* Fixes some styling inconsistencies */
   width: 4px;
 }
 
-.download-progress .start-cap:-moz-locale-dir(ltr),
-.download-progress .end-cap:-moz-locale-dir(rtl) {
-  border-radius: 3px 0 0 3px;
-}
-
-.download-progress .end-cap:-moz-locale-dir(ltr),
-.download-progress .start-cap:-moz-locale-dir(rtl) {
-  border-radius: 0 3px 3px 0;
-}
-
 .download-progress .cancel {
-  -moz-appearance: none;
-  background-color: rgba(255, 255, 255, 0.4);
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  padding: 3px;
-  border-radius: 3px;
+  -moz-appearance: none;    
+  border: none;
+  margin: 0;
   min-width: 0;
-  margin: 3px;
+  list-style-image: url("chrome://global/skin/icons/close.png");
+  -moz-image-region: rect(0, 16px, 16px, 0);
 }
 
 .download-progress .cancel:hover {
-  background-color: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  -moz-image-region: rect(0, 32px, 16px, 16px);
 }
 
-.download-progress .cancel:active:hover {
-  box-shadow: inset rgba(0, 0, 0, 0.5) 1px 1px 2px;
+.download-progress .cancel:hover:active {
+  -moz-image-region: rect(0, 48px, 16px, 32px);
 }
 
 .download-progress .cancel .button-box {
@@ -1036,16 +970,8 @@ menulist { /* Fixes some styling inconsistencies */
   margin-inline-start: 0;
 }
 
-.download-progress .cancel {
-  list-style-image: url('chrome://mozapps/skin/extensions/cancel.png');
-}
-
 .download-progress .status-container {
   -moz-box-align: center;
-}
-
-.download-progress .status {
-  text-shadow: #FFF 0 0 2px;
 }
 
 /*** install status ***/
@@ -1115,16 +1041,23 @@ button.button-link:not([disabled="true"]):active:hover {
 }
 
 .header-button {
-  -moz-appearance: button;
-  margin: 1px 5px 2px 5px;
-  border: 3px solid;
-  -moz-border-top-colors: transparent ThreeDHighlight ThreeDLightShadow;
-  -moz-border-right-colors: transparent ThreeDDarkShadow ThreeDShadow;
-  -moz-border-bottom-colors: transparent ThreeDDarkShadow ThreeDShadow;
-  -moz-border-left-colors: transparent ThreeDHighlight ThreeDLightShadow;
+  -moz-appearance: none;
+  border: 2px solid;
+  -moz-border-top-colors:    ThreeDHighlight  ThreeDHighlight;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors:   ThreeDHighlight  ThreeDHighlight;
+  -moz-border-right-colors:  ThreeDDarkShadow ThreeDShadow;
   background-color: ThreeDFace;
   color: ButtonText;
   text-shadow: none;
+}
+
+.header-button:hover:active,
+.header-button[open] {
+  -moz-border-bottom-colors: ThreeDHighlight  ThreeDHighlight;
+  -moz-border-top-colors:    ThreeDDarkShadow ThreeDShadow;
+  -moz-border-right-colors:  ThreeDHighlight  ThreeDHighlight;
+  -moz-border-left-colors:   ThreeDDarkShadow ThreeDShadow;
 }
 
 .header-button[disabled="true"] {
@@ -1137,4 +1070,19 @@ button.button-link:not([disabled="true"]):active:hover {
 
 .header-button > .toolbarbutton-text {
   display: none;
+}
+
+
+/*** notification bar ***/
+
+#addons-notifications > notification {
+  border: 1px solid #000;
+  margin-bottom: 1em;
+}
+
+
+/*** TGS ***/
+
+page[aios-inSidebar] .main-content {
+  border: none;
 }
