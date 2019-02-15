@@ -550,7 +550,11 @@ toolbox[labelalign="end"] > toolbar[mode="full"] deck .toolbarbutton-text {
 
 #button-send[disabled="true"] {
   -moz-image-region: rect(48px 24px 72px 0px) !important;
-} 
+}
+
+#button-send:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(72px 24px 96px 0px);
+}
 
 #button-contacts {
   list-style-image: url("chrome://messenger/skin/messengercompose/compose-toolbar.png");
@@ -563,7 +567,11 @@ toolbox[labelalign="end"] > toolbar[mode="full"] deck .toolbarbutton-text {
 
 #button-contacts[disabled="true"] {
   -moz-image-region: rect(48px 48px 72px 24px) !important;
-} 
+}
+
+#button-contacts:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(72px 48px 96px 24px) !important;
+}
 
 #spellingButton {
   list-style-image: url("chrome://messenger/skin/messengercompose/compose-toolbar.png");
@@ -576,6 +584,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] deck .toolbarbutton-text {
 
 #spellingButton[disabled="true"] {
   -moz-image-region: rect(48px 72px 72px 48px) !important;
+}
+
+#spellingButton:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(72px 72px 96px 48px);
 }
 
 #button-attach {
@@ -591,6 +603,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] deck .toolbarbutton-text {
   -moz-image-region: rect(48px 96px 72px 72px) !important;
 }
 
+#button-attach:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(72px 96px 96px 72px);
+}
+
 #button-security {
   list-style-image: url("chrome://messenger/skin/messengercompose/compose-toolbar.png");
   -moz-image-region: rect(0px 120px 24px 96px);
@@ -604,6 +620,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] deck .toolbarbutton-text {
   -moz-image-region: rect(48px 120px 72px 96px) !important;
 }
 
+#button-security:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(72px 120px 96px 96px);
+}
+
 #button-save {
   list-style-image: url("chrome://messenger/skin/messengercompose/compose-toolbar.png");
   -moz-image-region: rect(0px 144px 24px 120px);
@@ -615,7 +635,11 @@ toolbox[labelalign="end"] > toolbar[mode="full"] deck .toolbarbutton-text {
 
 #button-save[disabled="true"] {
   -moz-image-region: rect(48px 144px 72px 120px) !important;
-} 
+}
+
+#button-save:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(72px 144px 96px 120px);
+}
 
 #quoteButton {
   list-style-image: url("chrome://messenger/skin/messengercompose/compose-toolbar.png");
@@ -628,6 +652,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] deck .toolbarbutton-text {
 
 #quoteButton[disabled="true"] {
   -moz-image-region: rect(48px 168px 72px 144px) !important;
+}
+
+#quoteButton:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(72px 168px 96px 144px);
 }
 
 #cut-button {
@@ -643,6 +671,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] deck .toolbarbutton-text {
   -moz-image-region: rect(48px 192px 72px 168px) !important;
 }
 
+#cut-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(72px 192px 96px 168px);
+}
+
 #copy-button {
   list-style-image: url("chrome://messenger/skin/messengercompose/compose-toolbar.png");
   -moz-image-region: rect(0px 216px 24px 192px);
@@ -654,6 +686,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] deck .toolbarbutton-text {
 
 #copy-button[disabled="true"] {
   -moz-image-region: rect(48px 216px 72px 192px) !important;
+}
+
+#copy-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(72px 216px 96px 192px);
 }
 
 #paste-button {
@@ -669,6 +705,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] deck .toolbarbutton-text {
   -moz-image-region: rect(48px 240px 72px 216px) !important;
 }
 
+#paste-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(72px 240px 96px 216px);
+}
+
 #button-print {
   list-style-image: url("chrome://messenger/skin/messengercompose/compose-toolbar.png");
   -moz-image-region: rect(0px 264px 24px 240px);
@@ -680,6 +720,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] deck .toolbarbutton-text {
 
 #button-print[disabled="true"] {
   -moz-image-region: rect(48px 264px 72px 240px);
+}
+
+#button-print:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(72px 264px 96px 240px);
 }
 
 /* ::::: small primary toolbar buttons ::::: */
@@ -697,6 +741,10 @@ toolbar[iconsize="small"] #button-send[disabled="true"] {
   -moz-image-region: rect(32px 16px 48px 0px) !important;
 } 
 
+toolbar[iconsize="small"] #button-send:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(48px 16px 64px 0px);
+}
+
 toolbar[iconsize="small"] #button-contacts {
   list-style-image: url("chrome://messenger/skin/messengercompose/compose-toolbar-small.png");
   -moz-image-region: rect(0px 32px 16px 16px) !important;
@@ -708,6 +756,10 @@ toolbar[iconsize="small"] #button-contacts:hover {
 
 toolbar[iconsize="small"] #button-contacts[disabled="true"] {
    -moz-image-region: rect(32px 32px 48px 16px) !important;
+}
+
+toolbar[iconsize="small"] #button-contacts:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(48px 32px 64px 16px) !important;
 }
 
 toolbar[iconsize="small"] #spellingButton {
@@ -723,6 +775,10 @@ toolbar[iconsize="small"] #spellingButton[disabled="true"] {
   -moz-image-region: rect(32px 48px 48px 32px) !important;
 }
 
+toolbar[iconsize="small"] #spellingButton:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(48px 48px 64px 32px);
+}
+
 toolbar[iconsize="small"] #button-attach {
   list-style-image: url("chrome://messenger/skin/messengercompose/compose-toolbar-small.png");
   -moz-image-region: rect(0px 64px 16px 48px);
@@ -734,6 +790,10 @@ toolbar[iconsize="small"] #button-attach:hover {
 
 toolbar[iconsize="small"] #button-attach[disabled="true"] {
   -moz-image-region: rect(32px 64px 48px 48px) !important;
+}
+
+toolbar[iconsize="small"] #button-attach:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(48px 64px 64px 48px);
 }
 
 toolbar[iconsize="small"] #button-security {
@@ -749,6 +809,10 @@ toolbar[iconsize="small"] #button-security[disabled] {
   -moz-image-region: rect(32px 80px 48px 64px) !important;
 }
 
+toolbar[iconsize="small"] #button-security:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(48px 80px 64px 64px);
+}
+
 toolbar[iconsize="small"] #button-save {
   list-style-image: url("chrome://messenger/skin/messengercompose/compose-toolbar-small.png");
   -moz-image-region: rect(0px 96px 16px 80px);
@@ -760,6 +824,10 @@ toolbar[iconsize="small"] #button-save:hover {
 
 toolbar[iconsize="small"] #button-save[disabled="true"] {
   -moz-image-region: rect(32px 96px 48px 80px) !important;
+}
+
+toolbar[iconsize="small"] #button-save:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(48px 96px 64px 80px);
 }
 
 toolbar[iconsize="small"] #quoteButton {
@@ -775,6 +843,10 @@ toolbar[iconsize="small"] #quoteButton[disabled="true"] {
   -moz-image-region: rect(32px 112px 48px 96px) !important;
 }
 
+toolbar[iconsize="small"] #quoteButton:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(48px 112px 64px 96px);
+}
+
 toolbar[iconsize="small"] #cut-button {
   list-style-image: url("chrome://messenger/skin/messengercompose/compose-toolbar-small.png");
   -moz-image-region: rect(0px 128px 16px 112px);
@@ -786,6 +858,10 @@ toolbar[iconsize="small"] #cut-button:hover {
 
 toolbar[iconsize="small"] #cut-button[disabled="true"] {
   -moz-image-region: rect(32px 128px 48px 112px) !important;
+}
+
+toolbar[iconsize="small"] #cut-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(48px 128px 64px 112px);
 }
 
 toolbar[iconsize="small"] #copy-button {
@@ -801,6 +877,10 @@ toolbar[iconsize="small"] #copy-button[disabled="true"] {
   -moz-image-region: rect(32px 144px 48px 128px) !important;
 }
 
+toolbar[iconsize="small"] #copy-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(48px 144px 64px 128px);
+}
+
 toolbar[iconsize="small"] #paste-button {
   list-style-image: url("chrome://messenger/skin/messengercompose/compose-toolbar-small.png");
   -moz-image-region: rect(0px 160px 16px 144px);
@@ -814,6 +894,10 @@ toolbar[iconsize="small"] #paste-button[disabled="true"] {
   -moz-image-region: rect(32px 160px 48px 144px) !important;
 }
 
+toolbar[iconsize="small"] #paste-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(48px 160px 64px 144px);
+}
+
 toolbar[iconsize="small"] #button-print {
   list-style-image: url("chrome://messenger/skin/messengercompose/compose-toolbar-small.png");
   -moz-image-region: rect(0px 176px 16px 160px);
@@ -825,6 +909,10 @@ toolbar[iconsize="small"] #button-print:hover {
 
 toolbar[iconsize="small"] #button-print[disabled="true"] {
   -moz-image-region: rect(32px 176px 48px 160px);
+}
+
+toolbar[iconsize="small"] #button-print:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(48px 176px 64px 160px);
 }
 
 /* ::::: autocomplete icons ::::: */
