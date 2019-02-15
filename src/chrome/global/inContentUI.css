@@ -22,6 +22,7 @@ html|html {
   font: message-box;
 }
 
+
 /* Content */
 *|*.main-content {
   /* Needed to allow the radius to clip the inner content, see bug 595656 */
@@ -34,6 +35,7 @@ html|html {
   background-color: -moz-dialog;
   color: -moz-DialogText;
 }
+
 
 colorpicker[type="button"] {
   margin: 1px 5px 2px 5px;

@@ -21,12 +21,7 @@
   --in-content-border-highlight: #ff9500;
   --in-content-border-focus: #0095dd;
   --in-content-border-color: #c1c1c1;
-  --in-content-category-text: #000;
   --in-content-category-border-focus: 1px dotted #fff;
-  --in-content-category-text-hover: #120EFD;
-  --in-content-category-text-selected: #000080;
-  --in-content-category-background: #fff;
-  --in-content-category-background-active: var(--in-content-page-background);
   --in-content-tab-color: #424f5a;
   --in-content-table-border-dark-color: #d1d1d1;
   --in-content-table-header-background: #0095dd;
@@ -64,12 +59,24 @@ xul|caption > xul|label {
   padding-top: 40px;
   padding-inline-end: 44px; /* compensate the 4px margin of child elements */
   padding-bottom: 48px;
-  padding-inline-start: 48px;
+  padding-inline-start: 5px;
   overflow: auto;
 }
 
 xul|prefpane > xul|*.content-box {
   overflow: visible;
+}
+
+*|*.panel {
+  padding: 5px 15px;
+  border: 2px solid;
+  max-width: unset !important;
+  -moz-border-top-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors: ThreeDHighlight ThreeDLightShadow;
+  background-color: -moz-dialog;
+  color: -moz-DialogText;
 }
 
 /* groupboxes */
@@ -146,29 +153,32 @@ xul|*.tab-text {
 
 *|*#categories {
   -moz-appearance: none;
-  background-color: var(--in-content-category-background);
-  padding-top: 39px;
+  padding-top: 40px;
+  padding-inline-start: 1.2em;
   margin: 0;
   border-width: 0;
 }
 
 *|*.category {
   -moz-appearance: none;
-  color: var(--in-content-category-text);
-  border-inline-end-width: 0;
+  border: 2px solid;
+  -moz-border-top-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors: ThreeDHighlight ThreeDLightShadow;
+  background-color: -moz-dialog;
+  color: -moz-DialogText;
   padding-inline-start: 15px;
-  padding-inline-end: 21px;
-  min-height: 40px;
-}
-
-*|*.category:hover {
-  color: var(--in-content-category-text-hover);
+  padding-inline-end: 5em;
+  min-height: 50px;
 }
 
 *|*.category[selected],
 *|*.category.selected {
-  background-color: var(--in-content-category-background-active);
-  color: var(--in-content-category-text-selected);
+  -moz-border-top-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors: ThreeDDarkShadow ThreeDShadow;
 }
 
 *|*#categories[keyboard-navigation="true"]:-moz-focusring > *|*.category[current] {
