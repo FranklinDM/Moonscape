@@ -205,10 +205,9 @@
 }
 
 .category-badge {
-  background-color: #55D4FF;
+  background-color: ThreeDDarkShadow;
   padding: 2px 8px;
   margin: 6px 0;
-  border-radius: 10000px;
   color: #FFF;
   font-weight: bold;
   text-align: center;
