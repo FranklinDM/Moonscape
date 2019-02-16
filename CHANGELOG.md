@@ -1,4 +1,4 @@
 # Changelog
 
-## Moonscape for MailNews 1.00 - 2018-00-00
+## Moonscape Messenger 1.0.0
 - Initial release
