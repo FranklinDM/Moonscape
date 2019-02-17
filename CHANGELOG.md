@@ -1,5 +1,9 @@
 # Changelog
 ```Format: Release name version - (YYYY-MM-DD)```
+## Moonscape 6.23 - 2019-02-17
+- Only use white audio indicator when using a lightweight theme
+- Update in-content styling (including the Add-ons Manager)
+
 ## Moonscape 6.22 - 2019-01-02
 - Update extension icon to use a flatter one
 - Add tab audio indicator (for Pale Moon 28.3+)
