@@ -140,7 +140,7 @@
 }
 
 .loading {
-  list-style-image: url("chrome://global/skin/icons/loading_16.png");
+  list-style-image: url("chrome://global/skin/icons/loading.png");
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -701,7 +701,7 @@
 }
 
 #detail-screenshot[loading] {
-  background-image: url("chrome://global/skin/icons/loading_16.png"),
+  background-image: url("chrome://global/skin/icons/loading.png"),
                     linear-gradient(rgba(255, 255, 255, 0.5), transparent);
   background-position: 50% 50%;
   background-repeat: no-repeat;
