@@ -193,3 +193,11 @@ toolbarbutton[type="menu-button"][disabled="true"]:hover:active {
   background-color: transparent;
   width: auto;
 }
+
+toolbarbutton:not([disabled="true"]):hover dropmarker {
+  -moz-image-region: rect(0px, 15px, 3px, 10px);
+}
+
+toolbarbutton:not([disabled="true"]):hover:active dropmarker {
+  -moz-image-region: rect(0px, 20px, 3px, 15px);
+}
