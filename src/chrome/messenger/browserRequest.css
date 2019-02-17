@@ -32,8 +32,8 @@
   font-size: normal;
   -moz-appearance: textfield;
   overflow: hidden;
-  margin: 0px 5px;
   font-weight: normal;
+  margin: -1px;
 }
 
 #headerMessage {

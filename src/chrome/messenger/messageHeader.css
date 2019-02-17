@@ -245,11 +245,6 @@ toolbox[labelalign="end"] toolbar[mode="full"] .msgHeaderView-button .toolbarbut
   -moz-image-region: rect(0 13px 11px 0);
 }
 
-#header-view-toolbar[brighttext] #otherActionsButton > hbox >
-  .toolbarbutton-menu-dropmarker {
-  list-style-image: url(chrome://messenger/skin/icons/mainwindow-dropdown-arrow-inverted.png);
-}
-
 /* show a icon in customize window */
 #CustomizeToolbarWindow toolbarpaletteitem > #otherActionsButton >
   .toolbarbutton-icon {

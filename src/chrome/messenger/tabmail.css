@@ -229,10 +229,6 @@ tabpanels {
   -moz-image-region: rect(0, 13px, 11px, 0);
 }
 
-#tabs-toolbar[brighttext] .tabs-alltabs-button > .toolbarbutton-menu-dropmarker {
-  list-style-image: url(chrome://messenger/skin/icons/mainwindow-dropdown-arrow-inverted.png);
-}
-
 /**
  * All Tabs Menupopup
  */
