@@ -17,10 +17,6 @@
   background-color: -moz-dialog;
 }
 
-#mail-toolbox:not(:-moz-lwtheme) {
-  -moz-appearance: toolbox;
-}
-
 #mail-toolbox:-moz-lwtheme {
   text-shadow: none;
 }
