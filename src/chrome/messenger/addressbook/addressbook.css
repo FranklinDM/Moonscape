@@ -245,7 +245,6 @@ toolbar[iconsize="small"] #button-abdelete:not([disabled="true"]):hover:active {
 #abContent {
   text-shadow: none;
   background-color: -moz-Dialog;
-  border-top: 1px solid ThreeDShadow;
 }
 
 /* ::::: directory pane adjustments ::::: */
