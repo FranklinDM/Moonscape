@@ -1,5 +1,12 @@
 # Changelog
 ```Format: Release name version - (YYYY-MM-DD)```
+## Moonscape 6.24 - 2019-07-27
+- Add style for reader and narrator components
+- Use alternative icon for open directory in download items
+- Remove remaining web apps icons from global
+- Use shorthand border color property for pane buttons in preferences
+- Snatch icons for phone and computer from Classic Base
+
 ## Moonscape 6.23 - 2019-02-17
 - Only use white audio indicator when using a lightweight theme
 - Update in-content styling (including the Add-ons Manager)
