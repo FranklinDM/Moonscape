@@ -1,5 +1,8 @@
 # Changelog
 ```Format: Release name version - (YYYY-MM-DD)```
+## Moonscape 6.25 - 2019-10-05
+- Set a minimum height on about:config warning title
+
 ## Moonscape 6.24 - 2019-07-27
 - Add style for reader and narrator components
 - Use alternative icon for open directory in download items
