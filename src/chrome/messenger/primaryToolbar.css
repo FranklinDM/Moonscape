@@ -941,15 +941,18 @@ toolbar[iconsize="small"] #button-archive:not([disabled="true"]):hover:active {
   -moz-image-region: rect(48px 320px 64px 304px);
 }
 
+toolbar[iconsize="small"] #button-showconversation,
 toolbar[iconsize="small"] #button-chat {
   list-style-image: url("chrome://messenger/skin/icons/mail-toolbar-small.png");
   -moz-image-region: rect(0px 352px 16px 336px);
 }
 
+toolbar[iconsize="small"] #button-showconversation:hover,
 toolbar[iconsize="small"] #button-chat:hover {
   -moz-image-region: rect(16px 352px 32px 336px);
 }
 
+toolbar[iconsize="small"] #button-showconversation[disabled],
 toolbar[iconsize="small"] #button-chat[disabled] {
   -moz-image-region: rect(32px 352px 48px 336px) !important;
 }
@@ -958,6 +961,7 @@ toolbar[iconsize="small"] #button-chat[unreadMessages="true"] {
   -moz-image-region: rect(48px 352px 64px 336px) !important;
 }
 
+toolbar[iconsize="small"] #button-showconversation:not([disabled="true"]):hover:active,
 toolbar[iconsize="small"] #button-chat:not([disabled="true"]):hover:active {
   -moz-image-region: rect(48px 400px 64px 384px);
 }
