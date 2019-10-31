@@ -81,6 +81,10 @@
   background-color: ThreeDFace;
 }
 
+#headers-box[hidden="true"] ~ #compose-toolbar-sizer {
+  visibility: collapse;
+}
+
 #msgSubject {
   margin-bottom: 4px;
 }
