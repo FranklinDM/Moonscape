@@ -1,5 +1,8 @@
 # Changelog
 ```Format: Release name version - (YYYY-MM-DD)```
+## Moonscape 6.26 - 2020-01-28
+- Initial support for Pale Moon 29
+
 ## Moonscape 6.25 - 2019-10-05
 - Set a minimum height on about:config warning title
 
