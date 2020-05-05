@@ -1,0 +1,26 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@import url("chrome://global/skin/global.css");
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+treechildren::-moz-tree-image {
+  margin-inline-end: 2px;
+  list-style-image: url("chrome://mozapps/skin/profile/profileicon.png");
+}
+
+treechildren::-moz-tree-image(rowMigrate-no) {
+  list-style-image: url("chrome://mozapps/skin/profile/migrate.png");
+}
+
+/* profile selection dialog */
+#intro,
+#label {
+  width: 17em;
+}
+
+#managebuttons > button {
+  min-width: 8em;
+}
