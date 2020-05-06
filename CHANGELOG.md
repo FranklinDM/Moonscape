@@ -1,6 +1,6 @@
 # Changelog
 
-## Moonscape Messenger 1.1.0
+## Moonscape 1.1.0 (Mail/News release)
 - Remove duplicate border from address book window
 - Don't use native appearance for mail toolbox
 - Hide compose toolbar splitter when using print preview
@@ -9,5 +9,5 @@
 - Fix inconsistent search icon size in the Preferences window
 - Fix missing calendar icon in the Preferences window
 
-## Moonscape Messenger 1.0.0
+## Moonscape 1.0.0 (Mail/News release)
 - Initial release
