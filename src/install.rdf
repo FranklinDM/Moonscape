@@ -1,34 +1,50 @@
 <?xml version="1.0"?>
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
-  <Description about="urn:mozilla:install-manifest">
-	<!-- Target Application(s) this extension can install into, with minimum and maximum supported versions. -->
-	<em:targetApplication>
-		<!-- Interlink -->
-		<Description>
-			<em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
-			<em:minVersion>52.0.0</em:minVersion>
-			<em:maxVersion>52.*</em:maxVersion>
-		</Description>
-	</em:targetApplication>
-
-	<!-- Extension's ID and type -->
-	<em:id>moonscape@franklindm</em:id>
-	<!-- Types: 2=Extensions, 4=Themes, 8=Locale, 16=Plugin, 32=Multiple Item Package -->
-	<em:type>4</em:type>
-
-	<!-- Extension's info and metadata -->
-	<em:name>Moonscape</em:name>
-	<em:version>dev-build</em:version>
-	<em:description>A full featured retro theme that looks like Netscape 4.x.</em:description>
-	<em:creator>FranklinDM</em:creator>
-	<em:contributor>Michael Walden</em:contributor>
-	<em:contributor>Netscape</em:contributor>
-	<em:homepageURL>http://franklindm.github.io/docs/moonscape-fm</em:homepageURL>
-
-	<!-- Allow lightweight themes / personas to apply to this theme, using 'skinnable' -->
-	<em:skinnable>true</em:skinnable>
-	
-	<!-- internalName must match the 'skinname' part of the relevant chrome.manifest directives in order for those mappings to be associated with this skin. -->
-	<em:internalName>moonscape</em:internalName>
-  </Description>
+    <Description about="urn:mozilla:install-manifest">
+        <!-- Extension's ID and type -->
+        <em:id>moonscape@franklindm</em:id>
+        <!-- Types: 2=Extensions, 4=Themes, 8=Locale, 16=Plugin, 32=Multiple Item Package -->
+        <em:type>4</em:type>
+        
+        <!-- Extension's info and metadata -->
+        <em:name>Moonscape</em:name>
+        <em:version>dev-build</em:version>
+        <em:description>A full featured retro theme that looks like Netscape 4.x.</em:description>
+        <em:creator>FranklinDM</em:creator>
+        <em:contributor>Michael Walden</em:contributor>
+        <em:contributor>Netscape</em:contributor>
+        <em:homepageURL>http://franklindm.github.io/</em:homepageURL>
+        
+        <!-- Allow lightweight themes / personas to apply to this theme, using 'skinnable' -->
+        <em:skinnable>true</em:skinnable>
+        
+        <!-- internalName must match the 'skinname' part of the relevant chrome.manifest directives in order for those mappings to be associated with this skin. -->
+        <em:internalName>moonscape</em:internalName>
+        
+        <!-- Target Application(s) this extension can install into, with minimum and maximum supported versions. -->
+        <em:targetApplication>
+            <!-- Pale Moon -->
+            <Description>
+                <em:id>{8de7fcbb-c55c-4fbe-bfc5-fc555c87dbc4}</em:id>
+                <em:minVersion>28.0.0a1</em:minVersion>
+                <em:maxVersion>29.*</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+        <em:targetApplication>
+            <!-- Interlink -->
+            <Description>
+                <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+                <em:minVersion>52.0.0</em:minVersion>
+                <em:maxVersion>52.*</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+        <em:targetApplication>
+            <!-- Ambassador -->
+            <Description>
+                <em:id>{4523665a-317f-4a66-9376-3763d1ad1978}</em:id>
+                <em:minVersion>1.0.0</em:minVersion>
+                <em:maxVersion>1.*</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+    </Description>
 </RDF>
