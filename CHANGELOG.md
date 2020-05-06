@@ -1,53 +1,53 @@
 # Changelog
 ```Format: Release name version - (YYYY-MM-DD)```
-## Moonscape 6.26 - 2020-01-28
+## Moonscape Classic 6.26 - 2020-01-28
 - Initial support for Pale Moon 29
 
-## Moonscape 6.25 - 2019-10-05
+## Moonscape Classic 6.25 - 2019-10-05
 - Set a minimum height on about:config warning title
 
-## Moonscape 6.24 - 2019-07-27
+## Moonscape Classic 6.24 - 2019-07-27
 - Add style for reader and narrator components
 - Use alternative icon for open directory in download items
 - Remove remaining web apps icons from global
 - Use shorthand border color property for pane buttons in preferences
 - Snatch icons for phone and computer from Classic Base
 
-## Moonscape 6.23 - 2019-02-17
+## Moonscape Classic 6.23 - 2019-02-17
 - Only use white audio indicator when using a lightweight theme
 - Update in-content styling (including the Add-ons Manager)
 
-## Moonscape 6.22 - 2019-01-02
+## Moonscape Classic 6.22 - 2019-01-02
 - Update extension icon to use a flatter one
 - Add tab audio indicator (for Pale Moon 28.3+)
 - Remove icon pack from XPI package
 - Restore missing animations from GIF splash images
 
-## Moonscape 6.21 - 2018-10-06
+## Moonscape Classic 6.21 - 2018-10-06
 - Drop support for Pale Moon 27
 - Fix inconsistent favicons in Saved Logins
 - Update global styling and shared browser developer tools style
 - Use non-prefixed form of some properties
 - Use small error icon in extensions page
 
-## Moonscape 6.20 - 2018-07-13
+## Moonscape Classic 6.20 - 2018-07-13
 - Initial support for Pale Moon 28
   - This is the last version that will support Pale Moon 27
   - Serves as a transition release (so that in case you updated to PM 28, this theme will not be disabled)
 
-## Moonscape 6.19 - 2017-11-11
+## Moonscape Classic 6.19 - 2017-11-11
 - Style the 'about:plugins' page
   - Somewhat requested here: https://forum.palemoon.org/viewtopic.php?f=45&p=126731#p126731
 - Use white-on-black as titlebar style (Win10)
 
-## Moonscape 6.18 - 2017-09-26
+## Moonscape Classic 6.18 - 2017-09-26
 - Drop support for PM 27.4.* and lower
 - Support PM 27.5's Win10 window styling implementation
 - All tabs button should change accordingly to its state
   - Dropdown (used when previews are disabled)
   - Boxes (used when previews are enabled - default)
 
-## Moonscape 6.17 - 2017-09-24
+## Moonscape Classic 6.17 - 2017-09-24
 - Drop support for versions lower than PM27.4
 - Improve resolution of error console icons
 - Enforce right border on AiOS toolbar
@@ -59,11 +59,11 @@
   - Above may have been done in the past but applies only to tab-close, see 820ee4fc6fac0baa748ce03bc9ae0bf85d5de90b
   - New 2x close icon has been created for mac (and other uses, ie. HiDPI)
 
-## Moonscape 6.16 - 2017-07-19
+## Moonscape Classic 6.16 - 2017-07-19
 - Minor revisions to documentation
 - Remove design file from XPI package (only applies to APO)
 
-## Moonscape 6.15 - 2017-06-27
+## Moonscape Classic 6.15 - 2017-06-27
 - New logo and icon for Moonscape
 - Add small gap to toolbar buttons on status bar
 - Improve resolution of privacy icons and all standard icons (finally)
@@ -77,7 +77,7 @@
 - Remove some subskins
 - Remove excess borders from status bar
 
-## Moonscape 6.12 - 2017-05-12
+## Moonscape Classic 6.12 - 2017-05-12
 - Restore regular toolbar button styling to back/forward buttons and remove borders
 - Remove tab-close button
 - Improve resolution of some icons (warning, info, etc.)
@@ -98,7 +98,7 @@
 - Restore dotted tree-connecting lines
 - Minor revisions to internal documentation (readme)
 	
-## Moonscape 6.10 - 2017-03-09
+## Moonscape Classic 6.10 - 2017-03-09
 - Skin Restart Manager instead of Restartless Restart (subskin renamed)
 - Massive code cleanup, remove unused files
 - Improved appearance, resolution, and added a lot of new icons (notably Plugins)
@@ -115,7 +115,7 @@
 - Unnecessary margins from the top window are now removed
 - Fix existing references to FX in some images
 
-## Moonscape 6.07 - 2017-01-22
+## Moonscape Classic 6.07 - 2017-01-22
 - Removed support for PM26
 - Created padlock.css, fixes the missing/double padlock icon in the identity bar
 - Reflect changes from PM26-27
@@ -127,7 +127,7 @@
 - Change of directory (from foxscape to moonscape)
 - Changed splash logo (4 and 5)
 
-## Moonscape 6.05 - 2017-01-21
+## Moonscape Classic 6.05 - 2017-01-21
 - Removed default subskins from global.css and moved it to its own css file (default_subskins.css)
   which is now referenced by browser.css instead because it gets loaded 3 times in the past
   This somehow led to an increase in memory usage
@@ -135,7 +135,7 @@
 - Added homepage url to install.rdf
 - Fix for the missing RSS icon in the address bar
 
-## Moonscape 6.00 - 2016-12-25
+## Moonscape Classic 6.00 - 2016-12-25
 - Committed the project to GitHub, renamed
 - Updated manifest files. (supports PM26-27)
 
