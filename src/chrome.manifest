@@ -1,6 +1,32 @@
-skin	communicator			moonscape		chrome/communicator/
-skin	editor					moonscape		chrome/editor/
-skin	global					moonscape		chrome/global/
-skin	messenger				moonscape		chrome/messenger/
-skin	messenger-newsblog		moonscape		chrome/messenger-newsblog/
-skin	mozapps					moonscape		chrome/mozapps/
+#------------------------------------------------------------------------------
+# Toolkit
+#------------------------------------------------------------------------------
+skin    global                  moonscape        chrome/global/
+skin    mozapps                 moonscape        chrome/mozapps/
+
+#------------------------------------------------------------------------------
+# Application
+#------------------------------------------------------------------------------
+skin    browser                 moonscape        chrome/browser/
+skin    messenger               moonscape        chrome/messenger/
+skin    messenger-newsblog      moonscape        chrome/messenger-newsblog/
+skin    editor                  moonscape        chrome/editor/
+skin    ambassador              moonscape        chrome/ambassador/
+skin    communicator            moonscape        chrome/communicator/
+
+#------------------------------------------------------------------------------
+# OS-specific skin
+#------------------------------------------------------------------------------
+# Fallback skin for unmatched systems
+skin    os_target               moonscape        chrome/os_target/windows/
+
+# Skin content overrides
+skin    os_target               moonscape        chrome/os_target/windows/     os=WINNT
+skin    os_target               moonscape        chrome/os_target/mac/         os=Darwin
+skin    os_target               moonscape        chrome/os_target/linux/       os=Linux
+
+#------------------------------------------------------------------------------
+# Overrides
+#------------------------------------------------------------------------------
+# Another loading icon (with the same dimensions, seemingly redundant) is referenced by some applications
+override    chrome://global/skin/icons/loading.png    chrome://global/skin/icons/loading_16.png
