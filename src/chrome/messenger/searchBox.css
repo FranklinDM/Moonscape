@@ -24,8 +24,8 @@
 #quick-search-button  {
   margin-top: 0px;
   margin-bottom: 0px;
-  -moz-margin-start: 0px;
-  -moz-margin-end: 2px;
+  margin-inline-start: 0px;
+  margin-inline-end: 2px;
 }
 
 .gloda-search-icon {

@@ -11,7 +11,7 @@
 /* :::::::::: button :::::::::: */
 
 button {
-  -moz-appearance: button;
+  -moz-appearance: none;
   margin: 1px 5px 2px 5px;
   min-width: 6.3em;
   border: 3px solid;
@@ -70,9 +70,9 @@ button[checked="true"] {
   -moz-border-left-colors: ThreeDDarkShadow ThreeDShadow transparent;
 }
 
-button:hover:active > .button-box:-moz-system-metric(windows-classic),
-button[open="true"] > .button-box:-moz-system-metric(windows-classic),
-button[checked="true"] > .button-box:-moz-system-metric(windows-classic) {
+button:hover:active > .button-box,
+button[open="true"] > .button-box,
+button[checked="true"] > .button-box {
   padding-top: 2px;
   padding-bottom: 1px;
   padding-inline-start: 4px;
@@ -86,10 +86,6 @@ button[disabled="true"] {
   -moz-border-right-colors: transparent ThreeDDarkShadow ThreeDShadow !important;
   -moz-border-bottom-colors: transparent ThreeDDarkShadow ThreeDShadow !important;
   -moz-border-left-colors: transparent ThreeDHighlight ThreeDLightShadow !important;
-  color: GrayText;
-}
-
-button[disabled="true"]:-moz-system-metric(windows-classic) {
   color: ThreeDShadow;
   text-shadow: 1px 1px ThreeDHighlight;
 }
@@ -108,8 +104,7 @@ button[type="menu-button"] {
   border: none;
 }
 
-.button-menu-dropmarker,
-.button-menubutton-dropmarker {
+.button-menu-dropmarker {
   -moz-appearance: none !important;
   margin: 1px;
   background-color: transparent;
@@ -118,11 +113,8 @@ button[type="menu-button"] {
   height: 11px;
 }
 
-.button-menubutton-dropmarker[open="true"] {
-  margin-top: 2px;
-  margin-bottom: 0px;
-  margin-inline-start: 2px;
-  margin-inline-end: 0px;
+.button-menubutton-dropmarker {
+  margin: 1px 5px 3px -6px;
 }
 
 /* ::::: plain buttons ::::: */

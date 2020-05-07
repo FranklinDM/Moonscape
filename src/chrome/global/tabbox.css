@@ -19,7 +19,7 @@
 /* ::::: tabpanels ::::: */
 
 tabpanels {
-  -moz-appearance: tabpanels; 
+  -moz-appearance: none; 
   border-right: 2px solid;
   border-bottom: 2px solid;
   border-left: 2px solid;
@@ -33,9 +33,8 @@ tabpanels {
 
 /* ::::: tab ::::: */
 
-tab 
-{
-  -moz-appearance: tab;
+tab {
+  -moz-appearance: none;
   margin-top: 2px;
   border-top: 2px solid;
   border-right: 2px solid;

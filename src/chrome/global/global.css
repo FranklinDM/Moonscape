@@ -5,12 +5,11 @@
 /* ===== global.css =====================================================
   == Styles that apply everywhere.
   ======================================================================= */
-  
+
 /* all localizable skin settings shall live here */
 @import url("chrome://global/locale/intl.css");
-
 /* Import platform-specific override stylesheets */
-@import url("chrome://os_target/skin/global-override.css");
+@import url("chrome://os_target/skin/global.css");
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
@@ -20,13 +19,8 @@ radio {
   -moz-binding: url("chrome://global/skin/globalBindings.xml#radio");
 }
 
-menulist > menupopup,
-.menulist-menupopup {
+menulist > menupopup {
   -moz-binding: url("chrome://global/content/bindings/popup.xml#popup-scrollbars");
-}
-
-.menulist-compact {
-  -moz-binding: url("chrome://global/skin/globalBindings.xml#menulist-compact");
 }
 
 /* ::::: root elements ::::: */
@@ -90,7 +84,7 @@ iframe {
 /* ::::: statusbar ::::: */
 
 statusbar {
-  -moz-appearance: statusbar;
+  -moz-appearance: none;
   border-top: 1px solid ThreeDLightShadow;
   border-left: 1px solid ThreeDShadow;
   border-right: 1px solid ThreeDHighlight;
@@ -100,7 +94,7 @@ statusbar {
 }
 
 statusbarpanel {
-  -moz-appearance: statusbarpanel;
+  -moz-appearance: none;
   -moz-box-align: center;
   -moz-box-pack: center;
   border-left: 1px solid ThreeDHighlight;
@@ -120,7 +114,7 @@ statusbarpanel:not(.statusbar-resizerpanel):-moz-lwtheme {
 .statusbar-resizerpanel {
   -moz-box-align: end;
   -moz-box-pack: end;
-  -moz-appearance: resizerpanel;
+  -moz-appearance: none;
   padding: 0;
   border: none;
 }
@@ -136,7 +130,7 @@ statusbarpanel:not(.statusbar-resizerpanel):-moz-lwtheme {
 sidebarheader {
   height: 25px;
   background-color: -moz-Dialog;
-  -moz-appearance: toolbox;
+  -moz-appearance: none;
   border-bottom: 1px solid ThreeDShadow;
   border-top: 1px solid ThreeDHighlight;
 }
@@ -153,21 +147,6 @@ toolbar[mode="text"] .toolbarbutton-text {
   padding: 0 !important;
   margin: 3px 5px !important;
 }
-
-/*#+++*/
-toolbar[mode="icons"] .toolbarbutton-text {
-  display: none;
-}
-
-toolbar[mode="text"] .toolbarbutton-icon {
-  display: none;
-}
-
-toolbar[mode="text"] .toolbarbutton-text {
-  padding: 0 !important;
-  margin: 3px 5px !important;
-}
-/*#+++*/
 
 /* ::::: miscellaneous formatting ::::: */
 
@@ -259,10 +238,6 @@ description {
 }
 
 label[disabled="true"] {
-  color: GrayText;
-}
-
-label[disabled="true"]:-moz-system-metric(windows-classic) {
   color: ThreeDShadow;
   text-shadow: 1px 1px ThreeDHighlight;
 }

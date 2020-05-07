@@ -44,8 +44,8 @@
 }
 
 .tab-content {
-  -moz-padding-end: var(--tabSidePadding);
-  -moz-padding-start: var(--tabSidePadding);
+  padding-inline-end: var(--tabSidePadding);
+  padding-inline-start: var(--tabSidePadding);
 }
 
 .tab-throbber,
@@ -56,17 +56,17 @@
 
 .tab-throbber,
 .tab-icon-image {
-  -moz-margin-end: 6px;
+  margin-inline-end: 6px;
 }
 
 .tab-label {
-  -moz-margin-end: 0;
-  -moz-margin-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
 }
 
 .tab-close-button {
-  -moz-margin-start: 4px;
-  -moz-margin-end: -2px;
+  margin-inline-start: 4px;
+  margin-inline-end: -2px;
   padding: 0;
 }
 

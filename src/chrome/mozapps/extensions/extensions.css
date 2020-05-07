@@ -140,7 +140,7 @@
 }
 
 .loading {
-  list-style-image: url("chrome://global/skin/icons/loading.png");
+  list-style-image: url("chrome://global/skin/icons/loading_16.png");
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -375,8 +375,6 @@
 
 .addon {
   color: black;
-  border-top: 1x solid;
-  -moz-border-top-colors: ThreeDShadow;
   border-bottom: 1px solid;
   -moz-border-bottom-colors: ThreeDShadow;
   padding: 5px;
@@ -560,7 +558,7 @@
   color: #888A8B;
 }
 
-.addon-view[notification="warning"] {
+.addon-view[notification="warning"]:not([native="false"]) {
   background-color: rgb(255, 255, 224);
 }
 
@@ -701,7 +699,7 @@
 }
 
 #detail-screenshot[loading] {
-  background-image: url("chrome://global/skin/icons/loading.png"),
+  background-image: url("chrome://global/skin/icons/loading_16.png"),
                     linear-gradient(rgba(255, 255, 255, 0.5), transparent);
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -815,8 +813,7 @@ setting {
 }
 
 #detail-view[active="false"]:not([pending]):not([notification]) {
-  background-image: linear-gradient(rgba(135, 135, 135, 0.1),
-                                    rgba(135, 135, 135, 0));
+  background-color: rgba(135, 135, 135, 0.1);
 }
 
 setting[first-row="true"] {
@@ -1077,4 +1074,11 @@ button.button-link:not([disabled="true"]):active:hover {
 #addons-notifications > notification {
   border: 1px solid #000;
   margin-bottom: 1em;
+}
+
+
+/*** TGS ***/
+
+page[aios-inSidebar] .main-content {
+  border: none;
 }

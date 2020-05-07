@@ -49,6 +49,10 @@
   .title-text {
     padding-top: 0;
   }
+  
+  .description {
+    padding-inline-start: 0;
+  }
 }
 
 ul, ol {

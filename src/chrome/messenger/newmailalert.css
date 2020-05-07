@@ -1,5 +1,4 @@
-/* -*- Mode: Java; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 2 -*-
- * This Source Code Form is subject to the terms of the Mozilla Public
+/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
@@ -31,7 +30,7 @@
 
 #alertTextBox {
   padding: 4px;
-  -moz-padding-end: 25px;
+  padding-inline-end: 25px;
   background-image: linear-gradient(rgba(255, 255, 255, .2),
                                     rgba(255, 255, 255, .1));
 }
@@ -39,12 +38,12 @@
 #alertTitle {
   font-weight: bold;
   font-size: 110%;
-  -moz-padding-start: 5px;
-  -moz-padding-end: 5px;
+  padding-inline-start: 5px;
+  padding-inline-end: 5px;
 }
 
 #alertGroove {
-  -moz-margin-start: 11px;
+  margin-inline-start: 11px;
 }
 
 .folderSummary-message-row {

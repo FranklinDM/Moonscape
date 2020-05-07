@@ -2,6 +2,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+@import url("chrome://global/skin/throbber.css");
+
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 description.error {
@@ -24,49 +26,6 @@ toolbar[printpreview="true"] {
 #tabbar-toolbar[customizing="true"] {
   min-width: 16px;
   min-height: 10px;
-}
-
-/* :::::: throbber :::::::::: */
-
-#throbber-box {
-  width: 16px;
-  min-height: 16px;
-  margin: 0 3px;
-}
-
-#throbber-box > image {
-  border: 2px solid;
-  -moz-border-top-colors:    ThreeDHighlight  ThreeDLightShadow;
-  -moz-border-right-colors:  ThreeDDarkShadow ThreeDShadow;
-  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
-  -moz-border-left-colors:   ThreeDHighlight  ThreeDLightShadow;
-}
-
-#throbber-box,
-toolbar[mode="full"] #throbber-box {
-  list-style-image: url("chrome://messenger/skin/thr/Throbber32S.png");
-}
-#throbber-box[busy="true"],
-toolbar[mode="full"] #throbber-box[busy="true"] {
-  list-style-image: url("chrome://messenger/skin/thr/Throbber32A.gif");
-}
-toolbar[iconsize="large"][mode="full"] #throbber-box {
-  list-style-image: url("chrome://messenger/skin/thr/Throbber40S.gif");
-}
-toolbar[iconsize="large"][mode="full"] #throbber-box[busy="true"] {
-  list-style-image: url("chrome://messenger/skin/thr/Throbber40A.gif");
-}
-toolbar[iconsize="small"]:not([mode="full"]) #throbber-box,
-toolbar[mode="text"] #throbber-box,
-.chromeclass-menubar #throbber-box,
-toolbar[mode="full"].chromeclass-menubar  #throbber-box {
-  list-style-image: url("chrome://messenger/skin/thr/Throbber16S.png");
-}
-toolbar[iconsize="small"]:not([mode="full"]) #throbber-box[busy="true"],
-toolbar[mode="text"] #throbber-box[busy="true"],
-.chromeclass-menubar #throbber-box[busy="true"],
-toolbar[mode="full"].chromeclass-menubar  #throbber-box[busy="true"] {
-  list-style-image: url("chrome://messenger/skin/thr/Throbber16A.gif");
 }
 
 /* ::::: online/offline icons ::::: */

@@ -34,23 +34,23 @@ toolbar[iconsize="large"] #qfb-show-filter-bar[disabled="true"] {
   margin: 0;
   padding-top: 5px;
   padding-bottom: 6px;
-  -moz-padding-start: 4px;
-  -moz-padding-end: 5px;
+  padding-inline-start: 4px;
+  padding-inline-end: 5px;
 }
 
 #mail-toolbox #qfb-show-filter-bar[open="true"],
 #mail-toolbox #qfb-show-filter-bar:hover:active {
   padding-top: 6px;
   padding-bottom: 5px;
-  -moz-padding-start: 5px;
-  -moz-padding-end: 4px;
+  padding-inline-start: 5px;
+  padding-inline-end: 4px;
 }
 
 #mail-toolbox #qfb-show-filter-bar[checked="true"] {
   padding-top: 6px !important;
   padding-bottom: 5px !important;
-  -moz-padding-start: 5px !important;
-  -moz-padding-end: 4px !important;
+  padding-inline-start: 5px !important;
+  padding-inline-end: 4px !important;
 }
 
 #mail-toolbox #qfb-show-filter-bar[style="visibility: hidden;"] {
@@ -79,8 +79,8 @@ toolbox[labelalign="end"] #qfb-show-filter-bar {
 /* :::: Filter Buttons :::: */
 
 #quick-filter-bar-main-bar toolbarbutton {
-  -moz-margin-start: 1px;
-  -moz-margin-end: 1px;
+  margin-inline-start: 1px;
+  margin-inline-end: 1px;
   min-width: 26px;
 }
 
@@ -141,18 +141,18 @@ toolbox[labelalign="end"] #qfb-show-filter-bar {
 }
 
 #quick-filter-bar-main-bar toolbarbutton > .toolbarbutton-icon {
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
 }
 
 #quick-filter-bar-collapsible-buttons > toolbarbutton > .toolbarbutton-text {
-  -moz-margin-start: 4px !important;
+  margin-inline-start: 4px !important;
 }
 
 #quick-filter-bar-expando toolbarbutton,
 #quick-filter-bar-expando toolbarbutton[checked] {
-  -moz-padding-end: 6px !important;
+  padding-inline-end: 6px !important;
   padding-top: 1px;
   padding-bottom: 1px;
-  -moz-margin-start: 1px;
-  -moz-margin-end: 1px;
+  margin-inline-start: 1px;
+  margin-inline-end: 1px;
 }

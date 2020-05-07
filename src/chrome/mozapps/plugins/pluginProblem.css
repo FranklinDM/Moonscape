@@ -13,23 +13,19 @@
   display: table;
   width: 100%;
   height: 100%;
-  background-color: rgb(72,72,72);
-  color: white;
+  background-color: -moz-Dialog;
+  color: -moz-DialogText;
   -moz-user-select: none;
 }
 
 .hoverBox {
   display: table-cell;
   box-sizing: border-box;
+  border: 1px solid ThreeDShadow;
   padding: 5px;
   vertical-align: middle;
   width: 100%;
   height: 100%;
-}
-:-moz-handler-vulnerable-updatable .hoverBox:active,
-:-moz-handler-vulnerable-no-update .hoverBox:active,
-:-moz-handler-clicktoplay .hoverBox:active {
-  background-color: rgb(65, 65, 65);
 }
 
 :-moz-handler-clicktoplay .hoverBox:active .msgTapToPlay,
@@ -91,7 +87,7 @@ html|a {
 
 .throbber {
   padding-left: 16px; /* width of the background image */
-  background: url(chrome://global/skin/icons/loading.png) no-repeat;
+  background: url(chrome://global/skin/icons/loading_16.png) no-repeat;
   margin-left: 5px;
 }
 

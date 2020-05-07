@@ -127,23 +127,14 @@
 #alertSettings {
   -moz-appearance: none;
   background-color: transparent;
-  border: none;
   min-width: 0;
+  list-style-image: url("chrome://mozapps/skin/extensions/utilities.png");
+  margin-inline-end: 0;
   margin-bottom: 0;
-  list-style-image: url("chrome://browser/skin/moonscape/img/alert_settings.png");
-  -moz-image-region: rect(0, 16px, 16px, 0);
 }
 
 #alertSettings > .button-box {
   padding: 0;
-}
-
-#alertSettings:hover {
-  -moz-image-region: rect(0, 32px, 16px, 16px);
-}
-
-#alertSettings[open] {
-  -moz-image-region: rect(0, 48px, 16px, 32px);
 }
 
 #alertSettings[focusedViaMouse]:-moz-focusring > .button-box {

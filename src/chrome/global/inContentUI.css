@@ -14,14 +14,13 @@
   -moz-appearance: none;
   padding: 18px;
   background-repeat: repeat;
-  color: #000;
-  background-color: #C0C0C0;
+  color: -moz-dialogText;
+  background-color: -moz-dialog;
 }
 
 html|html {
   font: message-box;
 }
-
 
 /* Content */
 *|*.main-content {
@@ -35,7 +34,6 @@ html|html {
   background-color: -moz-dialog;
   color: -moz-DialogText;
 }
-
 
 colorpicker[type="button"] {
   margin: 1px 5px 2px 5px;

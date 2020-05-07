@@ -18,7 +18,7 @@ datepicker, timepicker {
 }
 
 .datetimepicker-input-box {
-  -moz-appearance: textfield;
+  -moz-appearance: none;
   cursor: text;
   margin-inline-end: 2px;
   border: 2px solid;
@@ -49,14 +49,12 @@ html|*.datetimepicker-input {
   width: 3.2em;
 }
 
-datepicker[readonly="true"],
-timepicker[readonly="true"] {
+.datetimepicker-input-box[readonly="true"] {
   background-color: -moz-Dialog;
   color: -moz-DialogText;
 }
 
-datepicker[disabled="true"],
-timepicker[disabled="true"] {
+.datetimepicker-input-box[disabled="true"] {
   cursor: default;
   background-color: -moz-Dialog;
   color: GrayText;

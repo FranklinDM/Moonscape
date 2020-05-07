@@ -1,0 +1,275 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+:root {
+  -moz-appearance: none;
+  font-size: 75%;
+  background-color: transparent;
+}
+
+/* SCROLLBOX */
+#newtab-vertical-margin,
+#newtab-scrollbox:not([page-disabled]) {
+  color: -moz-DialogText;
+  background-color: -moz-Dialog;
+}
+
+/* UNDO */
+#newtab-undo-container {
+  padding: 4px 3px;
+  border: 2px solid;
+  -moz-border-top-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors: ThreeDHighlight ThreeDLightShadow;
+  background-color: -moz-Dialog;
+  color: -moz-DialogText;
+}
+
+#newtab-undo-label {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.newtab-undo-button {
+  -moz-appearance: none;
+  color: -moz-nativehyperlinktext;
+  color: rgb(0,102,204);
+  cursor: pointer;
+  padding: 0;
+  margin: 0 4px;
+  border: 0;
+  background: transparent;
+  text-decoration: none;
+  min-width: 0;
+}
+
+.newtab-undo-button:hover {
+  text-decoration: underline;
+}
+
+.newtab-undo-button:-moz-focusring {
+  outline: 1px dotted;
+}
+
+.newtab-undo-button > .button-box {
+  padding: 0;
+}
+
+#newtab-undo-close-button {
+  -moz-appearance: none;
+  padding: 0;
+  border: none;
+  -moz-user-focus: normal;
+}
+
+#newtab-undo-close-button > .toolbarbutton-text {
+  display: none;
+}
+
+#newtab-undo-close-button:-moz-focusring {
+  outline: 1px dotted;
+}
+
+/* TOGGLE */
+#newtab-toggle {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: none;
+  background: -216px 0 transparent url(chrome://browser/skin/newtab/controls.png);
+}
+
+#newtab-toggle[page-disabled] {
+  background-position: -232px 0;
+}
+
+/* ROWS */
+.newtab-row {
+  margin-bottom: 20px;
+}
+
+.newtab-row:last-child {
+  margin-bottom: 0;
+}
+
+/* CELLS */
+.newtab-cell {
+  margin-inline-end: 20px;
+  background-color: #F3F3F3;
+  border: 1px solid #CFCFCF;
+  transition: border-color 100ms ease-out;
+}
+
+.newtab-cell:empty {
+  border: 1px dashed #CFCFCF;
+}
+
+.newtab-cell:last-child {
+  margin-inline-end: 0;
+}
+
+.newtab-cell:hover:not(:empty):not([dragged]) {
+  border-color: #ACB0B5;
+}
+
+/* SITES */
+.newtab-site {
+  text-decoration: none;
+  transition-property: top, left, opacity, background-color;
+}
+
+.newtab-site[dragged] {
+  transition-property: box-shadow, background-color;
+  background-color: rgb(242,242,242);
+  border: 1px solid #ACB0B5;
+}
+
+/* THUMBNAILS */
+.newtab-thumbnail {
+  background-origin: padding-box;
+  background-clip: padding-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* TITLES */
+.newtab-title {
+  padding: 0 8px 1px;
+  background-color: #CFCFCF;
+  color: #000;
+  line-height: 24px;
+}
+
+.newtab-site[pinned] .newtab-title {
+  padding-inline-start: 16px;
+}
+
+.newtab-site[pinned] .newtab-title::before {
+  background-image: url(chrome://browser/skin/newtab/pinned.png);
+  content: "";
+  left: 2px;
+  top: 2px;
+  position: absolute;
+  width: 12px;
+  height: 20px;
+}
+
+.newtab-site[pinned] .newtab-title:dir(rtl)::before {
+  left: auto;
+  right: 2px;
+}
+
+/* CONTROLS */
+.newtab-control {
+  width: 24px;
+  height: 24px;
+  padding: 1px 2px 3px;
+  border: none;
+  background: transparent url(chrome://browser/skin/newtab/controls.png);
+}
+
+.newtab-control-pin:dir(ltr),
+.newtab-control-block:dir(rtl) {
+  left: 4px;
+}
+
+.newtab-control-block:dir(ltr),
+.newtab-control-pin:dir(rtl) {
+  right: 4px;
+}
+
+.newtab-control-pin:hover {
+  background-position: -24px 0;
+}
+
+.newtab-control-pin:active {
+  background-position: -48px 0;
+}
+
+.newtab-site[pinned] .newtab-control-pin,
+.newtab-control-pin[pinned] {
+  background-position: -72px 0;
+}
+
+.newtab-site[pinned] .newtab-control-pin:hover,
+.newtab-control-pin[pinned]:hover {
+  background-position: -96px 0;
+}
+
+.newtab-site[pinned] .newtab-control-pin:active
+.newtab-control-pin[pinned]:active {
+  background-position: -120px 0;
+}
+
+.newtab-control-block {
+  background-position: -144px 0;
+}
+
+.newtab-control-block:hover {
+  background-position: -168px 0;
+}
+
+.newtab-control-block:active {
+  background-position: -192px 0;
+}
+
+.newtab-undo-button {
+  -moz-appearance: none;
+  color: -moz-nativehyperlinktext;
+  color: rgb(0,102,204);
+  cursor: pointer;
+  padding: 0;
+  margin: 0 4px;
+  border: 0;
+  background: transparent;
+  text-decoration: none;
+  min-width: 0;
+}
+
+.newtab-undo-button > .button-box {
+  padding: 0;
+}
+
+#newtab-undo-close-button {
+  -moz-appearance: none;
+  padding: 0;
+  border: none;
+  -moz-user-focus: normal;
+}
+
+/* SEARCH BAR */
+#searchText {
+  box-shadow: none;
+  border-radius: 0;
+  border: 2px solid;
+  -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
+  -moz-border-right-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow;
+}
+#searchSubmit {
+  margin-inline-start: 5px;
+  box-shadow: none !important;
+  border-radius: 0;
+  border: 3px solid;
+  -moz-border-top-colors: transparent ThreeDHighlight ThreeDLightShadow;
+  -moz-border-right-colors: transparent ThreeDDarkShadow ThreeDShadow;
+  -moz-border-bottom-colors: transparent ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors: transparent ThreeDHighlight ThreeDLightShadow;
+  background-color: ThreeDFace !important;
+  color: ButtonText !important;
+}
+#searchSubmit:hover {
+  cursor: default;
+}
+#searchSubmit:hover:active {
+  -moz-border-top-colors: ThreeDDarkShadow ThreeDShadow transparent;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow transparent;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow transparent;
+  -moz-border-left-colors: ThreeDDarkShadow ThreeDShadow transparent;
+}
+#searchLogoContainer > * {
+  transform: scale(.75);
+}

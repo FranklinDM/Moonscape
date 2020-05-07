@@ -164,7 +164,7 @@ toolbox[labelalign="end"] .toolbarbutton-1[type="menu-button"] > .toolbarbutton-
 }
 
 toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1 .toolbarbutton-text {
-  -moz-padding-start: 2px;
+  padding-inline-start: 2px;
 }
 
 toolbox[labelalign="end"] > toolbar[mode="full"] deck .toolbarbutton-text {
@@ -1070,14 +1070,14 @@ toolbar[iconsize="small"] .button-appmenu[disabled] {
 }
 
 .msgNotificaton-smallText {
-  -moz-padding-start: 10px;
+  padding-inline-start: 10px;
   font-size: 90%;
 }
 
 /* AppMenu styling */
 
 .splitmenu-menuitem {
-  -moz-margin-end: 1px;
+  margin-inline-end: 1px;
 }
 
 .splitmenu-menu {

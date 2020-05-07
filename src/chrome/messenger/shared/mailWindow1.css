@@ -53,7 +53,7 @@ treechildren::-moz-tree-image(flaggedCol, dummy) {
 /* ..... junkStatus column ..... */
 
 .junkStatusHeader {
-  -moz-padding-end: 3px;
+  padding-inline-end: 3px;
 }
 
 treechildren::-moz-tree-image(junkStatusCol, dummy) {
@@ -67,7 +67,7 @@ treechildren::-moz-tree-image(subjectCol, dummy) {
 }
 
 treechildren::-moz-tree-cell-text(subjectCol) {
-  -moz-padding-start: 0;
+  padding-inline-start: 0;
 }
 
 #sizeCol,

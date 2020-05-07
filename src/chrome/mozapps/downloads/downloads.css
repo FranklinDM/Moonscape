@@ -6,16 +6,6 @@
   background-color: ThreeDFace;
 }
 
-/* Download View */
-@media not all and (-moz-windows-classic) {
-  #downloadView {
-    -moz-appearance: none;
-    margin: 0;
-    border-bottom: 2px solid;
-    -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
-  }
-}
-
 /* Download View Items */
 richlistitem[type="download"] {
   padding: 4px 8px 4px 4px;

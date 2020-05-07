@@ -11,7 +11,7 @@
 /* ::::: toolbarbutton ::::: */
 
 toolbarbutton {
-  -moz-appearance: toolbarbutton;
+  -moz-appearance: none;
   -moz-box-align: center;
   -moz-box-pack: center;
   margin: 0;
@@ -27,7 +27,7 @@ toolbarbutton {
 }
 
 .toolbarbutton-text {
-  margin: 0 !important;
+  margin: 0 !important; /* !important for overriding global.css */
   text-align: center;
 }
 
@@ -38,7 +38,7 @@ toolbarbutton.tabbable {
 toolbarbutton:-moz-focusring {
   /* -moz-appearance looks redundant here but is necessary.
       Without it, the outline won't appear. */
-  -moz-appearance: toolbarbutton;
+  -moz-appearance: none;
   outline: 1px dotted -moz-DialogText;
   outline-offset: -2px;
 }
@@ -58,15 +58,8 @@ toolbarbutton[open="true"] {
 }
 
 toolbarbutton[disabled="true"] {
-  color: GrayText;
-  text-shadow: none;
-}
-
-@media all and (-moz-windows-classic) {
-  toolbarbutton[disabled="true"] {
-    color: ThreeDShadow;
-    text-shadow: 1px 1px ThreeDHighlight;
-  }
+  color: ThreeDShadow;
+  text-shadow: 1px 1px ThreeDHighlight;
 }
 
 toolbarbutton[checked="true"]:not([disabled="true"]) {
@@ -79,7 +72,7 @@ toolbarbutton[checked="true"]:not([disabled="true"]) {
   color: ButtonText;
 }
 
-@media all and (-moz-windows-default-theme) {
+@media (-moz-windows-default-theme) {
   toolbarbutton:-moz-lwtheme {
     text-shadow: none;
   }
@@ -88,7 +81,7 @@ toolbarbutton[checked="true"]:not([disabled="true"]) {
     color: inherit;
     text-shadow: inherit;
   }
-
+  
   toolbarbutton:-moz-lwtheme:not([disabled="true"]) {
     color: inherit;
     text-shadow: inherit;
@@ -189,15 +182,17 @@ toolbarbutton[type="menu-button"][disabled="true"]:hover:active {
 .toolbarbutton-menubutton-dropmarker {
   -moz-appearance: none;
   padding: 3px 7px;
-  border: none;
+  border: 1px solid transparent;
   background-color: transparent;
   width: auto;
 }
 
-toolbarbutton:not([disabled="true"]):hover dropmarker {
-  -moz-image-region: rect(0px, 15px, 3px, 10px);
+toolbarbutton[type="menu-button"][open="true"]:not([checked="true"]):not([disabled="true"]) .toolbarbutton-menubutton-button,
+toolbarbutton[type="menu-button"]:hover:not([checked="true"]):not(:active):not([disabled="true"]) .toolbarbutton-menubutton-button,
+toolbarbutton[type="menu-button"]:hover:not([disabled="true"]) .toolbarbutton-menubutton-dropmarker {
+  border-color: ThreeDHighlight ThreeDShadow ThreeDShadow ThreeDHighlight;
 }
 
-toolbarbutton:not([disabled="true"]):hover:active dropmarker {
-  -moz-image-region: rect(0px, 20px, 3px, 15px);
+toolbarbutton[type="menu-button"][open="true"]:not([disabled="true"]) .toolbarbutton-menubutton-dropmarker {
+  border-color: ThreeDShadow ThreeDHighlight ThreeDHighlight ThreeDShadow;
 }

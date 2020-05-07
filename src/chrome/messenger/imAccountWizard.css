@@ -39,8 +39,8 @@
   height: 9px;
   background-repeat: no-repeat;
   background-position: center;
-  -moz-margin-start: 1px;
-  -moz-margin-end: 3px;
+  margin-inline-start: 1px;
+  margin-inline-end: 3px;
   background-image: url("chrome://global/skin/tree/twisty-open.png");
 }
 

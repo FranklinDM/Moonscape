@@ -40,10 +40,6 @@ body {
   pointer-events: none;
 }
 
-#categories hr {
-  border-top-color: rgba(255,255,255,0.15);
-}
-
 /** Warning container **/
 
 /* XXX: a lot of this is duplicated from info-pages.css since that stylesheet
@@ -68,22 +64,9 @@ body {
 }
 
 .title {
-  position: relative;
   border-bottom: 1px solid var(--in-content-box-border-color);
   margin-bottom: 1em;
   padding-bottom: 0.5em;
-}
-
-.title::before {
-  content: "";
-  left: -2.3em;
-  top: 0;
-  position: absolute;
-  display: block;
-  width: 1.6em;
-  height: 1.6em;
-  background: url("chrome://global/skin/icons/warning.svg") no-repeat left center;
-  background-size: 1.6em;
 }
 
 .warningBackground button {

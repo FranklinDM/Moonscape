@@ -6,13 +6,11 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 
-#warningScreen
-{
-  background-color: #C0C0C0;
+#warningScreen {
+  background-color: -moz-Dialog;
 }
 
-#warningBox
-{
+#warningBox {
   background-color: -moz-Field;
   color: -moz-FieldText;
   border: 1px solid ThreeDShadow;
@@ -23,57 +21,42 @@
   border-radius: 10px;
 }
 
-#warningInnerBox
-{
- max-width: 50em;
+#warningInnerBox {
+  max-width: 50em;
 }
 
-#warningTitle
-{
+#warningTitle {
   margin: 0 0 .6em 0;
   font-size: 160%;
   border-bottom: 1px solid ThreeDLightShadow
 }
 
-#warningText
-{
+#warningText {
   font-size: 110%;
   margin-left: 0;
 }
 
-#warningButton
-{
+#warningButton {
   margin-top: 0.6em;
 }
 
-#showWarningNextTime
-{
+#showWarningNextTime {
   margin-top: 0.6em;
 }
 
-#exclam
-{
-  list-style-image: url("chrome://global/skin/icons/warning-large.png");
-  margin-inline-end: 3em;
-}
-
-#configTreeBody::-moz-tree-cell-text(user)
-{
+#configTreeBody::-moz-tree-cell-text(user) {
   font-weight: bold;
 }
 
-#configTreeBody::-moz-tree-cell-text(locked)
-{
+#configTreeBody::-moz-tree-cell-text(locked) {
   font-style: italic;
 }
 
-#configTree 
-{  
+#configTree {
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
-#filterRow
-{
+#filterRow {
   margin-top: 5px;
 }

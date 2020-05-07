@@ -116,10 +116,6 @@ treechildren.autocomplete-treebody::-moz-tree-cell-text(selected) {
   list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
 }
 
-.ac-site-icon[selected] {
-  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
-}
-
 .ac-title {
   margin-inline-start: 0;
   margin-inline-end: 6px;

@@ -1,0 +1,11 @@
+
+#engineList treechildren::-moz-tree-image(engineName) {
+  margin-inline-end: 4px;
+  margin-inline-start: 1px;
+  width: 16px;
+  height: 16px;
+}
+
+#engineList treechildren::-moz-tree-row {
+  height: 20px;
+}

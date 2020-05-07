@@ -1,0 +1,50 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* ::::: throbber ::::: */
+#navigator-throbber,
+#throbber-box {
+  margin: 0 3px;
+}
+
+#navigator-throbber > image,
+#throbber-box > image {
+  border: 2px solid;
+  -moz-border-top-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors: ThreeDHighlight ThreeDLightShadow;
+}
+
+/* ::::: throbber icon (32px, large) ::::: */
+#navigator-throbber,
+#throbber-box {
+  list-style-image: url("chrome://global/skin/throbber/Throbber32S.png");
+}
+#navigator-throbber[busy="true"],
+#throbber-box[busy="true"] {
+  list-style-image: url("chrome://global/skin/throbber/Throbber32A.gif");
+}
+
+/* ::::: throbber icon (16px, small) ::::: */
+toolbar[iconsize="small"] #navigator-throbber,
+toolbar[iconsize="small"] #wrapper-navigator-throbber > #navigator-throbber,
+toolbar[iconsize="small"] #throbber-box {
+  list-style-image: url("chrome://global/skin/throbber/Throbber16S.png");
+}
+toolbar[iconsize="small"] #navigator-throbber[busy="true"],
+toolbar[iconsize="small"] #throbber-box[busy="true"] {
+  list-style-image: url("chrome://global/skin/throbber/Throbber16A.gif");
+}
+
+/* ::::: throbber icon (16px, menu bar) ::::: */
+.chromeclass-menubar #navigator-throbber,
+.chromeclass-menubar #throbber-box {
+  list-style-image: url("chrome://global/skin/throbber/Throbber16S.png");
+}
+
+.chromeclass-menubar #navigator-throbber[busy="true"],
+.chromeclass-menubar #throbber-box[busy="true"] {
+  list-style-image: url("chrome://global/skin/throbber/Throbber16A.gif");
+}

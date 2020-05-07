@@ -11,7 +11,7 @@
 /* ::::: checkbox ::::: */
 
 checkbox {
-  -moz-appearance: checkbox-container;
+  -moz-appearance: none;
   -moz-box-align: center;
   margin: 2px 4px;
   padding-top: 1px;
@@ -47,10 +47,6 @@ checkbox[disabled="true"] > .checkbox-check {
 }
 
 checkbox[disabled="true"] {
-  color: GrayText;
-}
-
-checkbox[disabled="true"]:-moz-system-metric(windows-classic) {
   color: ThreeDShadow;
   text-shadow: 1px 1px ThreeDHighlight;
 }
@@ -58,7 +54,7 @@ checkbox[disabled="true"]:-moz-system-metric(windows-classic) {
 /* ::::: checkmark image ::::: */
 
 .checkbox-check {
-  -moz-appearance: checkbox;
+  -moz-appearance: none;
   -moz-box-align: center;
   border: 2px solid;
   -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;

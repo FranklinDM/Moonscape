@@ -14,7 +14,7 @@ menu,
 menuitem,
 menucaption,
 .splitmenu-menuitem {
-  -moz-appearance: menuitem;
+  -moz-appearance: none;
   -moz-box-align: center;
   color: MenuText;
   font: menu;
@@ -36,14 +36,12 @@ menuitem[_moz-menuactive="true"][disabled="true"],
   text-shadow: none;
 }
 
-@media (-moz-windows-classic) {
-  menu[disabled="true"],
-  menubar > menu[disabled="true"][_moz-menuactive="true"],
-  menuitem[disabled="true"],
-  .splitmenu-menuitem[disabled="true"] {
-    color: ThreeDShadow;
-    text-shadow: 1px 1px ThreeDHighlight;
-  }
+menu[disabled="true"],
+menubar > menu[disabled="true"][_moz-menuactive="true"],
+menuitem[disabled="true"],
+.splitmenu-menuitem[disabled="true"] {
+  color: ThreeDShadow;
+  text-shadow: 1px 1px ThreeDHighlight;
 }
 
 menuitem.spell-suggestion {
@@ -62,8 +60,8 @@ menuitem.spell-suggestion {
 }
 
 .menu-text {
+  -moz-appearance: none;
   padding-inline-start: 1.45em !important;
-  -moz-appearance: menuitemtext;
 }
 
 .menu-text,
@@ -104,18 +102,17 @@ menucaption > .menu-iconic-text {
 menu.menu-iconic > .menu-iconic-left,
 menuitem.menuitem-iconic > .menu-iconic-left,
 .splitmenu-menuitem[iconic="true"] > .menu-iconic-left {
-  -moz-appearance: menuimage;
+  -moz-appearance: none;
   padding-top: 2px;
 }
 
 /* ..... menu arrow box ..... */
 
 .menu-right {
-  -moz-appearance: menuarrow;
-  margin-inline-end: -2px;
-  list-style-image: none;
-  min-width: 1.28em;
-  padding-top: 1px;
+  margin: 0 0 0 6px;
+  width: 8px;
+  list-style-image: url("chrome://global/skin/arrow/arrow-rit-sharp.gif");
+  -moz-image-region: auto;
 }
 
 /* ::::: menu/menuitems in menubar ::::: */
@@ -125,7 +122,7 @@ menubar > menu {
 }
 
 menubar > menu[_moz-menuactive="true"]:not([disabled="true"]) {
-  color: -moz-menubarhovertext;
+  color: HighlightText;
 }
 
 menubar > menu[_moz-menuactive="true"][open="true"] {
@@ -134,7 +131,7 @@ menubar > menu[_moz-menuactive="true"][open="true"] {
 
 menubar > menu:-moz-lwtheme {
   -moz-appearance: none;
-  border-color: transparent;
+  border-style: none;
 }
 
 menubar > menu:-moz-lwtheme:not([disabled="true"]) {
@@ -145,17 +142,6 @@ menubar > menu:-moz-lwtheme[_moz-menuactive="true"]:not([disabled="true"]) {
   background-color: Highlight;
   color: HighlightText !important;
   text-shadow: none;
-}
-
-@media (-moz-windows-default-theme) {
-  menubar > menu:-moz-lwtheme {
-    -moz-appearance: menuitem;
-  }
-
-  menubar > menu:-moz-lwtheme[_moz-menuactive="true"]:not([disabled="true"]) {
-    color: inherit !important;
-    text-shadow: inherit;
-  }
 }
 
 menubar > menu:-moz-window-inactive {
@@ -184,8 +170,8 @@ menupopup > menucaption {
 menu[_moz-menuactive="true"],
 menuitem[_moz-menuactive="true"],
 .splitmenu-menuitem[_moz-menuactive="true"] {
-  background-color: -moz-menuhover;
-  color: -moz-menuhovertext;
+  background-color: Highlight;
+  color: HighlightText;
 }
 
 /* ::::: menu/menuitems in menulist popups ::::: */
@@ -227,10 +213,6 @@ menulist:-moz-focusring > menupopup > menuitem[_moz-menuactive="true"] {
 
 menulist > menupopup > menuitem[_moz-menuactive="true"][disabled="true"] {
   color: GrayText;
-}
-
-menulist > menupopup > menuitem[disabled="true"]:not([_moz-menuactive="true"]):-moz-system-metric(windows-classic) {
-  color: GrayText;
   text-shadow: none;
 }
 
@@ -240,39 +222,30 @@ menulist > menupopup > :-moz-any(menuitem, menucaption):not(.menuitem-iconic) > 
 
 /* ::::: checkbox and radio menuitems ::::: */
 
-menuitem[type="checkbox"],
 menuitem[checked="true"] {
-  -moz-appearance: checkmenuitem;
-}
-menuitem[type="checkbox"] > .menu-iconic-left,
-menuitem[checked="true"] > .menu-iconic-left {
-  -moz-appearance: menucheckbox;
-  padding-top: 0px;
+  list-style-image: url("chrome://global/skin/menu/menu-check.gif");
 }
 
-menuitem[type="radio"] {
-  -moz-appearance: radiomenuitem;
-}
-menuitem[type="radio"] > .menu-iconic-left {
-  -moz-appearance: menuradio;
-  padding-top: 0px;
+menuitem[checked="true"][disabled="true"],
+menuitem[checked="true"][disabled="true"][_moz-menuactive="true"] {
+  list-style-image: url("chrome://global/skin/menu/menu-check-disabled.gif");
 }
 
-menuitem[type="checkbox"] > .menu-iconic-left > .menu-iconic-icon,
-menuitem[checked="true"] > .menu-iconic-left > .menu-iconic-icon,
-menuitem[type="radio"] > .menu-iconic-left > .menu-iconic-icon {
-  /* prevent .menu-iconic-icon from enforcing a minimal height of 16px (see bug 411064)
-     XXXzeniko apply that .menu-iconic-icon rule only for children of .menu-iconic */
-  display: none;
+menuitem[checked="true"][type="radio"] {
+  list-style-image: url("chrome://global/skin/menu/menu-radio.gif");
+}
+
+menuitem[checked="true"][type="radio"][disabled="true"],
+menuitem[checked="true"][type="radio"][disabled="true"][_moz-menuactive="true"] {
+  list-style-image: url("chrome://global/skin/menu/menu-radio-disabled.gif");
 }
 
 /* ::::: menuseparator ::::: */
 
 menuseparator {
-  -moz-appearance: menuseparator;
-  padding: 3px 1px 4px 1px;
+  -moz-appearance: none;
+  margin: 2px 3px;
   border-top: 1px solid ThreeDShadow;
-  border-bottom: 1px solid ThreeDHighlight;
 }
 
 menulist > menupopup > menuseparator {

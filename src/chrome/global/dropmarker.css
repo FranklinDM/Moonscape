@@ -3,7 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 dropmarker {
-  -moz-appearance: menulist-button;
+  -moz-appearance: none;
   width: 16px;
   height: 16px;
   -moz-box-align: center;
@@ -15,15 +15,16 @@ dropmarker {
   -moz-border-left-colors: ThreeDLightShadow ThreeDHighlight;
   background-color: -moz-Dialog;
   padding: 1px;
-  list-style-image: url("chrome://global/skin/arrow/dropmarker.gif");
-  -moz-image-region: rect(0px, 5px, 3px, 0px);
+  list-style-image: url("chrome://global/skin/arrow/arrow-dn.gif");
+  -moz-image-region: auto;
 }
 
-dropmarker:-moz-lwtheme-brighttext {
-  -moz-image-region: rect(0px, 25px, 3px, 20px);
-}
-
-dropmarker:hover:active:not([disabled="true"]) {
+/*
+  XXX: Anonymous button content 'never' receives hover/active states
+  https://bugzilla.mozilla.org/show_bug.cgi?id=257280#c46
+  dropmarker:hover:active:not([disabled="true"])
+ */
+*[open="true"]:not([disabled="true"]) dropmarker {
   -moz-border-top-colors: ThreeDShadow ThreeDFace;
   -moz-border-right-colors: ThreeDShadow ThreeDFace;
   -moz-border-bottom-colors: ThreeDShadow ThreeDFace;
@@ -35,5 +36,5 @@ dropmarker:hover:active:not([disabled="true"]) {
 }
 
 dropmarker[disabled="true"] {
-  -moz-image-region: rect(0px, 10px, 3px, 5px);
+  list-style-image: url("chrome://global/skin/arrow/arrow-dn-dis.gif");
 }
