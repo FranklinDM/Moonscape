@@ -527,37 +527,8 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   -moz-appearance: none;
 }
 
-:-moz-any(#TabsToolbar, #addon-bar) .toolbarbutton-1,
-:-moz-any(#TabsToolbar, #addon-bar) .toolbarbutton-1 > .toolbarbutton-menubutton-button,
-.tabbrowser-arrowscrollbox > .scrollbutton-up,
-.tabbrowser-arrowscrollbox > .scrollbutton-down {
-  -moz-appearance: none;
-  border-style: none;
-  padding: 0 3px;
-}
-
-#TabsToolbar .toolbarbutton-1:not([disabled]):hover,
-#TabsToolbar .toolbarbutton-1[open],
-#TabsToolbar .toolbarbutton-1 > .toolbarbutton-menubutton-button:not([disabled]):hover,
-.tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled]):hover,
-.tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled]):hover {
-  background-image: linear-gradient(var(--toolbar-highlight-bottom), var(--toolbar-highlight-top)),
-                    linear-gradient(transparent, rgba(0,0,0,.25) 30%),
-                    linear-gradient(transparent, rgba(0,0,0,.25) 30%);
-  background-position: 1px -1px, 0 -1px, 100% -1px;
-  background-size: calc(100% - 2px) 100%, 1px 100%, 1px 100%;
-  background-repeat: no-repeat;
-}
-
-#addon-bar .toolbarbutton-1:not([disabled]):hover,
-#addon-bar .toolbarbutton-1[open],
-#addon-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button:not([disabled]):hover {
-  background-image: linear-gradient(to top, transparent, rgba(0,0,0,.15)),
-                    linear-gradient(to top, transparent, rgba(0,0,0,.15) 30%),
-                    linear-gradient(to top, transparent, rgba(0,0,0,.15) 30%);
-  background-position: left, left, right;
-  background-size: auto, 1px 100%, 1px 100%;
-  background-repeat: no-repeat;
+#TabsToolbar .toolbarbutton-1 {
+  padding: 0;
 }
 
 /* ::::: primary toolbar buttons, large icons mode (24px) ::::: */
@@ -1496,11 +1467,11 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 
 #identity-box:hover:active > #page-proxy-favicon,
 #identity-box[open=true] > #page-proxy-favicon {
-  -moz-image-region: rect(0, 48px, 16px, 32px);
+  -moz-image-region: rect(0, 64px, 16px, 48px);
 }
 
 #page-proxy-favicon[pageproxystate="invalid"] {
-  opacity: 0.3;
+  -moz-image-region: rect(0, 48px, 16px, 32px);
 }
 
 /* autocomplete */
@@ -1742,30 +1713,10 @@ richlistitem[type~="action"][actiontype$="tab"][selected="true"] > .ac-url-box >
   -moz-border-top-colors: ThreeDHighlight ThreeDLightShadow;
   -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
   -moz-border-left-colors: ThreeDHighlight ThreeDLightShadow;
-
-  /* Hide the transparent top border by default */
-  margin-top: -1px;
 }
 
 .tabbrowser-tab {
   padding-inline-end: 3px;
-}
-
-/* Override the default (globally-set) tab width values; increase
-   by 2px to compensate for the transparent outer border of the tabs */
-.tabbrowser-tab:not([pinned]) {
-  max-width: 252px;
-  min-width: 102px;
-}
-
-/* When the tabs are on top and the window is maximized or in full-
-   screen mode, unhide the transparent top border of the tabs so we
-   have a 1px gap between the tabs and the top edge of the screen */
-#main-window[sizemode="maximized"][tabsontop=true] .tabbrowser-tab,
-#main-window[sizemode="maximized"][tabsontop=true] .tabs-newtab-button,
-#main-window[sizemode="fullscreen"][tabsontop=true] .tabbrowser-tab,
-#main-window[sizemode="fullscreen"][tabsontop=true] .tabs-newtab-button {
-  margin: 0 0 -1px;
 }
 
 .tabbrowser-tab:hover,
@@ -1990,30 +1941,26 @@ richlistitem[type~="action"][actiontype$="tab"][selected="true"] > .ac-url-box >
 .tabbrowser-arrowscrollbox > .scrollbutton-up,
 .tabbrowser-arrowscrollbox > .scrollbutton-down {
   list-style-image: url("chrome://browser/skin/tabbrowser/tab-arrow-left.png");
+  -moz-image-region: rect(0px, 11px, 11px, 0px); 
   margin: 0;
   padding-right: 2px;
   border-right: 2px solid transparent;
   background-origin: border-box;
 }
 
-/* Prevent the icon from being vertically stretched when we unhide
-   the transparent top border of the tabs (when the tabs are on top
-   and the window is maximized or in full-screen mode) */
-#main-window[sizemode="maximized"][tabsontop=true] .tabbrowser-arrowscrollbox > .scrollbutton-up > .toolbarbutton-icon,
-#main-window[sizemode="maximized"][tabsontop=true] .tabbrowser-arrowscrollbox > .scrollbutton-down > .toolbarbutton-icon,
-#main-window[sizemode="fullscreen"][tabsontop=true] .tabbrowser-arrowscrollbox > .scrollbutton-up > .toolbarbutton-icon,
-#main-window[sizemode="fullscreen"][tabsontop=true] .tabbrowser-arrowscrollbox > .scrollbutton-down > .toolbarbutton-icon {
-  margin-bottom: 1px;
+.tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled="true"]):hover,
+.tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled="true"]):hover {
+  -moz-image-region: rect(0px, 22px, 11px, 11px);
 }
 
-toolbar[brighttext] .tabbrowser-arrowscrollbox > .scrollbutton-up,
-toolbar[brighttext] .tabbrowser-arrowscrollbox > .scrollbutton-down {
-  list-style-image: url(chrome://browser/skin/tabbrowser/tab-arrow-left-inverted.png);
+.tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled]):hover:active,
+.tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled]):hover:active {
+  -moz-image-region: rect(0px, 44px, 11px, 33px);
 }
 
 .tabbrowser-arrowscrollbox > .scrollbutton-up[disabled],
 .tabbrowser-arrowscrollbox > .scrollbutton-down[disabled] {
-  opacity: .4;
+  -moz-image-region: rect(0px, 33px, 11px, 22px);
 }
 
 .tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-locale-dir(rtl),
@@ -2030,23 +1977,21 @@ toolbar[brighttext] .tabbrowser-arrowscrollbox > .scrollbutton-down {
   transition: none;
 }
 
-.tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled]),
-.tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled]) {
-  border-width: 0 2px 0 0;
-  border-style: solid;
-  border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill;
-}
-
-.tabs-newtab-button > .toolbarbutton-icon {
-  margin-top: -1px;
-  margin-bottom: -1px;
-}
-
 .tabs-newtab-button,
 #TabsToolbar > #new-tab-button,
 #TabsToolbar > toolbarpaletteitem > #new-tab-button {
   list-style-image: url(chrome://browser/skin/tabbrowser/newtab.png);
-  -moz-image-region: auto;
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+.tabs-newtab-button:hover,
+#TabsToolbar > #new-tab-button:hover {
+  -moz-image-region: rect(0, 32px, 16px, 16px);
+}
+
+.tabs-newtab-button:hover:active,
+#TabsToolbar > #new-tab-button:hover:active {
+  -moz-image-region: rect(0, 48px, 16px, 32px);
 }
 
 .tabs-newtab-button:-moz-lwtheme-brighttext,
@@ -2055,20 +2000,31 @@ toolbar[brighttext] .tabbrowser-arrowscrollbox > .scrollbutton-down {
   list-style-image: url(chrome://browser/skin/tabbrowser/newtab-inverted.png);
 }
 
-.tabs-newtab-button {
-/* The button has a transparent outer border, so it will appear
-   to be 2px narrower than the width we set for it here */
-  width: 30px;
-}
-
 #TabsToolbar > #new-tab-button {
-  width: 26px;
+  padding-bottom: 3px;
 }
 
 toolbar[iconsize="small"] #alltabs-button,
 #TabsToolbar > #alltabs-button {
   list-style-image: url("chrome://browser/skin/tabbrowser/alltabs.png");
-  -moz-image-region: rect(0, 14px, 16px, 0);
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+toolbar[iconsize="small"][brighttext] #alltabs-button,
+#TabsToolbar[brighttext] > #alltabs-button {
+  list-style-image: url("chrome://browser/skin/tabbrowser/alltabs-inverted.png");
+}
+
+toolbar[iconsize="small"] #alltabs-button[open="true"],
+toolbar[iconsize="small"] #alltabs-button:hover,
+#TabsToolbar > #alltabs-button[open="true"],
+#TabsToolbar > #alltabs-button:hover {
+  -moz-image-region: rect(0, 32px, 16px, 16px);
+}
+
+toolbar[iconsize="small"] #alltabs-button:hover:active,
+#TabsToolbar > #alltabs-button:hover:active {
+  -moz-image-region: rect(0, 48px, 16px, 32px);
 }
 
 toolbar[iconsize="small"] #alltabs-button[type="menu"],
@@ -2077,24 +2033,24 @@ toolbar[iconsize="small"] #alltabs-button[type="menu"],
   -moz-image-region: auto;
 }
 
-toolbar[iconsize="small"][brighttext] #alltabs-button,
-#TabsToolbar[brighttext] #alltabs-button {
-  list-style-image: url("chrome://browser/skin/tabbrowser/alltabs-inverted.png");
+toolbar[iconsize="small"][brighttext] #alltabs-button[type="menu"],
+#TabsToolbar[brighttext] > #alltabs-button[type="menu"] {
+  list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow-inverted.png");
+  -moz-image-region: auto;
 }
 
 #alltabs-button {
   list-style-image: url("chrome://browser/skin/tabbrowser/alltabs-toolbar.png");
   -moz-image-region: rect(0px, 24px, 24px, 0px);
 }
+
 #alltabs-button[open="true"],
 #alltabs-button:hover {
   -moz-image-region: rect(24px, 24px, 48px, 0px);
 }
+
 #alltabs-button:hover:active {
   -moz-image-region: rect(72px, 24px, 96px, 0px);
-}
-toolbar[iconsize="small"][brighttext] #alltabs-button {
-  list-style-image: url("chrome://browser/skin/tabbrowser/alltabs-toolbar-inverted.png");
 }
 
 #alltabs-button .toolbarbutton-menu-dropmarker {
