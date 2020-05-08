@@ -2616,8 +2616,8 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
   background-repeat: no-repeat;
 }
 
-#addon-bar > * {
-  margin: 1px;
+#addon-bar > *:not(resizer) {
+  margin: 1px 2px 1px 1px;
   border: 1px solid;
   border-color: ThreeDShadow ThreeDHighlight ThreeDHighlight ThreeDShadow;
 }
