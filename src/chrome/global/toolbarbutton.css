@@ -44,12 +44,14 @@ toolbarbutton:-moz-focusring {
 }
 
 toolbarbutton:hover:not([disabled="true"]) {
+  color: #0000FF;
   border-color: ThreeDHighlight ThreeDShadow ThreeDShadow ThreeDHighlight;
 }
 
 toolbarbutton:hover:active:not([disabled="true"]),
 toolbarbutton[open="true"]:hover,
 toolbarbutton[open="true"] {
+  color: #000080;
   border-color: ThreeDShadow ThreeDHighlight ThreeDHighlight ThreeDShadow;
   padding-top: 4px;
   padding-bottom: 2px;
