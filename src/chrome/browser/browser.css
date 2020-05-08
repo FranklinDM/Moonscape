@@ -301,15 +301,7 @@
 
 toolbarbutton.bookmark-item {
   margin: 0;
-  padding: 2px 3px;
-}
-
-toolbarbutton.bookmark-item:hover:active:not([disabled="true"]),
-toolbarbutton.bookmark-item[open="true"] {
-  padding-top: 3px;
-  padding-bottom: 1px;
-  padding-inline-start: 4px;
-  padding-inline-end: 2px;
+  padding: 0 3px;
 }
 
 .bookmark-item:not(#bookmarks-menu-button) > .toolbarbutton-icon {

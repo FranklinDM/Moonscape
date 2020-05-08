@@ -15,8 +15,8 @@ toolbarbutton {
   -moz-box-align: center;
   -moz-box-pack: center;
   margin: 0;
-  border: 1px solid transparent;
-  padding: 3px;
+  border: 2px solid transparent;
+  padding: 0 2px;
   background-color: transparent;
   color: -moz-DialogText;
 }
@@ -35,6 +35,7 @@ toolbarbutton.tabbable {
   -moz-user-focus: normal !important;
 }
 
+toolbarbutton[ring="true"],
 toolbarbutton:-moz-focusring {
   /* -moz-appearance looks redundant here but is necessary.
       Without it, the outline won't appear. */
@@ -45,18 +46,20 @@ toolbarbutton:-moz-focusring {
 
 toolbarbutton:hover:not([disabled="true"]) {
   color: #0000FF;
-  border-color: ThreeDHighlight ThreeDShadow ThreeDShadow ThreeDHighlight;
+  -moz-border-top-colors: ThreeDDarkShadow ThreeDHighlight;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors: ThreeDDarkShadow ThreeDHighlight;
 }
 
 toolbarbutton:hover:active:not([disabled="true"]),
 toolbarbutton[open="true"]:hover,
 toolbarbutton[open="true"] {
   color: #000080;
-  border-color: ThreeDShadow ThreeDHighlight ThreeDHighlight ThreeDShadow;
-  padding-top: 4px;
-  padding-bottom: 2px;
-  padding-inline-start: 4px;
-  padding-inline-end: 2px;
+  -moz-border-top-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDHighlight;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDHighlight;
+  -moz-border-left-colors: ThreeDDarkShadow ThreeDShadow;
 }
 
 toolbarbutton[disabled="true"] {
@@ -65,11 +68,10 @@ toolbarbutton[disabled="true"] {
 }
 
 toolbarbutton[checked="true"]:not([disabled="true"]) {
-  border-color: ThreeDShadow ThreeDHighlight ThreeDHighlight ThreeDShadow;
-  padding-top: 4px;
-  padding-bottom: 2px;
-  padding-inline-start: 4px;
-  padding-inline-end: 2px;
+  -moz-border-top-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDHighlight;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDHighlight;
+  -moz-border-left-colors: ThreeDDarkShadow ThreeDShadow;
   background-color: rgba(255,255,255,0.5);
   color: ButtonText;
 }
@@ -127,7 +129,7 @@ toolbarbutton[type="menu-button"][open="true"],
 toolbarbutton[type="menu-button"][disabled="true"],
 toolbarbutton[type="menu-button"][disabled="true"]:hover,
 toolbarbutton[type="menu-button"][disabled="true"]:hover:active {
-  border-style: none;
+  border-width: 1px;
   padding: 0 !important;
 }
 
@@ -135,6 +137,32 @@ toolbarbutton[type="menu-button"][disabled="true"]:hover:active {
   -moz-box-align: center;
   -moz-box-pack: center;
   -moz-box-orient: vertical;
+}
+
+.toolbarbutton-menubutton-button,
+.toolbarbutton-menubutton-dropmarker {
+  border: 1px solid transparent;
+}
+
+toolbarbutton[type="menu-button"]:hover > .toolbarbutton-menubutton-button,
+toolbarbutton[type="menu-button"][buttonover="true"] > .toolbarbutton-menubutton-button,
+toolbarbutton[type="menu-button"]:hover > .toolbarbutton-menubutton-dropmarker,
+toolbarbutton[type="menu-button"][buttonover="true"] > .toolbarbutton-menubutton-dropmarker,
+toolbarbutton[type="menu-button"][open="true"] > .toolbarbutton-menubutton-button {
+  -moz-border-top-colors: ThreeDHighlight;
+  -moz-border-right-colors: ThreeDShadow;
+  -moz-border-bottom-colors: ThreeDShadow;
+  -moz-border-left-colors: ThreeDHighlight;
+}
+
+toolbarbutton[type="menu-button"][buttondown="true"] > .toolbarbutton-menubutton-button,
+toolbarbutton[type="menu-button"]:hover:active > .toolbarbutton-menubutton-dropmarker,
+toolbarbutton[type="menu-button"][buttondown="true"] > .toolbarbutton-menubutton-dropmarker,
+toolbarbutton[type="menu-button"][open="true"] > .toolbarbutton-menubutton-dropmarker {
+  -moz-border-top-colors: ThreeDShadow;
+  -moz-border-right-colors: ThreeDHighlight;
+  -moz-border-bottom-colors: ThreeDHighlight;
+  -moz-border-left-colors: ThreeDShadow;
 }
 
 /* ::::: toolbarbutton badged ::::: */
@@ -187,14 +215,4 @@ toolbarbutton[type="menu-button"][disabled="true"]:hover:active {
   border: 1px solid transparent;
   background-color: transparent;
   width: auto;
-}
-
-toolbarbutton[type="menu-button"][open="true"]:not([checked="true"]):not([disabled="true"]) .toolbarbutton-menubutton-button,
-toolbarbutton[type="menu-button"]:hover:not([checked="true"]):not(:active):not([disabled="true"]) .toolbarbutton-menubutton-button,
-toolbarbutton[type="menu-button"]:hover:not([disabled="true"]) .toolbarbutton-menubutton-dropmarker {
-  border-color: ThreeDHighlight ThreeDShadow ThreeDShadow ThreeDHighlight;
-}
-
-toolbarbutton[type="menu-button"][open="true"]:not([disabled="true"]) .toolbarbutton-menubutton-dropmarker {
-  border-color: ThreeDShadow ThreeDHighlight ThreeDHighlight ThreeDShadow;
 }
