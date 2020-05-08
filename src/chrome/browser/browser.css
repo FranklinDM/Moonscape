@@ -2112,6 +2112,58 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
   -moz-binding: url("chrome://global/content/bindings/toolbarbutton.xml#menu");
 }
 
+/* Bookmarks menu button */
+#PersonalToolbar #bookmarks-menu-button {
+  list-style-image: url("chrome://browser/skin/places/bookmark-menu.png");
+  -moz-image-region: rect(0px 32px 16px 0px);
+}
+
+#PersonalToolbar #bookmarks-menu-button[disabled="true"] {
+  -moz-image-region: rect(16px 32px 32px 0px);
+}
+
+#PersonalToolbar #bookmarks-menu-button:hover:not([open]) {
+  -moz-image-region: rect(32px 32px 48px 0px);
+}
+
+#PersonalToolbar #bookmarks-menu-button:hover:active:not([open]) {
+  -moz-image-region: rect(48px 32px 64px 0px);
+}
+
+#PersonalToolbar[mode="icons"] #bookmarks-menu-button .toolbarbutton-text {
+  display: none !important;
+}
+
+#PersonalToolbar[mode="icons"] #bookmarks-menu-button .toolbarbutton-icon {
+  margin-inline-end: 0;
+}
+
+/* History menu button */
+#PersonalToolbar #history-menu-button {
+  list-style-image: url("chrome://browser/skin/places/history-menu.png");
+  -moz-image-region: rect(0px 32px 16px 0px);
+}
+
+#PersonalToolbar #history-menu-button[disabled="true"] {
+  -moz-image-region: rect(16px 32px 32px 0px);
+}
+
+#PersonalToolbar #history-menu-button:hover:not([open]) {
+  -moz-image-region: rect(32px 32px 48px 0px);
+}
+
+#PersonalToolbar #history-menu-button:hover:active:not([open]) {
+  -moz-image-region: rect(48px 32px 64px 0px);
+}
+
+#PersonalToolbar #history-menu-button .toolbarbutton-menu-dropmarker {
+  display: none;
+}
+
+#PersonalToolbar[mode="icons"] #history-menu-button .toolbarbutton-icon {
+  margin-inline-end: 0;
+}
+
 /* ::::: Identity Indicator Styling ::::: */
 
 /* Popup Icons */
