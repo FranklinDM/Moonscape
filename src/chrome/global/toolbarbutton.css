@@ -211,7 +211,7 @@ toolbarbutton[type="menu-button"][open="true"] > .toolbarbutton-menubutton-dropm
 
 .toolbarbutton-menubutton-dropmarker {
   -moz-appearance: none;
-  padding: 3px 7px;
+  padding: 0 2px;
   border: 1px solid transparent;
   background-color: transparent;
   width: auto;
