@@ -30,29 +30,6 @@ toolbar[iconsize="large"] #qfb-show-filter-bar[disabled="true"] {
 
 /* ::::: QFB button on main toolbar ::::: */
 
-#mail-toolbox #qfb-show-filter-bar {
-  margin: 0;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-inline-start: 4px;
-  padding-inline-end: 5px;
-}
-
-#mail-toolbox #qfb-show-filter-bar[open="true"],
-#mail-toolbox #qfb-show-filter-bar:hover:active {
-  padding-top: 6px;
-  padding-bottom: 5px;
-  padding-inline-start: 5px;
-  padding-inline-end: 4px;
-}
-
-#mail-toolbox #qfb-show-filter-bar[checked="true"] {
-  padding-top: 6px !important;
-  padding-bottom: 5px !important;
-  padding-inline-start: 5px !important;
-  padding-inline-end: 4px !important;
-}
-
 #mail-toolbox #qfb-show-filter-bar[style="visibility: hidden;"] {
   color: GrayText;
   text-shadow: none;
