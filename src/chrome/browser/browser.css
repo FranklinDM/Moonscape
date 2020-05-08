@@ -2091,6 +2091,27 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
   background-color: Highlight;
 }
 
+/* ::::: Personal Toolbar Styling ::::: */
+
+/* Enforce horizontal toolbar button text */
+
+#PersonalToolbar .toolbarbutton-1,
+#PersonalToolbar .toolbarbutton-1[type="menu-button"] > .toolbarbutton-menubutton-button {
+  -moz-box-orient: horizontal;
+}
+
+#PersonalToolbar[mode="full"] .toolbarbutton-1 .toolbarbutton-icon {
+  padding-inline-end: 5px;
+}
+
+#PersonalToolbar[mode="full"] deck .toolbarbutton-text {
+  text-align: start;
+}
+
+#PersonalToolbar[mode="full"] .toolbarbutton-1[type="menu"] {
+  -moz-binding: url("chrome://global/content/bindings/toolbarbutton.xml#menu");
+}
+
 /* ::::: Identity Indicator Styling ::::: */
 
 /* Popup Icons */
