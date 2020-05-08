@@ -1524,15 +1524,15 @@ richlistitem[type~="action"][actiontype$="tab"][selected="true"] > .ac-url-box >
 }
 
 #urlbar-reload-button {
-  -moz-image-region: rect(0, 14px, 14px, 0);
+  -moz-image-region: rect(0, 16px, 16px, 0);
 }
 
 #urlbar-reload-button:not([disabled]):hover {
-  -moz-image-region: rect(14px, 14px, 28px, 0);
+  -moz-image-region: rect(16px, 16px, 32px, 0);
 }
 
 #urlbar-reload-button:not([disabled]):hover:active {
-  -moz-image-region: rect(28px, 14px, 42px, 0);
+  -moz-image-region: rect(32px, 16px, 48px, 0);
 }
 
 #urlbar-reload-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
@@ -1541,17 +1541,17 @@ richlistitem[type~="action"][actiontype$="tab"][selected="true"] > .ac-url-box >
 
 #go-button,
 #urlbar-go-button {
-  -moz-image-region: rect(0, 42px, 14px, 28px);
+  -moz-image-region: rect(0, 48px, 16px, 32px);
 }
 
 #go-button:hover,
 #urlbar-go-button:hover {
-  -moz-image-region: rect(14px, 42px, 28px, 28px);
+  -moz-image-region: rect(16px, 48px, 32px, 32px);
 }
 
 #go-button:hover:active,
 #urlbar-go-button:hover:active {
-  -moz-image-region: rect(28px, 42px, 42px, 28px);
+  -moz-image-region: rect(32px, 48px, 48px, 32px);
 }
 
 #go-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
@@ -1560,15 +1560,15 @@ richlistitem[type~="action"][actiontype$="tab"][selected="true"] > .ac-url-box >
 }
 
 #urlbar-stop-button {
-  -moz-image-region: rect(0, 28px, 14px, 14px);
+  -moz-image-region: rect(0, 32px, 16px, 16px);
 }
 
 #urlbar-stop-button:not([disabled]):hover {
-  -moz-image-region: rect(14px, 28px, 28px, 14px);
+  -moz-image-region: rect(16px, 32px, 32px, 16px);
 }
 
 #urlbar-stop-button:hover:active {
-  -moz-image-region: rect(28px, 28px, 42px, 14px);
+  -moz-image-region: rect(32px, 32px, 48px, 16px);
 }
 
 /* popup blocker button */
