@@ -143,6 +143,14 @@ toolbar[mode="text"] .toolbarbutton-text {
   margin: 3px 5px !important;
 }
 
+browser {
+  border: 2px solid;
+  -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
+  -moz-border-right-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow;
+}
+
 /* ::::: miscellaneous formatting ::::: */
 
 :root:-moz-lwtheme,
