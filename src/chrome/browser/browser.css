@@ -1402,6 +1402,7 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 /* Location bar dropmarker */
 .urlbar-history-dropmarker {
   margin-inline-end: -2px;
+  -moz-box-ordinal-group: 100;
 }
 
 /* page proxy icon */
