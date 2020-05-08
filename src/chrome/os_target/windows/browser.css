@@ -16,7 +16,8 @@
 }
 
 #main-window[privatebrowsingmode=temporary] #appmenu-button > .button-box > .box-inherit > .button-icon {
-  list-style-image: url("chrome://browser/skin/privatebrowsing-light.png");
-  width: 20px;
+  list-style-image: url("chrome://browser/skin/Privacy-16.png");
+  width: 16px;
   height: 16px;
+  margin-inline-end: 4px;
 }
