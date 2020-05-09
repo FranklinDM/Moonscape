@@ -22,10 +22,18 @@ progressmeter {
   min-height: 15px;
 }
 
+progressmeter[mode="undetermined"] .progress-bar {
+  background-color: transparent;
+  background-image: url("chrome://global/skin/progressmeter/indeterminate.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: -moz-crisp-edges;
+}
+
 .progress-bar {
   -moz-appearance: none;
   min-width: 0px;
-  background-color: darkblue;
+  background-color: darkgray;
 }
 
 /* ::::: statusbar progressmeter ::::: */

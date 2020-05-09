@@ -119,13 +119,13 @@ splitter.status4evar-status-splitter:not(:hover) {
  * General progress
  */
 
-#status4evar-progress-bar[s4estyle="true"] > * {
-  border: none;
-}
-
 #status4evar-progress-bar > .progress-remainder {
   background-image: none;
   background-color: transparent;
+}
+
+#status4evar-progress-bar[s4estyle="true"] > * {
+  border: none;
 }
 
 #status4evar-progress-bar[s4estyle="true"] > .progress-bar {
@@ -135,6 +135,18 @@ splitter.status4evar-status-splitter:not(:hover) {
 #status4evar-progress-bar[s4estyle="true"][value="0"] > .progress-bar,
 #status4evar-progress-bar[s4estyle="true"][value="100"] > .progress-bar {
   border-right: none;
+}
+
+#status4evar-progress-bar:not([s4estyle="true"]):not([collapsed="true"]) {
+  background-color: transparent;
+  background-image: url("chrome://global/skin/progressmeter/indeterminate.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: -moz-crisp-edges;
+}
+
+#status4evar-progress-bar:not([s4estyle="true"]) > .progress-bar {
+  background-color: transparent;
 }
 
 /*
