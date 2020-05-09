@@ -48,7 +48,6 @@ tree.plain {
 
 #menubar-items {
   -moz-box-orient: vertical; /* for flex hack */
-  margin-bottom: 1px;
 }
 
 #menubar-items > menubar {
