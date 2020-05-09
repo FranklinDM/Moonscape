@@ -28,9 +28,9 @@
 }
 
 /* ::::: throbber icon (16px, small) ::::: */
-toolbar[iconsize="small"] #navigator-throbber,
-toolbar[iconsize="small"] #wrapper-navigator-throbber > #navigator-throbber,
-toolbar[iconsize="small"] #throbber-box {
+toolbar[iconsize="small"]:not([mode="full"]) #navigator-throbber,
+toolbar[iconsize="small"]:not([mode="full"]) #wrapper-navigator-throbber > #navigator-throbber,
+toolbar[iconsize="small"]:not([mode="full"]) #throbber-box {
   list-style-image: url("chrome://global/skin/throbber/Throbber16S.png");
 }
 toolbar[iconsize="small"] #navigator-throbber[busy="true"],
