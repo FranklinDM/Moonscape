@@ -144,21 +144,17 @@ toolbarbutton[type="menu-button"][disabled="true"]:hover:active {
   border: 1px solid transparent;
 }
 
-toolbarbutton[type="menu-button"]:hover > .toolbarbutton-menubutton-button,
-toolbarbutton[type="menu-button"][buttonover="true"] > .toolbarbutton-menubutton-button,
-toolbarbutton[type="menu-button"]:hover > .toolbarbutton-menubutton-dropmarker,
-toolbarbutton[type="menu-button"][buttonover="true"] > .toolbarbutton-menubutton-dropmarker,
-toolbarbutton[type="menu-button"][open="true"] > .toolbarbutton-menubutton-button {
+toolbarbutton[type="menu-button"]:not([disabled="true"]):hover > .toolbarbutton-menubutton-button,
+toolbarbutton[type="menu-button"]:not([disabled="true"]):hover > .toolbarbutton-menubutton-dropmarker,
+toolbarbutton[type="menu-button"]:not([disabled="true"])[open="true"] > .toolbarbutton-menubutton-button {
   -moz-border-top-colors: ThreeDHighlight;
   -moz-border-right-colors: ThreeDShadow;
   -moz-border-bottom-colors: ThreeDShadow;
   -moz-border-left-colors: ThreeDHighlight;
 }
 
-toolbarbutton[type="menu-button"][buttondown="true"] > .toolbarbutton-menubutton-button,
-toolbarbutton[type="menu-button"]:hover:active > .toolbarbutton-menubutton-dropmarker,
-toolbarbutton[type="menu-button"][buttondown="true"] > .toolbarbutton-menubutton-dropmarker,
-toolbarbutton[type="menu-button"][open="true"] > .toolbarbutton-menubutton-dropmarker {
+toolbarbutton[type="menu-button"]:not([disabled="true"]):hover:active > .toolbarbutton-menubutton-dropmarker,
+toolbarbutton[type="menu-button"]:not([disabled="true"])[open="true"] > .toolbarbutton-menubutton-dropmarker {
   -moz-border-top-colors: ThreeDShadow;
   -moz-border-right-colors: ThreeDHighlight;
   -moz-border-bottom-colors: ThreeDHighlight;
