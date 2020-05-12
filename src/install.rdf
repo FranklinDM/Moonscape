@@ -19,7 +19,7 @@
         <em:skinnable>true</em:skinnable>
         
         <!-- internalName must match the 'skinname' part of the relevant chrome.manifest directives in order for those mappings to be associated with this skin. -->
-        <em:internalName>moonscape</em:internalName>
+        <em:internalName>moonscape-classic</em:internalName>
         
         <!-- Target Application(s) this extension can install into, with minimum and maximum supported versions. -->
         <em:targetApplication>
