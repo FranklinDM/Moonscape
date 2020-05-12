@@ -1635,11 +1635,10 @@ richlistitem[type~="action"][actiontype$="tab"][selected="true"] > .ac-url-box >
 }
 
 .tabbrowser-tab[pinned][titlechanged]:not([selected="true"]) {
-  background-image: radial-gradient(circle farthest-corner at 50% 3px, rgba(255,255,255,1) 3%, rgba(186,221,251,.75) 40%, rgba(127,179,255,.5) 80%, rgba(127,179,255,.25));
+  background-color: rgba(186, 221, 251, 0.75);
 }
 .tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):hover {
-  background-image: linear-gradient(hsla(0,0%,100%,.4), hsla(0,0%,75%,.4) 80%),
-                    radial-gradient(circle farthest-corner at 50% 3px, rgba(255,255,255,1) 3%, rgba(186,221,251,.75) 40%, rgba(127,179,255,.5) 80%, rgba(127,179,255,.25));
+  background-color: rgb(186, 221, 251);
 }
 
 .tabs-newtab-button {
