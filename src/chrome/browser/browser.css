@@ -465,12 +465,12 @@ toolbar[brighttext] .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
   margin-inline-end: 0;
 }
 
-toolbar[mode=full] .toolbarbutton-1:not([type=menu-button]) {
+.toolbar-primary[mode=full] .toolbarbutton-1:not([type=menu-button]) {
   -moz-box-orient: vertical;
 }
 
-toolbar[mode=full] .toolbarbutton-1,
-toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
+.toolbar-primary[mode=full] .toolbarbutton-1,
+.toolbar-primary[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   min-width: 57px;
 }
 
@@ -2092,77 +2092,77 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
   background-color: Highlight;
 }
 
-/* ::::: Personal Toolbar Styling ::::: */
+/* ::::: Non-primary Toolbar Styling ::::: */
 
-/* Enforce horizontal toolbar button text */
+/* Enforce horizontal toolbar button text on the bookmarks toolbar */
 
-#PersonalToolbar .toolbarbutton-1,
-#PersonalToolbar .toolbarbutton-1[type="menu-button"] > .toolbarbutton-menubutton-button {
+toolbar:not(.toolbar-primary) .toolbarbutton-1,
+toolbar:not(.toolbar-primary) .toolbarbutton-1[type="menu-button"] > .toolbarbutton-menubutton-button {
   -moz-box-orient: horizontal;
 }
 
-#PersonalToolbar[mode="full"] .toolbarbutton-1 .toolbarbutton-icon {
+toolbar:not(.toolbar-primary)[mode="full"] .toolbarbutton-1 .toolbarbutton-icon {
   padding-inline-end: 5px;
 }
 
-#PersonalToolbar[mode="full"] deck .toolbarbutton-text {
+toolbar:not(.toolbar-primary)[mode="full"] deck .toolbarbutton-text {
   text-align: start;
 }
 
-#PersonalToolbar[mode="full"] .toolbarbutton-1[type="menu"] {
+toolbar:not(.toolbar-primary) #bookmarks-menu-button .toolbarbutton-menu-dropmarker,
+toolbar:not(.toolbar-primary) #history-menu-button .toolbarbutton-menu-dropmarker {
+  display: none;
+}
+
+toolbar:not(.toolbar-primary)[mode="icons"] #bookmarks-menu-button .toolbarbutton-icon,
+toolbar:not(.toolbar-primary)[mode="icons"] #history-menu-button .toolbarbutton-icon {
+  margin-inline-end: 0;
+}
+
+toolbar:not(.toolbar-primary)[mode="full"] .toolbarbutton-1[type="menu"] {
   -moz-binding: url("chrome://global/content/bindings/toolbarbutton.xml#menu");
 }
 
 /* Bookmarks menu button */
-#PersonalToolbar #bookmarks-menu-button {
+toolbar:not(.toolbar-primary) #bookmarks-menu-button {
   list-style-image: url("chrome://browser/skin/places/bookmark-menu.png");
   -moz-image-region: rect(0px 32px 16px 0px);
 }
 
-#PersonalToolbar #bookmarks-menu-button[disabled="true"] {
+toolbar:not(.toolbar-primary) #bookmarks-menu-button[disabled="true"] {
   -moz-image-region: rect(16px 32px 32px 0px);
 }
 
-#PersonalToolbar #bookmarks-menu-button:hover:not([open]) {
+toolbar:not(.toolbar-primary) #bookmarks-menu-button[open="true"],
+toolbar:not(.toolbar-primary) #bookmarks-menu-button:not([disabled="true"]):hover {
   -moz-image-region: rect(32px 32px 48px 0px);
 }
 
-#PersonalToolbar #bookmarks-menu-button:hover:active:not([open]) {
+toolbar:not(.toolbar-primary) #bookmarks-menu-button:not([disabled="true"]):hover:active {
   -moz-image-region: rect(48px 32px 64px 0px);
 }
 
-#PersonalToolbar[mode="icons"] #bookmarks-menu-button .toolbarbutton-text {
+toolbar:not(.toolbar-primary)[mode="icons"] #bookmarks-menu-button .toolbarbutton-text {
   display: none !important;
 }
 
-#PersonalToolbar[mode="icons"] #bookmarks-menu-button .toolbarbutton-icon {
-  margin-inline-end: 0;
-}
-
 /* History menu button */
-#PersonalToolbar #history-menu-button {
+toolbar:not(.toolbar-primary) #history-menu-button {
   list-style-image: url("chrome://browser/skin/places/history-menu.png");
   -moz-image-region: rect(0px 32px 16px 0px);
 }
 
-#PersonalToolbar #history-menu-button[disabled="true"] {
+toolbar:not(.toolbar-primary) #history-menu-button[disabled="true"] {
   -moz-image-region: rect(16px 32px 32px 0px);
 }
 
-#PersonalToolbar #history-menu-button:hover:not([open]) {
+toolbar:not(.toolbar-primary) #history-menu-button[open="true"],
+toolbar:not(.toolbar-primary) #history-menu-button:not([disabled="true"]):hover {
   -moz-image-region: rect(32px 32px 48px 0px);
 }
 
-#PersonalToolbar #history-menu-button:hover:active:not([open]) {
+toolbar:not(.toolbar-primary) #history-menu-button:not([disabled="true"]):hover:active {
   -moz-image-region: rect(48px 32px 64px 0px);
-}
-
-#PersonalToolbar #history-menu-button .toolbarbutton-menu-dropmarker {
-  display: none;
-}
-
-#PersonalToolbar[mode="icons"] #history-menu-button .toolbarbutton-icon {
-  margin-inline-end: 0;
 }
 
 /* ::::: Identity Indicator Styling ::::: */
