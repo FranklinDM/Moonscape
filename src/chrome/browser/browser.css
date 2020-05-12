@@ -1265,7 +1265,7 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 
 .searchbar-engine-button,
 .search-go-container {
-  padding: 2px 2px;
+  padding: 1px 2px;
 }
 
 .urlbar-icon:hover {
@@ -1304,7 +1304,7 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 /* identity box */
 
 #identity-box {
-  padding: 2px;
+  padding: 1px 2px;
   font-size: .9em;
 }
 
