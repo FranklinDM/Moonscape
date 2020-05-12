@@ -1,0 +1,36 @@
+/******************************************************************************
+ * Title:          Add scrollbars to all Bookmark menus in FF3 & FF4+
+ * By:             Mark S. Baines
+ * FF4 Update by:  Michael Walden
+ * Last Updated:   2013-09-12
+ * Source:         http://Linnhe.net/firefox/chrome.html
+ *                  or
+ *                 http://www.Linnhe2.free-online.co.uk/firefox/chrome.html
+ *
+ * This places a scrollbar on each of the Bookmarks menus, meaning faster and
+ * easier access to long lists of items.  Change the "max-height" and "width"
+ * numbers to suit.  The "width" statement keeps the menus the same width and
+ * stops them resizing to their contents.  Delete or change to "min-width"
+ * instead if you want menus to have a minimum width.  Changing "max-height"
+ * isn't really necessary, it depends if you want long menus to span the
+ * full height of your screen.
+ **/
+#appmenu_bookmarksPopup menupopup, /* Application Menu Bookmarks */
+#bookmarksMenuPopup menupopup,     /* Menu Bar Bookmarks */
+#BMB_bookmarksPopup menupopup,     /* Bookmarks menu button */
+#personal-bookmarks menupopup {    /* Bookmarks toolbar folders */
+  max-height: 750px !important;
+  width: 250px !important;
+}
+#appmenu_bookmarksPopup autorepeatbutton,
+#bookmarksMenuPopup autorepeatbutton,
+#BMB_bookmarksPopup autorepeatbutton,
+#personal-bookmarks autorepeatbutton {
+  display: none !important;
+}
+#appmenu_bookmarksPopup scrollbox,
+#bookmarksMenuPopup scrollbox,
+#BMB_bookmarksPopup scrollbox,
+#personal-bookmarks scrollbox {
+  overflow-y: auto !important;
+}

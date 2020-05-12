@@ -1,0 +1,23 @@
+/**************************************************************************
+ * List all tabs button on tab bar - Mozilla, SeaMonkey style
+ * By: Michael Walden
+ **/
+#TabsToolbar #alltabs-button,
+#TabsToolbar toolbarpaletteitem > #alltabs-button,
+#TabsToolbar #alltabs-button[open="true"],
+#TabsToolbar #alltabs-button:hover[open="true"] {
+  list-style-image: url("chrome://browser/skin/moonscape/img/mozilla-tab-list.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+}
+#TabsToolbar #alltabs-button:hover {
+  -moz-image-region: rect(0px, 32px, 16px, 16px) !important;
+}
+#TabsToolbar #new-tab-button[disabled="true"] {
+  -moz-image-region: rect(0px, 48px, 16px, 32px) !important;
+}
+#TabsToolbar #alltabs-button:hover:active {
+  -moz-image-region: rect(0px, 64px, 16px, 48px) !important;
+}
+#TabsToolbar #alltabs-button {
+  width: 26px !important;
+}

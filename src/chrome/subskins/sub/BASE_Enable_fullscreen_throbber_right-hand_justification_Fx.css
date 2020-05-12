@@ -1,0 +1,8 @@
+/**************************************************************************
+ * Enable fullscreen throbber right-hand justification
+ * Allow the throbber to go to the right end of the fullscreen toolbar.
+ * By: Michael Walden
+ **/
+#fullscreenflex {
+  display: none !important;
+}

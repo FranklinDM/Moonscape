@@ -1,0 +1,8 @@
+/**************************************************************************
+ * Enable fullscreen close button hover and active state outline
+ * By: Michael Walden
+ **/
+#close-button {
+  border-style: solid !important;
+  margin: 0px !important;
+}

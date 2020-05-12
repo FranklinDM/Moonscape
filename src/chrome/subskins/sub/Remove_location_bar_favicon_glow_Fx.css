@@ -1,0 +1,7 @@
+/**************************************************************************
+ * Remove location bar favicon glow
+ * By: Michael Walden
+ **/
+#page-proxy-stack {
+  background: transparent url("") !important;
+}

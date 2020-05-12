@@ -5,15 +5,13 @@
 /* ===== tree.css ===================================================
   == Styles used by the XUL outline element.
   ======================================================================= */
-  
-/* Tree-connecting lines default subskin */
-@import url("chrome://browser/skin/moonscape/sub/Enable_tree_connecting_lines_-_dotted_Fx.css");
-  
+
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 /* ::::: tree ::::: */
 
 tree {
+  -moz-appearance: none;
   margin: 0px 4px;
   border: 2px solid;
   -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
@@ -22,13 +20,12 @@ tree {
   -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow;
   background-color: -moz-Field;
   color: -moz-FieldText;
-  -moz-appearance: listbox;
 }
 
 /* ::::: tree focusring ::::: */
 
 .focusring > .tree-stack > .tree-rows > .tree-bodybox {
-  border: 1px solid transparent;  
+  border: 1px solid transparent;
 }
 
 .focusring:-moz-focusring > .tree-stack > .tree-rows > .tree-bodybox {
@@ -147,6 +144,8 @@ tree[seltype="cell"] > treechildren::-moz-tree-line,
 tree[seltype="text"] > treechildren::-moz-tree-line,
 treechildren::-moz-tree-line {
   border: 1px dotted ThreeDShadow;
+  visibility: visible;
+  border-style: dotted;
 }
 
 tree[seltype="cell"] > treechildren::-moz-tree-line(active, selected, focus),
@@ -195,10 +194,6 @@ treechildren::-moz-tree-progressmeter {
   color: ThreeDShadow;
 }
 
-treechildren::-moz-tree-progressmeter(progressUndetermined) {
-  list-style-image: url("chrome://global/skin/progressmeter/progressmeter-busy.gif");
-}
-
 treechildren::-moz-tree-cell-text(progressmeter) {
   margin: 2px 4px;
 }
@@ -207,7 +202,7 @@ treechildren::-moz-tree-cell-text(progressmeter) {
 
 treecol,
 treecolpicker {
-  -moz-appearance: treeheadercell;
+  -moz-appearance: none;
   -moz-box-align: center;
   -moz-box-pack: center;
   border: 2px solid;
@@ -239,9 +234,7 @@ treecol[hideheader="true"] {
 treecol:hover:active,
 treecolpicker:hover:active {
   border-top: 2px solid;
-  border-right: 1px solid;
   border-bottom: 1px solid;
-  border-left: 2px solid;
   -moz-border-top-colors: ThreeDShadow -moz-Dialog;
   -moz-border-right-colors: ThreeDShadow;
   -moz-border-bottom-colors: ThreeDShadow;
@@ -249,14 +242,14 @@ treecolpicker:hover:active {
   padding-top: 1px;
   padding-bottom: 0px;
   padding-inline-start: 5px;
-  padding-inline-end: 4px;
+  padding-inline-end: 3px;
 }
 
 .treecol-image:hover:active {
   padding-top: 1px;
   padding-bottom: 0px;
   padding-inline-start: 2px;
-  padding-inline-end: 1px;
+  padding-inline-end: 0px;
 }
 
 /* ::::: column drag and drop styles ::::: */
@@ -298,16 +291,8 @@ treecol:not([hideheader="true"]) > .treecol-sortdirection[sortDirection="ascendi
   list-style-image: url("chrome://global/skin/tree/sort-asc.png");
 }
 
-treecol:not([hideheader="true"]) > .treecol-sortdirection[sortDirection="ascending"]:-moz-system-metric(windows-classic) {
-  list-style-image: url("chrome://global/skin/tree/sort-asc-classic.png");
-}
-
 treecol:not([hideheader="true"]) > .treecol-sortdirection[sortDirection="descending"] {
   list-style-image: url("chrome://global/skin/tree/sort-dsc.png");
-}
-
-treecol:not([hideheader="true"]) > .treecol-sortdirection[sortDirection="descending"]:-moz-system-metric(windows-classic) {
-  list-style-image: url("chrome://global/skin/tree/sort-dsc-classic.png");
 }
 
 /* ::::: column picker :::::  */
@@ -326,12 +311,15 @@ treechildren::-moz-tree-twisty {
 }
 
 treechildren::-moz-tree-twisty(open) {
-  width: 9px; /* The image's width is 9 pixels */
   list-style-image: url("chrome://global/skin/tree/twisty-open.png");
 }
 
 treechildren::-moz-tree-indentation {
-  width: 18px;
+  width: 12px;
+}
+
+treechildren::-moz-tree-twisty {
+  padding-inline-end: 1px;
 }
 
 /* ::::: gridline style ::::: */

@@ -375,8 +375,6 @@
 
 .addon {
   color: black;
-  border-top: 1x solid;
-  -moz-border-top-colors: ThreeDShadow;
   border-bottom: 1px solid;
   -moz-border-bottom-colors: ThreeDShadow;
   padding: 5px;
@@ -560,11 +558,7 @@
   color: #888A8B;
 }
 
-.addon-view[notification="warning"][native="false"] {
-  background-color: rgba(255, 128, 0, 0.04);
-}
-
-.addon-view[notification="warning"] {
+.addon-view[notification="warning"]:not([native="false"]) {
   background-color: rgb(255, 255, 224);
 }
 
@@ -819,8 +813,7 @@ setting {
 }
 
 #detail-view[active="false"]:not([pending]):not([notification]) {
-  background-image: linear-gradient(rgba(135, 135, 135, 0.1),
-                                    rgba(135, 135, 135, 0));
+  background-color: rgba(135, 135, 135, 0.1);
 }
 
 setting[first-row="true"] {

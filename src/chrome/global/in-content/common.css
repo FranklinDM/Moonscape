@@ -6,9 +6,9 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 *|*:root {
-  --in-content-page-color: #000;
-  --in-content-page-background: rgb(192, 192, 192);
-  --in-content-text-color: #333;
+  --in-content-page-color: -moz-DialogText;
+  --in-content-page-background: -moz-Dialog;
+  --in-content-text-color: -moz-DialogText;
   --in-content-selected-text: #fff;
   --in-content-header-border-color: #c8c8c8;
   --in-content-box-background: #fff;
@@ -24,7 +24,7 @@
   --in-content-category-border-focus: 1px dotted #fff;
   --in-content-tab-color: #424f5a;
   --in-content-table-border-dark-color: #d1d1d1;
-  --in-content-table-header-background: #0095dd;
+  --in-content-table-header-background: ThreeDShadow;
 }
 
 html|html,
@@ -56,27 +56,30 @@ xul|caption > xul|label {
 }
 
 *|*.main-content {
-  padding-top: 40px;
-  padding-inline-end: 44px; /* compensate the 4px margin of child elements */
-  padding-bottom: 48px;
-  padding-inline-start: 5px;
+  background-color: -moz-dialog;
+  color: -moz-DialogText;
+  
+  margin-top: 40px;
+  margin-inline-end: 1.2em;
+  margin-bottom: 48px;
+  margin-inline-start: 5px;
+  padding: 15px;
+  
   overflow: auto;
-}
 
-xul|prefpane > xul|*.content-box {
-  overflow: visible;
-}
-
-*|*.panel {
-  padding: 5px 15px;
   border: 2px solid;
-  max-width: unset !important;
   -moz-border-top-colors: ThreeDHighlight ThreeDLightShadow;
   -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
   -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
   -moz-border-left-colors: ThreeDHighlight ThreeDLightShadow;
-  background-color: -moz-dialog;
-  color: -moz-DialogText;
+}
+
+*|*.panel {
+  max-width: unset !important;  
+}
+
+xul|prefpane > xul|*.content-box {
+  overflow: visible;
 }
 
 /* groupboxes */
@@ -149,6 +152,31 @@ xul|*.tab-text {
   line-height: 22px;
 }
 
+/* Buttons, menulists, and textboxes */
+
+*|button,
+html|select,
+xul|colorpicker[type="button"],
+xul|menulist,
+html|input[type="text"],
+html|textarea,
+xul|textbox {
+  -moz-appearance: none;
+}
+
+/* Checkboxes and radio buttons */
+
+html|*.toggle-container-with-text {
+  display: flex;
+  align-items: center;
+}
+
+xul|checkbox,
+input[type="checkbox"] {
+  -moz-appearance: none;
+}
+
+
 /* Category List */
 
 *|*#categories {
@@ -193,10 +221,6 @@ xul|*.tab-text {
   padding-inline-start: 9px;
   margin: 0;
   -moz-user-select: none;
-}
-
-*|*.category[selected] .category-name {
-  font-weight: bold;
 }
 
 *|*.category-icon {

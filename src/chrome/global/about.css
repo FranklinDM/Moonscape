@@ -3,7 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 html {
-  background: #C0C0C0;
+  background: -moz-Dialog;
   padding: 0 1em;
   font: message-box;
 }
@@ -26,7 +26,6 @@ body {
 }
 
 #aboutLogoContainer {
-  border: 1px solid ThreeDLightShadow;
   width: 300px;
   margin: 0 auto;
   margin-bottom: 2em;

@@ -59,12 +59,12 @@ treechildren::-moz-tree-image(title, open) {
 
 treechildren::-moz-tree-image(title, container, livemark) {
   list-style-image: url("chrome://browser/skin/livemark-folder.png");
-  -moz-image-region: auto;
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
 }
 
 treechildren::-moz-tree-image(title, container, livemark, open) {
-  list-style-image: url("chrome://browser/skin/livemark-folder-open.png");
-  -moz-image-region: auto;
+  list-style-image: url("chrome://browser/skin/livemark-folder.png");
+  -moz-image-region: rect(16px, 16px, 32px, 0px);
 }
 
 treechildren::-moz-tree-image(container, OrganizerQuery_AllBookmarks) {
@@ -90,6 +90,11 @@ treechildren::-moz-tree-image(container, OrganizerQuery_UnfiledBookmarks) {
 /* query-nodes should be styled even if they're not expandable */
 treechildren::-moz-tree-image(title, query) {
   list-style-image: url("chrome://browser/skin/places/query.png");
+  -moz-image-region: auto;
+}
+
+treechildren::-moz-tree-image(title, query, open) {
+  list-style-image: url("chrome://browser/skin/places/query-open.png");
   -moz-image-region: auto;
 }
 

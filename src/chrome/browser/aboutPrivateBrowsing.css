@@ -29,7 +29,7 @@ body.normal > #errorPageContainer {
   background: url("chrome://global/skin/icons/information-16.png") no-repeat top left;
 }
 
-body[dir="rtl"] #moreInfo {
+#moreInfo:-moz-dir(rtl) {
   background-position: top right;
 }
 

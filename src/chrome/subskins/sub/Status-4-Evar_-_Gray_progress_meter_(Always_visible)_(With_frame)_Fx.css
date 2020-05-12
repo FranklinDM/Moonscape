@@ -1,0 +1,37 @@
+/******************************************************************************
+ * Status-4-Evar - Gray progress meter (Always visible) (With frame)
+ * By: Michael Walden
+ * Note: You need not make sure that the following is selected...
+ * Status-4-Evar Preferences>Progress>Toolbar>[/] Always show the toolbar item
+ * ...to allow the progress meter to always be visible.  This is due to the
+ * visibility override noted below.
+ **/
+#status4evar-progress-bar {
+ -moz-appearance: -moz-box !important; 
+ visibility: visible !important     /* < Override Status-4-Evar visibility settings */
+}
+#status4evar-progress-bar spacer.progress-bar {
+ -moz-appearance: none !important;
+ background: #808080 !important
+}
+#status4evar-progress-bar.progressmeter-statusbar[collapsed="true"] {
+ -moz-appearance: -moz-box !important;
+ background: transparent !important;
+ border-style: solid !important;
+ border-width: 1px !important;
+ -moz-border-top-colors:    ThreeDShadow    !important;
+ -moz-border-right-colors:  ThreeDHighlight !important;
+ -moz-border-bottom-colors: ThreeDHighlight !important;
+ -moz-border-left-colors:   ThreeDShadow    !important
+}
+#status4evar-progress-bar.progressmeter-statusbar:not([collapsed="true"]) {
+ -moz-appearance: -moz-box !important;
+ background-color: transparent !important;
+ background-image: none !important;
+ border-style: solid !important;
+ border-width: 1px !important;
+ -moz-border-top-colors:    ThreeDShadow    !important;
+ -moz-border-right-colors:  ThreeDHighlight !important;
+ -moz-border-bottom-colors: ThreeDHighlight !important;
+ -moz-border-left-colors:   ThreeDShadow    !important
+}

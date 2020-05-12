@@ -6,12 +6,13 @@
   == Styles used by XUL listbox-related elements.
   ======================================================================= */
 
+
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 /* ::::: listbox ::::: */
 
 listbox {
-  -moz-appearance: listbox;
+  -moz-appearance: none;
   margin: 2px 4px;
   border: 2px solid;
   -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
@@ -53,8 +54,8 @@ listbox:focus > listitem[selected="true"] {
 
 /* ::::: listheader ::::: */
 
-listheader { 
-  -moz-appearance: treeheadercell;
+listheader {
+  -moz-appearance: none;
   -moz-box-align: center;
   border: 2px solid;
   -moz-border-top-colors: ThreeDHighlight ThreeDLightShadow;
@@ -99,16 +100,8 @@ listheader[sortable="true"]:hover:active {
   list-style-image: url("chrome://global/skin/tree/sort-asc.png");
 }
 
-.listheader-sortdirection[sortDirection="ascending"]:-moz-system-metric(windows-classic) {
-  list-style-image: url("chrome://global/skin/tree/sort-asc-classic.png");
-}
-
 .listheader-sortdirection[sortDirection="descending"] {
   list-style-image: url("chrome://global/skin/tree/sort-dsc.png");
-}
-
-.listheader-sortdirection[sortDirection="descending"]:-moz-system-metric(windows-classic) {
-  list-style-image: url("chrome://global/skin/tree/sort-dsc-classic.png");
 }
 
 /* ::::: listcell ::::: */
@@ -133,11 +126,17 @@ listheader[sortable="true"]:hover:active {
 /* ::::: listcell checkbox ::::: */
 
 .listcell-check {
-  -moz-appearance: checkbox;
+  -moz-appearance: none;
   -moz-box-align: center;
   margin: 0px 2px;
   border: 1px solid -moz-DialogText;
   min-width: 13px;
   min-height: 13px;
   background: -moz-Field no-repeat 50% 50%;
+}
+
+/* ..... checked state ..... */
+
+.listcell-check[checked="true"] {
+  background-image: url("chrome://global/skin/checkbox/cbox-check.gif");
 }

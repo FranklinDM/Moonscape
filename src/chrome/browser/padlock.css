@@ -1,0 +1,40 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+#padlock-tab[padshow="tabs-bar"][level="ev"],
+#padlock-sb[padshow="statbar"][level="ev"],
+#padlock-ub-right[padshow="ub-right"][level="ev"],
+#padlock-ib-left[padshow="ib-left"][level="ev"],
+#padlock-ib[padshow="ib-trans-bg"][level="ev"] {
+  list-style-image: url("chrome://browser/skin/identity-icons-https-ev.png") !important;
+}
+
+#padlock-tab[padshow="tabs-bar"][level="high"],
+#padlock-sb[padshow="statbar"][level="high"],
+#padlock-ub-right[padshow="ub-right"][level="high"],
+#padlock-ib-left[padshow="ib-left"][level="high"],
+#padlock-ib[padshow="ib-trans-bg"][level="high"] {
+  list-style-image: url("chrome://browser/skin/identity-icons-https.png") !important;
+}
+
+#padlock-tab[padshow="tabs-bar"][level="low"],
+#padlock-sb[padshow="statbar"][level="low"],
+#padlock-ub-right[padshow="ub-right"][level="low"],
+#padlock-ib-left[padshow="ib-left"][level="low"],
+#padlock-ib[padshow="ib-trans-bg"][level="low"],
+#padlock-tab[padshow="tabs-bar"][level="mixed"],
+#padlock-sb[padshow="statbar"][level="mixed"],
+#padlock-ub-right[padshow="ub-right"][level="mixed"],
+#padlock-ib-left[padshow="ib-left"][level="mixed"],
+#padlock-ib[padshow="ib-trans-bg"][level="mixed"] {
+  list-style-image: url("chrome://browser/skin/identity-icons-low.png") !important;
+}
+
+#padlock-tab[padshow="tabs-bar"][level="broken"],
+#padlock-sb[padshow="statbar"][level="broken"],
+#padlock-ub-right[padshow="ub-right"][level="broken"],
+#padlock-ib-left[padshow="ib-left"][level="broken"],
+#padlock-ib[padshow="ib-trans-bg"][level="broken"] {
+  list-style-image: url("chrome://browser/skin/identity-icons-broken.png") !important;
+}

@@ -4,8 +4,8 @@
 
 #tabs-display,
 #tabsList {
-  background-color: #C0C0C0;
-  -moz-appearance: none;
+  background-color: -moz-Dialog;
+  border: none;
   margin: 0;
 }
 
@@ -15,8 +15,8 @@
 
 #headers {
   background: url(chrome://browser/skin/sync-32.png) no-repeat;
-  margin-top: 4px;
-  width: 45em;
+  margin: 3em 0;
+  width: 80em;
   height: 32px;
   margin-inline-start: 2em;
   margin-inline-end: 2em;
@@ -39,18 +39,13 @@ richlistitem:focus {
 
 richlistitem[type="tab"] {
   min-height: 3em;
-  border: #999999 1px solid !important;
+  margin-inline-start: 2em;
+  border: 1px solid ThreeDShadow;
+  background-color: -moz-Field;
+  color: -moz-FieldText;
   padding: 2px 5px;
-  margin-bottom: 4px;
-  margin-inline-start: 4em;
-  border-radius: 6px;
-  background-color: menu;
   width: 44em;
-  opacity: 0.9;
-  box-shadow:
-    inset rgba(255, 255, 255, 0.5) 0 1px 0px,
-    inset rgba(0, 0, 0, 0.1) 0 -2px 0px,
-    rgba(0, 0, 0, 0.1) 0px 1px 0px;
+  margin-bottom: 2px;
 }
 
 richlistitem[type="tab"][selected="true"] {
@@ -59,13 +54,11 @@ richlistitem[type="tab"][selected="true"] {
 
 richlistitem[type="client"] {
   min-height: 2em;
-  color: #000000;
   margin-inline-start: 2em;
-  margin-top: 2px;
-  margin-bottom: 3px;
-  width: 42em;
-  border-radius: 6px;
   background-color: transparent;
+  color: #000000;
+  width: 42em;
+  font-weight: bold;
   -moz-user-focus: ignore !important;
 }
 richlistitem.mobile[type="client"] {

@@ -1,0 +1,120 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* ===== messenger.css ==================================================
+  == Styles shared throughout the Messenger application.
+  ======================================================================= */
+
+@import url("chrome://global/skin/");
+@import url("chrome://messenger/content/messenger.css");
+@import url("chrome://messenger/skin/shared/messenger.css");
+
+toolbox:-moz-lwtheme {
+  border-top-width: 0;
+}
+
+#tabmail:not(:-moz-lwtheme) {
+  background-color: ActiveCaption;
+}
+
+#tabmail:not(:-moz-lwtheme):-moz-window-inactive {
+  background-color: InactiveCaption;
+}
+
+.menu-iconic > .menu-iconic-left,
+.menuitem-iconic > .menu-iconic-left {
+  display: -moz-box;
+  padding-top: 0;
+}
+
+#tabbar-toolbar {
+  border: none;
+}
+
+#tabbar-toolbar[customizing="true"] {
+  min-width: 24px;
+}
+
+tree.plain {
+  border: 2px solid;
+  -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
+  -moz-border-right-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow;
+}
+
+/* ::::: menubar ::::: */
+
+#menubar-items {
+  -moz-box-orient: vertical; /* for flex hack */
+}
+
+#menubar-items > menubar {
+  -moz-box-flex: 1; /* make menu items expand to fill toolbar height */
+}
+
+/* ::::: toolbarbutton ::::: */
+
+toolbar[mode="full"] .toolbarbutton-1 {
+  min-width: 55px;
+}
+
+sidebarheader .toolbarbutton-text:not([value]) {
+  display: none;
+}
+
+#searchInput,
+#IMSearchInput,
+.remote-gloda-search {
+  -moz-appearance: none;
+  min-height: 22px;
+  border: 1px solid threedshadow;
+  padding-inline-end: 2px;
+  padding-inline-start: 2px;
+}
+
+#searchInput:-moz-lwtheme:not([focused="true"]),
+#IMSearchInput:-moz-lwtheme:not([focused="true"]),
+.remote-gloda-search:-moz-lwtheme:not([focused="true"]) {
+  opacity: .85;
+}
+
+.remote-gloda-search-container {
+  padding-top: 6px;
+  padding-bottom: 5px;
+}
+
+
+#status-bar:-moz-lwtheme {
+  padding-bottom: 1px;
+}
+
+#tabmail-buttons > toolbarbutton {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+treechildren::-moz-tree-cell-text {
+  padding-inline-start: 5px;
+  padding-bottom: 2px;
+}
+
+/* ::::: Notifications ::::: */
+
+notification[value="addon-install-failed"] .messageCloseButton {
+  list-style-image: url("chrome://global/skin/icons/close.png");
+}
+
+notification[type="critical"] .messageCloseButton:not(:hover):not(:active) {
+  -moz-image-region: rect(0, 64px, 16px, 48px);
+}
+
+menulist.folderMenuItem > .menulist-label-box > .menulist-label {
+  margin-inline-start: 2px !important;
+}
+
+menulist.folderMenuItem menu:not(.folderMenuItem) {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}

@@ -1,6 +1,7 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
 .searchbar-textbox {
   width: 6em;
   min-width: 6em;
@@ -42,12 +43,8 @@
 }
 
 .searchbar-dropmarker-image {
-  list-style-image: url("chrome://browser/skin/searchbar-dropdown-arrow.png");
-  -moz-image-region: rect(0, 13px, 11px, 0);
-}
-
-.searchbar-engine-button[open="true"] > .searchbar-dropmarker-image {
-  -moz-image-region: rect(0, 26px, 11px, 13px);
+  margin-inline-start: 2px;
+  list-style-image: url("chrome://global/skin/arrow/arrow-dn.gif");
 }
 
 
@@ -59,7 +56,7 @@
 
 .search-go-button {
   padding: 1px;
-  list-style-image: url("chrome://global/skin/icons/Search-glass.png");
+  list-style-image: url("chrome://global/skin/icons/search-icon.png");
   -moz-image-region: rect(0px 16px 16px 0px);
 }
 

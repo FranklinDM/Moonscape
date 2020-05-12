@@ -1,14 +1,34 @@
-# Main skin content
-skin    global          moonscape-classic       chrome/global/
-skin    browser         moonscape-classic       chrome/browser/
-skin    mozapps         moonscape-classic       chrome/mozapps/
+#------------------------------------------------------------------------------
+# Toolkit
+#------------------------------------------------------------------------------
+skin    global                  moonscape        chrome/global/
+skin    mozapps                 moonscape        chrome/mozapps/
 
-# Define a new package name (os_target) that will have different paths for Windows, Linux and Mac OS
+#------------------------------------------------------------------------------
+# Application
+#------------------------------------------------------------------------------
+skin    browser                 moonscape        chrome/browser/
+skin    messenger               moonscape        chrome/messenger/
+skin    messenger-newsblog      moonscape        chrome/messenger-newsblog/
+skin    editor                  moonscape        chrome/editor/
+skin    ambassador              moonscape        chrome/ambassador/
+skin    communicator            moonscape        chrome/communicator/
 
-# Fallback OS-specific skin for any OSes not matched below
-skin    os_target       moonscape-classic       chrome/os_target/windows/
+skin    subskins                moonscape        chrome/subskins/
 
-# OS-specific skin content overrides
-skin    os_target       moonscape-classic       chrome/os_target/windows/   os=WINNT
-skin    os_target       moonscape-classic       chrome/os_target/mac/       os=Darwin
-skin    os_target       moonscape-classic       chrome/os_target/linux/     os=Linux
+#------------------------------------------------------------------------------
+# OS-specific skin
+#------------------------------------------------------------------------------
+# Fallback skin for unmatched systems
+skin    os_target               moonscape        chrome/os_target/windows/
+
+# Skin content overrides
+skin    os_target               moonscape        chrome/os_target/windows/     os=WINNT
+skin    os_target               moonscape        chrome/os_target/mac/         os=Darwin
+skin    os_target               moonscape        chrome/os_target/linux/       os=Linux
+
+#------------------------------------------------------------------------------
+# Overrides
+#------------------------------------------------------------------------------
+# Another loading icon (with the same dimensions, seemingly redundant) is referenced by some applications
+override    chrome://global/skin/icons/loading.png    chrome://global/skin/icons/loading_16.png

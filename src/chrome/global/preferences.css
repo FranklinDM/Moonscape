@@ -55,7 +55,8 @@ radio[pane] {
   border-bottom: 2px groove ThreeDFace;
   margin: 0px;
   padding-inline-start: 10px;
-  color: -moz-FieldText;
+  background-color: -moz-Dialog;
+  color: -moz-DialogText;
 }
 
 .paneButtonIcon {

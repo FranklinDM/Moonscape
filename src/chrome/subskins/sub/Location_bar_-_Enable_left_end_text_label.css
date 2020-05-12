@@ -1,0 +1,30 @@
+/**************************************************************************
+ * Location bar - Enable left end text label
+ * By: Michael Walden
+ *
+ * My notes:
+ * http://en.Wikipedia.org/wiki/File:Netscape_wikipedia.png
+ *  http://Upload.Wikimedia.org/wikipedia/en/archive/9/94/20071216224652!Netscape_wikipedia.png
+ * 
+ * Location: (Netscape)
+ *    Go to: (Netscape)
+ *  Netsite: (Netscape - shown when connected to a site using Netscape's web server)
+ *  Address: (Internet Explorer 1.0 - 2.0)
+ *   Address (Internet Explorer 3.0 - 6.0)
+ *     Link: (Mosaic 1.0)
+ *      URL:
+ *     Site:
+ *
+ **/
+#urlbar-container:before  {
+  content: "Location:" !important;
+  display: block !important;
+  padding: 0 0 0 5px !important;
+  /* -moz-box-orient: horizontal !important; */
+  color: -moz-fieldtext !important;
+  /* background: transparent !important; */
+  /* text-shadow: none !important; */
+}
+#urlbar-container:hover:before {
+  color: blue !important;
+}

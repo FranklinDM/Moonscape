@@ -1,0 +1,28 @@
+/**************************************************************************
+ * New tab button on tab bar - Mozilla, SeaMonkey style
+ * By: Michael Walden
+ **/
+.tabs-newtab-button,
+#TabsToolbar > #new-tab-button,
+#TabsToolbar > toolbarpaletteitem > #new-tab-button {
+  list-style-image: url("chrome://browser/skin/moonscape/img/mozilla-tab-new.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+}
+.tabs-newtab-button:hover,
+#TabsToolbar > #new-tab-button:hover {
+  -moz-image-region: rect(0px, 32px, 16px, 16px) !important;
+}
+.tabs-newtab-button[disabled="true"],
+#TabsToolbar > #new-tab-button[disabled="true"] {
+  -moz-image-region: rect(0px, 48px, 16px, 32px) !important;
+}
+.tabs-newtab-button:hover:active,
+#TabsToolbar > #new-tab-button:hover:active {
+  -moz-image-region: rect(0px, 64px, 16px, 48px) !important;
+}
+.tabs-newtab-button {
+  width: 28px !important;
+}
+#TabsToolbar > #new-tab-button {
+  width: 26px !important;
+}

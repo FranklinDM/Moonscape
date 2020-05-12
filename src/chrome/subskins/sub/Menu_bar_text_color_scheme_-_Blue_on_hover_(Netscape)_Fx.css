@@ -1,0 +1,13 @@
+/**************************************************************************
+ * Menu bar text color scheme - Blue on hover (Netscape)
+ * By: Michael Walden
+ **/
+menubar > menu {
+  color: #000000 !important;
+}
+menubar > menu[_moz-menuactive="true"]:not([disabled="true"]) {
+  color: #0000FF !important;
+}
+menubar > menu[_moz-menuactive="true"][open="true"] {
+  color: #000080 !important;
+}

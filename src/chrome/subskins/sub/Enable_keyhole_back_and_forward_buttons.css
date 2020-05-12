@@ -1,0 +1,53 @@
+/**************************************************************************
+ * Enable keyhole back and forward buttons
+ * This subskin restores keyhole-style back/forward buttons
+ * By: Michael Walden, FranklinDM
+ **/
+
+/* ########################################################################## */
+
+/* Borders for unified back/forward buttons, for icons mode... */
+
+#back-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
+#forward-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
+  -moz-transform: scaleX(-1) !important;
+}
+
+toolbar[mode="icons"] #back-button > .toolbarbutton-icon,
+toolbar[mode="icons"] #forward-button > .toolbarbutton-icon {
+  border: 1px solid !important;
+  border-color: ThreeDHighlight ThreeDShadow ThreeDShadow ThreeDHighlight !important;
+}
+
+toolbar[mode="icons"] #back-button:hover:active:not([disabled="true"]) > .toolbarbutton-icon,
+toolbar[mode="icons"] #forward-button:hover:active:not([disabled="true"]) > .toolbarbutton-icon {
+  border-color: ThreeDShadow ThreeDHighlight ThreeDHighlight ThreeDShadow !important;
+}
+
+toolbar[mode="icons"] #back-button:hover:not([disabled="true"]) > .toolbarbutton-icon,
+toolbar[mode="icons"] #forward-button:hover:not([disabled="true"]) > .toolbarbutton-icon {
+  border-color: ThreeDHighlight ThreeDDarkShadow ThreeDDarkShadow ThreeDHighlight !important;
+}
+
+toolbar[mode="icons"] #forward-button {
+  margin-left: -4px;
+}
+
+/* ########################################################################## */
+
+/* Unified large back/forward buttons, 'keyhole' style, for icons mode... */
+toolbar[mode="icons"] #forward-button, toolbar[mode="icons"] #back-button {
+  border: none;
+  -moz-appearance: none;
+}
+
+/* ########################################################################## */
+
+/* Unified small back/forward buttons, for icons mode... */
+
+toolbar[iconsize="small"][mode="icons"] #back-button > .toolbarbutton-icon,
+toolbar[iconsize="small"][mode="icons"] #forward-button > .toolbarbutton-icon {
+  padding: 3px;
+}
+
+/* ########################################################################## */

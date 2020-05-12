@@ -1,0 +1,15 @@
+/**************************************************************************
+ * Gray about blank
+ * Skin the "about:blank" page's background to have the gray Windows system
+ * color as done in NS4's default blank page that appeared at start-up.
+ * Copy and paste this into your userContent.css file in your profile folder
+ * By: Michael Walden
+ **/
+
+@-moz-document url(about:blank) {
+  html {
+    /* background:#C0C0C0 !important; */  /* Color scheme: Windows Classic */
+    /* background:#D4D0C8 !important; */  /* Color scheme: Windows Standard */
+    background: -moz-dialog !important;   /* Use the color supplied by your OS */
+  }
+}

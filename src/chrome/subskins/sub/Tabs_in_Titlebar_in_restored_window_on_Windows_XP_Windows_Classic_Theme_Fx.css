@@ -1,0 +1,35 @@
+/**************************************************************************
+ * Tabs in Titlebar in restored window on Windows XP Windows Classic Theme
+ * By: Michael Walden
+ *
+ * Derived from the following sources:
+ *
+ * Thinning down FireFox 4's Tab Bar by Gdgtry.com
+ *  http://Gdgtry.com/2011/01/thinning-down-firefox-4s-tab-bar-2
+ * FF4 - Tabs in Titlebar in restored window by sdrocking
+ *  http://UserStyles.org/styles/42417
+ * FF4 - Tabs in Titlebar in restored window -- problem: close window button hidden by tornii
+ *  http://Forum.UserStyles.org/discussion/25719/x
+ *
+ **/
+
+#main-window[sizemode=normal][tabsontop="true"] #toolbar-menubar[autohide="true"] {
+ margin-top:-25px;
+ margin-left:80px;
+}
+#main-window[sizemode=normal] #navigator-toolbox[tabsontop="true"] > #toolbar-menubar[autohide="true"] ~ #TabsToolbar {
+ -moz-binding: url("chrome://global/content/bindings/general.xml#windowdragbox")!important; /* allow dragging of window by empty tab bar area */
+ padding-inline-start:10px!important; /* Make blank area on left end of tabs to allow for dragging window */
+ padding-inline-end:10px!important;   /* Make blank area on right end of tabs to allow for dragging window */
+ margin-left:75px !important;       /* Make opening for appbutton to show through */
+ margin-right:54px !important;      /* Make opening for Min, Max/Restore, and Close buttons to show through */
+}
+#appmenu-button {
+ padding-left: 8px !important;
+ padding-right: 8px !important;
+ height: 22px !important;
+}
+#main-window[sizemode=normal][tabsontop="true"] #titlebar-content {
+ margin-top: 2px !important;
+ background-color: -moz-dialog !important;
+}

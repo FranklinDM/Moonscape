@@ -37,7 +37,8 @@ textbox:not(.padded) .textbox-input-box {
 
 panel[type="private-autocomplete"],
 panel[type="private-autocomplete-richlistbox"],
-.private-autocomplete-history-popup {
+.private-autocomplete-history-popup,
+#PopupAutoCompleteRichResult {
   -moz-appearance: none;
   border-width: 1px;
   -moz-border-top-colors: ThreeDShadow;
@@ -95,6 +96,7 @@ treechildren.private-autocomplete-treebody::-moz-tree-cell-text(selected) {
 .private-autocomplete-richlistbox {
   -moz-appearance: none;
   margin: 0;
+  border: none;
 }
 
 .private-autocomplete-richlistitem {
@@ -196,4 +198,3 @@ toolbarpaletteitem > toolbaritem > textbox > hbox > hbox > html|*.textbox-input 
 toolbarpaletteitem > toolbaritem > * > textbox > hbox > hbox > html|*.textbox-input {
   visibility: hidden;
 }
-

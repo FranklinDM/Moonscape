@@ -1,0 +1,135 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@import url("chrome://messenger/content/quickFilterBar.css");
+
+/* :::: Filter Tab Bar Button :::: */
+
+#qfb-show-filter-bar {
+  list-style-image: url("chrome://messenger/skin/icons/mail-toolbar-small.png");
+  -moz-image-region: rect(0px 336px 16px 320px);
+}
+
+toolbar[iconsize="large"] #qfb-show-filter-bar {
+  list-style-image: url("chrome://messenger/skin/icons/mail-toolbar.png");
+  -moz-image-region: rect(0px 504px 24px 480px);
+}
+
+#qfb-show-filter-bar[disabled="true"] {
+  -moz-image-region: rect(32px 336px 48px 320px);
+}
+
+toolbar[iconsize="large"] #qfb-show-filter-bar[disabled="true"] {
+  -moz-image-region: rect(48px 504px 72px 480px);
+}
+
+#qfb-show-filter-bar > .toolbarbutton-icon {
+  padding: 0 3px;
+}
+
+/* ::::: QFB button on main toolbar ::::: */
+
+#mail-toolbox #qfb-show-filter-bar[style="visibility: hidden;"] {
+  color: GrayText;
+  text-shadow: none;
+}
+
+toolbox[labelalign="end"] #qfb-show-filter-bar {
+  -moz-box-orient: horizontal;
+}
+
+/* :::: Filter Bar :::: */
+
+#quick-filter-bar-main-bar {
+  border-top: 1px solid ThreeDHighlight;
+}
+
+#quick-filter-bar-expando {
+  border-bottom: 1px solid ThreeDShadow;
+}
+
+#threadTree[filterActive="searching"] {
+  background-color: #ffffcc;
+}
+
+/* :::: Filter Buttons :::: */
+
+#quick-filter-bar-main-bar toolbarbutton {
+  margin-inline-start: 1px;
+  margin-inline-end: 1px;
+  min-width: 26px;
+}
+
+/* keep that hideous outline focus ring from showing on the checked buttons */
+#quick-filter-bar-main-bar toolbarbutton:focus {
+  outline: none;
+}
+
+#qfb-boolean-mode {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+#qfb-sticky {
+  list-style-image: url("chrome://messenger/skin/icons/xp-pin-grey.png");
+}
+
+#qfb-sticky[checked] {
+  list-style-image: url("chrome://messenger/skin/icons/xp-pin-red.png");
+}
+
+#qfb-unread {
+  list-style-image: url("chrome://messenger/skin/icons/read.png");
+}
+
+#qfb-starred {
+  list-style-image: url("chrome://messenger/skin/icons/flag.png");
+}
+
+.qfb-starred-nostar {
+  list-style-image: url("chrome://messenger/skin/starContact.png");
+  -moz-image-region:rect(0px 32px 16px 16px);
+}
+
+#qfb-inaddrbook {
+  list-style-image: url("chrome://messenger/skin/addressbook/icons/abcard.png");
+}
+
+#qfb-tags {
+  list-style-image: url("chrome://messenger/skin/icons/mail-toolbar-small.png");
+  -moz-image-region: rect(0px 256px 16px 240px);
+}
+
+#qfb-tags[disabled] {
+  -moz-image-region: rect(48px, 384px, 72px, 360px) !important;
+}
+
+#qfb-attachment {
+  list-style-image: url("chrome://messenger/skin/icons/attachment-col.png");
+}
+
+#quick-filter-bar[filterActive="matches"] #qfb-results-label {
+  color: green;
+}
+
+#quick-filter-bar[filterActive="nomatches"] #qfb-results-label {
+  color: #f66;
+}
+
+#quick-filter-bar-main-bar toolbarbutton > .toolbarbutton-icon {
+  margin-inline-end: 0;
+}
+
+#quick-filter-bar-collapsible-buttons > toolbarbutton > .toolbarbutton-text {
+  margin-inline-start: 4px !important;
+}
+
+#quick-filter-bar-expando toolbarbutton,
+#quick-filter-bar-expando toolbarbutton[checked] {
+  padding-inline-end: 6px !important;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-inline-start: 1px;
+  margin-inline-end: 1px;
+}

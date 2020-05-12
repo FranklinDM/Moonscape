@@ -1,0 +1,30 @@
+/**************************************************************************
+ * BASE Enable titlebar and menubar separator
+ * By: Michael Walden
+ **/
+#toolbar-menubar:not(:-moz-lwtheme) {
+  border-top-style: solid !important;
+  border-top-width: 1px !important;
+  -moz-border-top-colors: ThreeDHighlight !important;
+}
+
+/* -- Old method (appears as double shad)
+ #toolbar-menubar:not(:-moz-lwtheme) {
+  border-top-style: solid !important;
+  border-top-width: 2px !important;
+  -moz-border-top-colors: ThreeDShadow ThreeDHighlight !important;
+}
+*/
+
+/* -- Alternate method --
+#navigator-toolbox:not(:-moz-lwtheme) {
+  border-top-style: solid !important;
+  border-top-width: 1px !important;
+  -moz-border-top-colors: ThreeDShadow !important;
+}
+#toolbar-menubar:not(:-moz-lwtheme) {
+  border-top-style: solid !important;
+  border-top-width: 1px !important;
+  -moz-border-top-colors: ThreeDHighlight !important;
+}
+*/

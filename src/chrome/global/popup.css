@@ -2,6 +2,128 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-/*#+++*/
-@import url("chrome://os_target/skin/popup.css");
-/*#+++*/
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: menupopup ::::: */
+
+menupopup,
+panel {
+  border: 3px solid transparent;
+  -moz-border-top-colors   : ThreeDLightShadow ThreeDHighlight ThreeDFace;
+  -moz-border-left-colors  : ThreeDLightShadow ThreeDHighlight ThreeDFace;
+  -moz-border-right-colors : ThreeDDarkShadow  ThreeDShadow    ThreeDFace;
+  -moz-border-bottom-colors: ThreeDDarkShadow  ThreeDShadow    ThreeDFace;
+  padding: 0px;
+  min-width: 1px;
+  background: Menu;
+  color: MenuText;
+}
+
+menupopup {
+  -moz-appearance: none;
+}
+
+menupopup > menu > menupopup {
+ /* align submenus */
+  margin-inline-start: -3px;
+  margin-top: -3px;
+}
+
+panel[type="arrow"] {
+  -moz-appearance: none;
+  background: transparent;
+  border: none;
+}
+
+panel[type="arrow"][side="top"],
+panel[type="arrow"][side="bottom"] {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+panel[type="arrow"][side="left"],
+panel[type="arrow"][side="right"] {
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+.panel-arrowcontent {
+  padding: 10px;
+  color: -moz-DialogText;
+  background: -moz-Dialog;
+  background-clip: padding-box;
+  margin: 4px;
+  border: 2px solid;
+  -moz-border-top-colors   : ThreeDLightShadow ThreeDHighlight ThreeDFace;
+  -moz-border-left-colors  : ThreeDLightShadow ThreeDHighlight ThreeDFace;
+  -moz-border-right-colors : ThreeDDarkShadow  ThreeDShadow    ThreeDFace;
+  -moz-border-bottom-colors: ThreeDDarkShadow  ThreeDShadow    ThreeDFace;
+}
+
+.panel-arrow[side="top"],
+.panel-arrow[side="bottom"] {
+  list-style-image: url("chrome://global/skin/arrow/panelarrow-vertical.svg");
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.panel-arrow[side="top"] {
+  margin-bottom: -6px;
+}
+
+.panel-arrow[side="bottom"] {
+  transform: scaleY(-1);
+  margin-top: -6px;
+}
+
+.panel-arrow[side="left"],
+.panel-arrow[side="right"] {
+  list-style-image: url("chrome://global/skin/arrow/panelarrow-horizontal.svg");
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.panel-arrow[side="left"] {
+  margin-right: -6px;
+}
+
+.panel-arrow[side="right"] {
+  transform: scaleX(-1);
+  margin-left: -6px;
+}
+
+/* ::::: tooltip ::::: */
+
+tooltip {
+  -moz-appearance: none;
+  margin-top: 21px;
+  border: 1px solid InfoText;
+  padding: 2px 3px;
+  max-width: 40em;
+  background-color: InfoBackground;
+  color: InfoText;
+  font: message-box;
+}
+
+tooltip[titletip="true"] {
+ /* See bug 32157 comment 128
+  * margin: -2px 0px 0px -3px;
+  */
+  max-width: none;
+}
+	
+/* rules for popups associated with menulists */
+
+menulist > menupopup {
+  -moz-appearance: none;
+  border-width: 1px;
+  -moz-border-top-colors: -moz-FieldText;
+  -moz-border-right-colors: -moz-FieldText;
+  -moz-border-bottom-colors: -moz-FieldText;
+  -moz-border-left-colors: -moz-FieldText;
+  padding: 0px;
+  min-width: 0px;
+  background-color: -moz-Field;
+}

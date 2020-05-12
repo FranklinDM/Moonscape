@@ -49,15 +49,6 @@
   margin-bottom: 2px;
 }
 
-#editBMPanel_namePicker[droppable="false"] > .menulist-editable-box {
-  padding: 0;
-}
-
-#editBMPanel_namePicker[droppable="false"] > .menulist-dropmarker,
-#editBMPanel_namePicker[droppable="false"] > menupopup {
-  display: none;
-}
-
 /* Hide the value column of the tag autocomplete popup
  * leaving only the comment column visible. This is
  * so that only the tag being edited is shown in the

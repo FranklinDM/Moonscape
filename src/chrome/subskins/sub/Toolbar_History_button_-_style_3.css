@@ -1,0 +1,49 @@
+/**************************************************************************
+ * Toolbar History button - style 3 (Clock in folder)
+ * Skin the history sidebar button
+ * By: Michael Walden
+ **/
+
+/* history sidebar button (large) */
+
+#history-button > .toolbarbutton-icon {
+  list-style-image: url("chrome://browser/skin/moonscape/img/ToolbarHistory3.png") !important;
+}
+#history-button {
+  -moz-image-region: rect(0px 24px 24px 0px) !important;
+}
+#history-button:not([disabled="true"]):not([checked="true"]):hover {
+  -moz-image-region: rect(24px 24px 48px 0px) !important;
+}
+#history-button[disabled="true"] {
+  -moz-image-region: rect(48px 24px 72px 0px) !important;
+}
+#history-button[checked="true"] {
+  -moz-image-region: rect(72px 24px 96px 0px) !important;
+}
+#history-button:not([disabled="true"]):not([checked="true"]):hover:active {
+  -moz-image-region: rect(96px 24px 120px 0px) !important;
+}
+
+
+/* history sidebar button (small) */
+
+toolbar[iconsize="small"] #history-button > .toolbarbutton-icon {
+  padding-left: 1px !important;
+  list-style-image: url("chrome://browser/skin/moonscape/img/Toolbar-smallHistory3.png") !important;
+}
+toolbar[iconsize="small"] #history-button {
+  -moz-image-region: rect(0px 16px 16px 0px) !important;
+}
+toolbar[iconsize="small"] #history-button:not([disabled="true"]):not([checked="true"]):hover {
+  -moz-image-region: rect(16px 16px 32px 0px) !important;
+}
+toolbar[iconsize="small"] #history-button[disabled="true"] {
+  -moz-image-region: rect(32px 16px 48px 0px) !important;
+}
+toolbar[iconsize="small"] #history-button[checked="true"] {
+  -moz-image-region: rect(48px 16px 64px 0px) !important;
+}
+toolbar[iconsize="small"] #history-button:not([disabled="true"]):not([checked="true"]):hover:active {
+  -moz-image-region: rect(64px 16px 80px 0px) !important;
+}

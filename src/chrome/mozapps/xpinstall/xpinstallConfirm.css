@@ -7,7 +7,7 @@
 }
 
 #itemList {
-  -moz-appearance: listbox;
+  -moz-appearance: none;
   margin: 3px 4px 10px 4px;
   height: 14em;
   border: 2px solid;

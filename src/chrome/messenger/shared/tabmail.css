@@ -1,0 +1,100 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@import url("chrome://messenger/skin/sharedPlatform.css");
+
+#tabs-toolbar {
+  --tabHeight: 23px;
+  --tabSidePadding: 3px;
+}
+
+/* == Tab style ============================================= */
+/* Unselected tab */
+.tabmail-tab {
+  -moz-appearance: none;
+  -moz-box-align: stretch;
+  margin: 0 0 2px 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.10);
+  border-top:    2px solid;
+  border-right:  2px solid;
+  border-left:   2px solid;
+  border-bottom: 0px solid;
+  -moz-border-top-colors:   transparent rgba(0, 0, 0, 0.2);
+  -moz-border-right-colors: transparent ThreeDDarkShadow;
+  -moz-border-left-colors:  transparent rgba(0, 0, 0, 0.2);
+}
+
+/* Unselected tab with hover */
+.tabmail-tab:hover:not([selected="true"]) {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Selected tab */
+.tabmail-tab[selected=true] {
+  -moz-border-top-colors:   ThreeDHighlight  ThreeDLightShadow;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors:  ThreeDHighlight  ThreeDLightShadow;
+  background-color: -moz-Dialog;
+}
+
+.tabmail-tab[type="preferencesTab"] {
+  list-style-image: url("chrome://mozapps/skin/extensions/utilities.svg#utilities");
+}
+
+.tab-content {
+  padding-inline-end: var(--tabSidePadding);
+  padding-inline-start: var(--tabSidePadding);
+}
+
+.tab-throbber,
+.tab-icon-image {
+  height: 16px;
+  width: 16px;
+}
+
+.tab-throbber,
+.tab-icon-image {
+  margin-inline-end: 6px;
+}
+
+.tab-label {
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+}
+
+.tab-close-button {
+  margin-inline-start: 4px;
+  margin-inline-end: -2px;
+  padding: 0;
+}
+
+.tab-background {
+  min-height: var(--tabHeight);
+}
+
+.tabmail-tab:-moz-lwtheme {
+  color: inherit;
+}
+
+/* Tab Overflow */
+.tabmail-arrowscrollbox > .arrowscrollbox-overflow-start-indicator,
+.tabmail-arrowscrollbox > .arrowscrollbox-overflow-end-indicator {
+  display: none;
+}
+
+/* Content Tabs */
+.contentTabToolbox {
+  height: 0px;
+}
+
+.contentTabInstance[disablechrome] .contentTabToolbox {
+  display: none;
+}
+
+.contentTabToolbar {
+  height: 0px;
+  min-height: 0px;
+  padding: 0px;
+}

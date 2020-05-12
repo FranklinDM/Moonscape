@@ -1,0 +1,18 @@
+/**************************************************************************
+ * Skin the MinimizeToTray revived extension 16x14
+ * By: Michael Walden
+ **/
+
+#MinTrayR_toolbaritem {
+  list-style-image: url("chrome://browser/skin/moonscape/img/MinTrayR16x14.png") !important;
+  -moz-image-region: rect(0px, 16px, 14px,  0px) !important;
+}
+#MinTrayR_toolbaritem:hover {
+  -moz-image-region: rect(0px, 32px, 14px, 16px) !important;
+}
+#MinTrayR_toolbaritem:hover:active {
+  -moz-image-region: rect(0px, 48px, 14px, 32px) !important;
+}
+#MinTrayR_toolbaritem[disabled="true"] {
+  -moz-image-region: rect(0px, 64px, 14px, 48px) !important;
+}

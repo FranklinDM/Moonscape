@@ -1,0 +1,14 @@
+/**************************************************************************
+ * Remove search bar search engine icon & dropmarker
+ * By: Michael Walden
+ *
+ * Note: Use ALT+DownArrow or ALT+UpArrow when the text cursor is in the
+ *       search bar to select a search engine.
+ **/
+.searchbar-engine-image { display: none !important; }
+.searchbar-dropmarker-image { display: none !important; }
+.searchbar-engine-button {
+  border: none !important;
+  margin: 0px 0px 0px 0px !important;
+  background: transparent url("") !important;
+}

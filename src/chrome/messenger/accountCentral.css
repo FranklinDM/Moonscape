@@ -1,0 +1,91 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* ===== accountCentral.css ==========================================
+  == Styles for the Messenger Account Central panel.
+  ======================================================================= */
+
+@import url("chrome://messenger/skin/");
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#acctCentralGrid {
+  background-color: Window;
+}
+
+spacer,
+spacer.big {
+  max-height: .5em;
+}
+
+/* ::::: rows ::::: */
+
+#acctCentralHeaderRow {
+  padding-top: 10px;
+  padding-inline-start: 10px;
+  padding-inline-end: 0px;
+  font-size: 180%;
+  font-weight: bold;
+  color: WindowText;
+}
+
+.acctCentralRow {
+  margin-inline-start: 10px;
+  font-size: 125%;
+  color: #000000;
+}
+
+.row-iconic-icon {
+  list-style-image: inherit;
+  margin-inline-end: 10px;
+}
+
+.acctCentralRowTitleBox {
+  background-color: ButtonFace;
+  margin: 15px 6px 0px;
+  color: -moz-DialogText;
+  padding-top: 2px;
+  padding-bottom: 0;
+  padding-inline-start: 8px;
+  padding-inline-end: 4px;
+  font-size: 150%;
+  font-weight: bold;
+}
+
+/* ::::: links ::::: */
+
+.acctCentralText {
+  color: WindowText;
+  padding-inline-start: 15px;
+  margin-top: .35em;
+  margin-bottom: .35em;
+  text-decoration: underline;
+  
+}
+
+.acctCentralNewAcctText {
+  color: WindowText;
+  padding-inline-start: 20px;
+  padding-inline-end: 10px;
+  background-position: 0 2px;
+}
+
+.acctCentralLinkText {
+  cursor: pointer;
+}
+
+.acctCentralLinkText:hover,
+.acctCentralLinkText:focus {
+  color: -moz-NativehyperlinkText;
+}
+
+.acctCentralLinkText:hover:active {
+  color: -moz-html-CellHighlight;
+}
+
+#CreateAccountsList {
+  display: block;
+  padding-inline-start: 45px;
+  margin-bottom: .6em;
+}

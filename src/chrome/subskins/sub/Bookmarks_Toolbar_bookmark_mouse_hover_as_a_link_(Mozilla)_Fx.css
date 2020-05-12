@@ -1,0 +1,18 @@
+/**************************************************************************
+ * Bookmarks Toolbar bookmark mouse hover as a link (Mozilla)
+ * By: Michael Walden
+ **/
+toolbarbutton.bookmark-item:not(#home-button):not([container]):not([query]):not(#bookmarks-menu-button) {
+  color: #000000 !important;
+}
+toolbarbutton.bookmark-item:hover:not(#home-button):not([container]):not([query]):not(#bookmarks-menu-button) {
+  color: #0000FF !important;
+  text-decoration: underline !important;
+  -moz-border-top-colors:    Transparent !important;
+  -moz-border-right-colors:  Transparent !important;
+  -moz-border-bottom-colors: Transparent !important;
+  -moz-border-left-colors:   Transparent !important;
+}
+toolbarbutton.bookmark-item:hover:active:not(#home-button):not([container]):not([query]):not(#bookmarks-menu-button) {
+  color: #000080 !important;
+}

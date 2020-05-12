@@ -1,0 +1,5 @@
+/**************************************************************************
+ * Show MinimizeToTray revived button text label on right
+ * By: Michael Walden
+ **/
+#MinTrayR_toolbaritem { -moz-box-orient: horizontal !important; } 

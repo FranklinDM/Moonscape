@@ -1,0 +1,14 @@
+/**************************************************************************
+ * Location bar - Enable right end gray background
+ * By: Michael Walden
+ **/
+#urlbar-icons {
+  border-left: 1px solid !important;
+  padding-left: 1px !important;
+  -moz-border-left-colors: ThreeDShadow rgba(255, 255, 255, 0.2) !important;
+}
+#urlbar-icons,
+#urlbar > .autocomplete-history-dropmarker,
+#urlbar > toolbarbutton {
+  background-color: -moz-dialog !important;
+}

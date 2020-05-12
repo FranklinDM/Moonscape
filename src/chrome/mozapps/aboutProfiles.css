@@ -3,7 +3,6 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 html {
-  --aboutProfiles-table-background: #ebebeb;
   background-color: var(--in-content-page-background);
 }
 
@@ -21,7 +20,7 @@ button {
 }
 
 table {
-  background-color: var(--aboutProfiles-table-background);
+  background-color: var(--in-content-page-background);
   color: var(--in-content-text-color);
   font: message-box;
   text-align: start;
@@ -51,7 +50,7 @@ td {
 }
 
 #action-box {
-  background-color: var(--aboutProfiles-table-background);
+  background-color: var(--in-content-page-background);
   border: 1px solid var(--in-content-border-color);
   color: var(--in-content-text-color);
   float: right;

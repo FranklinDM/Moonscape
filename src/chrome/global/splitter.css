@@ -36,6 +36,10 @@ splitter[state="collapsed"][substate="before"]:-moz-locale-dir(rtl) {
   cursor: w-resize;
 }
 
+splitter:not([collapse="none"]) {
+  border: none;
+}
+
 splitter:-moz-lwtheme {
   background: none;
 }
@@ -68,25 +72,21 @@ splitter[disabled="true"] {
 
 grippy {
   cursor: pointer;
-  border-top: 1px solid ThreeDShadow;
-  border-bottom: 1px solid ThreeDShadow;
-  min-width: 4px;
-  min-height: 115px;
+  border: none;
+  min-width: 7px;
+  min-height: 118px;
   background-color: transparent;
   background-repeat: no-repeat;
 }
 
 grippy:hover {
-  background-color: ThreeDHighlight;
+  background-color: #CCCCFF;
 }
 
 splitter[orient="vertical"] > grippy {
-  border-top: none;
-  border-right: 1px solid ThreeDShadow;
-  border-bottom: none;
-  border-left: 1px solid ThreeDShadow;;
-  min-width: 115px;
-  min-height: 4px;
+  border: none;
+  min-width: 118px;
+  min-height: 7px;
 }
   
 /* ..... normal state ..... */

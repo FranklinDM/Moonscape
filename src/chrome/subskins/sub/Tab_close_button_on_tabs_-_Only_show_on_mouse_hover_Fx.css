@@ -1,0 +1,35 @@
+/**************************************************************************
+ * Tab close button on tabs - Only show on mouse hover
+ * By: Michael Walden
+ * Current version adapted from CSS code in:
+ *  Mosaic-Fox by Patrick J. Dempsey <http://Addons.Mozilla.org/user/1643294>
+ *   http://Addons.Mozilla.org/addon/11228
+ *   http://Addons.Mozilla.org/addon/mosaic-fox
+ * Also see:
+ *  Tab Mix Plus by onemen <http://Addons.Mozilla.org/user/73820>,
+ *                  Gary Reyes <http://Addons.Mozilla.org/user/364>
+ *   http://Addons.Mozilla.org/addon/1122
+ *   http://Addons.Mozilla.org/addon/tab-mix-plus
+ *   http://TMP.GaryR.net
+ **/
+/* Hide tab close button on non-selected tabs in non-tab overflow mode & */
+/* show tab close button on non-selected tabs hovered in non-tab overflow mode. */
+.tabbrowser-tab:not(:hover):not([selected="true"])
+.tab-close-button:not([anonid="tmp-close-button"]) {
+ display: none !important;
+}
+/* Show tab close button on non-selected tabs hovered in tab overflow mode: */
+.tabbrowser-tabs:not([closebuttons="noclose"]):not([closebuttons="never"])
+.tabbrowser-tab:hover:not([pinned])
+.tab-close-button:not([anonid="tmp-close-button"]) {
+ display: -moz-box !important;
+}
+/* Hide tab close button on selected tab when not hovered */
+.tabbrowser-tab:not(:hover)[selected="true"]
+.tab-close-button:not([anonid="tmp-close-button"]) {
+ display: none !important;
+}
+
+/* My old version:
+.tabbrowser-tab:hover .tab-close-button:not([pinned]) { display: -moz-box !important; }
+*/

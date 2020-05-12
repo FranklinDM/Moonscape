@@ -1,0 +1,6 @@
+/**************************************************************************
+ * Remove Status-4-Evar-download-button text label
+ * By: Michael Walden
+ **/
+#status4evar-download-button { min-width: 16px !important; }
+#status4evar-download-button > .toolbarbutton-text { display: none !important; } 

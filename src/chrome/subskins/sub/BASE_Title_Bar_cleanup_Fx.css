@@ -1,0 +1,68 @@
+/**************************************************************************
+ * BASE Title Bar cleanup
+ * By: Michael Walden
+ **/
+
+/* Testing requires doing each of the following configurations:
+
+tabsontop           false
+menubar_autohide    false
+sizemode_maximized  false
+
+tabsontop           true
+menubar_autohide    false
+sizemode_maximized  false
+
+tabsontop           false
+menubar_autohide    true
+sizemode_maximized  false
+
+tabsontop           true
+menubar_autohide    true
+sizemode_maximized  false
+
+tabsontop           false
+menubar_autohide    false
+sizemode_maximized  true
+
+tabsontop           true
+menubar_autohide    false
+sizemode_maximized  true
+
+tabsontop           false
+menubar_autohide    true
+sizemode_maximized  true
+
+tabsontop           true
+menubar_autohide    true
+sizemode_maximized  true
+
+( test all of the above with and without a persona (lwtheme) )
+*/
+
+#main-window[sizemode="maximized"] {
+  -moz-appearance: -moz-window-button-box !important;
+}
+#main-window[sizemode="maximized"] #toolbar-menubar:not([autohide="true"]) {
+  margin-top: -4px !important;
+}
+#main-window[sizemode="maximized"] > #titlebar {
+  -moz-appearance: none !important;
+}
+
+#main-window:not([tabsontop="true"])[sizemode="maximized"] > #titlebar:not(:-moz-lwtheme) {
+  border-bottom-color: rgb(128, 128, 128) !important;
+  border-bottom-style: solid !important;
+  border-bottom-width: 1px !important;
+}
+
+#main-window[sizemode="maximized"] > #titlebar > #titlebar-content {
+  /* height: 31px !important; */
+}
+#main-window[sizemode="maximized"] #titlebar-buttonbox {
+  /* -moz-appearance: -moz-window-button-box !important; */
+}
+#main-window[tabsintitlebar] #TabsToolbar {
+  padding-top: 3px !important;
+  background-image: none !important;
+}

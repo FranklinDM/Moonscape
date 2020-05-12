@@ -12,7 +12,7 @@
 /* ::::: textbox ::::: */
 
 textbox {
-  -moz-appearance: textfield;
+  -moz-appearance: none;
   cursor: text;
   margin: 2px 4px;
   border: 2px solid;
@@ -30,10 +30,16 @@ html|*.textbox-input,
 html|*.textbox-textarea {
   margin: 0px !important;
   border: none !important;
-  padding: 0px !important;
+  padding: 0px 1px !important;
   background-color: inherit;
   color: inherit;
   font: inherit;
+}
+
+@media (-moz-windows-default-theme) {
+  textbox html|*.textbox-input::-moz-placeholder {
+    font-style: italic;
+  }
 }
 
 .textbox-contextmenu {
@@ -65,10 +71,15 @@ textbox.plain {
   border: none !important;
 }
 
+textbox.plain html|*.textbox-input,
+textbox.plain html|*.textbox-textarea {
+  padding: 0px !important;
+}
+
 /* ::::: search textbox ::::: */
 
 .textbox-search-icon {
-  list-style-image: url(chrome://global/skin/icons/Search-glass.png);
+  list-style-image: url(chrome://global/skin/icons/search-icon.png);
   -moz-image-region: rect(0, 16px, 16px, 0);
 }
 
@@ -81,7 +92,7 @@ textbox.plain {
 }
 
 .textbox-search-clear {
-  list-style-image: url(chrome://global/skin/icons/Search-close.png);
+  list-style-image: url(chrome://global/skin/icons/search-close.png);
   -moz-image-region: rect(0, 16px, 16px, 0);
 }
 

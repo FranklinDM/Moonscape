@@ -1,0 +1,11 @@
+/* ########################################################################## */
+/* ##  Copy this text block and paste it at the bottom of userContent.css in  */
+/* ##  your profile-directory/chrome/ folder or create a new userContent.css  */
+/* ##  in your profile-directory/chrome/ folder with this text block in it.   */
+/* ##  You may also paste the contents of this file as a user style.		  */
+/* ##  Un-comment lines to enable them.  See MOONSCAPE readme for more info.  */
+/* [Settings]================================================================ */
+/* @import url("chrome://subskins/skin/sub/Gray_about_blank_Fx.css"); */
+   @import url("chrome://subskins/skin/sub/Gray_about_blank_with_splash-3.css"); 
+/* @import url("chrome://subskins/skin/sub/Directory_Listing_-_style_2.css"); */
+/* ########################################################################## */

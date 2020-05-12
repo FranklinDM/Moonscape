@@ -1,0 +1,16 @@
+/******************************************************************************
+ * Title:  Add scrollbar to List all tabs drop-down
+ * By:     Michael Walden
+ * Date:   2013-09-12
+ *
+ * This will only be handy if you have lots of tabs open at once.  Then you
+ * will have a vertical scrollbar on the right edge of the List all tabs
+ * drop-down.
+ *
+ **/
+#alltabs-popup .autorepeatbutton-up,
+#alltabs-popup .autorepeatbutton-down {
+ display: none !important; }
+#alltabs-popup .arrowscrollbox-scrollbox {
+ overflow-y: auto !important;
+}

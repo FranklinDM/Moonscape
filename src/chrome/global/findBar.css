@@ -10,6 +10,10 @@
   -moz-appearance: none;
 }
 
+.findbar-closebutton:-moz-lwtheme-brighttext {
+  list-style-image: url("chrome://global/skin/icons/close-inverted.png");
+}
+
 findbar {
   padding-top: 1px;
   background-image: linear-gradient(rgba(0,0,0,.15) 1px, rgba(255,255,255,.15) 1px);
@@ -37,12 +41,8 @@ findbar[hidden] {
   -moz-image-region: rect(0px 16px 16px 0px);
 }
 
-.findbar-find-next:hover {
-  -moz-image-region: rect(16px 16px 32px 0px);
-}
-
 .findbar-find-next[disabled="true"] {
-  -moz-image-region: rect(32px 16px 48px 0px) !important;
+  -moz-image-region: rect(16px 16px 32px 0px);
 }
 
 /* find-previous button */
@@ -52,12 +52,8 @@ findbar[hidden] {
   -moz-image-region: rect(0px 32px 16px 16px);
 }
 
-.findbar-find-previous:hover {
-  -moz-image-region: rect(16px 32px 32px 16px);
-}
-
 .findbar-find-previous[disabled="true"] {
-  -moz-image-region: rect(32px 32px 48px 16px) !important;
+  -moz-image-region: rect(16px 32px 32px 16px);
 }
 
 /* highlight button */
@@ -67,20 +63,8 @@ findbar[hidden] {
   -moz-image-region: rect(0px 48px 16px 32px);
 }
 
-.findbar-highlight:hover {
-  -moz-image-region: rect(16px 48px 32px 32px);
-}
-
 .findbar-highlight[disabled="true"] {
-  -moz-image-region: rect(32px 48px 48px 32px) !important;
-}
-
-.findbar-highlight:active, .findbar-highlight[checked="true"] {
-  -moz-image-region: rect(48px 48px 64px 32px);
-}
-
-.findbar-highlight[checked="true"]:hover {
-  -moz-image-region: rect(64px 48px 80px 32px);
+  -moz-image-region: rect(16px 48px 32px 32px);
 }
 
 .find-status-icon {
@@ -100,20 +84,8 @@ findbar[hidden] {
   padding: 2px !important;
 }
 
-/* findbar search field */
-
-.findbar-textbox {
-  -moz-appearance: none;
-  border: 2px solid rgb(0, 0, 0);
-  -moz-border-top-colors:     threedshadow    threeddarkshadow;
-  -moz-border-right-colors:   threedhighlight threedlightshadow;
-  -moz-border-bottom-colors:  threedhighlight threedlightshadow;
-  -moz-border-left-colors:    threedshadow    threeddarkshadow;
-  min-width: 220px;
-}
-
-.findbar-textbox[focused="true"] {
-  border-color: Highlight;
+.find-status-icon[status="notfound"] {
+  list-style-image: url("chrome://global/skin/icons/information-16.png");
 }
 
 .findbar-textbox[status="notfound"] {
@@ -124,10 +96,6 @@ findbar[hidden] {
 .findbar-textbox[flash="true"] {
   box-shadow: 0 0 0 1em yellow inset;
   color: black;
-}
-
-.find-status-icon[status="notfound"] {
-  list-style-image: url("chrome://global/skin/icons/information-16.png");
 }
 
 .find-status-icon[status="wrapped"] {

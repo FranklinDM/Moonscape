@@ -3,12 +3,12 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 html {
-  background: #C0C0C0;
+  background: -moz-Dialog;
   font: 3mm tahoma,arial,helvetica,sans-serif;
 }
 
 #feedBody {
-  border: 1px solid THreeDShadow;
+  border: 1px solid ThreeDShadow;
   padding: 3em;
   padding-inline-start: 30px;
   margin: 2em auto;
@@ -36,16 +36,10 @@ html {
   display: none;
 }
 
-.feedBackground {
-  background: url("chrome://browser/skin/feeds/feedIcon.png") 0% 10% no-repeat InfoBackground;
-}
-
-.videoPodcastBackground {
-  background: url("chrome://browser/skin/feeds/videoFeedIcon.png") 0% 10% no-repeat InfoBackground;
-}
-
+.feedBackground,
+.videoPodcastBackground,
 .audioPodcastBackground {
-  background: url("chrome://browser/skin/feeds/audioFeedIcon.png") 0% 10% no-repeat InfoBackground;
+  background: url("chrome://browser/skin/feeds/feedIcon.png") 0% 10% no-repeat InfoBackground;
 }
 
 #feedHeader[dir="rtl"] {

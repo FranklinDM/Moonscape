@@ -4,7 +4,7 @@
 
 
 html {
-  background: #C0C0C0;
+  background: #833;
 }
 
 body {
@@ -29,7 +29,7 @@ h2 {
   min-width: 13em;
   max-width: 52em;
   margin: 4em auto;
-  border: 1px solid #FFBD09; /* pale yellow extracted from yellow passport icon */
+  border: 1px solid #DD0D09;
   border-radius: 10px;
   padding: 3em;
   padding-inline-start: 30px;
