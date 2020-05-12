@@ -1354,52 +1354,6 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
   padding-inline-end: 5px;
 }
 
-/* Address bar shading for SSL */
-
-#urlbar[https_color="all"][security_level="broken"],
-#urlbar[https_color="all"][security_level="low"] {
-  box-shadow: inset 0 0 2px rgb(168,0,0);
-}
-
-#urlbar[https_color="all"][security_level="mixed"],
-#urlbar[https_color="secure-mixed"][security_level="mixed"] {
-  box-shadow: inset 0 0 2px rgb(168,79,0);
-}
-
-#urlbar[https_color="all"][security_level="high"],
-#urlbar[https_color="secure-mixed"][security_level="high"],
-#urlbar[https_color="secure-only"][security_level="high"] {
-  box-shadow: inset 0 0 2px rgb(0,79,168);
-}
-
-#urlbar[https_color="all"][security_level="ev"],
-#urlbar[https_color="secure-mixed"][security_level="ev"],
-#urlbar[https_color="secure-only"][security_level="ev"] {
-  box-shadow: inset 0 0 2px rgb(0,168,0);
-}
-
-#urlbar[https_color="all"][security_level="broken"]:not(:-moz-lwtheme),
-#urlbar[https_color="all"][security_level="low"]:not(:-moz-lwtheme) {
-  box-shadow: inset 0 0 3px rgba(168,0,0,0.8);
-}
-
-#urlbar[https_color="all"][security_level="mixed"]:not(:-moz-lwtheme),
-#urlbar[https_color="secure-mixed"][security_level="mixed"]:not(:-moz-lwtheme) {
-  box-shadow: inset 0 0 3px rgba(168,79,0,0.8);
-}
-
-#urlbar[https_color="all"][security_level="high"]:not(:-moz-lwtheme),
-#urlbar[https_color="secure-mixed"][security_level="high"]:not(:-moz-lwtheme),
-#urlbar[https_color="secure-only"][security_level="high"]:not(:-moz-lwtheme) {
-  box-shadow: inset 0 0 3px rgba(0,79,168,0.8);
-}
-
-#urlbar[https_color="all"][security_level="ev"]:not(:-moz-lwtheme),
-#urlbar[https_color="secure-mixed"][security_level="ev"]:not(:-moz-lwtheme),
-#urlbar[https_color="secure-only"][security_level="ev"]:not(:-moz-lwtheme) {
-  box-shadow: inset 0 0 3px rgba(0,168,0,0.8);
-}
-
 /* Location bar dropmarker */
 .urlbar-history-dropmarker {
   margin-inline-end: -2px;
