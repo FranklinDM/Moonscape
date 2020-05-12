@@ -1268,15 +1268,6 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
   padding: 1px 2px;
 }
 
-.urlbar-icon:hover {
-  background-image: radial-gradient(circle closest-side, hsla(200,100%,70%,.3), hsla(200,100%,70%,0));
-}
-
-.urlbar-icon[open="true"],
-.urlbar-icon:hover:active {
-  background-image: radial-gradient(circle closest-side, hsla(200,100%,70%,.1), hsla(200,100%,70%,0));
-}
-
 #urlbar-search-splitter {
   min-width: 6px;
   margin-inline-start: -3px;
