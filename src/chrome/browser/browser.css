@@ -1311,37 +1311,27 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity {
   color: hsl(92,100%,20%);
   margin-inline-end: 4px;
-  background-image: -moz-linear-gradient(hsla(92,81%,16%,0),
-                                         hsla(92,81%,16%,.08) 25%,
-                                         hsla(92,81%,16%,.08) 75%,
-                                         hsla(92,81%,16%,0));
-  background-position: right;
-  background-repeat: no-repeat;
-  border-right: 1px solid hsla(92,100%,20%,0.5);
+  background-color: #CBEBB1;
+  border-right: 1px solid ThreeDDarkShadow;
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain {
   color: rgb(0,79,168);
   margin-inline-end: 4px;
-  background-image: -moz-linear-gradient(rgba(0,79,168,0),
-                                         rgba(0,79,168,.08) 25%,
-                                         rgba(0,79,168,.08) 75%,
-                                         rgba(0,79,168,0));
-  background-position: right;
-  background-repeat: no-repeat;
-  border-right: 1px solid rgba(0,79,168,0.5);
+  background-color: #CEDDF2;
+  border-right: 1px solid ThreeDDarkShadow;
 }
 
 #identity-box.verifiedIdentity:-moz-locale-dir(rtl) {
   background-position: left;
   border-right: none;
-  border-left: 1px solid hsla(92,100%,20%,0.5);
+  border-left: 1px solid ThreeDDarkShadow;
 }
 
 #identity-box.verifiedDomain:-moz-locale-dir(rtl) {
   background-position: left;
   border-right: none;
-  border-left: 1px solid rgba(0,79,168,0.5);
+  border-left: 1px solid ThreeDDarkShadow;
 }
 
 #identity-box:-moz-focusring {
