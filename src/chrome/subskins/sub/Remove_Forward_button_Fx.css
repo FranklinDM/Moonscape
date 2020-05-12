@@ -1,0 +1,5 @@
+/**************************************************************************
+ * Remove Forward button
+ * By: Michael Walden
+ **/
+#forward-button { display: none !important; }

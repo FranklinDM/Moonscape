@@ -1,0 +1,42 @@
+/**************************************************************************
+ * Toolbar Downloads button - style 3 (3.5 inch floppy disk in folder)
+ * Skin the download manager button
+ * By: Michael Walden
+ **/
+
+/* download manager button (large) */
+
+#downloads-button > .toolbarbutton-icon {
+  list-style-image: url("chrome://browser/skin/moonscape/img/ToolbarDownloads3.png") !important;
+}
+#downloads-button {
+  -moz-image-region: rect(0px 24px 24px 0px) !important;
+}
+#downloads-button:not([disabled="true"]):hover {
+  -moz-image-region: rect(24px 24px 48px 0px) !important;
+}
+#downloads-button[disabled="true"] {
+  -moz-image-region: rect(48px 24px 72px 0px) !important;
+}
+#downloads-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(96px 24px 120px 0px) !important;
+}
+
+/* download manager button (small) */
+
+toolbar[iconsize="small"] #downloads-button > .toolbarbutton-icon {
+  padding-left: 1px !important;
+  list-style-image: url("chrome://browser/skin/moonscape/img/Toolbar-smallDownloads3.png") !important;
+}
+toolbar[iconsize="small"] #downloads-button {
+  -moz-image-region: rect(0px 16px 16px 0px) !important;
+}
+toolbar[iconsize="small"] #downloads-button:not([disabled="true"]):hover {
+  -moz-image-region: rect(16px 16px 32px 0px) !important;
+}
+toolbar[iconsize="small"] #downloads-button[disabled="true"] {
+  -moz-image-region: rect(32px 16px 48px 0px) !important;
+}
+toolbar[iconsize="small"] #downloads-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(64px 16px 80px 0px) !important;
+}

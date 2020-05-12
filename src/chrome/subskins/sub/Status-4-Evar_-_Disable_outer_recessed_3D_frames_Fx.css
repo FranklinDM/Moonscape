@@ -1,0 +1,10 @@
+/**************************************************************************
+ * Status-4-Evar - Disable outer recessed 3D frames
+ * By: Michael Walden
+ **/
+#status4evar-status-widget,
+#status4evar-progress-widget,
+#status4evar-download-button,
+#status4evar-options-button {
+  border-width: 0px !important;
+}

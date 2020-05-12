@@ -1,0 +1,12 @@
+/**************************************************************************
+ * Remove Appmenu Button
+ * By: Michael Walden
+ **/
+
+#appmenu-button {
+  display: none !important;
+}
+
+.titlebar-placeholder[type="appmenu-button"] {
+  display: none !important;
+}

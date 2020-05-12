@@ -1,0 +1,40 @@
+/* ################################################################## */
+
+/* combined go/reload/stop button in location bar */
+
+#go-button,
+#urlbar > toolbarbutton {
+  -moz-appearance: none !important;
+  padding: 0 2px !important;
+  background-origin: border-box !important;
+  border: none !important;
+  list-style-image: url("chrome://browser/skin/reload-stop-go.png") !important;
+}
+
+#go-button { padding: 0 3px !important; }
+
+#go-button,
+#urlbar-go-button { -moz-image-region: rect(0, 48px, 16px, 32px) !important; }
+
+#go-button:hover,
+#urlbar-go-button:hover { -moz-image-region: rect(16px, 48px, 32px, 32px) !important; }
+
+#go-button:hover:active,
+#urlbar-go-button:hover:active { -moz-image-region: rect(32px, 48px, 48px, 32px) !important; }
+
+#go-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
+#urlbar-go-button:-moz-locale-dir(rtl) > .toolbarbutton-icon { transform: scaleX(-1) !important; }
+
+#urlbar-reload-button { -moz-image-region: rect(0, 16px, 16px, 0) !important; }
+
+#urlbar-reload-button:not([disabled]):hover { -moz-image-region: rect(16px, 16px, 32px, 0) !important; }
+
+#urlbar-reload-button:not([disabled]):hover:active { -moz-image-region: rect(32px, 16px, 48px, 0) !important; }
+
+#urlbar-reload-button:-moz-locale-dir(rtl) > .toolbarbutton-icon { transform: scaleX(-1) !important; }
+
+#urlbar-stop-button {-moz-image-region: rect(0, 32px, 16px, 16px) !important; }
+
+#urlbar-stop-button:not([disabled]):hover {-moz-image-region: rect(16px, 32px, 32px, 16px) !important; }
+
+#urlbar-stop-button:hover:active {-moz-image-region: rect(32px, 32px, 48px, 16px) !important; }

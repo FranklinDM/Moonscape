@@ -1,0 +1,50 @@
+/**************************************************************************
+ * Enable auto scaling throbber using small (16x16) and large (32x32)
+ * throbbers for small and large icon modes, respectively.
+ * By: Michael Walden
+ * (My note: [mode="full"] [mode="icons"] [mode="text"] [iconsize="large"] [iconsize="small"] )
+ **/
+#navigator-throbber,
+toolbar[mode="full"] #navigator-throbber {
+  width: 16px;
+  min-height: 16px;
+  margin: 0 3px;
+  list-style-image: url("chrome://browser/skin/moonscape/thr/Throbber32S.png") !important;
+}
+#navigator-throbber[busy="true"],
+toolbar[mode="full"] #navigator-throbber[busy="true"] {
+  list-style-image: url("chrome://browser/skin/moonscape/thr/Throbber32A.gif") !important;
+}
+toolbar[iconsize="small"]:not([mode="full"]) #navigator-throbber,
+toolbar[mode="text"] #navigator-throbber,
+.chromeclass-menubar #navigator-throbber,
+toolbar[mode="full"].chromeclass-menubar  #navigator-throbber {
+  list-style-image: url("chrome://browser/skin/moonscape/thr/Throbber16S.png") !important;
+}
+toolbar[iconsize="small"]:not([mode="full"]) #navigator-throbber[busy="true"],
+toolbar[mode="text"] #navigator-throbber[busy="true"],
+.chromeclass-menubar #navigator-throbber[busy="true"],
+toolbar[mode="full"].chromeclass-menubar  #navigator-throbber[busy="true"] {
+  list-style-image: url("chrome://browser/skin/moonscape/thr/Throbber16A.gif") !important;
+}
+/**************************************************************************
+ * Set other small throbbers to a matching throbber style.
+ * These should only be 16x16 pixels (or smaller) in size.
+ **/
+/* Tabs */
+.tabbrowser-tab[busy] > .tab-icon-image {
+  list-style-image: url("chrome://browser/skin/moonscape/thr/Throbber16A.gif") !important;
+}
+/* All tabs menupopup */
+.alltabs-item[busy] > .menu-iconic-left > .menu-iconic-icon {
+  list-style-image: url("chrome://browser/skin/moonscape/thr/Throbber16A.gif") !important;
+}
+/* sidebar-throbber */
+#sidebar-throbber[loading="true"] {
+  list-style-image: url("chrome://browser/skin/moonscape/thr/Throbber16A.gif") !important;
+  margin-inline-end: 4px !important;
+}
+/* ::::: About Popup Blocking dialog ::::: */
+#checkForUpdates[loading="true"] {
+  list-style-image: url("chrome://browser/skin/moonscape/thr/Throbber16A.gif") !important;
+}

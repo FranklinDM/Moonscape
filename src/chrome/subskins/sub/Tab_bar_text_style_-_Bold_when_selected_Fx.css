@@ -1,0 +1,7 @@
+/**************************************************************************
+ * Tab bar text style - Bold when selected
+ * By: Michael Walden
+ **/
+.tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {
+  font-weight: bold !important;
+}

@@ -1,0 +1,13 @@
+/**************************************************************************
+ * Location & search splitter grippy - Enable
+ * By: Michael Walden
+ **/
+#urlbar-search-splitter {
+  margin-right: -4px !important;
+  margin-left: -4px !important;
+  min-width: 9px !important;
+  background: url(chrome://browser/skin/moonscape/img/SplitterNormal.png) center center no-repeat !important;
+}
+#urlbar-search-splitter:hover {
+  background: url(chrome://browser/skin/moonscape/img/SplitterHover.png) center center no-repeat !important;
+}

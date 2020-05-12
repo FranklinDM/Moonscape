@@ -1,0 +1,8 @@
+/**************************************************************************
+ * Tab window loading gray background with splash-3
+ * By: Greg S - userstyles.org <http://userstyles.org/styles/272>
+ * Modified by: Michael Walden
+ **/
+tabbrowser tabpanels {
+  background:#D4D0C8 url("chrome://browser/skin/moonscape/spl/splash-3.gif") no-repeat fixed 50% 50% !important;
+}

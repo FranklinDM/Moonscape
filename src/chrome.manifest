@@ -14,6 +14,8 @@ skin    editor                  moonscape        chrome/editor/
 skin    ambassador              moonscape        chrome/ambassador/
 skin    communicator            moonscape        chrome/communicator/
 
+skin    subskins                moonscape        chrome/subskins/
+
 #------------------------------------------------------------------------------
 # OS-specific skin
 #------------------------------------------------------------------------------

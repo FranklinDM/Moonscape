@@ -1,0 +1,16 @@
+/**************************************************************************
+ * Status-4-Evar - Remove progress meter outer recessed 3D frame
+ * By: Michael Walden
+ **/
+#status4evar-progress-widget {
+  border-top-width:    0px !important;
+  border-right-width:  0px !important;
+  border-bottom-width: 0px !important;
+  border-left-width:   0px !important;
+  margin-left:         0px !important;
+  margin-right:        0px !important;
+  padding-top:         0px !important;
+  padding-right:       0px !important;
+  padding-bottom:      0px !important;
+  padding-left:        0px !important;
+}

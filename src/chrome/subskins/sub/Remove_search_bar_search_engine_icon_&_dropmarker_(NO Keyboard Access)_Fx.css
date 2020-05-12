@@ -1,0 +1,9 @@
+/**************************************************************************
+ * Remove search bar search engine icon & dropmarker (NO Keyboard Access) in FF3
+ * Source: http://ffextensiongurublog.info/2006/10/27/firefox-20-how-to-remove-the-search-button
+ * Modified by: Michael Walden
+ **/
+
+.searchbar-engine-button {
+ display: none !important
+}

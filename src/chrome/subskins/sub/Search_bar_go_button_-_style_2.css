@@ -1,0 +1,33 @@
+/**************************************************************************
+ * Search bar go button - style 2 (magnifying glass)
+ * By: Michael Walden
+ **/
+.search-go-button {
+  list-style-image: url("chrome://global/skin/icons/Search-glass.png") !important;
+  border: 0px !important;
+  padding: 2px !important;
+  -moz-appearance: none !important;
+}
+.search-go-button[chromedir="rtl"] {
+  list-style-image: url("chrome://global/skin/icons/Search-glass.png") !important;
+   -moz-transform: scaleX(-1);
+}
+.search-go-button {
+  -moz-image-region: rect(0px 16px 16px 0px) !important;
+}
+.search-go-button:hover {
+  -moz-image-region: rect(0px 32px 16px 16px) !important;
+}
+.search-go-button[disabled="true"] {
+  -moz-image-region: rect(0px, 48px, 16px, 32px) !important;
+}
+.search-go-button:hover:active {
+  -moz-image-region: rect(0px, 48px, 16px, 32px) !important;
+}
+
+/*
+.search-go-button:-moz-system-metric(touch-enabled) {
+  padding-inline-start: 5px;
+  padding-inline-end: 3px;
+}
+*/

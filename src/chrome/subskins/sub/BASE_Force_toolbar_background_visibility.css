@@ -1,0 +1,54 @@
+/**************************************************************************
+ * BASE Force background visibility
+ * By: Michael Walden
+ **/
+
+/* Toolbar backgrounds */
+/* #titlebar:not(:-moz-lwtheme), */
+#navigator-toolbox:not(:-moz-lwtheme) > toolbar,
+/*
+  #toolbar-menubar:not(:-moz-lwtheme),
+  #nav-bar:not(:-moz-lwtheme),
+  #__customToolbar_Location_Toolbar:not(:-moz-lwtheme),
+  #PersonalToolbar:not(:-moz-lwtheme),
+  #TabsToolbar:not(:-moz-lwtheme),
+*/
+#browser-bottombox:not(:-moz-lwtheme),
+#addon-bar:not(:-moz-lwtheme) {
+  /* -moz-appearance: none !important; */
+  background-color: -moz-dialog !important;
+}
+
+
+/* Sample color values */
+/* background-color: -moz-dialog !important; */ /* Use the color supplied by your OS */
+/* background-color: #DDDDDD !important; */     /* Color scheme: Mac OS 8.0 / 9.0    */
+/* background-color: #C0C0C0 !important; */     /* Color scheme: Windows Classic     */
+/* background-color: #D4D0C8 !important; */     /* Color scheme: Windows Standard    */
+/* background-color: #D3DAED !important; */     /* Vista Strata */
+/* background-color: #FFFFFF !important; */     /* White */
+/* background-color: #FF7E00 !important; */     /* Amber */
+/* background-color: #F0D0D0 !important; */     /* Redish */
+/* background-color: #D0F0D0 !important; */     /* Greenish */
+/* background-color: #D0D0F0 !important; */     /* Blueish */
+/* background-color: #D0F0F0 !important; */     /* Cyanish */
+/* background-color: #F0F0D0 !important; */     /* Yellowish */
+/* background-color: #F0D0F0 !important; */     /* Magentaish / Fuchsiaish */
+
+
+/* Menu backgrounds */
+/* -- NOT IN USE YET --
+#appmenu-popup:not(:-moz-lwtheme),
+#main-window:not(:-moz-lwtheme) menupopup > menu,
+#main-window:not(:-moz-lwtheme) menupopup > menuitem,
+#main-window:not(:-moz-lwtheme) popup > menu,
+#main-window:not(:-moz-lwtheme) popup > menuitem {
+  -moz-appearance: none !important;
+  background-color: -moz-dialog !important;
+}
+#main-window:not(:-moz-lwtheme) menupopup > menuseparator,
+#main-window:not(:-moz-lwtheme) popup > menuseparator {
+  -moz-appearance: none !important;
+  padding: 0px !important;
+}
+*/
