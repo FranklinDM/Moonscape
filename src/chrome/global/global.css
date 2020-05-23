@@ -143,6 +143,7 @@ toolbar[mode="text"] .toolbarbutton-text {
   margin: 3px 5px !important;
 }
 
+editor,
 window:not([inDOMFullscreen="true"]) browser {
   border: 2px solid;
   -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
