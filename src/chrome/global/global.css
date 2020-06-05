@@ -144,7 +144,7 @@ toolbar[mode="text"] .toolbarbutton-text {
 }
 
 editor,
-window:not([inDOMFullscreen="true"]) browser {
+window:not([inFullscreen="true"]) browser {
   border: 2px solid;
   -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
   -moz-border-right-colors: ThreeDHighlight ThreeDLightShadow;
