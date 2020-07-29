@@ -152,10 +152,11 @@ toolbarbutton[type="menu-button"]:not([disabled="true"])[open="true"] > .toolbar
   -moz-border-top-colors: ThreeDHighlight;
   -moz-border-right-colors: ThreeDShadow;
   -moz-border-bottom-colors: ThreeDShadow;
-  -moz-border-left-colors: ThreeDHighlight;
+  -moz-border-left-colors: ThreeDHighlight; 
 }
 
-toolbarbutton[type="menu-button"]:not([disabled="true"]):hover:active > .toolbarbutton-menubutton-dropmarker,
+toolbarbutton[type="menu-button"]:not([disabled="true"]) > .toolbarbutton-menubutton-button:hover:active,
+toolbarbutton[type="menu-button"]:not([disabled="true"]) > .toolbarbutton-menubutton-dropmarker:hover:active,
 toolbarbutton[type="menu-button"]:not([disabled="true"])[open="true"] > .toolbarbutton-menubutton-dropmarker {
   -moz-border-top-colors: ThreeDShadow;
   -moz-border-right-colors: ThreeDHighlight;
