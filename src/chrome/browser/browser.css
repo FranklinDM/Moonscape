@@ -3152,18 +3152,21 @@ toolbar[brighttext] #addonbar-closebutton {
   }
   
   /* Make these toolbars transparent and removes borders that overlap the caption buttons when the window is maximized nad tabs are on top */
-  #main-window[sizemode="maximized"][tabsontop=true] #toolbar-menubar[autohide="true"]:not(:-moz-lwtheme),
-  #main-window[sizemode="maximized"][tabsontop=true] #toolbar-menubar[autohide="true"] ~ #TabsToolbar:not(:-moz-lwtheme) {
+  #main-window[sizemode="maximized"][tabsontop=true] #toolbar-menubar[autohide="true"]:not([customizing]):not(:-moz-lwtheme),
+  #main-window[sizemode="maximized"][tabsontop=true] #toolbar-menubar[autohide="true"]:not([customizing]) ~ #TabsToolbar:not(:-moz-lwtheme) {
     background-color: transparent !important;
     color: var(--window-text-color);
     border-left-style: none !important;
     border-right-style: none !important;
   }
-  #main-window[sizemode="maximized"][tabsontop=true] #toolbar-menubar[autohide="true"] ~ #TabsToolbar {
-    border-top: none;
+  #main-window[sizemode="maximized"][tabsontop=true] #toolbar-menubar[autohide="true"]:not([customizing]) {
+    border-style: none;
   }
-  #main-window[sizemode="maximized"][tabsontop=true] #toolbar-menubar[autohide="true"] {
-    border: none;
+  #main-window[sizemode="maximized"][tabsontop=true] #toolbar-menubar[autohide="true"]:not([customizing]) ~ #TabsToolbar {
+    border-top-style: none;
+  }
+  #main-menubar > menu:not([_moz-menuactive]):not([disabled="true"]):not(:-moz-lwtheme) {
+    color: inherit;
   }
     
 /* Show toolbar borders on vista through win8, but not on win10 and later: */
