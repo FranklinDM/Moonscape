@@ -86,6 +86,7 @@ toolbarbutton[checked="true"]:not([disabled="true"]) {
     text-shadow: inherit;
   }
   
+  toolbarbutton:-moz-lwtheme:hover:active:not([disabled="true"]),
   toolbarbutton:-moz-lwtheme:not([disabled="true"]) {
     color: inherit;
     text-shadow: inherit;
@@ -97,6 +98,7 @@ toolbarbutton[checked="true"]:not([disabled="true"]) {
     -moz-appearance: none;
   }
 
+  toolbarbutton:-moz-lwtheme:hover:active:not([disabled="true"]),
   toolbarbutton:-moz-lwtheme:not([disabled="true"]) {
     color: inherit;
     text-shadow: inherit;
