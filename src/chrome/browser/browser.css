@@ -1850,6 +1850,7 @@ richlistitem[type~="action"][actiontype$="tab"][selected="true"] > .ac-url-box >
 }
 
 .tabs-newtab-button:-moz-lwtheme-brighttext,
+#TabsToolbar[brighttext] .tabs-newtab-button,
 #TabsToolbar[brighttext] > #new-tab-button,
 #TabsToolbar[brighttext] > toolbarpaletteitem > #new-tab-button {
   list-style-image: url(chrome://browser/skin/tabbrowser/newtab-inverted.png);
