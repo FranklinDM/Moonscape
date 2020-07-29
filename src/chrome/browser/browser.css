@@ -1588,21 +1588,17 @@ richlistitem[type~="action"][actiontype$="tab"][selected="true"] > .ac-url-box >
 
 .tabbrowser-tab {
   -moz-appearance: none;
-  background-color: rgba(0, 0, 0, 0.10);
+  background-color: ThreeDLightShadow;
   padding: 0;
   margin: 0;
   border: 2px solid;
-  border-bottom: none;
+  border-bottom-style: none;
   border-radius: var(--tab-border-radius) var(--tab-border-radius) 0px 0px;
   -moz-border-top-colors: transparent rgba(0, 0, 0, 0.2);
   -moz-border-right-colors: transparent ThreeDDarkShadow;
   -moz-border-left-colors: transparent rgba(0, 0, 0, 0.2);
   height: var(--tab-height);
   padding-inline-end: 3px;
-}
-
-.tabbrowser-tab:hover {
-  background: rgba(0, 0, 0, 0.05);
 }
 
 .tabbrowser-tab[selected="true"] {
@@ -1621,17 +1617,25 @@ richlistitem[type~="action"][actiontype$="tab"][selected="true"] > .ac-url-box >
 }
 
 .tabbrowser-tab:-moz-lwtheme {
+  background-color: rgba(0, 0, 0, 0.10);
   color: inherit;
   /* 0.99 opacity rquired to force an active layer, see bug #1028369 */
   opacity: 0.99;
+  border-bottom-style: solid;
+  -moz-border-bottom-colors: transparent ThreeDDarkShadow;
+}
+
+
+.tabbrowser-tab:hover:-moz-lwtheme {
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .tabbrowser-tab:-moz-lwtheme:not([selected="true"]) {
   opacity: 0.9;
 }
 
-.tabbrowser-tab[selected="true"]:-moz-lwtheme {
-  background-color: transparent;
+.tabbrowser-tab:-moz-lwtheme[selected="true"] {
+  -moz-border-bottom-colors: ThreeDShadow ThreeDDarkShadow;
 }
 
 .tabbrowser-tab[pinned][titlechanged]:not([selected="true"]) {
