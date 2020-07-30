@@ -4,5 +4,5 @@
  * Modified by: Michael Walden
  **/
 tabbrowser tabpanels {
-  background:#D4D0C8 url("chrome://browser/skin/moonscape/spl/splash-3.gif") no-repeat fixed 50% 50% !important;
+  background:#D4D0C8 url("chrome://subskins/skin/spl/splash-3.gif") no-repeat fixed 50% 50% !important;
 }

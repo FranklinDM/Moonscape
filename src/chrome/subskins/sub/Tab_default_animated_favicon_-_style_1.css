@@ -3,7 +3,7 @@
  * By: Michael Walden
  **/
 .tabbrowser-tab .tab-icon-image {
-  list-style-image: url("chrome://browser/skin/moonscape/img/page-proxy.png") !important;
+  list-style-image: url("chrome://subskins/skin/img/page-proxy.png") !important;
   -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
 }
 .tabbrowser-tab:hover .tab-icon-image {

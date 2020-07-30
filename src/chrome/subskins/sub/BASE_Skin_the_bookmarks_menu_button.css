@@ -5,7 +5,7 @@
  
 /* Bookmarks menu button */
 #bookmarks-menu-button {
- list-style-image: url("chrome://browser/skin/moonscape/img/bookmark-menu-17.png") !important;
+ list-style-image: url("chrome://subskins/skin/img/bookmark-menu-17.png") !important;
  -moz-image-region: rect( 0px 32px 17px 0px) !important;  /* Normal */
 }
 /* Bookmarks menu button, hover */

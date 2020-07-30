@@ -6,7 +6,7 @@
  
 /* History menu button */
 #history-menu-button {
- list-style-image: url("chrome://browser/skin/moonscape/img/history-menu-17.png") !important;
+ list-style-image: url("chrome://subskins/skin/img/history-menu-17.png") !important;
  -moz-image-region: rect( 0px 32px 20px 0px) !important;  /* Normal */
 }
 /* History menu button, hover */

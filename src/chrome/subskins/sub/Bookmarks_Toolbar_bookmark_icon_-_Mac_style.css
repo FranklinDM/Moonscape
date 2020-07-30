@@ -5,6 +5,6 @@
 
 toolbarbutton.bookmark-item:not(#home-button):not([container]):not([query]):not(#bookmarks-menu-button),
 .chevron menuitem.bookmark-item {
-  list-style-image: url("chrome://browser/skin/moonscape/img/page-proxy.png") !important;
+  list-style-image: url("chrome://subskins/skin/img/page-proxy.png") !important;
   -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
 }

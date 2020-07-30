@@ -5,7 +5,7 @@
 
 /* tabview button (24px) ################################################### */
 #tabview-button {
-  list-style-image: url(chrome://browser/skin/moonscape/img/tabview-large.png) !important;
+  list-style-image: url(chrome://subskins/skin/img/tabview-large.png) !important;
 }
 #tabview-button > image {
   margin: 0px !important;
@@ -60,7 +60,7 @@
 
 /* tabview button (18px) ################################################### */
 toolbar[iconsize="small"] #tabview-button {
-  list-style-image: url(chrome://browser/skin/moonscape/img/tabview.png) !important;
+  list-style-image: url(chrome://subskins/skin/img/tabview.png) !important;
 }
 toolbar[iconsize="small"] #tabview-button > image {
   margin: 0px !important;
@@ -115,7 +115,7 @@ toolbar[iconsize="small"] #tabview-button:hover:active {
 
 /* menu_tabview button (16px) ############################################## */
 #menu_tabview {
-  list-style-image: url(chrome://browser/skin/moonscape/img/tabview.png) !important;
+  list-style-image: url(chrome://subskins/skin/img/tabview.png) !important;
 }
 #menu_tabview[groups="0"] {
   -moz-image-region: rect(1px, 17px, 17px, 1px) !important;

@@ -5,7 +5,7 @@
  **/
 
 #aOffline-status > .toolbarbutton-icon {
-  list-style-image: url("chrome://browser/skin/moonscape/img/Offline-Online6.png") !important;
+  list-style-image: url("chrome://subskins/skin/img/Offline-Online6.png") !important;
   -moz-image-region:rect(0px 40px 12px 20px) !important;
   width: 20px !important;
   height: 12px !important;

@@ -4,9 +4,9 @@
  **/
 
 #navigator-throbber {
-  list-style-image: url("chrome://browser/skin/moonscape/thr/Throbber16S.png") !important;
+  list-style-image: url("chrome://subskins/skin/thr/Throbber16S.png") !important;
 }
 
 #navigator-throbber[busy="true"] {
-  list-style-image: url("chrome://browser/skin/moonscape/thr/Throbber16A.gif") !important;
+  list-style-image: url("chrome://subskins/skin/thr/Throbber16A.gif") !important;
 }

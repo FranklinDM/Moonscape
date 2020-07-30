@@ -6,7 +6,7 @@
 /* restman button (large) */
 
 #restman-button > .toolbarbutton-icon {
-  list-style-image: url("chrome://browser/skin/moonscape/img/Restart.png") !important;
+  list-style-image: url("chrome://subskins/skin/img/Restart.png") !important;
 }
 #restman-button {
   -moz-image-region: rect(0px 24px 24px 0px) !important;
@@ -28,7 +28,7 @@
 
 toolbar[iconsize="small"] #restman-button > .toolbarbutton-icon {
   padding-left: 2px !important;
-  list-style-image: url("chrome://browser/skin/moonscape/img/Restart-small.png") !important;
+  list-style-image: url("chrome://subskins/skin/img/Restart-small.png") !important;
 }
 toolbar[iconsize="small"] #restman-button {
   -moz-image-region: rect(0px 16px 16px 0px) !important;

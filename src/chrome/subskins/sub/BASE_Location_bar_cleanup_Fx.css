@@ -8,7 +8,7 @@
  *
  **/
 #identity-box #page-proxy-favicon:not([src]) {
-  list-style-image: url("chrome://browser/skin/moonscape/img/page-proxy.png") !important;
+  list-style-image: url("chrome://subskins/skin/img/page-proxy.png") !important;
   -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
 }
 #identity-box:hover #page-proxy-favicon[pageproxystate="valid"] {

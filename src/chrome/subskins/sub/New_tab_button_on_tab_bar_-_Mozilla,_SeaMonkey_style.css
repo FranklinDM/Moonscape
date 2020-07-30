@@ -5,7 +5,7 @@
 .tabs-newtab-button,
 #TabsToolbar > #new-tab-button,
 #TabsToolbar > toolbarpaletteitem > #new-tab-button {
-  list-style-image: url("chrome://browser/skin/moonscape/img/mozilla-tab-new.png") !important;
+  list-style-image: url("chrome://subskins/skin/img/mozilla-tab-new.png") !important;
   -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
 }
 .tabs-newtab-button:hover,

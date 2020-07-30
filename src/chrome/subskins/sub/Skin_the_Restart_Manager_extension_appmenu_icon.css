@@ -4,6 +4,6 @@
  **/
 
 #restman-appMenuItem {
-  list-style-image: url("chrome://browser/skin/moonscape/img/Restart-small.png") !important;
+  list-style-image: url("chrome://subskins/skin/img/Restart-small.png") !important;
   -moz-image-region:rect(0px 16px 16px 0px) !important;
 }

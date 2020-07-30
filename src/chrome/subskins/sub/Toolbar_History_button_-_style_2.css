@@ -7,7 +7,7 @@
 /* history sidebar button (large) */
 
 #history-button > .toolbarbutton-icon {
-  list-style-image: url("chrome://browser/skin/moonscape/img/ToolbarHistory2.png") !important;
+  list-style-image: url("chrome://subskins/skin/img/ToolbarHistory2.png") !important;
 }
 #history-button {
   -moz-image-region: rect(0px 24px 24px 0px) !important;
@@ -30,7 +30,7 @@
 
 toolbar[iconsize="small"] #history-button > .toolbarbutton-icon {
   padding-left: 1px !important;
-  list-style-image: url("chrome://browser/skin/moonscape/img/Toolbar-smallHistory2.png") !important;
+  list-style-image: url("chrome://subskins/skin/img/Toolbar-smallHistory2.png") !important;
 }
 toolbar[iconsize="small"] #history-button {
   -moz-image-region: rect(0px 16px 16px 0px) !important;

@@ -4,7 +4,7 @@
  **/
 
 #MinTrayR_toolbaritem {
-  list-style-image: url("chrome://browser/skin/moonscape/img/MinTrayR16x16.png") !important;
+  list-style-image: url("chrome://subskins/skin/img/MinTrayR16x16.png") !important;
   -moz-image-region: rect(0px, 16px, 16px,  0px) !important;
 }
 #MinTrayR_toolbaritem:hover {

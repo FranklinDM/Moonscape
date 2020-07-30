@@ -7,5 +7,5 @@
 /* History */
 /* browser\places\places.css */
 treechildren::-moz-tree-image(title, query, OrganizerQuery_History) {
-  list-style-image: url("chrome://browser/skin/moonscape/img/history2.png") !important;
+  list-style-image: url("chrome://subskins/skin/img/history2.png") !important;
 }

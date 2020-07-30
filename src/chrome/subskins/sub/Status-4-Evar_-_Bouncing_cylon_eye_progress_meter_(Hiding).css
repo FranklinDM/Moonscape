@@ -21,6 +21,6 @@
  visibility: collapse !important     /* < Override Status-4-Evar visibility settings */
 }
 #status4evar-progress-bar.progressmeter-statusbar:not([collapsed="true"]) {
- background: transparent url("chrome://browser/skin/moonscape/img/old-progressmeter.gif") !important;
+ background: transparent url("chrome://subskins/skin/img/old-progressmeter.gif") !important;
  visibility: visible !important
 }

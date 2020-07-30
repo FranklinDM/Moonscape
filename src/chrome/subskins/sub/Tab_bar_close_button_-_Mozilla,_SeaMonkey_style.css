@@ -3,7 +3,7 @@
  * By: Michael Walden
  **/
 #TabsToolbar .tabs-closebutton {
-  list-style-image: url("chrome://browser/skin/moonscape/img/mozilla-tab-close.png") !important;
+  list-style-image: url("chrome://subskins/skin/img/mozilla-tab-close.png") !important;
   -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
 }
 #TabsToolbar .tabs-closebutton:hover {

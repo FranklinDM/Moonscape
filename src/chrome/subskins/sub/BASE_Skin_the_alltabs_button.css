@@ -9,7 +9,7 @@
 
 /* List style image and region for large alltabs icon */
 #alltabs-button {
-  list-style-image: url("chrome://browser/skin/moonscape/img/ToolbarAlltabs.png") !important;
+  list-style-image: url("chrome://subskins/skin/img/ToolbarAlltabs.png") !important;
   -moz-image-region: rect(0px, 24px, 24px, 0px) !important;
 }
 /* Large alltabs icon, hover */
@@ -25,7 +25,7 @@
 
 /* Small alltabs icon */
 toolbar[iconsize="small"] #alltabs-button {
-  list-style-image: url("chrome://browser/skin/moonscape/img/Toolbar-smallAlltabs.png") !important;
+  list-style-image: url("chrome://subskins/skin/img/Toolbar-smallAlltabs.png") !important;
   -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
 }
 /* Small alltabs icon, hover */
@@ -65,7 +65,7 @@ toolbar[iconsize="small"] #alltabs-button[open="true"] {
 
 /* Special case alltabs dropdown-arrow display in tabs toolbar */
 #TabsToolbar #alltabs-button {
-  list-style-image: url("chrome://browser/skin/moonscape/img/alltabs.png") !important;
+  list-style-image: url("chrome://subskins/skin/img/alltabs.png") !important;
   -moz-image-region: rect(0, 14px, 14px, 0) !important;
 }
 /* Special case alltabs dropdown-arrow display in tabs toolbar, hover (same as non-hover) */

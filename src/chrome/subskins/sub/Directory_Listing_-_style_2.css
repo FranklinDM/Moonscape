@@ -12,8 +12,8 @@
  *
  **/
 .up::before {
-  content: url(chrome://browser/skin/moonscape/img/up2.png) !important;
+  content: url(chrome://subskins/skin/img/up2.png) !important;
 }
 .dir::before {
-  content: url(chrome://browser/skin/moonscape/img/folder2.png) !important;
+  content: url(chrome://subskins/skin/img/folder2.png) !important;
 }

@@ -6,7 +6,7 @@
 #TabsToolbar toolbarpaletteitem > #alltabs-button,
 #TabsToolbar #alltabs-button[open="true"],
 #TabsToolbar #alltabs-button:hover[open="true"] {
-  list-style-image: url("chrome://browser/skin/moonscape/img/mozilla-tab-list.png") !important;
+  list-style-image: url("chrome://subskins/skin/img/mozilla-tab-list.png") !important;
   -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
 }
 #TabsToolbar #alltabs-button:hover {

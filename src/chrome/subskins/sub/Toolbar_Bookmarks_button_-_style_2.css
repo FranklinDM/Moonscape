@@ -7,7 +7,7 @@
 /* bookmark sidebar button (large) */
 
 #bookmarks-button > .toolbarbutton-icon {
-  list-style-image: url("chrome://browser/skin/moonscape/img/ToolbarBookmarks2.png") !important;
+  list-style-image: url("chrome://subskins/skin/img/ToolbarBookmarks2.png") !important;
 }
 #bookmarks-button {
   -moz-image-region: rect(0px 24px 24px 0px) !important;
@@ -29,7 +29,7 @@
 
 toolbar[iconsize="small"] #bookmarks-button > .toolbarbutton-icon {
   padding-left: 2px !important;
-  list-style-image: url("chrome://browser/skin/moonscape/img/Toolbar-smallBookmarks2.png") !important;
+  list-style-image: url("chrome://subskins/skin/img/Toolbar-smallBookmarks2.png") !important;
 }
 toolbar[iconsize="small"] #bookmarks-button {
   -moz-image-region: rect(0px 16px 16px 0px) !important;

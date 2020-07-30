@@ -9,6 +9,6 @@
 
 @-moz-document url(about:blank) {
   html {
-    background:-moz-dialog url("chrome://browser/skin/moonscape/spl/splash-3.gif") no-repeat fixed 50% 50% !important;
+    background:-moz-dialog url("chrome://subskins/skin/spl/splash-3.gif") no-repeat fixed 50% 50% !important;
   }
 }
