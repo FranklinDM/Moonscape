@@ -1,5 +1,0 @@
-/**************************************************************************
- * Always show location bar Go button in FF3
- * By: Michael Walden
- **/
-#go-button { visibility: visible !important; }

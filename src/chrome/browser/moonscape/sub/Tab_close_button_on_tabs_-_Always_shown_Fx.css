@@ -1,8 +1,0 @@
-/**************************************************************************
- * Always show tab close button on tabs
- * By: Michael Walden
- **/
-.tabbrowser-tabs > * > * > * > .tab-close-button:not([pinned])[selected="true"],
-.tabbrowser-tabs > * > * > * > .tab-close-button:not([pinned]) {
-  display: -moz-box !important;
-}

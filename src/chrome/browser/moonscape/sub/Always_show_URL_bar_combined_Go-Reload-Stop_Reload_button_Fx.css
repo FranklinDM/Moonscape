@@ -1,6 +1,0 @@
-/**************************************************************************
- * Always show URL bar combined Go/Reload/Stop Reload button
- * By: Michael Walden
- **/
-#urlbar-reload-button { visibility: visible !important; }
-#urlbar-reload-button:hover { visibility: visible !important; }

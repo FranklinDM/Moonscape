@@ -1,7 +1,0 @@
-/**************************************************************************
- * Bookmarks menu button - Remove text label
- * By: Michael Walden
- **/
-#bookmarks-menu-button { min-width: 16px !important; }
-#bookmarks-menu-button > .toolbarbutton-text { display: none !important; }
-#bookmarks-menu-button > .toolbarbutton-icon { margin-right: 0px !important; }

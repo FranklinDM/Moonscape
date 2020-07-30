@@ -1,6 +1,0 @@
-/**************************************************************************
- * Remove Tab Groups button text label
- * By: Michael Walden
- **/
- #tabview-button { min-width: 16px !important; } 
- #tabview-button > .toolbarbutton-text { display: none !important; } 

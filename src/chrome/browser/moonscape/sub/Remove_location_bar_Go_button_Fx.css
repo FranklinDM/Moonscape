@@ -1,5 +1,0 @@
-/**************************************************************************
- * Remove location bar Go button in FF3
- * By: Michael Walden
- **/
-#go-button { display: none !important; }

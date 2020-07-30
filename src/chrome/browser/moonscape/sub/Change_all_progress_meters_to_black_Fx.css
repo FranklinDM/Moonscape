@@ -1,9 +1,0 @@
-/**************************************************************************
- * Change all progress meters to black
- * Source: http://ffextensiongurublog.info/2007/01/10/fx-tweak-changing-progress-bar-color
- * Modified by: Michael Walden
- **/
-.progress-bar {
- -moz-appearance: none !important;
- background-color: #000000 !important;
-}

@@ -1,7 +1,0 @@
-/**************************************************************************
- * Close Button by Isaac - Show text label below button
- * By: Michael Walden
- **/
-#cb-button {
- -moz-box-orient: vertical !important;
-}

@@ -1,5 +1,0 @@
-/**************************************************************************
- * Remove Bookmarks menu
- * By: Michael Walden
- **/
-menu[label="Bookmarks"] { display: none !important; }

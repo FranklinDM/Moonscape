@@ -1,7 +1,0 @@
-/**************************************************************************
- * Remove location bar favicon and identity button in FF3
- * By: Michael Walden
- **/
-#identity-box > hbox {
-  display: none !important;
-}

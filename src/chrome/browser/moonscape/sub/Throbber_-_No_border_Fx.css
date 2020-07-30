@@ -1,8 +1,0 @@
-/**************************************************************************
- * Throbber - No border
- * By: Michael Walden
- **/
-#navigator-throbber > image,
-#navigator-throbber[busy] > image {
-  border: 0px solid !important;
-}

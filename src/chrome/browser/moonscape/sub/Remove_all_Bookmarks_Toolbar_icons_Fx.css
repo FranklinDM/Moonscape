@@ -1,6 +1,0 @@
-/**************************************************************************
- * Remove all Bookmarks (Personal) Toolbar icons in FF3
- * By: Customizing Mozilla > userChrome.css <http://www.mozilla.org/unix/customizing.html>
- * Modified by: Michael Walden
- **/
-toolbarbutton.bookmark-item > .toolbarbutton-icon { display: none !important; }

@@ -1,8 +1,0 @@
-/**************************************************************************
- * Remove location bar identity button text label in Fx
- * By: Michael Walden
- **/
-#identity-icon-country-label:not([value=""]),
-#identity-icon-label:not([value=""]){
-  display: none !important;
-}

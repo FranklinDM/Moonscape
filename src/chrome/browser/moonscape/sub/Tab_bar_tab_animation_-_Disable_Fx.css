@@ -1,8 +1,0 @@
-/**************************************************************************
- * Tab bar tab animation - Disable
- * By: Michael Walden
- **/
-.tabbrowser-tab {
-  transition-duration:  0s !important;
-  transition-delay: .0001s !important;
-}

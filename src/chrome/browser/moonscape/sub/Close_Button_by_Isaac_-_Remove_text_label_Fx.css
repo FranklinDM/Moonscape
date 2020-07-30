@@ -1,7 +1,0 @@
-/**************************************************************************
- * Close Button by Isaac - Remove text label
- * By: Michael Walden
- **/
-#cb-button > .toolbarbutton-text {
- display: none !important;
-}

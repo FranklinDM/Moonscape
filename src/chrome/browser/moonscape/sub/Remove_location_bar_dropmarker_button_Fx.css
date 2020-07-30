@@ -1,5 +1,0 @@
-/**************************************************************************
- * Remove location bar dropmarker button in FF3
- * By: Michael Walden
- **/
-#urlbar > .autocomplete-history-dropmarker { display: none !important; }

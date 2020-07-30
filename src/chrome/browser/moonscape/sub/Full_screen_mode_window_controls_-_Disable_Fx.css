@@ -1,7 +1,0 @@
-/**************************************************************************
- * Full screen mode window controls - Disable
- * By: Michael Walden
- **/
-#main-window[inFullscreen] #window-controls {
- display: none !important;
-}

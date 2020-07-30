@@ -1,7 +1,0 @@
-/**************************************************************************
- * Remove Home button text label only when on bookmarks toolbar
- * By: Michael Walden
- **/
-#PersonalToolbar > #home-button { min-width: 16px !important; } 
-#PersonalToolbar > #home-button > .toolbarbutton-text { display: none !important; } 
-#PersonalToolbar > #home-button > .toolbarbutton-icon { margin-right: 0px !important; } 
