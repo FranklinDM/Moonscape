@@ -1,0 +1,113 @@
+/* Containers */
+body {
+  background: #C0C0C0;
+  margin: 0;
+}
+.sticky-header {
+  background: #C0C0C0;
+  position: sticky;
+  top: 0;
+  width: 100%;  
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.margin-position {
+  margin: 2em 0;
+}
+.center-container {
+  align-items: center;
+}
+.right-container {
+  align-items: right;
+}
+.left-container {
+  align-items: center;
+}
+.center-content {
+  justify-content: center;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.center-text > div,
+.center-text {
+  text-align: center;
+}
+.left-text > div,
+.left-text {
+  text-align: left;
+}
+
+
+/* Text */
+.bold {
+  font-weight: bold;
+}
+.mb {
+  margin-bottom: 2em;
+}
+.ml {
+  margin-left: 2em;
+}
+.mr {
+  margin-right: 2em;
+}
+.mt {
+  margin-top: 2em;
+}
+.ma {
+  margin: 2em;
+}
+.superscript {
+  position: relative;
+  top: -0.5em;
+  font-size: 80%;
+}
+.red {
+  color: red;
+}
+
+/* Adjustments */
+.restrict-width {
+  width: 75%;
+}
+.borderless {
+  border: none;
+}
+#header-image {
+  max-height: 128px;
+}
+#header-image-small {
+  max-height: 48px;
+}
+
+/* HTML elements */
+table {
+  text-align: left;
+  width: 100%;
+}
+h1, h2 {
+  border-bottom: 1px solid ThreeDShadow;
+}
+h3 {
+  text-decoration: underline;
+}
+img {
+  max-width: 80%;
+  height: auto;
+  width: auto;
+}
+
+/* Responsive Design */
+@media all and (max-width: 800px) {
+  body {
+    margin: 0 1em;
+  }
+  .restrict-width {
+    width: 100%;
+  }
+}
