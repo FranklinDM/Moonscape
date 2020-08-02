@@ -1048,7 +1048,7 @@ button.button-link:not([disabled="true"]):active:hover {
   text-shadow: none;
 }
 
-.header-button:hover:active,
+.header-button:not([disabled="true"]):hover:active,
 .header-button[open] {
   -moz-border-bottom-colors: ThreeDHighlight  ThreeDHighlight;
   -moz-border-top-colors:    ThreeDDarkShadow ThreeDShadow;
