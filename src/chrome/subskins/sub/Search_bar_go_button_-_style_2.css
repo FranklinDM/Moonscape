@@ -3,13 +3,13 @@
  * By: Michael Walden
  **/
 .search-go-button {
-  list-style-image: url("chrome://global/skin/icons/Search-glass.png") !important;
+  list-style-image: url("chrome://global/skin/icons/search-icon.png") !important;
   border: 0px !important;
   padding: 2px !important;
   -moz-appearance: none !important;
 }
 .search-go-button[chromedir="rtl"] {
-  list-style-image: url("chrome://global/skin/icons/Search-glass.png") !important;
+  list-style-image: url("chrome://global/skin/icons/search-icon.png") !important;
    -moz-transform: scaleX(-1);
 }
 .search-go-button {

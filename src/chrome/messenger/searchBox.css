@@ -29,7 +29,7 @@
 }
 
 .gloda-search-icon {
-  list-style-image: url(chrome://global/skin/icons/Search-glass.png);
+  list-style-image: url("chrome://global/skin/icons/search-icon.png");
   -moz-image-region: rect(0, 16px, 16px, 0);
 }
 
