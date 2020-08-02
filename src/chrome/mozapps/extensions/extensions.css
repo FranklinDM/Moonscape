@@ -1071,9 +1071,9 @@ button.button-link:not([disabled="true"]):active:hover {
 
 /*** notification bar ***/
 
-#addons-notifications > notification {
-  border: 1px solid #000;
-  margin-bottom: 1em;
+#addons-notifications {
+  margin: -18px;
+  margin-bottom: 18px;
 }
 
 
