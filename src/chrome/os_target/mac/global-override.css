@@ -1,8 +1,0 @@
-/**
- * Tab Drag and Drop
- */
-
-.tab-drop-indicator {
-  list-style-image: url("chrome://os_target/skin/tabDragIndicator.png") !important;
-  margin-bottom: -4px !important;
-}
