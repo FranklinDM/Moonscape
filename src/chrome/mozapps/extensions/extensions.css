@@ -9,16 +9,36 @@
   list-style-image: url(chrome://mozapps/skin/extensions/navigation.png);
 }
 
-#back-btn:-moz-locale-dir(ltr),
-#forward-btn:-moz-locale-dir(rtl) {
-  -moz-image-region: rect(0, 18px, 18px, 0);
+#back-btn {
+  -moz-image-region: rect(0px 24px 24px 0px);
+}
+#back-btn:not([disabled="true"]):hover {
+  -moz-image-region: rect(24px 24px 48px 0px);
+}
+#back-btn[disabled="true"] {
+  -moz-image-region: rect(48px 24px 72px 0px);
+}
+#back-btn:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(72px 24px 96px 0px);
+}
+
+#forward-btn {
+  -moz-image-region: rect(0px 48px 24px 24px);
+}
+#forward-btn:not([disabled="true"]):hover {
+  -moz-image-region: rect(24px 48px 48px 24px);
+}
+#forward-btn[disabled="true"] {
+  -moz-image-region: rect(48px 48px 72px 24px);
+}
+#forward-btn:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(72px 48px 96px 24px);
 }
 
 #back-btn:-moz-locale-dir(rtl),
-#forward-btn:-moz-locale-dir(ltr) {
-  -moz-image-region: rect(0, 36px, 18px, 18px);
+#forward-btn:-moz-locale-dir(rtl) {
+  transform: scaleX(-1);
 }
-
 
 /*** global warnings ***/
 
@@ -1038,30 +1058,33 @@ button.button-link:not([disabled="true"]):active:hover {
 
 .header-button {
   -moz-appearance: none;
-  border: 2px solid;
-  -moz-border-top-colors:    ThreeDHighlight  ThreeDHighlight;
-  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
-  -moz-border-left-colors:   ThreeDHighlight  ThreeDHighlight;
-  -moz-border-right-colors:  ThreeDDarkShadow ThreeDShadow;
-  background-color: ThreeDFace;
-  color: ButtonText;
+  border: 2px solid transparent;
+  background-color: transparent;
+  color: -moz-DialogText;
   text-shadow: none;
 }
 
+.header-button:not([disabled="true"]):hover {
+  color: #0000FF;
+  -moz-border-top-colors: ThreeDDarkShadow ThreeDHighlight;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-left-colors: ThreeDDarkShadow ThreeDHighlight;
+}
+
 .header-button:not([disabled="true"]):hover:active,
-.header-button[open] {
-  -moz-border-bottom-colors: ThreeDHighlight  ThreeDHighlight;
-  -moz-border-top-colors:    ThreeDDarkShadow ThreeDShadow;
-  -moz-border-right-colors:  ThreeDHighlight  ThreeDHighlight;
-  -moz-border-left-colors:   ThreeDDarkShadow ThreeDShadow;
+.header-button[open="true"]:hover,
+.header-button[open="true"] {
+  color: #000080;
+  -moz-border-top-colors: ThreeDDarkShadow ThreeDShadow;
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDHighlight;
+  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDHighlight;
+  -moz-border-left-colors: ThreeDDarkShadow ThreeDShadow;
 }
 
 .header-button[disabled="true"] {
-  opacity: 0.8;
-}
-
-.header-button[disabled="true"] > .toolbarbutton-icon {
-  opacity: 0.4;
+  color: ThreeDShadow;
+  text-shadow: 1px 1px ThreeDHighlight;
 }
 
 .header-button > .toolbarbutton-text {
