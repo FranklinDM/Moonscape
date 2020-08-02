@@ -11,8 +11,9 @@
         <em:version>dev-build</em:version>
         <em:description>A full featured retro theme that looks like Netscape 4.x.</em:description>
         <em:creator>FranklinDM</em:creator>
-        <em:contributor>Michael Walden</em:contributor>
+        <em:contributor>Michael Walden (creator of FOXSCAPE)</em:contributor>
         <em:contributor>Netscape</em:contributor>
+        <em:contributor>Lootyhoof (for Windows 10 support)</em:contributor>
         <em:homepageURL>http://franklindm.github.io/</em:homepageURL>
         
         <!-- Allow lightweight themes / personas to apply to this theme, using 'skinnable' -->
