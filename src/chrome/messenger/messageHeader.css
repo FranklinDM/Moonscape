@@ -123,7 +123,6 @@
 }
 
 .msgHeaderView-button {
-  -moz-appearance: button;
   min-height: 1ex;
   margin-inline-start: 2px;
   margin-inline-end: 2px;
@@ -156,7 +155,6 @@
 }
 
 .msgHeaderView-button[type="menu-button"] > .toolbarbutton-menubutton-button {
-  -moz-appearance: button;
   min-width: 1em;
   min-height: 1ex;
   margin: 0px;
