@@ -115,6 +115,14 @@ menuitem.menuitem-iconic > .menu-iconic-left,
   -moz-image-region: auto;
 }
 
+menu[disabled="true"] > .menu-right {
+  list-style-image: url("chrome://global/skin/arrow/arrow-rit-sharp-dis.gif");
+}
+
+menu[_moz-menuactive="true"]:not([disabled="true"]) > .menu-right {
+  list-style-image: url("chrome://global/skin/arrow/arrow-rit-sharp-inverted.gif");
+}
+
 /* ::::: menu/menuitems in menubar ::::: */
 
 menubar > menu:-moz-lwtheme:not([disabled="true"]) {
@@ -204,6 +212,10 @@ menuitem[checked="true"][disabled="true"][_moz-menuactive="true"] {
   list-style-image: url("chrome://global/skin/menu/menu-check-disabled.gif");
 }
 
+menuitem[_moz-menuactive="true"][checked="true"]:not([disabled="true"]) {
+  list-style-image: url("chrome://global/skin/menu/menu-check-inverted.gif");
+}
+
 menuitem[checked="true"][type="radio"] {
   list-style-image: url("chrome://global/skin/menu/menu-radio.gif");
 }
@@ -211,6 +223,10 @@ menuitem[checked="true"][type="radio"] {
 menuitem[checked="true"][type="radio"][disabled="true"],
 menuitem[checked="true"][type="radio"][disabled="true"][_moz-menuactive="true"] {
   list-style-image: url("chrome://global/skin/menu/menu-radio-disabled.gif");
+}
+
+menuitem[_moz-menuactive="true"][checked="true"][type="radio"]:not([disabled="true"]) {
+  list-style-image: url("chrome://global/skin/menu/menu-radio-inverted.gif");
 }
 
 /* ::::: menuseparator ::::: */
