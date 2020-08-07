@@ -1,5 +1,14 @@
 # Changelog
 ```Format: Release name version - (YYYY-MM-DD)```
+## Moonscape 7.0.0 - 2020-08-08
+- Use a [common theme base](https://github.com/FranklinDM/Classic-Base/) to simplify maintenance across all classic themes
+- Single XPI package for all applications
+- Restore missing close button in the undo pop-up of the new tab page
+- Fix new tab thumbnail appearance when using placeholders
+- Toolbar buttons in custom toolbars when in Icons and Text mode will now have their labels positioned beside their icons
+- Include 3D edges around the content area
+- (Untested) support for Mac OS
+
 ## Moonscape Classic 6.26 - 2020-01-28
 - Initial support for Pale Moon 29
 
