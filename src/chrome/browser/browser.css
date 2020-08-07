@@ -2590,6 +2590,11 @@ toolbar[brighttext] #addonbar-closebutton {
   list-style-image: url("chrome://global/skin/icons/close-inverted.png");
 }
 
+/* Sync notifications don't define a notification side, leading to double bottom borders */
+notificationbox[id="sync-notifications"] > notification {
+  border-bottom-style: none;
+}
+
 /* Status panel */
 
 .statuspanel-label {
