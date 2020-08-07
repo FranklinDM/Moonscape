@@ -3170,7 +3170,8 @@ toolbar[brighttext] #addonbar-closebutton {
   #main-window[sizemode="maximized"][tabsontop=true] #toolbar-menubar[autohide="true"]:not([customizing]) ~ #TabsToolbar {
     border-top-style: none;
   }
-  #main-menubar > menu:not([_moz-menuactive]):not([disabled="true"]):not(:-moz-lwtheme) {
+  
+  #main-window[sizemode="maximized"][tabsontop=true] #toolbar-menubar[autohide="true"] #main-menubar > menu:not(:-moz-lwtheme) {
     color: inherit;
   }
     
