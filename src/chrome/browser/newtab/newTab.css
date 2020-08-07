@@ -138,6 +138,14 @@
   background-size: cover;
 }
 
+.newtab-thumbnail.placeholder {
+  display: flex;
+  color: white;
+  font-size: 85px;
+  justify-content: center;
+  align-items: center;
+}
+
 /* TITLES */
 .newtab-title {
   padding: 0 8px 1px;
