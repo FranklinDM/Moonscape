@@ -2053,7 +2053,6 @@ toolbar:not(.toolbar-primary) #history-menu-button .toolbarbutton-menu-dropmarke
   display: none;
 }
 
-toolbar:not(.toolbar-primary)[mode="icons"] #bookmarks-menu-button .toolbarbutton-icon,
 toolbar:not(.toolbar-primary)[mode="icons"] #history-menu-button .toolbarbutton-icon {
   margin-inline-end: 0;
 }
@@ -2079,10 +2078,6 @@ toolbar:not(.toolbar-primary) #bookmarks-menu-button:not([disabled="true"]):hove
 
 toolbar:not(.toolbar-primary) #bookmarks-menu-button:not([disabled="true"]):hover:active {
   -moz-image-region: rect(48px 32px 64px 0px);
-}
-
-toolbar:not(.toolbar-primary)[mode="icons"] #bookmarks-menu-button .toolbarbutton-text {
-  display: none !important;
 }
 
 /* History menu button */
