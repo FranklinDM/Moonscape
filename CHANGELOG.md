@@ -1,5 +1,11 @@
 # Changelog
 ```Format: Release name version - (YYYY-MM-DD)```
+## Moonscape 7.1.0 - 2021-01-31
+- Treat the bookmarks menu button as a "bookmark item"
+  - This removes the rule that hides the label associated with the bookmarks menu button when it is placed on the Bookmarks toolbar while using icons only mode.
+- Remove custom styling from session restore page
+- Add mixed-mode SSL styling
+
 ## Moonscape 7.0.0 - 2020-08-08
 - Use a [common theme base](https://github.com/FranklinDM/Classic-Base/) to simplify maintenance across all classic themes
 - Single XPI package for all applications
