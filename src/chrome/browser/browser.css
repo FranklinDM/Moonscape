@@ -1313,13 +1313,16 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
   border-right: 1px solid ThreeDDarkShadow;
 }
 
-#identity-box.verifiedIdentity:-moz-locale-dir(rtl) {
-  background-position: left;
-  border-right: none;
-  border-left: 1px solid ThreeDDarkShadow;
+#urlbar[pageproxystate="valid"] > #identity-box.mixedContent {
+  color: #726239;
+  margin-inline-end: 4px;
+  background-color: #FFE4A3;
+  border-right: 1px solid ThreeDDarkShadow;
 }
 
-#identity-box.verifiedDomain:-moz-locale-dir(rtl) {
+#identity-box.mixedContent:-moz-locale-dir(rtl),
+#identity-box.verifiedDomain:-moz-locale-dir(rtl),
+#identity-box.verifiedIdentity:-moz-locale-dir(rtl) {
   background-position: left;
   border-right: none;
   border-left: 1px solid ThreeDDarkShadow;
