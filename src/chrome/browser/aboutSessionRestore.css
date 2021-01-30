@@ -1,6 +1,8 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 html {
-  background: #f8ffd0;
   height: 100%;
 }
 
@@ -10,7 +12,6 @@ body {
 }
 
 #errorPageContainer {
-  background-image: url("chrome://global/skin/icons/warning-large.png");
   display: -moz-box;
   width: -moz-available;
   max-width: 85%;
@@ -18,8 +19,6 @@ body {
   max-height: 85%;
   -moz-box-orient: vertical;
   text-align: start;
-  border: 2px solid #efc;
-  box-shadow: 0px 0px 8px #aaa;
 }
 
 #errorShortDesc > p {
@@ -27,7 +26,8 @@ body {
   margin-bottom: 0;
 }
 
-#errorLongContent, #errorTrailerDesc {
+#errorLongContent,
+#errorTrailerDesc {
   display: -moz-box;
   -moz-box-flex: 1;
   -moz-box-orient: vertical;
@@ -46,7 +46,6 @@ treechildren::-moz-tree-image(noicon) {
   width: 16px;
   height: 16px;
 }
-
 treechildren::-moz-tree-image(noicon) {
   list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
 }
@@ -63,6 +62,7 @@ treechildren::-moz-tree-image(partial) {
 #buttons {
   width: 100%;
 }
+
 #buttons > button {
   margin-top: 2em;
 }
