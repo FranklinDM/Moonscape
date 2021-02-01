@@ -30,8 +30,7 @@ scrollbar {
   }
 }
 
-scrollbar[orient="vertical"] 
-{
+scrollbar[orient="vertical"] {
    -moz-appearance: none;
 }
 
@@ -48,12 +47,15 @@ scrollbarbutton {
 }
 
 /* ::::: slider - a thumb is inside  ::::: */
-slider {
-  -moz-appearance: none;
-}
 
 slider[orient="vertical"] {
   -moz-appearance: none;
+  min-width: 16px;
+}
+
+slider[orient="horizontal"] {
+  -moz-appearance: none;
+  min-height: 16px;
 }
 
 /* ::::: thumb (horizontal) ::::: */
