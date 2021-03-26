@@ -1,8 +1,12 @@
 # Changelog
 ```Format: Release name version - (YYYY-MM-DD)```
+## Moonscape 7.1.1 - 2021-03-27
+- Set a minimum width/height for the scrollbar slider (Linux only)
+  * This is a workaround for some GTK themes with missing scrollbar buttons
+
 ## Moonscape 7.1.0 - 2021-01-31
 - Treat the bookmarks menu button as a "bookmark item"
-  - This removes the rule that hides the label associated with the bookmarks menu button when it is placed on the Bookmarks toolbar while using icons only mode.
+  * This removes the rule that hides the label associated with the bookmarks menu button when it is placed on the Bookmarks toolbar while using icons only mode.
 - Remove custom styling from session restore page
 - Add mixed-mode SSL styling
 
@@ -47,20 +51,20 @@
 
 ## Moonscape Classic 6.20 - 2018-07-13
 - Initial support for Pale Moon 28
-  - This is the last version that will support Pale Moon 27
-  - Serves as a transition release (so that in case you updated to PM 28, this theme will not be disabled)
+  * This is the last version that will support Pale Moon 27
+  * Serves as a transition release (so that in case you updated to PM 28, this theme will not be disabled)
 
 ## Moonscape Classic 6.19 - 2017-11-11
 - Style the 'about:plugins' page
-  - Somewhat requested here: https://forum.palemoon.org/viewtopic.php?f=45&p=126731#p126731
+  * Somewhat requested here: https://forum.palemoon.org/viewtopic.php?f=45&p=126731#p126731
 - Use white-on-black as titlebar style (Win10)
 
 ## Moonscape Classic 6.18 - 2017-09-26
 - Drop support for PM 27.4.* and lower
 - Support PM 27.5's Win10 window styling implementation
 - All tabs button should change accordingly to its state
-  - Dropdown (used when previews are disabled)
-  - Boxes (used when previews are enabled - default)
+  * Dropdown (used when previews are disabled)
+  * Boxes (used when previews are enabled - default)
 
 ## Moonscape Classic 6.17 - 2017-09-24
 - Drop support for versions lower than PM27.4
@@ -68,11 +72,11 @@
 - Enforce right border on AiOS toolbar
 - Update devtools styling
 - Missing notification icons in other platforms
-  - Was applied only to windows/notification.css
-  - Remove background images from mac notifications
+  * Was applied only to windows/notification.css
+  * Remove background images from mac notifications
 - Remove redundant close icon attributes and selectors
-  - Above may have been done in the past but applies only to tab-close, see 820ee4fc6fac0baa748ce03bc9ae0bf85d5de90b
-  - New 2x close icon has been created for mac (and other uses, ie. HiDPI)
+  * Above may have been done in the past but applies only to tab-close, see 820ee4fc6fac0baa748ce03bc9ae0bf85d5de90b
+  * New 2x close icon has been created for mac (and other uses, ie. HiDPI)
 
 ## Moonscape Classic 6.16 - 2017-07-19
 - Minor revisions to documentation
@@ -135,8 +139,8 @@
 - Created padlock.css, fixes the missing/double padlock icon in the identity bar
 - Reflect changes from PM26-27
 - Cleanup on the code
-  - Remove redundant Social API styling
-  - Devtools code on browser.css
+  * Remove redundant Social API styling
+  * Devtools code on browser.css
 - Minor fix on the download button
 - Added history menu subskin (similar to bookmarks menu)
 - Change of directory (from foxscape to moonscape)
