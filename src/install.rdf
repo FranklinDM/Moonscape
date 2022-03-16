@@ -1,28 +1,25 @@
 <?xml version="1.0"?>
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
     <Description about="urn:mozilla:install-manifest">
-        <!-- Extension's ID and type -->
+        <!-- General -->
         <em:id>{2C646A52-4EDC-455F-8047-9405795D3E51}</em:id>
-        <!-- Types: 2=Extensions, 4=Themes, 8=Locale, 16=Plugin, 32=Multiple Item Package -->
-        <em:type>4</em:type>
-        
-        <!-- Extension's info and metadata -->
-        <em:name>Moonscape</em:name>
         <em:version>dev-build</em:version>
+        <em:type>4</em:type>
+        <em:internalName>moonscape-classic</em:internalName>
+        <em:skinnable>true</em:skinnable>
+
+        <!-- Front-end metadata -->
+        <em:name>Moonscape</em:name>
         <em:description>A full featured retro theme that looks like Netscape 4.x.</em:description>
+        <em:homepageURL>http://franklindm.github.io/</em:homepageURL>
+
+        <!-- Authors -->
         <em:creator>FranklinDM</em:creator>
         <em:contributor>Michael Walden (creator of FOXSCAPE)</em:contributor>
         <em:contributor>Netscape</em:contributor>
         <em:contributor>Lootyhoof (for Windows 10 support)</em:contributor>
-        <em:homepageURL>http://franklindm.github.io/</em:homepageURL>
-        
-        <!-- Allow lightweight themes / personas to apply to this theme, using 'skinnable' -->
-        <em:skinnable>true</em:skinnable>
-        
-        <!-- internalName must match the 'skinname' part of the relevant chrome.manifest directives in order for those mappings to be associated with this skin. -->
-        <em:internalName>moonscape-classic</em:internalName>
-        
-        <!-- Target Application(s) this extension can install into, with minimum and maximum supported versions. -->
+
+        <!-- Targeted applications -->
         <em:targetApplication>
             <!-- Pale Moon -->
             <Description>
@@ -32,10 +29,22 @@
             </Description>
         </em:targetApplication>
         <em:targetApplication>
-            <!-- Interlink -->
+            <!-- Applications using Firefox GUID -->
+            <Description>
+                <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+                <!--
+                    Pale Moon 30 and above will stop using its own GUID to
+                    "further improve extension compatibility"
+                 -->
+                <em:minVersion>30.0.0a1</em:minVersion>
+                <em:maxVersion>30.*</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+        <em:targetApplication>
+            <!-- Applications using Thunderbird GUID -->
             <Description>
                 <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
-                <em:minVersion>52.0.0</em:minVersion>
+                <em:minVersion>52.0.0a1</em:minVersion>
                 <em:maxVersion>52.*</em:maxVersion>
             </Description>
         </em:targetApplication>
