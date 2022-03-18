@@ -1,5 +1,8 @@
 # Changelog
 ```Format: Release name version - (YYYY-MM-DD)```
+## Moonscape 7.2.0 - 2022-03-18
+- Initial support for Pale Moon 30
+
 ## Moonscape 7.1.1 - 2021-03-27
 - Set a minimum width/height for the scrollbar slider (Linux only)
   * This is a workaround for some GTK themes with missing scrollbar buttons
