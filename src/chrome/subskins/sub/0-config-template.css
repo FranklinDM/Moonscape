@@ -20,21 +20,21 @@
 /* ##  Un-comment lines to enable them.  See MOONSCAPE readme for more info.  */
 /* ========================================================================== */
 /* [Add-ons]                                                                  */
-/* -import url("chrome://subskins/skin/sub/Skin_the_Work_Offline_extension1.css"); */ /* ------------------------------------ DEFAULT */
+/* @import url("chrome://subskins/skin/sub/Skin_the_Work_Offline_extension1.css"); */ /* ------------------------------------ DEFAULT */
 /* @import url("chrome://subskins/skin/sub/Skin_the_Work_Offline_extension2.css"); */
 /* @import url("chrome://subskins/skin/sub/Skin_the_Work_Offline_extension3.css"); */
 /* @import url("chrome://subskins/skin/sub/Skin_the_Work_Offline_extension4.css"); */
 /* @import url("chrome://subskins/skin/sub/Skin_the_Work_Offline_extension5.css"); */
 /* @import url("chrome://subskins/skin/sub/Skin_the_Work_Offline_extension6.css"); */
 /* @import url("chrome://subskins/skin/sub/Skin_the_Work_Offline_extension7.css"); */
-/* -import url("chrome://subskins/skin/sub/Work_Offline_-_Enable_outer_recessed_3D_frame_Fx.css"); */ /* -------------------- DEFAULT */
+/* @import url("chrome://subskins/skin/sub/Work_Offline_-_Enable_outer_recessed_3D_frame_Fx.css"); */ /* -------------------- DEFAULT */
 /* @import url("chrome://subskins/skin/sub/Work_Offline_-_Disable_outer_recessed_3D_frame_Fx.css"); */
 /* @import url("chrome://subskins/skin/sub/Work_Offline_-_Remove_button_text_Fx.css"); */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 /* @import url("chrome://subskins/skin/sub/Status-4-Evar_-_Skin_the_download_button_and_remove_extra_padding.css"); */
-/* -import url("chrome://subskins/skin/sub/Status-4-Evar_-_Enable_outer_recessed_3D_frames_Fx.css"); */ /* ------------------ DEFAULT */
+/* @import url("chrome://subskins/skin/sub/Status-4-Evar_-_Enable_outer_recessed_3D_frames_Fx.css"); */ /* ------------------ DEFAULT */
 /* @import url("chrome://subskins/skin/sub/Status-4-Evar_-_Disable_outer_recessed_3D_frames_Fx.css"); */
-/* -import url("chrome://subskins/skin/sub/Status-4-Evar_-_Bouncing_cylon_eye_progress_meter_(Always_visible).css"); */ /* -- DEFAULT */
+/* @import url("chrome://subskins/skin/sub/Status-4-Evar_-_Bouncing_cylon_eye_progress_meter_(Always_visible).css"); */ /* -- DEFAULT */
 /* @import url("chrome://subskins/skin/sub/Status-4-Evar_-_Bouncing_cylon_eye_progress_meter_(Hiding).css"); */
 /* @import url("chrome://subskins/skin/sub/Status-4-Evar_-_Remove_progress_meter_outer_recessed_3D_frame_Fx.css"); */
 /* @import url("chrome://subskins/skin/sub/Status-4-Evar_-_Gray_progress_meter_(Always_visible)_(No_frame)_Fx.css"); */
@@ -46,14 +46,14 @@
 /* @import url("chrome://subskins/skin/sub/Show_Status-4-Evar-options-button_text_label_on_right.css"); */
 /* @import url("chrome://subskins/skin/sub/Remove_Status-4-Evar-options-button_text_label.css"); */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-/* -import url("chrome://subskins/skin/sub/Skin_the_MinimizeToTray_revived_extension_16x16.css"); */ /* --------------------- DEFAULT */
+/* @import url("chrome://subskins/skin/sub/Skin_the_MinimizeToTray_revived_extension_16x16.css"); */ /* --------------------- DEFAULT */
 /* @import url("chrome://subskins/skin/sub/Skin_the_MinimizeToTray_revived_extension_16x14.css"); */
 /* @import url("chrome://subskins/skin/sub/Show_MinimizeToTray_revived_button_text_label_on_right.css"); */
 /* @import url("chrome://subskins/skin/sub/Remove_MinimizeToTray_revived_button_text_label.css"); */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 /* @import url("chrome://subskins/skin/sub/Restart_Manager_-_Remove_extra_button_padding.css"); */
 /* @import url("chrome://subskins/skin/sub/Restart_Manager_-_Remove_button_text_label_Fx.css"); */
-/* -import url("chrome://subskins/skin/sub/Skin_the_Restart_Manager_extension_appmenu_icon.css"); */ /* ----------------- DEFAULT */
+/* @import url("chrome://subskins/skin/sub/Skin_the_Restart_Manager_extension_appmenu_icon.css"); */ /* ----------------- DEFAULT */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 /* @import url("chrome://subskins/skin/sub/Close_Button_by_Isaac_-_Remove_extra_button_padding_Fx.css"); */
 /* @import url("chrome://subskins/skin/sub/Close_Button_by_Isaac_-_Remove_text_label_Fx.css"); */
@@ -65,12 +65,12 @@
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 /* @import url("chrome://subskins/skin/sub/Remove_separators_between_toolbars_Fx.css"); */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-/* -import url("chrome://subskins/skin/sub/Toolbar_button_text_color_-_scheme_1.css"); */ /* -------------------------------- DEFAULT */
+/* @import url("chrome://subskins/skin/sub/Toolbar_button_text_color_-_scheme_1.css"); */ /* -------------------------------- DEFAULT */
 /* @import url("chrome://subskins/skin/sub/Toolbar_button_text_color_-_scheme_2.css"); */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 /* @import url("chrome://subskins/skin/sub/Tab_window_loading_gray_background_with_splash-3.css"); */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-/* -import url("chrome://subskins/skin/sub/Enable_tree_connecting_lines_-_dotted_Fx.css"); */ /* ---------------------------- DEFAULT */
+/* @import url("chrome://subskins/skin/sub/Enable_tree_connecting_lines_-_dotted_Fx.css"); */ /* ---------------------------- DEFAULT */
 /* @import url("chrome://subskins/skin/sub/Enable_tree_connecting_lines_-_solid_Fx.css"); */
 /* @import url("chrome://subskins/skin/sub/Disable_tree_connecting_lines_Fx.css"); */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
@@ -123,7 +123,7 @@
 /* @import url("chrome://subskins/skin/sub/Toolbar_Bookmarks_button_-_style_3.css"); */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 /* default */
-/* -import url("chrome://subskins/skin/sub/Toolbar_Restart_Manager_button.css"); */
+/* @import url("chrome://subskins/skin/sub/Toolbar_Restart_Manager_button.css"); */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 /* @import url("chrome://subskins/skin/sub/Toolbar_History_button_-_style_2.css"); */
 /* @import url("chrome://subskins/skin/sub/Toolbar_History_button_-_style_3.css"); */
@@ -134,12 +134,12 @@
 /* @import url("chrome://subskins/skin/sub/Throbber_-_force_extra_large_(40x40).css"); */
 /* @import url("chrome://subskins/skin/sub/Throbber_-_auto_small_and_medium.css"); */
 /* @import url("chrome://subskins/skin/sub/Throbber_-_auto_small_and_large.css"); */
-/* -import url("chrome://subskins/skin/sub/Throbber_-_auto_small,_large_and_extra_large.css"); */ /* ------------------------ DEFAULT */
+/* @import url("chrome://subskins/skin/sub/Throbber_-_auto_small,_large_and_extra_large.css"); */ /* ------------------------ DEFAULT */
 /* @import url("chrome://subskins/skin/sub/Throbber_-_Mozilla_auto_small_and_large.css"); */
 /* @import url("chrome://subskins/skin/sub/Throbber_-_SeaMonkey_1.x_auto_small_and_large.css"); */
 /* @import url("chrome://subskins/skin/sub/Throbber_-_SeaMonkey_2.x_auto_small_and_large.css"); */
 /* @import url("chrome://subskins/skin/sub/Throbber_-_No_border_Fx.css"); */
-/* -import url("chrome://subskins/skin/sub/Throbber_-_Raised_2px_wide_3D_border_(Netscape)_Fx.css"); */ /* ------------------ DEFAULT */
+/* @import url("chrome://subskins/skin/sub/Throbber_-_Raised_2px_wide_3D_border_(Netscape)_Fx.css"); */ /* ------------------ DEFAULT */
 /* @import url("chrome://subskins/skin/sub/Throbber_-_Raised_2px_wide_3D_border_with_1px_gap_(Netscape)_Fx.css"); */
 /* @import url("chrome://subskins/skin/sub/Throbber_-_Raised_3px_wide_3D_border_(Mozilla)_Fx.css"); */
 /* @import url("chrome://subskins/skin/sub/Throbber_-_Raised_3px_wide_3D_border_with_1px_gap_(Mozilla)_Fx.css"); */
@@ -152,7 +152,7 @@
 /* @import url("chrome://subskins/skin/sub/Location_bar_&_search_bar_style_1_-_Minimal.css"); */
 /* @import url("chrome://subskins/skin/sub/Location_bar_&_search_bar_style_2_-_Small.css"); */
 /* @import url("chrome://subskins/skin/sub/Location_bar_&_search_bar_style_3_-_Netscape_4.css"); */
-/* -import url("chrome://subskins/skin/sub/Location_bar_&_search_bar_style_4_-_Firefox_3.6.css"); */ /* --------------------- DEFAULT */
+/* @import url("chrome://subskins/skin/sub/Location_bar_&_search_bar_style_4_-_Firefox_3.6.css"); */ /* --------------------- DEFAULT */
 /* @import url("chrome://subskins/skin/sub/Location_bar_&_search_bar_style_5_-_Firefox_3.6_compact.css"); */
 /* @import url("chrome://subskins/skin/sub/Location_bar_&_search_bar_style_6_-_Firefox_4.0.css"); */
 /* @import url("chrome://subskins/skin/sub/Location_bar_&_search_bar_style_7_-_Firefox_4.0_compact.css"); */
@@ -163,7 +163,7 @@
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 /* @import url("chrome://subskins/skin/sub/Location_bar_icons_-_Only_show_on_mouse_hover_and_focus_Fx.css"); */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-/* -import url("chrome://subskins/skin/sub/Page-proxy_-_style_1.css"); */ /* ------------------------------------------------ DEFAULT */
+/* @import url("chrome://subskins/skin/sub/Page-proxy_-_style_1.css"); */ /* ------------------------------------------------ DEFAULT */
 /* @import url("chrome://subskins/skin/sub/Page-proxy_-_style_2.css"); */
 /* @import url("chrome://subskins/skin/sub/Page-proxy_-_style_3.css"); */
 /* @import url("chrome://subskins/skin/sub/Page-proxy_-_style_4.css"); */
@@ -175,7 +175,7 @@
 /* @import url("chrome://subskins/skin/sub/Remove_location_bar_edit_bookmark_button_Fx.css"); */
 /* @import url("chrome://subskins/skin/sub/Remove_location_bar_add_and_edit_bookmark_buttons_Fx.css"); */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-/* -import url("chrome://subskins/skin/sub/Location_bar_go_button_-_style_1.css"); */ /* ------------------------------------ DEFAULT */
+/* @import url("chrome://subskins/skin/sub/Location_bar_go_button_-_style_1.css"); */ /* ------------------------------------ DEFAULT */
 /* @import url("chrome://subskins/skin/sub/Location_bar_go_button_-_style_2.css"); */
 /* @import url("chrome://subskins/skin/sub/Location_bar_go_button_-_style_3.css"); */
 /* @import url("chrome://subskins/skin/sub/Remove_location_bar_Go_button_Fx.css"); */
@@ -189,7 +189,7 @@
 /* @import url("chrome://subskins/skin/sub/Always_show_URL_bar_combined_Go-Reload-Stop_Reload_button_Fx.css"); */
 /* @import url("chrome://subskins/skin/sub/Always_show_URL_bar_combined_Go-Reload-Stop_Stop_button_Fx.css"); */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-/* -import url("chrome://subskins/skin/sub/Location_&_search_splitter_grippy_-_Enable.css"); */ /* -------------------------- DEFAULT */
+/* @import url("chrome://subskins/skin/sub/Location_&_search_splitter_grippy_-_Enable.css"); */ /* -------------------------- DEFAULT */
 /* @import url("chrome://subskins/skin/sub/Location_&_search_splitter_grippy_-_Disable.css"); */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 /* @import url("chrome://subskins/skin/sub/Search_bar_icons_-_Only_show_on_mouse_hover_and_focus_Fx.css"); */
@@ -201,7 +201,7 @@
 /* @import url("chrome://subskins/skin/sub/Remove_search_bar_search_engine_icon_&_dropmarker_(NO Keyboard Access)_Fx.css"); */
 /* @import url("chrome://subskins/skin/sub/Search_bar_-_Hide_search_engine_name_label_Fx.css"); */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-/* -import url("chrome://subskins/skin/sub/Search_bar_go_button_-_style_1.css"); */ /* -------------------------------------- DEFAULT */
+/* @import url("chrome://subskins/skin/sub/Search_bar_go_button_-_style_1.css"); */ /* -------------------------------------- DEFAULT */
 /* @import url("chrome://subskins/skin/sub/Search_bar_go_button_-_style_2.css"); */
 /* @import url("chrome://subskins/skin/sub/Remove_Search-Go_button_Fx.css"); */
 /* @import url("chrome://subskins/skin/sub/Search_bar_-_Enable_right_end_gray_background_Fx.css"); */
@@ -209,7 +209,7 @@
 /* [Bookmarks Toolbar (aka Personal Toolbar)]                                 */
 /* @import url("chrome://subskins/skin/sub/Remove_extra_Bookmarks_Toolbar_padding_Fx.css"); */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-/* -import url("chrome://subskins/skin/sub/Bookmarks_Toolbar_bookmark_icon_-_Windows_style.css"); */ /* --------------------- DEFAULT */
+/* @import url("chrome://subskins/skin/sub/Bookmarks_Toolbar_bookmark_icon_-_Windows_style.css"); */ /* --------------------- DEFAULT */
 /* @import url("chrome://subskins/skin/sub/Bookmarks_Toolbar_bookmark_icon_-_Linux_style.css"); */
 /* @import url("chrome://subskins/skin/sub/Bookmarks_Toolbar_bookmark_icon_-_Mac_style.css"); */
 /* @import url("chrome://subskins/skin/sub/Bookmarks_Toolbar_bookmark_icon_-_Mozilla,_SeaMonkey_style.css"); */
@@ -221,11 +221,11 @@
 /* ========================================================================== */
 /* [Tab Bar]                                                                  */
 /* @import url("chrome://subskins/skin/sub/Remove_extra_Tab_Bar_padding_Fx.css"); */
-/* -import url("chrome://subskins/skin/sub/Tab_bar_tab_animation_-_Disable_Fx.css"); */ /* ---------------------------------- DEFAULT */
+/* @import url("chrome://subskins/skin/sub/Tab_bar_tab_animation_-_Disable_Fx.css"); */ /* ---------------------------------- DEFAULT */
 /* @import url("chrome://subskins/skin/sub/Tab_bar_tab_animation_-_Enable_Fx.css"); */
 /* @import url("chrome://subskins/skin/sub/Tab_bar_tab_animation_-_Enhance_Fx.css"); */
 /* @import url("chrome://subskins/skin/sub/Tab_bar_text_style_-_Bold_when_selected_Fx.css"); */
-/* -import url("chrome://subskins/skin/sub/Tab_bar_text_color_scheme_-_Blue_on_hover_(Netscape)_Fx.css"); */ /* ------------- DEFAULT */
+/* @import url("chrome://subskins/skin/sub/Tab_bar_text_color_scheme_-_Blue_on_hover_(Netscape)_Fx.css"); */ /* ------------- DEFAULT */
 /* @import url("chrome://subskins/skin/sub/Tab_bar_text_color_scheme_-_Blue_on_hover_and_selected_Fx.css"); */
 /* @import url("chrome://subskins/skin/sub/Tab_bar_text_color_scheme_-_Always_black_Fx.css"); */
 /* @import url("chrome://subskins/skin/sub/Tab_default_animated_favicon_-_style_1.css"); */
