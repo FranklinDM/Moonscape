@@ -1,5 +1,8 @@
 # Changelog
 ```Format: Release name version - (YYYY-MM-DD)```
+## Moonscape 7.2.1 - 2022-04-30
+- Initial support for Pale Moon 31
+
 ## Moonscape 7.2.0 - 2022-03-18
 - Initial support for Pale Moon 30
 
