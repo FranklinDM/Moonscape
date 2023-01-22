@@ -1,5 +1,9 @@
 # Changelog
 ```Format: Release name version - (YYYY-MM-DD)```
+## Moonscape 7.2.2 - 2023-01-23
+- Initial support for Pale Moon 32
+- Remove some leftover Australis styling from Mail/News
+
 ## Moonscape 7.2.1 - 2022-04-30
 - Initial support for Pale Moon 31
 
