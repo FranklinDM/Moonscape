@@ -5,47 +5,42 @@
 @import url("chrome://messenger/skin/sharedPlatform.css");
 
 #tabs-toolbar {
-  --tabHeight: 23px;
-  --tabSidePadding: 3px;
+  --tab-height: 25px;
+  --tab-border-radius: 0px;
 }
 
-/* == Tab style ============================================= */
-/* Unselected tab */
 .tabmail-tab {
   -moz-appearance: none;
-  -moz-box-align: stretch;
-  margin: 0 0 2px 0;
-  padding: 0;
-  background-color: rgba(0, 0, 0, 0.10);
-  border-top:    2px solid;
-  border-right:  2px solid;
-  border-left:   2px solid;
-  border-bottom: 0px solid;
-  -moz-border-top-colors:   transparent rgba(0, 0, 0, 0.2);
+  background-color: ThreeDLightShadow;
+  padding: 3px 1px 4px;
+  margin: 0;
+  border: 2px solid;
+  border-bottom-style: none;
+  border-radius: var(--tab-border-radius) var(--tab-border-radius) 0px 0px;
+  -moz-border-top-colors: transparent rgba(0, 0, 0, 0.2);
   -moz-border-right-colors: transparent ThreeDDarkShadow;
-  -moz-border-left-colors:  transparent rgba(0, 0, 0, 0.2);
+  -moz-border-left-colors: transparent rgba(0, 0, 0, 0.2);
+  height: var(--tab-height);
+  padding-inline-end: 3px;
 }
 
-/* Unselected tab with hover */
-.tabmail-tab:hover:not([selected="true"]) {
-  background: rgba(0, 0, 0, 0.05);
-}
-
-/* Selected tab */
 .tabmail-tab[selected=true] {
-  -moz-border-top-colors:   ThreeDHighlight  ThreeDLightShadow;
+  -moz-border-top-colors: ThreeDHighlight ThreeDLightShadow;
   -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
-  -moz-border-left-colors:  ThreeDHighlight  ThreeDLightShadow;
-  background-color: -moz-Dialog;
+  -moz-border-left-colors: ThreeDHighlight ThreeDLightShadow;
+  background-color: var(--toolbar-custom-color);
+}
+
+.tabmail-tab:hover:not(:-moz-lwtheme) {
+  color: #0000FF;
+}
+
+.tabmail-tab[selected="true"]:hover:active:not(:-moz-lwtheme) {
+  color: #000080;
 }
 
 .tabmail-tab[type="preferencesTab"] {
   list-style-image: url("chrome://mozapps/skin/extensions/utilities.svg#utilities");
-}
-
-.tab-content {
-  padding-inline-end: var(--tabSidePadding);
-  padding-inline-start: var(--tabSidePadding);
 }
 
 .tab-throbber,
@@ -56,7 +51,8 @@
 
 .tab-throbber,
 .tab-icon-image {
-  margin-inline-end: 6px;
+  margin-inline-start: 2px;
+  margin-inline-end: 3px;
 }
 
 .tab-label {
@@ -68,10 +64,6 @@
   margin-inline-start: 4px;
   margin-inline-end: -2px;
   padding: 0;
-}
-
-.tab-background {
-  min-height: var(--tabHeight);
 }
 
 .tabmail-tab:-moz-lwtheme {

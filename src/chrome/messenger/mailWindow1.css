@@ -14,6 +14,13 @@
 @import url("chrome://messenger/skin/folderPane.css");
 @import url("chrome://messenger/skin/tagColors.css");
 @import url("chrome://messenger/skin/shared/mailWindow1.css");
+@import url("chrome://os_target/skin/mailWindow1.css");
+
+@media (-moz-windows-classic) {
+  #messengerWindow[sizemode="normal"] > #titlebar > #titlebar-content > #appmenu-button-container {
+    margin-top: 4px;
+  }
+}
 
 /* Don't use the listbox appearance as that gives us a blue-grey top border
    that collides with the primary toolbar border */
@@ -342,10 +349,6 @@ treechildren::-moz-tree-image(subjectCol, imapdeleted) {
   -moz-binding: url("chrome://global/content/bindings/general.xml#windowdragbox");
 }
 
-#messengerWindow:not([tabsintitlebar]) #titlebar {
-  visibility: collapse;
-}
-
 #titlebar-spacer {
   pointer-events: none;
 }
@@ -385,76 +388,16 @@ treechildren::-moz-tree-image(subjectCol, imapdeleted) {
   -moz-appearance: -moz-window-button-close;
 }
 
+#messengerWindow[tabsintitlebar] .titlebar-placeholder[type="appmenu-button"] {
+  margin-right: 4px;
+}
+
 #messengerWindow[tabsintitlebar] .titlebar-placeholder[type="caption-buttons"] {
   margin-left: 10px; /* additional space for Aero Snap */
 }
 
-@media (-moz-os-version: windows-win10) {
-  #messengerWindow[tabsintitlebar] .titlebar-placeholder[type="caption-buttons"] {
-    min-width: 143px; /* Bug 1193721, hardcode the width for scaled screens */
-  }
-}
-
 #messengerWindow:not([tabsintitlebar]) .titlebar-placeholder {
   visibility: collapse;
-}
-
-/* Render a window top border for lwthemes on WinXP modern themes: */
-@media (-moz-windows-theme: luna-blue) {
-  #messengerWindow[tabsintitlebar][sizemode="normal"]
-  #titlebar-content:-moz-lwtheme {
-    background-image: linear-gradient(to bottom, rgb(8, 49, 216) 0,
-                                      rgb(8, 49, 216) 1px, rgb(15, 77, 227) 1px,
-                                      rgb(15, 77, 227) 2px, rgb(22, 106, 238) 2px,
-                                      rgb(22, 106, 238) 3px, rgb(8, 85, 221) 3px,
-                                      rgb(8, 85, 221) 4px, transparent 4px);
-  }
-
-  #messengerWindow[tabsintitlebar][sizemode="normal"]
-  #titlebar-content:-moz-lwtheme:-moz-window-inactive {
-    background-image: linear-gradient(to bottom, rgb(91, 104, 205) 0,
-                                      rgb(91, 104, 205) 1px, rgb(116, 128, 220) 1px,
-                                      rgb(116, 128, 220) 2px, rgb(117, 140, 221) 2px,
-                                      rgb(117, 140, 221) 4px, transparent 4px);
-  }
-}
-
-@media (-moz-windows-theme: luna-silver) {
-  #messengerWindow[tabsintitlebar][sizemode="normal"]
-  #titlebar-content:-moz-lwtheme {
-    background-image: linear-gradient(to bottom, rgb(102,102,126) 0,
-                                      rgb(102, 102, 126) 1px, rgb(168, 167, 191) 1px,
-                                      rgb(168, 167, 191) 2px, white 2px, white 3px,
-                                      rgb(188, 188, 207) 3px, rgb(188, 188, 207) 4px,
-                                      transparent 4px);
-  }
-
-  #messengerWindow[tabsintitlebar][sizemode="normal"]
-  #titlebar-content:-moz-lwtheme:-moz-window-inactive {
-    background-image: linear-gradient(to bottom, rgb(186, 186, 197) 0,
-                                      rgb(186, 186, 197) 1px, rgb(236, 238, 245) 1px,
-                                      rgb(236, 238, 245) 2px, white 2px, white 3px,
-                                      rgb(215, 215, 227) 3px, rgb(215, 215, 227) 4px,
-                                      transparent 4px);
-  }
-}
-
-@media (-moz-windows-theme: luna-olive) {
-  #messengerWindow[tabsintitlebar][sizemode="normal"]
-  #titlebar-content:-moz-lwtheme {
-    background-image: linear-gradient(to bottom, rgb(139, 161, 105) 0,
-                                      rgb(139, 161, 105) 1px, rgb(171, 189, 133) 1px,
-                                      rgb(171, 189, 133) 2px, rgb(164, 178, 127) 2px,
-                                      rgb(164, 178, 127) 3px, transparent 3px);
-  }
-
-  #messengerWindow[tabsintitlebar][sizemode="normal"]
-  #titlebar-content:-moz-lwtheme:-moz-window-inactive {
-    background-image: linear-gradient(to bottom, rgb(207, 214, 188) 0,
-                                      rgb(207, 214, 188) 1px, rgb(224, 226, 200) 1px,
-                                      rgb(224, 226, 200) 2px, rgb(214, 216, 190) 2px,
-                                      rgb(214, 216, 190) 3px, transparent 3px);
-  }
 }
 
 #viewPicker > .menulist-label-box > .menulist-icon,

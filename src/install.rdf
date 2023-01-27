@@ -29,19 +29,19 @@
             </Description>
         </em:targetApplication>
         <em:targetApplication>
-            <!-- Applications using Thunderbird GUID -->
-            <Description>
-                <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
-                <em:minVersion>52.0.0a1</em:minVersion>
-                <em:maxVersion>52.*</em:maxVersion>
-            </Description>
-        </em:targetApplication>
-        <em:targetApplication>
             <!-- Ambassador -->
             <Description>
                 <em:id>{4523665a-317f-4a66-9376-3763d1ad1978}</em:id>
                 <em:minVersion>1.0.0</em:minVersion>
                 <em:maxVersion>1.*</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+        <em:targetApplication>
+            <!-- Epyrus -->
+            <Description>
+                <em:id>{29877c1d-27df-4421-9a79-382c31470151}</em:id>
+                <em:minVersion>2.0.0a1</em:minVersion>
+                <em:maxVersion>2.*</em:maxVersion>
             </Description>
         </em:targetApplication>
     </Description>
