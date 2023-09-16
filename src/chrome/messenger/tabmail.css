@@ -241,3 +241,12 @@ tabpanels {
 .alltabs-item[busy] {
   list-style-image: url("chrome://global/skin/icons/loading.png") !important;
 }
+
+/**
+ * Interlink special case: remove navigation toolbox border since tabs
+ * are on bottom. This won't affect other clients as the location of the
+ * mail toolbox is different (for now).
+ */
+#mail-toolbox + #navigation-toolbox {
+  border: none;
+}
