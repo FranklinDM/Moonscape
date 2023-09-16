@@ -1,5 +1,8 @@
 # Changelog
 ```Format: Release name version - (YYYY-MM-DD)```
+## Moonscape 7.3.0
+- Initial support for Epyrus 2.x and above.
+
 ## Moonscape 7.2.2 - 2023-01-23
 - Initial support for Pale Moon 32
 - Remove some leftover Australis styling from Mail/News
