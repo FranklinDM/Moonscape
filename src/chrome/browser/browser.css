@@ -1799,7 +1799,7 @@ richlistitem[type~="action"][actiontype$="tab"][selected="true"] > .ac-url-box >
 .tabbrowser-arrowscrollbox > .scrollbutton-up,
 .tabbrowser-arrowscrollbox > .scrollbutton-down {
   list-style-image: url("chrome://browser/skin/tabbrowser/tab-arrow-left.png");
-  -moz-image-region: rect(0px, 11px, 11px, 0px); 
+  -moz-image-region: rect(0px, 11px, 11px, 0px);
   margin: 0;
   padding-right: 2px;
   border-right: 2px solid transparent;
@@ -1925,7 +1925,7 @@ toolbar[iconsize="small"] #alltabs-button[type="menu"] .toolbarbutton-icon,
 }
 
 .alltabs-item[selected="true"] {
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 .alltabs-item[busy] > .menu-iconic-left > .menu-iconic-icon {
@@ -1987,13 +1987,13 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 #ub-feed-button:hover:active > .button-box {
   padding: 0px;
   margin: 0px;
-  border: 0px; 
+  border: 0px;
   background-color: transparent !important;
 }
 
 #ub-feed-button {
-  -moz-appearance: none; 
-  min-width: 0px; 
+  -moz-appearance: none;
+  min-width: 0px;
   list-style-image: url("chrome://browser/skin/feeds/feed-icons-16.png");
   -moz-image-region: rect(0px 16px 16px 0px);
 }
@@ -2760,20 +2760,21 @@ notificationbox[id="sync-notifications"] > notification {
     -moz-appearance: -moz-win-exclude-glass;
   }
 
-/* ==== Windows 10 styling ==== */
+/* ==== Windows 10/11 styling ==== */
 
-  @media (-moz-os-version: windows-win10) {
-    /* Draw XUL caption buttons and background on Win10 */
+  @media (-moz-os-version: windows-win10),
+         (-moz-os-version: windows-win11) {
+    /* Draw XUL caption buttons and background on Win10/11 */
     @media (-moz-windows-accent-color-applies: 0) {
       /* Default styling for when no accent color is applied */
       #main-window:not(:-moz-window-inactive):not(:-moz-lwtheme) {
         background-color: white;
       }
-      
+
       :root:not(:-moz-window-inactive):not(:-moz-lwtheme) {
         --window-text-color: black;
       }
-      
+
       #titlebar-min:not(:-moz-window-inactive):not(:-moz-lwtheme) {
         list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize);
       }
@@ -2785,7 +2786,7 @@ notificationbox[id="sync-notifications"] > notification {
       #main-window[sizemode="maximized"] #titlebar-max:not(:-moz-window-inactive):not(:-moz-lwtheme) {
         list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore);
       }
-      
+
       #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme) {
         list-style-image: url(chrome://browser/skin/caption-buttons.svg#close);
       }
@@ -2798,7 +2799,7 @@ notificationbox[id="sync-notifications"] > notification {
         background-color: hsla(0, 0%, 0%, .27);
         transition: none;
       }
-      
+
       #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
         list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-highlight);
         background-color: hsla(0, 86%, 49%, 1);
@@ -2809,17 +2810,17 @@ notificationbox[id="sync-notifications"] > notification {
         transition: none;
       }
     }
-    
+
     @media (-moz-windows-accent-color-applies) {
       /* Styling for when an accent color is applied to the titlebar */
       #main-window:not(:-moz-window-inactive):not(:-moz-lwtheme) {
         background-color: -moz-win-accentcolor;
       }
-      
+
       :root:not(:-moz-window-inactive):not(:-moz-lwtheme) {
         --window-text-color: -moz-win-accentcolortext;
       }
-      
+
       #titlebar-min {
         list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize);
       }
@@ -2835,7 +2836,7 @@ notificationbox[id="sync-notifications"] > notification {
       #titlebar-close {
         list-style-image: url(chrome://browser/skin/caption-buttons.svg#close);
       }
-      
+
       .titlebar-button:hover {
         background-color: hsla(0, 0%, 0%, .17);
       }
@@ -2844,7 +2845,7 @@ notificationbox[id="sync-notifications"] > notification {
         background-color: hsla(0, 0%, 0%, .27);
         transition: none;
       }
-      
+
       @media (-moz-windows-accent-color-is-dark) {
         /* dark accent color */
         #titlebar-min {
@@ -2862,7 +2863,7 @@ notificationbox[id="sync-notifications"] > notification {
         #titlebar-close {
           list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-highlight);
         }
-      
+
         .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
           background-color: hsla(0, 0%, 100%, .17);
         }
@@ -2871,7 +2872,7 @@ notificationbox[id="sync-notifications"] > notification {
           background-color: hsla(0, 0%, 100%, .27);
           transition: none;
         }
-      
+
         #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
           background-color: hsla(0, 86%, 49%, 1);
         }
@@ -2882,7 +2883,7 @@ notificationbox[id="sync-notifications"] > notification {
         }
       }
     }
-    
+
     #main-window:-moz-window-inactive:not(:-moz-lwtheme) {
       background-color: hsl(0, 0%, 95%);
     }
@@ -2905,7 +2906,7 @@ notificationbox[id="sync-notifications"] > notification {
       padding: 9px 17px;
       transition: background-color linear 120ms;
     }
-        
+
     #main-window[sizemode="maximized"][tabsontop=true] #tabbrowser-tabs {
       min-height: 28px;
     }
@@ -2931,7 +2932,7 @@ notificationbox[id="sync-notifications"] > notification {
     #main-window[sizemode="maximized"] #titlebar-close {
       padding-right: 19px;
     }
-    
+
     #titlebar-close:hover {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-highlight);
       background-color: hsla(0, 86%, 49%, 1);
@@ -2939,10 +2940,10 @@ notificationbox[id="sync-notifications"] > notification {
     }
 
     #titlebar-close:hover:active {
-      background-color: hsla(0, 86%, 49%, 0.6); 
+      background-color: hsla(0, 86%, 49%, 0.6);
       transition: none;
     }
-    
+
     /* inactive window */
 
     #titlebar-min:-moz-window-inactive:not(:-moz-lwtheme) {
@@ -2960,7 +2961,7 @@ notificationbox[id="sync-notifications"] > notification {
     #titlebar-close:-moz-window-inactive:not(:-moz-lwtheme):not(:hover) {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-inactive);
     }
-    
+
     .titlebar-button:-moz-window-inactive:not(:-moz-lwtheme):hover {
       background-color: hsla(0, 0%, 0%, .17);
     }
@@ -2969,9 +2970,9 @@ notificationbox[id="sync-notifications"] > notification {
       background-color: hsla(0, 0%, 0%, .27);
       transition: none;
     }
-    
+
     /* light persona */
-    
+
     .titlebar-button:-moz-lwtheme-darktext:hover {
       background-color: hsla(0, 0%, 0%, .17);
     }
@@ -2980,7 +2981,7 @@ notificationbox[id="sync-notifications"] > notification {
       background-color: hsla(0, 0%, 0%, .27);
       transition: none;
     }
-    
+
     #titlebar-min:-moz-lwtheme-darktext {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize-outline);
     }
@@ -2999,9 +3000,9 @@ notificationbox[id="sync-notifications"] > notification {
     #titlebar-close:hover:-moz-lwtheme-darktext {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-outline);
     }
-        
+
     /* dark persona */
-    
+
     .titlebar-button:-moz-lwtheme-brighttext:hover {
       background-color: hsla(0, 0%, 100%, .27);
     }
@@ -3010,7 +3011,7 @@ notificationbox[id="sync-notifications"] > notification {
       background-color: hsla(0, 0%, 100%, .37);
       transition: none;
     }
-    
+
     #titlebar-min:-moz-lwtheme-brighttext {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize-outline-inverted);
     }
@@ -3029,7 +3030,7 @@ notificationbox[id="sync-notifications"] > notification {
     #titlebar-close:hover:-moz-lwtheme-brighttext {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-outline-inverted);
     }
-        
+
     /* the 12px image renders a 10px icon, and the 10px upscaled gets rounded to 12.5, which
      * rounds up to 13px, which makes the icon one pixel too big on 1.25dppx. Fix: */
     @media (min-resolution: 1.20dppx) and (max-resolution: 1.45dppx) {
@@ -3072,11 +3073,11 @@ notificationbox[id="sync-notifications"] > notification {
         height: 10.8px;
       }
     }
-      
+
     #appmenu-button {
       margin-top: -1px;
       margin-bottom: 5px;
-    }    
+    }
   }
 
 /* ==== Windows Vista/7/8 styling ==== */
@@ -3090,7 +3091,7 @@ notificationbox[id="sync-notifications"] > notification {
     #main-window {
       -moz-appearance: -moz-win-borderless-glass;
     }
-    
+
     /* These should be hidden w/ glass enabled. Windows draws its own buttons. */
     .titlebar-button {
       display: none;
@@ -3120,7 +3121,7 @@ notificationbox[id="sync-notifications"] > notification {
     #main-window[sizemode="normal"] > #titlebar > #titlebar-content:-moz-lwtheme:-moz-window-inactive {
       -moz-border-top-colors: rgb(102, 102, 102) rgba(255,255,255,.6);
     }
-    
+
     #main-window[sizemode="normal"] > #titlebar > #titlebar-content > #appmenu-button-container:-moz-lwtheme {
       margin-top: -1px;
     }
@@ -3132,10 +3133,10 @@ notificationbox[id="sync-notifications"] > notification {
     #appmenu-button {
       margin-bottom: -1px; /* compensate white outer border */
     }
-    
+
   }
 
-/* ==== Windows 8/10 (flat color) styling ==== */
+/* ==== Windows 8/10/11 (flat color) styling ==== */
 
   @media (-moz-os-version: windows-win8) {
     /* Use a light text styling on dark window frames */
@@ -3145,20 +3146,21 @@ notificationbox[id="sync-notifications"] > notification {
   }
 
   @media (-moz-os-version: windows-win8),
-         (-moz-os-version: windows-win10) {
+         (-moz-os-version: windows-win10),
+         (-moz-os-version: windows-win11) {
     /* Fade text stylings on window inactivity */
     :root:not(:-moz-lwtheme):-moz-window-inactive {
       --window-text-color: rgba(0, 0, 0, 0.5);
     }
   }
-  
+
 /* ==== ==== */
 
   #main-window[sizemode=fullscreen]:not(:-moz-lwtheme) {
     -moz-appearance: none;
     background-color: #556;
   }
-  
+
   /* Make these toolbars transparent and removes borders that overlap the caption buttons when the window is maximized nad tabs are on top */
   #main-window[sizemode="maximized"][tabsontop=true] #toolbar-menubar[autohide="true"]:not([customizing]):not(:-moz-lwtheme),
   #main-window[sizemode="maximized"][tabsontop=true] #toolbar-menubar[autohide="true"]:not([customizing]) ~ #TabsToolbar:not(:-moz-lwtheme) {
@@ -3173,11 +3175,11 @@ notificationbox[id="sync-notifications"] > notification {
   #main-window[sizemode="maximized"][tabsontop=true] #toolbar-menubar[autohide="true"]:not([customizing]) ~ #TabsToolbar {
     border-top-style: none;
   }
-  
+
   #main-window[sizemode="maximized"][tabsontop=true] #toolbar-menubar[autohide="true"] #main-menubar > menu:not(:-moz-lwtheme) {
     color: inherit;
   }
-    
+
 /* Show toolbar borders on vista through win8, but not on win10 and later: */
 @media (-moz-os-version: windows-win7),
        (-moz-os-version: windows-win8) {

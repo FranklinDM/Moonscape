@@ -161,7 +161,8 @@ menulist.folderMenuItem menu:not(.folderMenuItem) {
 }
 
 @media (-moz-windows-compositor) {
-  @media (-moz-os-version: windows-win10) {
+  @media (-moz-os-version: windows-win10),
+         (-moz-os-version: windows-win11) {
     #appmenu-button {
       margin-top: -1px;
       margin-bottom: 5px;
