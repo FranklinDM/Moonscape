@@ -211,7 +211,7 @@ menulist > menupopup > menuitem[_moz-menuactive="true"][disabled="true"] {
   text-shadow: none;
 }
 
-menulist > menupopup > :-moz-any(menuitem, menucaption):not(.menuitem-iconic) > .menu-iconic-text {
+menulist > menupopup > :is(menuitem, menucaption):not(.menuitem-iconic) > .menu-iconic-text {
   margin: 0 !important;
 }
 

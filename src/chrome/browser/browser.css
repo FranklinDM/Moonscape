@@ -382,7 +382,7 @@ menuitem.bookmark-item {
   -moz-image-region: auto;
 }
 
-.bookmark-item[container][query][open]:not(:-moz-any([tagContainer], [dayContainer], [hostContainer])) {
+.bookmark-item[container][query][open]:not(:is([tagContainer], [dayContainer], [hostContainer])) {
   list-style-image: url("chrome://browser/skin/places/query-open.png");
 }
 
@@ -435,7 +435,7 @@ toolbar[brighttext] .toolbarbutton-1 {
 }
 
 /* Use vertical style for menus */
-.toolbarbutton-1[type="menu"]:not(:-moz-any(#back-button, #forward-button, #feed-button)) {
+.toolbarbutton-1[type="menu"]:not(:is(#back-button, #forward-button, #feed-button)) {
   -moz-binding: url("chrome://global/content/bindings/toolbarbutton.xml#menu-vertical");
 }
 
@@ -1357,7 +1357,7 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
   -moz-image-region: rect(0, 16px, 16px, 0);
 }
 
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button + #urlbar-container > #urlbar > #identity-box > #page-proxy-favicon {
+window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :is(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button + #urlbar-container > #urlbar > #identity-box > #page-proxy-favicon {
   margin-inline-end: 1px;
 }
 

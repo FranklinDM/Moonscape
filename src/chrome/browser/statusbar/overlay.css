@@ -264,7 +264,7 @@ splitter.status4evar-status-splitter {
  * Status bar
  */
 
-#browser-bottombox[s4eboarder="true"] :-moz-any(#status4evar-status-bar, #addon-bar) {
+#browser-bottombox[s4eboarder="true"] :is(#status4evar-status-bar, #addon-bar) {
   -moz-appearance: none;
 }
 

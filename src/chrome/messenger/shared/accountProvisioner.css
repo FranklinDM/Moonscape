@@ -244,7 +244,7 @@ input[type="submit"].search {
   border-bottom: 1px solid #ccc;
 }
 
-#results :-moz-any(div.selection) {
+#results :is(div.selection) {
   cursor: pointer;
 }
 
