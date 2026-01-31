@@ -10,7 +10,7 @@
 }
 
 .tabmail-tab {
-  -moz-appearance: none;
+  appearance: none;
   background-color: ThreeDLightShadow;
   padding: 3px 1px 4px;
   margin: 0;

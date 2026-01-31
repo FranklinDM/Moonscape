@@ -4,7 +4,7 @@
 
 /* File Field Widget */
 filefield {
-  -moz-appearance: none;
+  appearance: none;
   margin: 2px 4px;
   border: 2px solid;
   -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
@@ -34,7 +34,7 @@ filefield {
 }
 
 .fileFieldLabel {
-  -moz-appearance: none;
+  appearance: none;
   background-color: transparent;
   border: none;
   margin: 0px;

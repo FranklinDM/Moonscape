@@ -3,7 +3,7 @@
  * By: Michael Walden
  **/
 menubar > menu {
-  -moz-appearance: none !important; 
+  appearance: none !important; 
   background: transparent !important;
   /* color: #000000 !important; */
   border: 2px solid !important;

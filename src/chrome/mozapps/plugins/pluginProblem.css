@@ -15,7 +15,7 @@
   height: 100%;
   background-color: -moz-Dialog;
   color: -moz-DialogText;
-  -moz-user-select: none;
+  user-select: none;
 }
 
 .hoverBox {

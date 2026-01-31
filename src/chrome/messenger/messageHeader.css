@@ -34,14 +34,14 @@
 /* toolbars are optimized to look like OS-provided widgets; override this */
 .inline-toolbox {
   border-top-width: 0;
-  -moz-appearance: none;
+  appearance: none;
   background-color: transparent;
 }
 
 /* ::::: attachment view ::::: */
 
 #attachmentList {
-  -moz-appearance: none;
+  appearance: none;
   border-top: 1px solid ThreeDDarkShadow;
   background-color: -moz-Field;
   color: -moz-FieldText;
@@ -49,7 +49,7 @@
 
 #attachmentToggle {
   /* Override button appearance */
-  -moz-appearance: none;
+  appearance: none;
   min-width: 0;
   margin: 0;
   border: 0;
@@ -117,7 +117,7 @@
   margin: 0;
   padding: .1em 0;
   padding-inline-end: 8px;
-  -moz-user-select: text;
+  user-select: text;
   -moz-user-focus: normal;
   cursor: text;
 }
@@ -146,8 +146,8 @@
 }
 
 .msgHeaderView-button[type="menu-button"] {
-  /* important required to override -moz-appearance from msgHdrView-button */
-  -moz-appearance: dualbutton !important;
+  /* important required to override appearance from msgHdrView-button */
+  appearance: dualbutton !important;
   margin-inline-end: 0 !important;
 
   /* Need to override both rules from messenger.css and msgHeaderView-button */
@@ -266,7 +266,7 @@ toolbox[labelalign="end"] toolbar[mode="full"] .msgHeaderView-button .toolbarbut
 }
 
 .inline-toolbar:not(.chromeclass-toolbar) {
-  -moz-appearance: none;
+  appearance: none;
   -moz-box-pack: end;
   border-top-width: 0 !important;
   border-bottom-width: 0 !important;
@@ -316,7 +316,7 @@ toolbarpaletteitem .msgHeaderView-button {
   white-space: normal;
   color: WindowText;
   line-height: 1.5em;
-  -moz-appearance: none;
+  appearance: none;
   padding: .1em 0px;
   margin: 0px;
   margin-bottom: 3px !important;
@@ -400,7 +400,7 @@ mail-emailaddress[selected="true"] .emailDisplayButton{
 .emailStar {
   max-width: 16px;
   max-height: 16px;
-  -moz-appearance: none;
+  appearance: none;
   -moz-box-orient: vertical;
   padding: 0px;
   list-style-image: url("chrome://messenger/skin/starContact.png");

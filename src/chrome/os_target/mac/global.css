@@ -17,7 +17,7 @@
    * clears everything under it.
    * Without help from native theming this effect wouldn't be achievable.
    */
-  -moz-appearance: menuitem;
+  appearance: menuitem;
 }
 
 .popup-internal-box > .autorepeatbutton-up {
@@ -26,7 +26,7 @@
 }
 
 .popup-internal-box > .autorepeatbutton-up > .autorepeatbutton-icon {
-  -moz-appearance: button-arrow-up;
+  appearance: button-arrow-up;
 }
 
 .popup-internal-box > .autorepeatbutton-down {
@@ -35,7 +35,7 @@
 }
 
 .popup-internal-box > .autorepeatbutton-down > .autorepeatbutton-icon {
-  -moz-appearance: button-arrow-down;
+  appearance: button-arrow-down;
 }
 
 .popup-internal-box > autorepeatbutton[disabled="true"] {

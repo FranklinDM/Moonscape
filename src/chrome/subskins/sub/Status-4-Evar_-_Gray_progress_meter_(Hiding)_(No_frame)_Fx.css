@@ -7,18 +7,18 @@
  * visibility override noted below.
  **/
 #status4evar-progress-bar {
- -moz-appearance: -moz-box !important; 
+ appearance: -moz-box !important; 
  visibility: collapse !important
 }
 #status4evar-progress-bar spacer.progress-bar {
- -moz-appearance: none !important;
+ appearance: none !important;
  background: #808080 !important
 }
 .progressmeter-statusbar[collapsed="true"] {
  visibility: collapse !important     /* < Override Status-4-Evar visibility settings */
 }
 #status4evar-progress-bar.progressmeter-statusbar:not([collapsed="true"]) {
- -moz-appearance: none !important;
+ appearance: none !important;
  background-color: transparent !important;
  background-image: none !important;
  visibility: visible !important

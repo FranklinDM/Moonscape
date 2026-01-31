@@ -7,7 +7,7 @@
 }
 
 #itemList {
-  -moz-appearance: none;
+  appearance: none;
   margin: 3px 4px 10px 4px;
   height: 14em;
   border: 2px solid;
@@ -65,7 +65,7 @@ installitem {
 }
 
 .xpinstallItemURL {
-  -moz-appearance: none;
+  appearance: none;
   border: none;
   padding: 0;
   background-color: -moz-Field;

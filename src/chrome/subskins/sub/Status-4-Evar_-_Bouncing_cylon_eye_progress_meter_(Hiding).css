@@ -9,11 +9,11 @@
  * visibility override noted below.
  **/
 #status4evar-progress-bar {
- -moz-appearance: none !important;
+ appearance: none !important;
  visibility: collapse !important
 }
 #status4evar-progress-bar spacer.progress-bar {
- -moz-appearance: none !important;
+ appearance: none !important;
  background: transparent !important
 }
 .progressmeter-statusbar[collapsed="true"] {

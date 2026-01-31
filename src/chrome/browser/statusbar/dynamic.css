@@ -7,7 +7,7 @@
 /* Progress bar/line styles */
 
 #status4evar-progress-bar[s4estyle="true"] > .progress-bar {
-  -moz-appearance: none;
+  appearance: none;
   background: #333399;
   border-radius: 3px;
 }

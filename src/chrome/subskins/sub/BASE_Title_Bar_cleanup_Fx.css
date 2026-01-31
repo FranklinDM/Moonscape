@@ -41,13 +41,13 @@ sizemode_maximized  true
 */
 
 #main-window[sizemode="maximized"] {
-  -moz-appearance: -moz-window-button-box !important;
+  appearance: -moz-window-button-box !important;
 }
 #main-window[sizemode="maximized"] #toolbar-menubar:not([autohide="true"]) {
   margin-top: -4px !important;
 }
 #main-window[sizemode="maximized"] > #titlebar {
-  -moz-appearance: none !important;
+  appearance: none !important;
 }
 
 #main-window:not([tabsontop="true"])[sizemode="maximized"] > #titlebar:not(:-moz-lwtheme) {
@@ -60,7 +60,7 @@ sizemode_maximized  true
   /* height: 31px !important; */
 }
 #main-window[sizemode="maximized"] #titlebar-buttonbox {
-  /* -moz-appearance: -moz-window-button-box !important; */
+  /* appearance: -moz-window-button-box !important; */
 }
 #main-window[tabsintitlebar] #TabsToolbar {
   padding-top: 3px !important;

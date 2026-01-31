@@ -77,7 +77,7 @@ window {
 
 .view-button {
     /* Box model is 5px 5px 5px 6px in aggregate. Extra pixel on the left is for the separator. */
-    -moz-appearance: none;
+    appearance: none;
     margin: 5px 0;
     border: none;
     border-left: 1px solid ButtonShadow;
@@ -291,7 +291,7 @@ menuitem[header="true"] {
 
 /* Feel the hacks. */
 progressmeter[mode="undetermined"] {
-    -moz-appearance: none;
+    appearance: none;
 }
 
 [dir="ltr"] {

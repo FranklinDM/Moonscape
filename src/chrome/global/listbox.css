@@ -12,7 +12,7 @@
 /* ::::: listbox ::::: */
 
 listbox {
-  -moz-appearance: none;
+  appearance: none;
   margin: 2px 4px;
   border: 2px solid;
   -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
@@ -55,7 +55,7 @@ listbox:focus > listitem[selected="true"] {
 /* ::::: listheader ::::: */
 
 listheader {
-  -moz-appearance: none;
+  appearance: none;
   -moz-box-align: center;
   border: 2px solid;
   -moz-border-top-colors: ThreeDHighlight ThreeDLightShadow;
@@ -126,7 +126,7 @@ listheader[sortable="true"]:hover:active {
 /* ::::: listcell checkbox ::::: */
 
 .listcell-check {
-  -moz-appearance: none;
+  appearance: none;
   -moz-box-align: center;
   margin: 0px 2px;
   border: 1px solid -moz-DialogText;

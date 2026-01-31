@@ -27,7 +27,7 @@
 
 .collapsable[closed="true"] {
   border: none;
-  -moz-appearance: none;
+  appearance: none;
 }
 
 .collapsable[closed="true"] > .groupbox-body {

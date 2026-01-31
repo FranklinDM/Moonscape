@@ -15,7 +15,7 @@
 */
 #browser-bottombox:not(:-moz-lwtheme),
 #addon-bar:not(:-moz-lwtheme) {
-  /* -moz-appearance: none !important; */
+  /* appearance: none !important; */
   background-color: -moz-dialog !important;
 }
 
@@ -43,12 +43,12 @@
 #main-window:not(:-moz-lwtheme) menupopup > menuitem,
 #main-window:not(:-moz-lwtheme) popup > menu,
 #main-window:not(:-moz-lwtheme) popup > menuitem {
-  -moz-appearance: none !important;
+  appearance: none !important;
   background-color: -moz-dialog !important;
 }
 #main-window:not(:-moz-lwtheme) menupopup > menuseparator,
 #main-window:not(:-moz-lwtheme) popup > menuseparator {
-  -moz-appearance: none !important;
+  appearance: none !important;
   padding: 0px !important;
 }
 */

@@ -18,6 +18,6 @@
 #addon-bar:not(:-moz-lwtheme),                    /* Add-on Bar */
 #placesToolbox:not(:-moz-lwtheme),                /* Library */
 #console-toolbox:not(:-moz-lwtheme) {             /* Error Console */
-  /* -moz-appearance: none !important; */
+  /* appearance: none !important; */
   background-color: #D4D0C8 !important;
 }

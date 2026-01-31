@@ -5,7 +5,7 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 richlistbox {
-  -moz-appearance: none;
+  appearance: none;
   margin: 2px 4px;
   border: 2px solid;
   -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;

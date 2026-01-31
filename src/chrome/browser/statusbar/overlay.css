@@ -55,14 +55,14 @@ toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label {
 
 #status4evar-download-progress-bar {
   border: 1px solid gray;
-  -moz-appearance: none;
+  appearance: none;
   margin: 0px;
   min-height: 0px;
   min-width: 0px;
 }
 
 #status4evar-download-progress-bar > * {
-  -moz-appearance: none;
+  appearance: none;
   background: #FFFFFF;
 }
 
@@ -105,14 +105,14 @@ toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label {
  */
 
 splitter.status4evar-status-splitter {
-  -moz-appearance: splitter;
+  appearance: splitter;
   border: none;
   background: transparent;
   position: relative;
 }
 
 splitter.status4evar-status-splitter:not(:hover) {
-  -moz-appearance: none;
+  appearance: none;
 }
 
 /*
@@ -265,7 +265,7 @@ splitter.status4evar-status-splitter {
  */
 
 #browser-bottombox[s4eboarder="true"] :is(#status4evar-status-bar, #addon-bar) {
-  -moz-appearance: none;
+  appearance: none;
 }
 
 #browser-bottombox[s4eboarder="true"] > *:not([hidden="true"]):not([collapsed="true"]) {

@@ -23,7 +23,7 @@ toolbar[printpreview="true"] {
 }
 
 #tabbar-toolbar {
-  -moz-appearance: none;
+  appearance: none;
   padding: 0;
 }
 

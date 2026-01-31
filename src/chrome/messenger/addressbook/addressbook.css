@@ -278,7 +278,7 @@ treechildren::-moz-tree-image(DirCol, IsRemote-true, IsSecure-true) {
 /* Don't use the listbox appearance as that gives us a blue-grey top border
    that collides with the primary toolbar border */
 #dirTree {
-  -moz-appearance:  none;
+  appearance:  none;
   background-color: -moz-Field;
   color: -moz-FieldText;
 }
@@ -318,7 +318,7 @@ treechildren::-moz-tree-image(DirCol, IsRemote-true, IsSecure-true) {
 /* ::::: results pane ::::: */
 
 #abResultsTree {
-  -moz-appearance:  none;
+  appearance:  none;
   background-color: -moz-Field;
   color: -moz-FieldText;
 }

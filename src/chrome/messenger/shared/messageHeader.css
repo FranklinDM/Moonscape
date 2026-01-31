@@ -194,7 +194,7 @@ mail-newsgroups-headerfield {
 
 mail-headerfield > .headerValue {
   -moz-user-focus: normal;
-  -moz-user-select: text;
+  user-select: text;
   word-wrap: break-word;
 }
 

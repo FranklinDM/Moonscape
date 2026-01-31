@@ -34,7 +34,7 @@
 }
 
 .editContactTextbox[readonly="true"] {
-  -moz-appearance: none;
+  appearance: none;
   margin: 4px 7px;
   border: none;
   background-color: inherit;

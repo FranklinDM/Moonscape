@@ -4,7 +4,7 @@
 
 #go-button,
 #urlbar > toolbarbutton {
-  -moz-appearance: none !important;
+  appearance: none !important;
   padding: 0 2px !important;
   background-origin: border-box !important;
   border: none !important;

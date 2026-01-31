@@ -34,7 +34,7 @@
 }
 
 #navigator-toolbox {
-  -moz-appearance: none;
+  appearance: none;
   background-color: transparent;
 }
 
@@ -49,7 +49,7 @@
 }
 
 #navigator-toolbox > toolbar:not(:-moz-lwtheme) {
-  -moz-appearance: none;
+  appearance: none;
   background-color: var(--toolbar-custom-color);
 }
 
@@ -75,7 +75,7 @@
 /* ::::: app menu button ::::: */
 
 #appmenu-button {
-  -moz-appearance: none;
+  appearance: none;
   background-clip: padding-box;
   border: 1px solid ThreeDHighlight;
   border-top: none;
@@ -125,7 +125,7 @@
 }
 
 .appmenu-edit-button {
-  -moz-appearance: none;
+  appearance: none;
   border: 1px solid transparent;
   padding: 2px;
   background: transparent;
@@ -184,7 +184,7 @@
 }
 
 #appmenu-edit-label {
-  -moz-appearance: none;
+  appearance: none;
   background: transparent;
   font-style: italic;
 }
@@ -244,11 +244,11 @@
 /* ::::: titlebar ::::: */
 
 #main-window[sizemode="normal"] > #titlebar {
-  -moz-appearance: -moz-window-titlebar;
+  appearance: -moz-window-titlebar;
 }
 
 #main-window[sizemode="maximized"] > #titlebar {
-  -moz-appearance: -moz-window-titlebar-maximized;
+  appearance: -moz-window-titlebar-maximized;
 }
 
 @media (-moz-windows-classic) {
@@ -258,11 +258,11 @@
 }
 
 #titlebar-buttonbox {
-  -moz-appearance: -moz-window-button-box;
+  appearance: -moz-window-button-box;
 }
 
 #main-window[sizemode="maximized"] #titlebar-buttonbox {
-  -moz-appearance: -moz-window-button-box-maximized;
+  appearance: -moz-window-button-box-maximized;
 }
 
 .titlebar-placeholder[type="appmenu-button"] {
@@ -276,19 +276,19 @@
 /* titlebar command buttons */
 
 #titlebar-min {
-  -moz-appearance: -moz-window-button-minimize;
+  appearance: -moz-window-button-minimize;
 }
 
 #titlebar-max {
-  -moz-appearance: -moz-window-button-maximize;
+  appearance: -moz-window-button-maximize;
 }
 
 #main-window[sizemode="maximized"] #titlebar-max {
-  -moz-appearance: -moz-window-button-restore;
+  appearance: -moz-window-button-restore;
 }
 
 #titlebar-close {
-  -moz-appearance: -moz-window-button-close;
+  appearance: -moz-window-button-close;
 }
 
 @media not all and (-moz-windows-classic) {
@@ -476,7 +476,7 @@ toolbar[brighttext] .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
 
 #navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1,
 #navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button {
-  -moz-appearance: none;
+  appearance: none;
 }
 
 #TabsToolbar .toolbarbutton-1 {
@@ -1205,7 +1205,7 @@ toolbar[iconsize="small"] #webrtc-status-button:not([disabled="true"]):hover:act
 }
 #close-button {
   -moz-image-region: rect(0, 48px, 16px, 32px);
-  -moz-appearance: none;
+  appearance: none;
   border-style: none;
   margin: 2px;
 }
@@ -1452,7 +1452,7 @@ richlistitem[type~="action"][actiontype$="tab"][selected="true"] > .ac-url-box >
 
 #go-button,
 #urlbar > toolbarbutton {
-  -moz-appearance: none;
+  appearance: none;
   padding: 0 2px;
   background-origin: border-box;
   border: none;
@@ -1590,7 +1590,7 @@ richlistitem[type~="action"][actiontype$="tab"][selected="true"] > .ac-url-box >
 }
 
 .tabbrowser-tab {
-  -moz-appearance: none;
+  appearance: none;
   background-color: ThreeDLightShadow;
   padding: 0;
   margin: 0;
@@ -1688,7 +1688,7 @@ richlistitem[type~="action"][actiontype$="tab"][selected="true"] > .ac-url-box >
 
 /* Tab close button */
 .tab-close-button {
-  -moz-appearance: none;
+  appearance: none;
   border: none;
   padding: 0px;
 }
@@ -1939,7 +1939,7 @@ toolbar[iconsize="small"] #alltabs-button[type="menu"] .toolbarbutton-icon,
 
 /* Tabstrip close button */
 .tabs-closebutton {
-  -moz-appearance: none;
+  appearance: none;
   padding: 4px 2px;
   margin: 0px;
   border: none;
@@ -1992,7 +1992,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 }
 
 #ub-feed-button {
-  -moz-appearance: none;
+  appearance: none;
   min-width: 0px;
   list-style-image: url("chrome://browser/skin/feeds/feed-icons-16.png");
   -moz-image-region: rect(0px 16px 16px 0px);
@@ -2014,7 +2014,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 }
 
 toolbarbutton.bookmark-item[dragover="true"][open="true"] {
-  -moz-appearance: none;
+  appearance: none;
   background: Highlight !important;
   color: HighlightText !important;
 }
@@ -2220,7 +2220,7 @@ toolbar:not(.toolbar-primary) #history-menu-button:not([disabled="true"]):hover:
 }
 
 .popup-progress-cancel {
-  -moz-appearance: none;
+  appearance: none;
   background: transparent;
   border: none;
   padding: 0;
@@ -2401,7 +2401,7 @@ toolbar:not(.toolbar-primary) #history-menu-button:not([disabled="true"]):hover:
 /* ::::: Keyboard UI Panel ::::: */
 
 .KUI-panel {
-  -moz-appearance: none;
+  appearance: none;
   background: rgba(27%,27%,27%,.9) url(KUI-background.png) repeat-x;
   color: white;
   border-style: none;
@@ -2414,7 +2414,7 @@ toolbar:not(.toolbar-primary) #history-menu-button:not([disabled="true"]):hover:
 
 .KUI-panel-closebutton {
   list-style-image: url(KUI-close.png);
-  -moz-appearance: none;
+  appearance: none;
   border: none;
   padding: 0;
   width: 24px;
@@ -2485,7 +2485,7 @@ toolbar:not(.toolbar-primary) #history-menu-button:not([disabled="true"]):hover:
 
 #allTabs-panel {
   padding-bottom: 10px;
-  -moz-appearance: none;
+  appearance: none;
   border: none;
   background: var(--toolbar-custom-color);
   color: -moz-dialogText;
@@ -2543,7 +2543,7 @@ toolbar:not(.toolbar-primary) #history-menu-button:not([disabled="true"]):hover:
 /* Add-on bar */
 
 #addon-bar {
-  -moz-appearance: none;
+  appearance: none;
   min-height: 20px;
   border-top-style: none;
   border-bottom-style: none;
@@ -2560,7 +2560,7 @@ toolbar:not(.toolbar-primary) #history-menu-button:not([disabled="true"]):hover:
 }
 
 #status-bar {
-  -moz-appearance: none;
+  appearance: none;
   background-color: transparent;
   border: none;
   min-height: 0;
@@ -2575,13 +2575,13 @@ toolbar:not(.toolbar-primary) #history-menu-button:not([disabled="true"]):hover:
 
 #status-bar > statusbarpanel {
   border-width: 0;
-  -moz-appearance: none;
+  appearance: none;
 }
 
 #addonbar-closebutton {
   border: none;
   padding: 0 5px;
-  -moz-appearance: none;
+  appearance: none;
 }
 
 toolbar[brighttext] #addonbar-closebutton {
@@ -2750,14 +2750,14 @@ notificationbox[id="sync-notifications"] > notification {
 @media (-moz-windows-compositor) {
   #main-window {
     background-color: transparent;
-    -moz-appearance: -moz-win-glass;
+    appearance: -moz-win-glass;
   }
 
   /* On win 10, if we don't set this on the entire browser container, including
    * the sidebar, then the accent color bleeds through in the titlebar
    * if the sidebar is open. */
   #browser {
-    -moz-appearance: -moz-win-exclude-glass;
+    appearance: -moz-win-exclude-glass;
   }
 
 /* ==== Windows 10/11 styling ==== */
@@ -2897,7 +2897,7 @@ notificationbox[id="sync-notifications"] > notification {
 
     #titlebar-buttonbox,
     .titlebar-button {
-      -moz-appearance: none !important;
+      appearance: none !important;
     }
 
     .titlebar-button {
@@ -3089,7 +3089,7 @@ notificationbox[id="sync-notifications"] > notification {
      * We can't use -moz-win-glass there because the border sizing would
      * not be correct. */
     #main-window {
-      -moz-appearance: -moz-win-borderless-glass;
+      appearance: -moz-win-borderless-glass;
     }
 
     /* These should be hidden w/ glass enabled. Windows draws its own buttons. */
@@ -3101,11 +3101,11 @@ notificationbox[id="sync-notifications"] > notification {
      * vista and win7 we want to make sure they are "glassy", so we can't use
      * #browser as the exclude-glass container. We use #appcontent instead. */
     #browser {
-      -moz-appearance: none;
+      appearance: none;
     }
 
     #appcontent {
-      -moz-appearance: -moz-win-exclude-glass;
+      appearance: -moz-win-exclude-glass;
     }
 
     #main-window[chromemargin^="0,"][sizemode=normal] #navigator-toolbox {
@@ -3157,7 +3157,7 @@ notificationbox[id="sync-notifications"] > notification {
 /* ==== ==== */
 
   #main-window[sizemode=fullscreen]:not(:-moz-lwtheme) {
-    -moz-appearance: none;
+    appearance: none;
     background-color: #556;
   }
 
@@ -3241,7 +3241,7 @@ notificationbox[id="sync-notifications"] > notification {
   #allTabs-panel,
   #ctrlTab-panel {
     background: transparent;
-    -moz-appearance: -moz-win-glass;
+    appearance: -moz-win-glass;
     border-radius: 0;
     border: none;
     font: normal 1.2em "Segoe UI";
@@ -3276,7 +3276,7 @@ notificationbox[id="sync-notifications"] > notification {
 #minimize-button,
 #restore-button,
 #close-button {
-  -moz-appearance: none;
+  appearance: none;
   border-style: none;
   margin: 0;
 }

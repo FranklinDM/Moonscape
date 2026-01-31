@@ -26,7 +26,7 @@
 }
 
 .searchbar-engine-button {
-  -moz-appearance: none;
+  appearance: none;
   min-width: 0;
   margin: 0;
   padding: 0;
@@ -37,7 +37,7 @@
 }
 
 .searchbar-engine-button > .button-box {
-  -moz-appearance: none;
+  appearance: none;
   padding: 0;
   border: 0;
 }

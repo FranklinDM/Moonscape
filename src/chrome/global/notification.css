@@ -62,7 +62,7 @@ notification[type="critical"] {
 }
 
 .messageCloseButton {
-  -moz-appearance: none;
+  appearance: none;
   padding: 4px 2px;
   border: none !important;
 }
@@ -99,7 +99,7 @@ XXX: apply styles to all themes until bug 509642 is fixed
 @media (-moz-windows-default-theme) {
 */
   .popup-notification-menubutton {
-    -moz-appearance: none;
+    appearance: none;
     padding: 0;
     border: 3px solid;
     -moz-border-top-colors: transparent ThreeDHighlight ThreeDLightShadow;
@@ -117,7 +117,7 @@ XXX: apply styles to all themes until bug 509642 is fixed
   .popup-notification-menubutton:not([type="menu-button"]),
   .popup-notification-menubutton > .button-menubutton-button,
   .popup-notification-menubutton > .button-menubutton-dropmarker {
-    -moz-appearance: none;
+    appearance: none;
     margin: 0;
     border: none;
   }

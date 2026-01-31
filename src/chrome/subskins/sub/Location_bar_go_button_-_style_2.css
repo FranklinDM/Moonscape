@@ -3,7 +3,7 @@
  * By: Michael Walden
  **/
 #go-button {
-  -moz-appearance: none !important;
+  appearance: none !important;
   list-style-image: url("chrome://subskins/skin/img/Go-arrow-plain.png") !important;	/* was: chrome://browser/skin/Go-arrow.png */
   -moz-image-region: rect(0px 16px 16px 0px) !important;
   border: 0px !important;

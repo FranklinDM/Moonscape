@@ -97,7 +97,7 @@
   
 #addressingWidget {
   -moz-user-focus: none;
-  -moz-appearance: none;
+  appearance: none;
   width: 0;
   border: none;
   background-color: transparent;
@@ -136,7 +136,7 @@
 
 .aw-menulist {
   -moz-binding: url("chrome://global/content/bindings/menulist.xml#menulist");
-  -moz-appearance: none;
+  appearance: none;
   -moz-box-align: stretch;
   margin: 1px 0;
   margin-inline-start: 7px;
@@ -618,7 +618,7 @@ toolbarbutton.formatting-button {
 /* ::::: address book sidebar ::::: */
 
 #sidebar-box sidebarheader {
-  -moz-appearance: none;
+  appearance: none;
   color: -moz-DialogText;
   text-shadow: none;
   background-color: -moz-Dialog;
@@ -628,7 +628,7 @@ toolbarbutton.formatting-button {
   list-style-image: url("chrome://global/skin/icons/close.png");
   -moz-image-region: rect(0, 16px, 16px, 0);
   border: none !important;
-  -moz-appearance: none;
+  appearance: none;
 }
 
 .ab-closebutton:hover {

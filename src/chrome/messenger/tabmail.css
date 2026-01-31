@@ -65,7 +65,7 @@
 }
 
 tabpanels {
-  -moz-appearance: none;
+  appearance: none;
   background-color: transparent;
 }
 
@@ -100,7 +100,7 @@ tabpanels {
 
 .tab-close-button,
 .tabs-closebutton {
-  -moz-appearance: none;
+  appearance: none;
   -moz-image-region: rect(0, 16px, 16px, 0);
   border: none;
   cursor: default;

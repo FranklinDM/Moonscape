@@ -216,7 +216,7 @@ body:not(.loaded) .toolbar:-moz-locale-dir(rtl) {
   padding: 0;
   list-style: none;
   background-color: -moz-Dialog;
-  -moz-user-select: none;
+  user-select: none;
   border-top: 1px solid ThreeDHighlight;
   border-right: 1px solid ThreeDShadow;
   z-index: 1;

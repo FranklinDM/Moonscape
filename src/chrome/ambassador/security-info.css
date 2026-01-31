@@ -12,7 +12,7 @@ textbox {
     border: none;
     padding: 0px;
     margin-top: 1px;
-    -moz-appearance: none;
+    appearance: none;
 }
 
 #securityPanel .caption-icon {

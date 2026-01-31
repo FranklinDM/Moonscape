@@ -7,15 +7,15 @@
  * visibility override noted below.
  **/
 #status4evar-progress-bar {
- -moz-appearance: -moz-box !important; 
+ appearance: -moz-box !important; 
  visibility: visible !important     /* < Override Status-4-Evar visibility settings */
 }
 #status4evar-progress-bar spacer.progress-bar {
- -moz-appearance: none !important;
+ appearance: none !important;
  background: #808080 !important
 }
 #status4evar-progress-bar.progressmeter-statusbar[collapsed="true"] {
- -moz-appearance: -moz-box !important;
+ appearance: -moz-box !important;
  background: transparent !important;
  border-style: solid !important;
  border-width: 1px !important;
@@ -25,7 +25,7 @@
  -moz-border-left-colors:   ThreeDShadow    !important
 }
 #status4evar-progress-bar.progressmeter-statusbar:not([collapsed="true"]) {
- -moz-appearance: -moz-box !important;
+ appearance: -moz-box !important;
  background-color: transparent !important;
  background-image: none !important;
  border-style: solid !important;

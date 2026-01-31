@@ -13,7 +13,7 @@
   list-style-image: url("chrome://browser/skin/pageInfo.png");
   -moz-box-orient: vertical;
   -moz-box-align: center;
-  -moz-appearance: none;
+  appearance: none;
   padding: 5px 3px 1px 3px;
   margin: 0 1px;
   min-width: 4.5em;
@@ -21,12 +21,12 @@
 }
 
 #viewGroup > radio:hover {
-  -moz-appearance: none;
+  appearance: none;
   border-color: ThreeDHighlight ThreeDShadow ThreeDShadow ThreeDHighlight;
 }
 
 #viewGroup > radio[selected="true"] {
-  -moz-appearance: none;
+  appearance: none;
   background-color: rgba(255, 255, 255, 0.5);
   border-color: ThreeDShadow ThreeDHighlight ThreeDHighlight ThreeDShadow;
 }
@@ -76,7 +76,7 @@ textbox {
   border: none;
   padding: 0px;
   margin-top: 1px;
-  -moz-appearance: none;
+  appearance: none;
 }
 
 textbox.header {
@@ -111,7 +111,7 @@ groupbox.collapsable caption .caption-icon {
 groupbox.collapsable[closed="true"] {
   border: none;
   margin-bottom: 9px;
-  -moz-appearance: none;
+  appearance: none;
 }
 
 groupbox.collapsable[closed="true"] caption .caption-icon { 

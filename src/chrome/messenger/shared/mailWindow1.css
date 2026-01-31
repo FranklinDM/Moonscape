@@ -98,7 +98,7 @@ treechildren::-moz-tree-cell-text(subjectCol) {
 }
 
 #quotaPanel .progress-bar {
-  -moz-appearance: none;
+  appearance: none;
   background-color: #88AAFF;
   opacity: .5;
 }

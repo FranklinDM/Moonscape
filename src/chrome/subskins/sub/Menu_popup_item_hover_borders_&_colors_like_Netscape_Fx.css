@@ -15,7 +15,7 @@ menupopup > menu,
 menupopup > menuitem,
 popup > menu,
 popup > menuitem {
-  -moz-appearance: none !important;
+  appearance: none !important;
   color: #000000 !important;
   background: transparent !important;
   border: 2px solid !important;

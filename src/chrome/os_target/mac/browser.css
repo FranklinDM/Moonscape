@@ -5,15 +5,15 @@
 /* ::::: titlebar ::::: */
 
 #main-window[sizemode="normal"]:not([privatebrowsingmode=temporary]) > #titlebar {
-  -moz-appearance: -moz-window-titlebar;
+  appearance: -moz-window-titlebar;
 }
 
 #main-window[sizemode="maximized"] > #titlebar {
-  -moz-appearance: -moz-window-titlebar-maximized;
+  appearance: -moz-window-titlebar-maximized;
 }
 
 #titlebar-buttonbox {
-  -moz-appearance: -moz-window-button-box;
+  appearance: -moz-window-button-box;
 }
 
 .titlebar-placeholder[type="appmenu-button"] {
@@ -27,19 +27,19 @@
 /* titlebar command buttons */
 
 #titlebar-min {
-  -moz-appearance: -moz-window-button-minimize;
+  appearance: -moz-window-button-minimize;
 }
 
 #titlebar-max {
-  -moz-appearance: -moz-window-button-maximize;
+  appearance: -moz-window-button-maximize;
 }
 
 #main-window[sizemode="maximized"] #titlebar-max {
-  -moz-appearance: -moz-window-button-restore;
+  appearance: -moz-window-button-restore;
 }
 
 #titlebar-close {
-  -moz-appearance: -moz-window-button-close;
+  appearance: -moz-window-button-close;
 }
 
 /* ensure titlebar on privacy windows is of correct size */

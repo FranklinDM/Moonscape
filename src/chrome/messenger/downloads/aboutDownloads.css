@@ -18,7 +18,7 @@
 
 #msgDownloadsRichListBox {
   /** The default listbox appearance comes with an unwanted margin. **/
-  -moz-appearance: none;
+  appearance: none;
   margin: 0;
 }
 

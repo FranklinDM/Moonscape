@@ -4,7 +4,7 @@
  **/
 
 #alltabs-button {
- -moz-appearance: toolbarbutton !important;
+ appearance: toolbarbutton !important;
 }
 
 /* List style image and region for large alltabs icon */

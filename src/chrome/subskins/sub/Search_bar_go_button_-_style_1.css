@@ -6,7 +6,7 @@
   list-style-image: url("chrome://subskins/skin/img/search-icon.png") !important;
   border: 0px !important;
   padding: 0px !important;
-  -moz-appearance: none !important;
+  appearance: none !important;
 }
 .search-go-button[chromedir="rtl"] {
   list-style-image: url("chrome://subskins/skin/img/Search-glass-rtl.png") !important;

@@ -8,13 +8,13 @@
 
 @media (-moz-windows-compositor) {
   #tabmail-container {
-    -moz-appearance: -moz-win-exclude-glass;
+    appearance: -moz-win-exclude-glass;
   }
 
   @media (-moz-os-version: windows-win7),
          (-moz-os-version: windows-win8) {
     #messengerWindow {
-      -moz-appearance: -moz-win-borderless-glass;
+      appearance: -moz-win-borderless-glass;
       background-color: transparent;
     }
 
@@ -198,7 +198,7 @@
     }
 
     #messengerWindow {
-      -moz-appearance: -moz-win-glass;
+      appearance: -moz-win-glass;
     }
     
     #messengerWindow:-moz-window-inactive:not(:-moz-lwtheme) {
@@ -214,7 +214,7 @@
 
     #titlebar-buttonbox,
     .titlebar-button {
-      -moz-appearance: none !important;
+      appearance: none !important;
     }
 
     .titlebar-button {

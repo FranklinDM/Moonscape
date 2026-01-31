@@ -5,7 +5,7 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 resizer {
-  -moz-appearance: none;
+  appearance: none;
   background: url("chrome://global/skin/icons/resizer.png") no-repeat;
   background-position: bottom right;
   cursor: se-resize;

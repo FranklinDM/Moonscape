@@ -11,7 +11,7 @@
 /* :::::::::: button :::::::::: */
 
 button {
-  -moz-appearance: none;
+  appearance: none;
   margin: 1px 5px 2px 5px;
   min-width: 6.3em;
   border: 3px solid;
@@ -105,7 +105,7 @@ button[type="menu-button"] {
 }
 
 .button-menu-dropmarker {
-  -moz-appearance: none !important;
+  appearance: none !important;
   margin: 1px;
   background-color: transparent;
   border: none;
@@ -129,7 +129,7 @@ button[type="disclosure"] {
   border: 0px !important;
   margin: 0px !important;
   padding: 0px !important;
-  -moz-appearance: none;
+  appearance: none;
   list-style-image: url("chrome://global/skin/tree/twisty-clsd.png");
   min-width: 0px !important;
   background-color: transparent;

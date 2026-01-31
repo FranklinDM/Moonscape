@@ -4,7 +4,7 @@
 
 
 .activityview {
-  -moz-appearance: none !important;
+  appearance: none !important;
   margin: 0;
   border-bottom: 2px solid;
   -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
@@ -79,7 +79,7 @@ activity-process button {
 }
 
 activity-process button {
-  -moz-appearance: none;
+  appearance: none;
   min-height: 16px;
   min-width: 16px;
   max-height: 16px;
@@ -102,7 +102,7 @@ activity-event button {
 }
 
 activity-event button {
-  -moz-appearance: none;
+  appearance: none;
   min-height: 16px;
   min-width: 16px;
   max-height: 16px;
@@ -125,7 +125,7 @@ activity-warning button {
 }
 
 activity-warning button {
-  -moz-appearance: none;
+  appearance: none;
   min-height: 16px;
   min-width: 16px;
   max-height: 16px;
@@ -154,7 +154,7 @@ activity-group button {
 }
 
 activity-group button {
-  -moz-appearance: none;
+  appearance: none;
   min-height: 16px;
   min-width: 16px;
   max-height: 16px;

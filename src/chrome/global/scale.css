@@ -7,14 +7,14 @@
 /* ::::: scale ::::: */
 
 .scale-slider {
-  -moz-appearance: none;
+  appearance: none;
   background: url("chrome://global/skin/scale/scale-tray-horiz.gif") 0% 50% repeat-x;
   margin: 2px 4px;
   width: 100px;
 }
 
 .scale-slider[orient="vertical"] {
-  -moz-appearance: none;
+  appearance: none;
   background: url("chrome://global/skin/scale/scale-tray-vert.gif") 50% 0% repeat-y;
   margin: 4px 2px;
   width: auto;
@@ -24,7 +24,7 @@
 /* ::::: scale thumb ::::: */
 
 .scale-thumb {
-  -moz-appearance: none;
+  appearance: none;
   border: 2px solid;
   -moz-border-top-colors: ThreeDLightShadow ThreeDHighlight;
   -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
@@ -36,7 +36,7 @@
 }
 
 .scale-thumb[orient="vertical"] {
-  -moz-appearance: none;
+  appearance: none;
   min-width: 15px;
   min-height: 30px;
 }

@@ -29,7 +29,7 @@ menu:not(:-moz-lwtheme):-moz-window-inactive {
 #tabs-toolbar {
   border-top-width: 0;
   border-bottom-width: 0;
-  -moz-appearance: none;
+  appearance: none;
 }
 
 #mail-toolbar-menubar2 {
@@ -993,7 +993,7 @@ toolbar[iconsize="small"] .button-appmenu[disabled] {
 }
 
 .appmenu-edit-button {
-  -moz-appearance: none;
+  appearance: none;
   border: 1px solid transparent;
   padding: 2px;
   background: transparent;
@@ -1051,7 +1051,7 @@ toolbar[iconsize="small"] .button-appmenu[disabled] {
 }
 
 #appmenu-edit-label {
-  -moz-appearance: none;
+  appearance: none;
   background: transparent;
   font-style: italic;
 }
