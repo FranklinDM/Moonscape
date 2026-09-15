@@ -1,5 +1,8 @@
 # Changelog
 ```Format: Release name version - (YYYY-MM-DD)```
+## Moonscape 7.4.1
+- Initial support for Pale Moon 35
+
 ## Moonscape 7.4.0
 - Initial support for Pale Moon 34
 - Use standard :is() pseudo-class instead of :-moz-any()
