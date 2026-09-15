@@ -3,7 +3,7 @@
     <Description about="urn:mozilla:install-manifest">
         <!-- General -->
         <em:id>{2C646A52-4EDC-455F-8047-9405795D3E51}</em:id>
-        <em:version>7.4.0</em:version>
+        <em:version>7.4.1</em:version>
         <em:type>4</em:type>
         <em:internalName>moonscape-classic</em:internalName>
         <em:skinnable>true</em:skinnable>
@@ -25,7 +25,7 @@
             <Description>
                 <em:id>{8de7fcbb-c55c-4fbe-bfc5-fc555c87dbc4}</em:id>
                 <em:minVersion>33.0.0a1</em:minVersion>
-                <em:maxVersion>34.*</em:maxVersion>
+                <em:maxVersion>35.*</em:maxVersion>
             </Description>
         </em:targetApplication>
         <em:targetApplication>
